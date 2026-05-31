@@ -1092,39 +1092,34 @@ graph TD
     <h4 id="4311-cấu-hình-thuế-configuration--taxes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4311-cấu-hình-thuế-configuration--taxes"><span class="octicon octicon-link"></span></a><strong>4.3.1.1 Cấu hình thuế (Configuration > Taxes)</strong></h4>
     <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-19"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-19"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Cấu hình các loại thuế suất giá trị gia tăng (VAT) đầu vào và đầu ra áp dụng cho sản phẩm. Thiết lập này giúp hệ thống định khoản tự động tài khoản thuế phải nộp hoặc thuế được khấu trừ tương ứng khi ghi sổ hóa đơn.</p>
-    <h5 id="giải-thích-các-trường-thông-tin-10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-10"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
-    <table>
-      <thead>
-        <tr>
-          <th align="left">Trường thông tin
-            <div style="width: 250px;"></div>
-          </th>
-          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td align="left"><strong>Tên thuế (*)</strong></td>
-          <td align="left">Tên hiển thị của loại thuế (Ví dụ: VAT 10% bán ra).</td>
-        </tr>
-        <tr>
-          <td align="left"><strong>Loại thuế (*)</strong></td>
-          <td align="left">Phân loại: <strong>Sales</strong> (Thuế đầu ra) hoặc <strong>Purchase</strong> (Thuế đầu vào).</td>
-        </tr>
-        <tr>
-          <td align="left"><strong>Cách tính thuế (*)</strong></td>
-          <td align="left">Phương pháp tính thuế: <strong>Phần trăm của giá</strong> (Tính theo % đơn giá), <strong>Cố định</strong> (Thuế cố định).</td>
-        </tr>
-        <tr>
-          <td align="left"><strong>Giá trị</strong></td>
-          <td align="left">Giá trị thuế suất (Ví dụ: <code>10.00</code> tương đương 10%).</td>
-        </tr>
-        <tr>
-          <td align="left"><strong>Tài khoản thuế</strong></td>
-          <td align="left">Tài khoản kế toán ghi nhận số tiền thuế (Ví dụ: Tài khoản 3331 cho thuế đầu ra).</td>
-        </tr>
-      </tbody>
-    </table>
+    <h5 id="giải-thích-các-trường-thông-tin-10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-10"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin &amp; Cấu hình các Tab</strong></h5>
+    <ul>
+      <li><strong>Thông tin chung:</strong>
+        <ul>
+          <li><strong>Tên thuế (*):</strong> Tên hiển thị của loại thuế (Ví dụ: <code>VAT 10% bán ra</code>).</li>
+          <li><strong>Loại thuế (*):</strong> Phân loại phạm vi áp dụng: <strong>Sales</strong> (Thuế đầu ra khi bán hàng) hoặc <strong>Purchase</strong> (Thuế đầu vào khi mua hàng).</li>
+          <li><strong>Cách tính thuế (*):</strong> Phương pháp tính, thường chọn <strong>Phần trăm của giá</strong> (Percentage of Price).</li>
+          <li><strong>Giá trị:</strong> Giá trị thuế suất (Ví dụ: <code>10.00</code> tương đương 10%).</li>
+        </ul>
+      </li>
+      <li><strong>Tab Định nghĩa (Definition):</strong>
+        <p>Quy định cách hạch toán tiền hàng trước thuế (Cơ sở) và tiền thuế (Thuế) vào sổ cái khi phát sinh Hóa đơn (Invoices) hoặc đơn Hoàn tiền (Refunds):</p>
+        <ul>
+          <li><strong>Cơ sở (Base):</strong> Tiền hàng trước thuế. Dòng này để trống phần Tài khoản kế toán (hệ thống tự lấy tài khoản doanh thu/chi phí của sản phẩm).</li>
+          <li><strong>Thuế (Tax):</strong> Tiền thuế suất được tính ra. Dòng này cần nhập <code>%</code> là <code>100.00</code>, <code>Dựa trên</code> chọn <code>thuế</code> và chọn <strong>Tài khoản</strong> kế toán phù hợp (Ví dụ: <code>333100</code> cho thuế bán ra, <code>131000</code>/<code>1331</code> cho thuế mua vào).</li>
+          <li><strong>Lưới thuế (Tax Grid):</strong> Gán chỉ tiêu tương ứng trên Tờ khai thuế GTGT nếu cần kết xuất tờ khai tự động (để trống nếu không dùng).</li>
+        </ul>
+      </li>
+      <li><strong>Tab Tùy chọn nâng cao (Advanced Options):</strong>
+        <ul>
+          <li><strong>Nhãn thuế trên hóa đơn:</strong> Ký hiệu ngắn in ra cho khách hàng xem trên hóa đơn (Ví dụ: <code>VAT 10%</code>).</li>
+          <li><strong>Nhóm thuế:</strong> Phân loại nhóm thuế (Ví dụ: nhóm <code>Nhóm thuế VAT 10%</code>).</li>
+          <li><strong>Quốc gia:</strong> Chọn <code>Việt Nam</code> để đồng bộ đúng chuẩn tiền tệ và định dạng pháp lý.</li>
+          <li><strong>Bao gồm trong giá:</strong> Tích chọn nếu đơn giá sản phẩm nhập trên đơn hàng là giá đã gồm thuế (bán lẻ B2C); bỏ tích nếu là giá chưa gồm thuế (bán buôn B2B).</li>
+          <li><strong>Ảnh hưởng cơ sở tính thuế kế tiếp:</strong> Tích chọn nếu tính thuế chồng thuế (ví dụ: thuế tiêu thụ đặc biệt tính cộng vào giá cơ sở rồi mới tính thuế GTGT).</li>
+        </ul>
+      </li>
+    </ul>
     <h5 id="các-bước-thực-hiện-19"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-19"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
       <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> click <strong>"Cấu hình"</strong> -> chọn <strong>"Thuế"</strong>.</li>
@@ -1134,9 +1129,13 @@ graph TD
         <img src="images/vi/taxes.png" alt="Cấu hình thuế">
       </li>
       <li>
-        <strong>Bước 3:</strong> Điền <strong>Tax Name</strong>, chọn loại thuế <strong>Tax Type</strong>, thuế suất <strong>Giá trị</strong> và gán tài khoản kế toán tại tab <strong>Định nghĩa nâng cao</strong> (Advanced Options):
+        <strong>Bước 3:</strong> Điền <strong>Tên thuế</strong>, chọn loại <strong>Loại thuế</strong>, nhập <strong>Giá trị</strong> thuế suất, đồng thời cấu hình các thông tin hạch toán và tùy chọn nâng cao tại 2 tab <strong>Định nghĩa</strong> &amp; <strong>Tùy chọn nâng cao</strong> như hướng dẫn trên:
         
         <img src="images/vi/steps/tax_form_filled.png" alt="Chi tiết biểu mẫu Cấu hình thuế">
+        <br>
+        <em>Chi tiết tab Tùy chọn nâng cao:</em>
+        <br>
+        <img src="images/vi/steps/tax_advanced_tab.png" alt="Cấu hình tab Tùy chọn nâng cao">
       </li>
       <li><strong>Bước 4:</strong> Nhấn <strong>Save</strong> để lưu.</li>
     </ul>
@@ -1158,7 +1157,13 @@ graph TD
         
         <img src="images/vi/steps/journal_form_filled.png" alt="Chi tiết biểu mẫu Sổ nhật ký kế toán">
       </li>
-      <li><strong>Bước 4:</strong> Thiết lập tài khoản tiền mặt/ngân hàng mặc định đối với nhật ký thanh toán tại tab <strong>Mục nhập Sổ nhật ký</strong> (Journal Entries). Nhấn <strong>Save</strong>.</li>
+      <li><strong>Bước 4:</strong> Thiết lập tài khoản tiền mặt/ngân hàng mặc định đối với nhật ký thanh toán tại tab <strong>Mục nhập Sổ nhật ký</strong> (Journal Entries).</li>
+      <li>
+        <strong>Bước 5:</strong> Tại tab <strong>Cài đặt nâng cao</strong> (Advanced Settings), cấu hình tài khoản kiểm soát, kiểm soát sản phẩm, hoặc phương thức thanh toán tương ứng:
+        
+        <img src="images/vi/steps/journal_advanced_tab.png" alt="Cấu hình tab Cài đặt nâng cao">
+      </li>
+      <li><strong>Bước 6:</strong> Nhấn <strong>Save</strong> để lưu.</li>
     </ul>
     <hr>
     <p><a id="payment-terms"></a></p>
