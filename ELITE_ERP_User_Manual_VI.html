@@ -1453,8 +1453,32 @@ graph TD
       </li>
     </ul>
     <hr>
+    <p><a id="internal-transfers"></a></p>
+    <h4 id="4423-chuyển-kho-nội-bộ-internal-transfers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4423-chuyển-kho-nội-bộ-internal-transfers"><span class="octicon octicon-link"></span></a><strong>4.4.2.3 Chuyển kho nội bộ (Internal Transfers)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-35-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-35-1"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Điều chuyển hàng hóa giữa các kho vật lý hoặc các khu vực khác nhau trong cùng một kho (Ví dụ: Chuyển hàng từ Kho chính sang Kho cửa hàng bán lẻ, hoặc chuyển hàng vào khu vực hàng lỗi). Việc điều chuyển này giúp luân chuyển hàng hóa và tối ưu hóa lượng hàng sẵn sàng bán.</p>
+    <blockquote style="margin: 0; padding: 0 1em; color: var(--color-fg-muted); border-left: .25em solid var(--color-border-default);">
+      <p><strong>[IMPORTANT]</strong><br>
+      Nếu bạn không nhìn thấy trường <strong>Địa điểm nguồn</strong> (Source Location) và <strong>Địa điểm đích</strong> (Destination Location), nguyên nhân có thể do hệ thống chưa kích hoạt tính năng <strong>Nhiều địa điểm kho</strong> (Storage Locations). Hãy liên hệ Quản trị viên truy cập <strong>Tồn kho</strong> -> <strong>Cấu hình</strong> -> <strong>Thiết lập</strong> -> Tích chọn <strong>Địa điểm lưu kho</strong> (Storage Locations) và lưu lại.</p>
+    </blockquote>
+    <h5 id="các-bước-thực-hiện-35-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-35-1"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Tồn kho"</strong> -> chọn menu <strong>"Hoạt động"</strong> -> click <strong>"Chuyển hàng"</strong> (hoặc nhấn vào nút <strong>"Mới"</strong> trên thẻ <strong>Chuyển kho nội bộ</strong> tại bảng điều khiển Inventory Overview).
+        <br>
+        <img src="images/vi/inventory_transfers.png" alt="Danh sách Phiếu điều chuyển kho">
+      </li>
+      <li><strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> (New).</li>
+      <li>
+        <strong>Bước 3:</strong> Khai báo <strong>Địa điểm nguồn</strong> (Source Location), <strong>Địa điểm đích</strong> (Destination Location). Tại tab <strong>Hoạt động</strong>, bấm <strong>Thêm một dòng</strong>, chọn sản phẩm và nhập <strong>Số lượng nhu cầu</strong>:
+        <br>
+        <img src="images/vi/steps/inventory_transfer_form.png" alt="Biểu mẫu Phiếu điều chuyển kho">
+      </li>
+      <li><strong>Bước 4:</strong> Nhấn <strong>Lưu</strong>, sau đó nhấn <strong>Đánh dấu cần làm</strong> (Mark as Todo) và <strong>Kiểm tra khả dụng</strong> (Check Availability) để giữ hàng trong kho.</li>
+      <li><strong>Bước 5:</strong> Khi hoàn tất điều chuyển thực tế, nhập số lượng vào cột <strong>Đã hoàn thành</strong> (Done) và nhấn <strong>Xác thực</strong> (Validate) để hoàn tất.</li>
+    </ul>
+    <hr>
     <p><a id="physical-inventory"></a></p>
-    <h4 id="4423-kiểm-kho-định-kỳ-physical-inventory"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4423-kiểm-kho-định-kỳ-physical-inventory"><span class="octicon octicon-link"></span></a><strong>4.4.2.3 Kiểm kho định kỳ (Physical Inventory)</strong></h4>
+    <h4 id="4424-kiểm-kho-định-kỳ-physical-inventory"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4424-kiểm-kho-định-kỳ-physical-inventory"><span class="octicon octicon-link"></span></a><strong>4.4.2.4 Kiểm kho định kỳ (Physical Inventory)</strong></h4>
     <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-36"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-36"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Kiểm kê số lượng tồn kho thực tế tại kho và điều chỉnh số lượng tồn kho trên hệ thống nếu có chênh lệch, đảm bảo tính chính xác của số liệu kế toán kho.</p>
     <h5 id="các-bước-thực-hiện-36"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-36"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
@@ -1469,7 +1493,7 @@ graph TD
     </ul>
     <hr>
     <p><a id="scrap-orders"></a></p>
-    <h4 id="4424-phiếu-loại-bỏ--hủy-hàng-scrap-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4424-phiếu-loại-bỏ--hủy-hàng-scrap-orders"><span class="octicon octicon-link"></span></a><strong>4.4.2.4 Phiếu loại bỏ / Hủy hàng (Scrap Orders)</strong></h4>
+    <h4 id="4425-phiếu-loại-bỏ--hủy-hàng-scrap-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4425-phiếu-loại-bỏ--hủy-hàng-scrap-orders"><span class="octicon octicon-link"></span></a><strong>4.4.2.5 Phiếu loại bỏ / Hủy hàng (Scrap Orders)</strong></h4>
     <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-37"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-37"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Loại bỏ hàng hóa bị hư hỏng, lỗi, hết hạn sử dụng ra khỏi kho và ghi nhận chi phí hao hụt kho tương ứng.</p>
     <h5 id="các-bước-thực-hiện-37"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-37"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
@@ -1484,7 +1508,7 @@ graph TD
     </ul>
     <hr>
     <p><a id="inventory-overview"></a></p>
-    <h4 id="4425-tổng-quan-kho-inventory-overview"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4425-tổng-quan-kho-inventory-overview"><span class="octicon octicon-link"></span></a><strong>4.4.2.5 Tổng quan kho (Inventory Overview)</strong></h4>
+    <h4 id="4426-tổng-quan-kho-inventory-overview"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4426-tổng-quan-kho-inventory-overview"><span class="octicon octicon-link"></span></a><strong>4.4.2.6 Tổng quan kho (Inventory Overview)</strong></h4>
     <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-38"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-38"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Bảng điều khiển trung tâm hiển thị trạng thái hoạt động của tất cả các loại hoạt động kho (Nhập kho, Xuất kho, Chuyển kho nội bộ) giúp thủ kho nắm bắt nhanh số lượng phiếu đang chờ xử lý (To Process), phiếu trễ hạn (Late), hoặc phiếu sẵn sàng thực hiện (Ready).</p>
     <h5 id="các-bước-thực-hiện-38"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-38"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
