@@ -1582,10 +1582,10 @@ graph TD
         </ul>
       </li>
     </ul>
-    <h5 id="2-hủyhoàn-trả-phiếu-nhậpxuất-kho-đã-hoàn-thành"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-hủyhoàn-trả-phiếu-nhậpxuất-kho-đã-hoàn-thành"><span class="octicon octicon-link"></span></a><strong>2. Hủy/Hoàn trả phiếu Nhập/Xuất kho đã "Hoàn thành"?</strong></h5>
+    <h5 id="2-hủyhoàn-trả-phiếu-nhậpxuấtchuyển-kho-nội-bộ-đã-hoàn-thành"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-hủyhoàn-trả-phiếu-nhậpxuấtchuyển-kho-nội-bộ-đã-hoàn-thành"><span class="octicon octicon-link"></span></a><strong>2. Hủy/Hoàn trả phiếu Nhập/Xuất/Chuyển kho nội bộ đã "Hoàn thành"?</strong></h5>
     <ul>
-      <li>Phiếu kho đã hoàn thành (Done) <strong>không thể xóa hoặc hủy</strong>.</li>
-      <li><strong>Xử lý:</strong> Mở phiếu kho đó, bấm nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tạo một phiếu kho đảo ngược (Reverse Transfer) để trừ lại số lượng đã cộng/trừ sai.</li>
+      <li>Phiếu kho đã hoàn thành (Done) <strong>không thể xóa hoặc hủy</strong> trực tiếp.</li>
+      <li><strong>Xử lý:</strong> Mở phiếu kho đó, bấm nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tự động tạo một phiếu kho đảo ngược (Reverse Transfer) để đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).</li>
     </ul>
     <h5 id="3-xử-lý-hóa-đơn-kế-toán-đã-vào-sổ-posted-bị-sai"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-xử-lý-hóa-đơn-kế-toán-đã-vào-sổ-posted-bị-sai"><span class="octicon octicon-link"></span></a><strong>3. Xử lý hóa đơn kế toán đã "Vào sổ" (Posted) bị sai?</strong></h5>
     <ul>
@@ -1594,12 +1594,17 @@ graph TD
     </ul>
     <p><a id="general-faq"></a></p>
     <h2 id="52-câu-hỏi-thường-gặp-khác-general-faq"><a class="anchor" aria-hidden="true" tabindex="-1" href="#52-câu-hỏi-thường-gặp-khác-general-faq"><span class="octicon octicon-link"></span></a><strong>5.2 Câu hỏi thường gặp khác (General FAQ)</strong></h2>
-    <h5 id="1-không-thể-xác-thực-validate-phiếu-xuất-kho"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-không-thể-xác-thực-validate-phiếu-xuất-kho"><span class="octicon octicon-link"></span></a><strong>1. Không thể "Xác thực" (Validate) phiếu xuất kho?</strong></h5>
+    <h5 id="1-không-thể-xác-thực-validate-phiếu-xuất-kho-hoặc-phiếu-chuyển-kho-nội-bộ"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-không-thể-xác-thực-validate-phiếu-xuất-kho-hoặc-phiếu-chuyển-kho-nội-bộ"><span class="octicon octicon-link"></span></a><strong>1. Không thể "Xác thực" (Validate) phiếu xuất kho hoặc phiếu chuyển kho nội bộ?</strong></h5>
     <ul>
-      <li><strong>Nguyên nhân:</strong> Có thể do sản phẩm trong kho không đủ (Cột "Dành trước / Reserved" hiển thị màu đỏ).</li>
-      <li><strong>Xử lý:</strong> Kiểm tra lại số lượng tồn kho thực tế, hoặc kiểm tra xem có phiếu xuất nào khác đang "giữ chỗ" sản phẩm này không.</li>
+      <li><strong>Nguyên nhân:</strong> Có thể do sản phẩm trong kho nguồn không đủ (Cột "Dành trước / Reserved" hiển thị màu đỏ).</li>
+      <li><strong>Xử lý:</strong> Kiểm tra lại số lượng tồn kho thực tế tại địa điểm nguồn, hoặc kiểm tra xem có phiếu xuất/chuyển kho nào khác đang "giữ chỗ" (Reserved) sản phẩm này không.</li>
     </ul>
-    <h5 id="2-không-thấy-menu-chức-năng"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-không-thấy-menu-chức-năng"><span class="octicon octicon-link"></span></a><strong>2. Không thấy menu chức năng?</strong></h5>
+    <h5 id="2-tạo-phiếu-chuyển-kho-nội-bộ-nhưng-không-thấy-trường-địa-điểm-nguồn-và-địa-điểm-đích"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-tạo-phiếu-chuyển-kho-nội-bộ-nhưng-không-thấy-trường-địa-điểm-nguồn-và-địa-điểm-đích"><span class="octicon octicon-link"></span></a><strong>2. Tạo phiếu chuyển kho nội bộ nhưng không thấy trường "Địa điểm nguồn" và "Địa điểm đích"?</strong></h5>
+    <ul>
+      <li><strong>Nguyên nhân:</strong> Tính năng <strong>Nhiều địa điểm kho</strong> (Storage Locations) chưa được kích hoạt trong thiết lập hệ thống.</li>
+      <li><strong>Xử lý:</strong> Liên hệ Quản trị viên hệ thống (Admin) truy cập **Tồn kho** -> **Cấu hình** -> **Thiết lập** -> Tích chọn **Địa điểm lưu kho** (Storage Locations) và lưu lại.</li>
+    </ul>
+    <h5 id="3-không-thấy-menu-chức-năng"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-không-thấy-menu-chức-năng"><span class="octicon octicon-link"></span></a><strong>3. Không thấy menu chức năng?</strong></h5>
     <ul>
       <li><strong>Nguyên nhân:</strong> Tài khoản của bạn chưa được phân quyền truy cập.</li>
       <li><strong>Xử lý:</strong> Liên hệ Quản trị viên hệ thống (Admin) để được cấp quyền bổ sung.</li>
