@@ -448,7 +448,7 @@ table th:first-child, table td:first-child {
     <pre class="mermaid">
 graph TD
     A[Nhân viên Mua hàng: Tạo RFQ nháp] --> B[Nhân viên Mua hàng: Gửi báo giá &#x26; Chốt PO]
-    B --> C[Thủ kho: Nhận hàng Receipts &#x26; Xác thực vào kho]
+    B --> C[Thủ kho: Nhận hàng Receipts &#x26; Xác nhận vào kho]
     C --> D[Kế toán mua hàng: Tạo Hóa đơn nhà cung cấp Bill từ PO]
     D --> E[Kế toán thanh toán: Ghi nhận thanh toán hoàn tất công nợ]
     </pre>
@@ -456,7 +456,7 @@ graph TD
     <ol>
       <li><strong>Yêu cầu báo giá (RFQ):</strong> <em>Bộ phận Mua hàng</em> tạo <a href="#rfq">Yêu cầu báo giá (RFQ) nháp</a> trên hệ thống và gửi cho Nhà cung cấp.</li>
       <li><strong>Xác nhận Đơn mua (PO):</strong> Khi thống nhất giá, <em>Bộ phận Mua hàng</em> xác nhận RFQ thành <a href="#po">Đơn mua hàng (PO) chính thức</a>. Hệ thống tự động sinh một phiếu <a href="#receipts">Nhận hàng (Receipt) nháp</a> bên phân hệ Kho.</li>
-      <li><strong>Nhận hàng vào kho:</strong> Khi hàng về, <em>Thủ kho</em> kiểm tra thực tế, đối chiếu số lượng và tiến hành <a href="#receipts">Xác thực phiếu Nhận hàng (Validate)</a> để tăng tồn kho hệ thống.</li>
+      <li><strong>Nhận hàng vào kho:</strong> Khi hàng về, <em>Thủ kho</em> kiểm tra thực tế, đối chiếu số lượng và tiến hành <a href="#receipts">Xác nhận phiếu Nhận hàng (Validate)</a> để tăng tồn kho hệ thống.</li>
       <li><strong>Tạo Hóa đơn nhà cung cấp:</strong> <em>Kế toán mua hàng</em> tạo <a href="#bills">Hóa đơn nhà cung cấp (Vendor Bill)</a> từ PO và nhấn <strong>Confirm</strong> (hoặc <strong>Post</strong>) để ghi nhận công nợ phải trả.</li>
       <li><strong>Thanh toán:</strong> <em>Kế toán thanh toán</em> thực hiện chuyển tiền và nhấn <a href="#vendor-payments">Ghi nhận thanh toán (Register Payment)</a> trên hóa đơn để hoàn tất giao dịch.</li>
     </ol>
@@ -467,7 +467,7 @@ graph TD
     <pre class="mermaid">
 graph TD
     A[Kinh doanh: Tạo &#x26; Gửi báo giá Quotation] --> B[Kinh doanh: Xác nhận Đơn bán hàng SO]
-    B --> C[Thủ kho: Chuẩn bị hàng &#x26; Xác thực phiếu Giao hàng Deliveries]
+    B --> C[Thủ kho: Chuẩn bị hàng &#x26; Xác nhận phiếu Giao hàng Deliveries]
     C --> D[Kế toán bán hàng: Tạo &#x26; Xác nhận Hóa đơn khách hàng Invoice từ SO]
     D --> E[Kế toán thanh toán: Thu tiền &#x26; Ghi nhận thanh toán hoàn tất]
     </pre>
@@ -475,7 +475,7 @@ graph TD
     <ol>
       <li><strong>Tạo Báo giá:</strong> <em>Bộ phận Kinh doanh</em> tạo <a href="#quotations">Báo giá (Quotation) nháp</a> gửi cho Khách hàng.</li>
       <li><strong>Xác nhận Đơn bán (SO):</strong> Khi khách chốt mua, <em>Bộ phận Kinh doanh</em> xác nhận báo giá thành <a href="#sales-orders-main">Đơn bán hàng (SO) chính thức</a>. Hệ thống tự động sinh một phiếu <a href="#deliveries">Giao hàng (Delivery Order) nháp</a> bên phân hệ Kho.</li>
-      <li><strong>Giao hàng xuất kho:</strong> <em>Thủ kho</em> chuẩn bị hàng, kiểm tra thực tế và nhấn <a href="#deliveries">Xác thực phiếu Giao hàng (Validate)</a> để giảm tồn kho hệ thống và xuất hàng cho khách.</li>
+      <li><strong>Giao hàng xuất kho:</strong> <em>Thủ kho</em> chuẩn bị hàng, kiểm tra thực tế và nhấn <a href="#deliveries">Xác nhận phiếu Giao hàng (Validate)</a> để giảm tồn kho hệ thống và xuất hàng cho khách.</li>
       <li><strong>Tạo Hóa đơn khách hàng:</strong> <em>Kế toán bán hàng / Kinh doanh</em> tạo <a href="#invoices">Hóa đơn khách hàng (Customer Invoice)</a> từ SO và nhấn **Confirm** (hoặc **Post**) để ghi nhận doanh thu và công nợ phải thu.</li>
       <li><strong>Thu tiền:</strong> Khi khách thanh toán, <em>Kế toán thanh toán</em> nhấn <a href="#customer-payments">Ghi nhận thanh toán (Register Payment)</a> trên hóa đơn để hoàn tất giao dịch.</li>
     </ol>
@@ -1465,7 +1465,7 @@ graph TD
         <img src="images/vi/steps/inventory_tab_note.png" alt="Giao diện Tab Ghi chú Phiếu kho">
       </li>
       <li>
-        <strong>Bước 6:</strong> Nhấn nút <strong>"Xác thực"</strong> (Validate) để hoàn tất nhập kho:
+        <strong>Bước 6:</strong> Nhấn nút <strong>"Xác nhận"</strong> (Validate) để hoàn tất nhập kho:
         
         <img src="images/vi/inventory_receipt_validated.png" alt="Phiếu nhập kho hoàn thành">
       </li>
@@ -1491,7 +1491,7 @@ graph TD
         <img src="images/vi/steps/inventory_tab_note.png" alt="Giao diện Tab Ghi chú Phiếu kho">
       </li>
       <li>
-        <strong>Bước 6:</strong> Nhấn <strong>"Xác thực"</strong> (Validate) để chính thức xuất kho hàng hóa:
+        <strong>Bước 6:</strong> Nhấn <strong>"Xác nhận"</strong> (Validate) để chính thức xuất kho hàng hóa:
         
         <img src="images/vi/inventory_delivery_validated.png" alt="Phiếu xuất kho hoàn thành">
       </li>
@@ -1507,7 +1507,7 @@ graph TD
     </blockquote>
     <h5 id="các-bước-thực-hiện-35-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-35-1"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Tồn kho"</strong> -> chọn menu <strong>"Hoạt động"</strong> -> click <strong>"Chuyển hàng"</strong> (hoặc nhấn vào nút <strong>"Mới"</strong> trên thẻ <strong>Chuyển kho nội bộ</strong> tại bảng điều khiển Inventory Overview).
+      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Tồn kho"</strong> -> chọn menu <strong>"Hoạt động"</strong> -> click <strong>"Lệnh chuyển hàng"</strong> (hoặc nhấn vào nút <strong>"Mới"</strong> trên thẻ <strong>Chuyển kho nội bộ</strong> tại bảng điều khiển Inventory Overview).
         <br>
         <img src="images/vi/inventory_transfers.png" alt="Danh sách Phiếu điều chuyển kho">
       </li>
@@ -1518,8 +1518,15 @@ graph TD
         <img src="images/vi/steps/inventory_transfer_form.png" alt="Biểu mẫu Phiếu điều chuyển kho">
       </li>
       <li><strong>Bước 4:</strong> Nhấn <strong>Lưu</strong>, sau đó nhấn <strong>Đánh dấu cần làm</strong> (Mark as Todo) và <strong>Kiểm tra khả dụng</strong> (Check Availability) để giữ hàng trong kho.</li>
-      <li><strong>Bước 5:</strong> Khi hoàn tất điều chuyển thực tế, nhập số lượng vào cột <strong>Đã hoàn thành</strong> (Done) và nhấn <strong>Xác thực</strong> (Validate) để hoàn tất.</li>
+      <li><strong>Bước 5:</strong> Khi hoàn tất điều chuyển thực tế, nhập số lượng vào cột <strong>Số lượng</strong> (hoặc <strong>Hoàn thành</strong>) (Done) và nhấn <strong>Xác nhận</strong> (Validate) để hoàn tất.</li>
     </ul>
+    <blockquote style="margin: 15px 0; padding: 0 1em; color: var(--color-fg-muted); border-left: .25em solid var(--color-accent-emphasis);">
+      <p><strong>[LƯU Ý QUAN TRỌNG KHI CHUYỂN KHO]</strong><br>
+      • <strong>Tồn kho nguồn:</strong> Kho nguồn bắt buộc phải có sẵn sản phẩm thì mới có thể <strong>Xác nhận</strong> (Validate) phiếu chuyển kho. Nếu thiếu hàng, phiếu sẽ ở trạng thái <em>Chờ</em> và không cho phép hoàn tất.<br>
+      • <strong>Giữ hàng (Reservation):</strong> Khi bấm <strong>Kiểm tra khả dụng</strong> (Check Availability), hệ thống sẽ tự động khóa số lượng hàng tương ứng tại kho nguồn vào cột <strong>Dành trước</strong> (Reserved) để tránh việc lượng hàng này bị lấy đi bởi các đơn hàng khác.<br>
+      • <strong>Quản lý Lô/Serial:</strong> Đối với sản phẩm quản lý theo Lô hoặc Số Sê-ri, bạn bắt buộc phải chọn chính xác mã Lô/Serial cụ thể được điều chuyển tại tab hoạt động chi tiết, không thể chỉ nhập số lượng tổng hợp.<br>
+      • <strong>Đơn vị tính (UoM):</strong> Hãy đảm bảo sử dụng đúng đơn vị tính của sản phẩm để tránh trường hợp quy đổi sai lệch số lượng tồn thực tế.</p>
+    </blockquote>
     <hr>
     <p><a id="physical-inventory"></a></p>
     <h4 id="4424-kiểm-kho-định-kỳ-physical-inventory"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4424-kiểm-kho-định-kỳ-physical-inventory"><span class="octicon octicon-link"></span></a><strong>4.4.2.4 Kiểm kho định kỳ (Physical Inventory)</strong></h4>
@@ -1551,11 +1558,58 @@ graph TD
       <li><strong>Bước 3:</strong> Chọn sản phẩm cần hủy, nhập số lượng hủy tại cột <strong>"Quantity"</strong>, và chọn kho chứa hàng lỗi. Nhấn <strong>Save</strong> và <strong>Validate</strong> để hoàn tất hủy hàng.</li>
     </ul>
     <hr>
-    <p><a id="inventory-overview"></a></p>
-    <h4 id="4426-tổng-quan-kho-inventory-overview"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4426-tổng-quan-kho-inventory-overview"><span class="octicon octicon-link"></span></a><strong>4.4.2.6 Tổng quan kho (Inventory Overview)</strong></h4>
+    <p><a id="product-returns"></a></p>
+    <h4 id="4426-quy-trình-trả-hàng-product-returns"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4426-quy-trình-trả-hàng-product-returns"><span class="octicon octicon-link"></span></a><strong>4.4.2.6 Quy trình Trả hàng (Product Returns)</strong></h4>
     <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-38"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-38"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
-    <p>Bảng điều khiển trung tâm hiển thị trạng thái hoạt động của tất cả các loại hoạt động kho (Nhập kho, Xuất kho, Chuyển kho nội bộ) giúp thủ kho nắm bắt nhanh số lượng phiếu đang chờ xử lý (To Process), phiếu trễ hạn (Late), hoặc phiếu sẵn sàng thực hiện (Ready).</p>
-    <h5 id="các-bước-thực-hiện-38"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-38"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <p>Xử lý việc nhận lại hàng hóa bị trả từ khách hàng (Customer Return) hoặc xuất trả lại hàng hóa cho nhà cung cấp (Vendor Return) khi phát hiện hàng lỗi, hỏng hoặc không đạt yêu cầu. Quy trình này giúp cập nhật chính xác tồn kho thực tế và làm cơ sở cho kế toán xử lý cấn trừ công nợ hoặc hoàn tiền.</p>
+    
+    <h5 id="các-bước-thực-hiện-38-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-38-1"><span class="octicon octicon-link"></span></a><strong>1. Khách hàng trả lại hàng (Customer Returns)</strong></h5>
+    <ul>
+      <li><strong>Bước 1:</strong> Truy cập vào phân hệ <strong>Tồn kho</strong> -> chọn menu <strong>Hoạt động</strong> -> click <strong>Giao hàng</strong> (hoặc <strong>Lệnh chuyển hàng</strong>). Tìm và mở phiếu Xuất kho (giao hàng) có mã <strong>OUT</strong> tương ứng của đơn hàng ban đầu cần trả.</li>
+      <li><strong>Bước 2:</strong> Tại giao diện chi tiết phiếu xuất kho (trạng thái Hoàn tất), nhấn nút <strong>[Trả hàng] (Return)</strong> ở thanh trạng thái phía trên:
+        <br>
+        <img src="images/vi/steps/delivery_return_button.png" alt="Nút Trả hàng trên phiếu xuất">
+      </li>
+      <li><strong>Bước 3:</strong> Hệ thống hiển thị hộp thoại pop-up (Hỗ trợ trả hàng). Bạn hãy kiểm tra danh sách sản phẩm và nhập số lượng khách trả thực tế tại cột <strong>Số lượng</strong>:
+        <br>
+        <img src="images/vi/steps/delivery_return_wizard.png" alt="Cửa sổ thiết lập Trả hàng">
+      </li>
+      <li><strong>Bước 4:</strong> Nhấn nút <strong>[Trả hàng] (Return)</strong> màu xanh. Hệ thống sẽ tự động tạo một phiếu Nhập kho mới ở trạng thái <strong>Sẵn sàng (Ready)</strong> với mã nguồn gốc được ghi nhận là <em>"Đơn trả hàng của [Mã phiếu OUT ban đầu]"</em>:
+        <br>
+        <img src="images/vi/steps/delivery_return_picking_ready.png" alt="Phiếu nhận hàng trả ở trạng thái Sẵn sàng">
+      </li>
+      <li><strong>Bước 5:</strong> Thủ kho tiến hành kiểm đếm hàng nhận lại thực tế, điền số lượng vào cột <strong>Số lượng</strong> (hoặc <strong>Hoàn thành</strong>) (Done) và nhấn <strong>[Xác nhận]</strong> (Validate) để hoàn tất đưa hàng trở lại kho:
+        <br>
+        <img src="images/vi/steps/delivery_return_picking_validated.png" alt="Xác nhận hoàn tất phiếu nhận hàng trả">
+      </li>
+    </ul>
+
+    <h5 id="các-bước-thực-hiện-38-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-38-2"><span class="octicon octicon-link"></span></a><strong>2. Trả hàng cho Nhà cung cấp (Vendor Returns)</strong></h5>
+    <ul>
+      <li><strong>Bước 1:</strong> Truy cập vào phân hệ <strong>Tồn kho</strong> -> chọn menu <strong>Hoạt động</strong> -> click <strong>Phiếu nhập kho</strong> (hoặc <strong>Lệnh chuyển hàng</strong>). Tìm và mở phiếu Nhập kho (nhận hàng) có mã <strong>IN</strong> tương ứng của đơn mua hàng ban đầu cần trả.</li>
+      <li><strong>Bước 2:</strong> Nhấn nút <strong>[Trả hàng] (Return)</strong> ở thanh trạng thái phía trên:
+        <br>
+        <img src="images/vi/steps/receipt_return_button.png" alt="Nút Trả hàng trên phiếu nhập">
+      </li>
+      <li><strong>Bước 3:</strong> Tại hộp thoại pop-up, điền số lượng sản phẩm thực tế cần xuất trả cho Nhà cung cấp:
+        <br>
+        <img src="images/vi/steps/receipt_return_wizard.png" alt="Cửa sổ thiết lập trả hàng cho Nhà cung cấp">
+      </li>
+      <li><strong>Bước 4:</strong> Nhấn nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tự động tạo một phiếu Xuất kho mới (giao hàng trả) ở trạng thái <strong>Sẵn sàng (Ready)</strong> với nguồn gốc là <em>"Đơn trả hàng của [Mã phiếu IN ban đầu]"</em>:
+        <br>
+        <img src="images/vi/steps/receipt_return_picking_ready.png" alt="Phiếu xuất trả hàng ở trạng thái Sẵn sàng">
+      </li>
+      <li><strong>Bước 5:</strong> Nhấn <strong>[Xác nhận]</strong> (Validate) để hoàn tất xuất trả hàng đi:
+        <br>
+        <img src="images/vi/steps/receipt_return_picking_validated.png" alt="Xác nhận hoàn tất phiếu xuất trả hàng">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="inventory-overview"></a></p>
+    <h4 id="4427-tổng-quan-kho-inventory-overview"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4427-tổng-quan-kho-inventory-overview"><span class="octicon octicon-link"></span></a><strong>4.4.2.7 Tổng quan kho (Inventory Overview)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-39"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-39"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Bảng điều khiển trung tâm hiển thái trạng thái hoạt động của tất cả các loại hoạt động kho (Nhập kho, Xuất kho, Chuyển kho nội bộ) giúp thủ kho nắm bắt nhanh số lượng phiếu đang chờ xử lý (To Process), phiếu trễ hạn (Late), hoặc phiếu sẵn sàng thực hiện (Ready).</p>
+    <h5 id="các-bước-thực-hiện-39"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-39"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
       <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Tồn kho"</strong> -> chọn menu <strong>"Hoạt động"</strong> -> click <strong>"Tổng quan tồn kho"</strong> (hoặc click trực tiếp vào tab Inventory khi vào phân hệ).</li>
       <li>
@@ -1594,7 +1648,7 @@ graph TD
     </ul>
     <p><a id="general-faq"></a></p>
     <h2 id="52-câu-hỏi-thường-gặp-khác-general-faq"><a class="anchor" aria-hidden="true" tabindex="-1" href="#52-câu-hỏi-thường-gặp-khác-general-faq"><span class="octicon octicon-link"></span></a><strong>5.2 Câu hỏi thường gặp khác (General FAQ)</strong></h2>
-    <h5 id="1-không-thể-xác-thực-validate-phiếu-xuất-kho-hoặc-phiếu-chuyển-kho-nội-bộ"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-không-thể-xác-thực-validate-phiếu-xuất-kho-hoặc-phiếu-chuyển-kho-nội-bộ"><span class="octicon octicon-link"></span></a><strong>1. Không thể "Xác thực" (Validate) phiếu xuất kho hoặc phiếu chuyển kho nội bộ?</strong></h5>
+    <h5 id="1-không-thể-xác-nhận-validate-phiếu-xuất-kho-hoặc-phiếu-chuyển-kho-nội-bộ"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-không-thể-xác-nhận-validate-phiếu-xuất-kho-hoặc-phiếu-chuyển-kho-nội-bộ"><span class="octicon octicon-link"></span></a><strong>1. Không thể "Xác nhận" (Validate) phiếu xuất kho hoặc phiếu chuyển kho nội bộ?</strong></h5>
     <ul>
       <li><strong>Nguyên nhân:</strong> Có thể do sản phẩm trong kho nguồn không đủ (Cột "Dành trước / Reserved" hiển thị màu đỏ).</li>
       <li><strong>Xử lý:</strong> Kiểm tra lại số lượng tồn kho thực tế tại địa điểm nguồn, hoặc kiểm tra xem có phiếu xuất/chuyển kho nào khác đang "giữ chỗ" (Reserved) sản phẩm này không.</li>
@@ -1645,7 +1699,7 @@ graph TD
         </tr>
         <tr>
           <td align="left"><strong>Validate</strong></td>
-          <td align="left"><strong>Xác thực / Chốt:</strong> Hành động bấm xác nhận để hệ thống thực thi một giao dịch (VD: Xác thực phiếu kho). Sau khi xác thực, chứng từ thường không thể xóa.</td>
+          <td align="left"><strong>Xác nhận / Xác thực / Chốt:</strong> Hành động bấm xác nhận để hệ thống thực thi một giao dịch (VD: Xác nhận phiếu kho). Sau khi xác nhận, chứng từ thường không thể xóa.</td>
         </tr>
         <tr>
           <td align="left"><strong>Posted</strong></td>
