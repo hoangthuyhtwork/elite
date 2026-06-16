@@ -1,0 +1,1909 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Elite ERP User Manual</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+[data-color-mode*='light'], [data-color-mode*='light'] body, .markdown-style[theme*='light'] { --color-prettylights-syntax-comment: #6e7781; --color-prettylights-syntax-constant: #0550ae; --color-prettylights-syntax-entity: #8250df; --color-prettylights-syntax-storage-modifier-import: #24292f; --color-prettylights-syntax-entity-tag: #116329; --color-prettylights-syntax-keyword: #cf222e; --color-prettylights-syntax-string: #0a3069; --color-prettylights-syntax-variable: #953800; --color-prettylights-syntax-brackethighlighter-unmatched: #82071e; --color-prettylights-syntax-invalid-illegal-text: #f6f8fa; --color-prettylights-syntax-invalid-illegal-bg: #82071e; --color-prettylights-syntax-carriage-return-text: #f6f8fa; --color-prettylights-syntax-carriage-return-bg: #cf222e; --color-prettylights-syntax-string-regexp: #116329; --color-prettylights-syntax-markup-list: #3b2300; --color-prettylights-syntax-markup-heading: #0550ae; --color-prettylights-syntax-markup-italic: #24292f; --color-prettylights-syntax-markup-bold: #24292f; --color-prettylights-syntax-markup-deleted-text: #82071e; --color-prettylights-syntax-markup-deleted-bg: #FFEBE9; --color-prettylights-syntax-markup-inserted-text: #116329; --color-prettylights-syntax-markup-inserted-bg: #dafbe1; --color-prettylights-syntax-markup-changed-text: #953800; --color-prettylights-syntax-markup-changed-bg: #ffd8b5; --color-prettylights-syntax-markup-ignored-text: #eaeef2; --color-prettylights-syntax-markup-ignored-bg: #0550ae; --color-prettylights-syntax-meta-diff-range: #8250df; --color-prettylights-syntax-brackethighlighter-angle: #57606a; --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f; --color-prettylights-syntax-constant-other-reference-link: #0a3069; --color-fg-default: #24292f; --color-fg-muted: #57606a; --color-fg-subtle: #6e7781; --color-canvas-default: #ffffff; --color-canvas-subtle: #f6f8fa; --color-border-default: #d0d7de; --color-border-muted: hsla(210,18%,87%,1); --color-neutral-muted: rgba(175,184,193,0.2); --color-accent-fg: #0969da; --color-accent-emphasis: #0969da; --color-attention-subtle: #fff8c5; --color-danger-fg: #cf222e; }
+[data-color-mode*='dark'], [data-color-mode*='dark'] body, .markdown-style[theme*='dark'] { --color-prettylights-syntax-comment: #8b949e; --color-prettylights-syntax-constant: #79c0ff; --color-prettylights-syntax-entity: #d2a8ff; --color-prettylights-syntax-storage-modifier-import: #c9d1d9; --color-prettylights-syntax-entity-tag: #7ee787; --color-prettylights-syntax-keyword: #ff7b72; --color-prettylights-syntax-string: #a5d6ff; --color-prettylights-syntax-variable: #ffa657; --color-prettylights-syntax-brackethighlighter-unmatched: #f85149; --color-prettylights-syntax-invalid-illegal-text: #f0f6fc; --color-prettylights-syntax-invalid-illegal-bg: #8e1519; --color-prettylights-syntax-carriage-return-text: #f0f6fc; --color-prettylights-syntax-carriage-return-bg: #b62324; --color-prettylights-syntax-string-regexp: #7ee787; --color-prettylights-syntax-markup-list: #f2cc60; --color-prettylights-syntax-markup-heading: #1f6feb; --color-prettylights-syntax-markup-italic: #c9d1d9; --color-prettylights-syntax-markup-bold: #c9d1d9; --color-prettylights-syntax-markup-deleted-text: #ffdcd7; --color-prettylights-syntax-markup-deleted-bg: #67060c; --color-prettylights-syntax-markup-inserted-text: #aff5b4; --color-prettylights-syntax-markup-inserted-bg: #033a16; --color-prettylights-syntax-markup-changed-text: #ffdfb6; --color-prettylights-syntax-markup-changed-bg: #5a1e02; --color-prettylights-syntax-markup-ignored-text: #c9d1d9; --color-prettylights-syntax-markup-ignored-bg: #1158c7; --color-prettylights-syntax-meta-diff-range: #d2a8ff; --color-prettylights-syntax-brackethighlighter-angle: #8b949e; --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58; --color-prettylights-syntax-constant-other-reference-link: #a5d6ff; --color-fg-default: #c9d1d9; --color-fg-muted: #8b949e; --color-fg-subtle: #484f58; --color-canvas-default: #0d1117; --color-canvas-subtle: #161b22; --color-border-default: #30363d; --color-border-muted: #21262d; --color-neutral-muted: rgba(110,118,129,0.4); --color-accent-fg: #58a6ff; --color-accent-emphasis: #1f6feb; --color-attention-subtle: rgba(187,128,9,0.15); --color-danger-fg: #f85149; }
+.markdown-style { display: block; -webkit-text-size-adjust: 100%; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; font-size: 16px; line-height: 1.5; word-wrap: break-word; color: var(--color-fg-default); background-color: var(--color-canvas-default); } .markdown-style details, .markdown-style figcaption, .markdown-style figure { display: block; } .markdown-style summary { display: list-item; } .markdown-style [hidden] { display: none !important; } .markdown-style a { background-color: transparent; color: var(--color-accent-fg); text-decoration: none; } .markdown-style a:active, .markdown-style a:hover { outline-width: 0; } .markdown-style abbr[title] { border-bottom: none; text-decoration: underline dotted; } .markdown-style b, .markdown-style strong { font-weight: 600; } .markdown-style dfn { font-style: italic; } .markdown-style h1 { margin: .67em 0; font-weight: 600; padding-bottom: .3em; font-size: 2em; border-bottom: 1px solid var(--color-border-muted); } .markdown-style mark { background-color: var(--color-attention-subtle); color: var(--color-text-primary); } .markdown-style small { font-size: 90%; } .markdown-style sub, .markdown-style sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } .markdown-style sub { bottom: -0.25em; } .markdown-style sup { top: -0.5em; } .markdown-style img { border-style: none; max-width: 100%; box-sizing: content-box; background-color: var(--color-canvas-default); } .markdown-style code, .markdown-style kbd, .markdown-style pre, .markdown-style samp { font-family: monospace,monospace; font-size: 1em; } .markdown-style figure { margin: 1em 40px; } .markdown-style hr { box-sizing: content-box; overflow: hidden; background: transparent; border-bottom: 1px solid var(--color-border-muted); height: .25em; padding: 0; margin: 24px 0; background-color: var(--color-border-default); border: 0; } .markdown-style input { font: inherit; margin: 0; overflow: visible; font-family: inherit; font-size: inherit; line-height: inherit; } .markdown-style [type=button], .markdown-style [type=reset], .markdown-style [type=submit] { -webkit-appearance: button; } .markdown-style [type=button]::-moz-focus-inner, .markdown-style [type=reset]::-moz-focus-inner, .markdown-style [type=submit]::-moz-focus-inner { border-style: none; padding: 0; } .markdown-style [type=button]:-moz-focusring, .markdown-style [type=reset]:-moz-focusring, .markdown-style [type=submit]:-moz-focusring { outline: 1px dotted ButtonText; } .markdown-style [type=checkbox], .markdown-style [type=radio] { box-sizing: border-box; padding: 0; } .markdown-style [type=number]::-webkit-inner-spin-button, .markdown-style [type=number]::-webkit-outer-spin-button { height: auto; } .markdown-style [type=search] { -webkit-appearance: textfield; outline-offset: -2px; } .markdown-style [type=search]::-webkit-search-cancel-button, .markdown-style [type=search]::-webkit-search-decoration { -webkit-appearance: none; } .markdown-style ::-webkit-input-placeholder { color: inherit; opacity: .54; } .markdown-style ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } .markdown-style a:hover { text-decoration: underline; } .markdown-style hr::before { display: table; content: ""; } .markdown-style hr::after { display: table; clear: both; content: ""; } .markdown-style table { border-spacing: 0; border-collapse: collapse; display: block; width: max-content; max-width: 100%; overflow: auto; } .markdown-style td, .markdown-style th { padding: 0; } .markdown-style details summary { cursor: pointer; } .markdown-style details:not([open])>*:not(summary) { display: none !important; } .markdown-style kbd { display: inline-block; padding: 3px 5px; font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace,Helvetica,Arial,sans-serif; line-height: 10px; color: var(--color-fg-default); vertical-align: middle; background-color: var(--color-canvas-subtle); border: solid 1px var(--color-neutral-muted); border-bottom-color: var(--color-neutral-muted); border-radius: 6px; box-shadow: inset 0 -1px 0 var(--color-neutral-muted); } .markdown-style h1, .markdown-style h2, .markdown-style h3, .markdown-style h4, .markdown-style h5, .markdown-style h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; } .markdown-style h2 { font-weight: 600; padding-bottom: .3em; font-size: 1.5em; border-bottom: 1px solid var(--color-border-muted); } .markdown-style h3 { font-weight: 600; font-size: 1.25em; } .markdown-style h4 { font-weight: 600; font-size: 1em; } .markdown-style h5 { font-weight: 600; font-size: .875em; } .markdown-style h6 { font-weight: 600; font-size: .85em; color: var(--color-fg-muted); } .markdown-style p { margin-top: 0; margin-bottom: 10px; } .markdown-style blockquote { margin: 0; padding: 0 1em; color: var(--color-fg-muted); border-left: .25em solid var(--color-border-default); } .markdown-style ul, .markdown-style ol { margin-top: 0; margin-bottom: 0; padding-left: 2em; } .markdown-style ol ol, .markdown-style ul ol { list-style-type: lower-roman; } .markdown-style ul ul ol, .markdown-style ul ol ol, .markdown-style ol ul ol, .markdown-style ol ol ol { list-style-type: lower-alpha; } .markdown-style dd { margin-left: 0; } .markdown-style tt, .markdown-style code { font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace,Helvetica,Arial,sans-serif; font-size: 12px; } .markdown-style pre { margin-top: 0; margin-bottom: 0; font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace,Helvetica,Arial,sans-serif; font-size: 12px; word-wrap: normal; } .markdown-style .octicon { display: inline-block; overflow: visible !important; vertical-align: text-bottom; fill: currentColor; } .markdown-style ::placeholder { color: var(--color-fg-subtle); opacity: 1; } .markdown-style input::-webkit-outer-spin-button, .markdown-style input::-webkit-inner-spin-button { margin: 0; -webkit-appearance: none; appearance: none; }
+.markdown-style .token.comment, .markdown-style .token.prolog, .markdown-style .token.doctype, .markdown-style .token.cdata { color: var(--color-prettylights-syntax-comment); } .markdown-style .token.namespace { opacity: 0.7; } .markdown-style .token.tag, .markdown-style .token.selector, .markdown-style .token.constant, .markdown-style .token.symbol, .markdown-style .token.deleted { color: var(--color-prettylights-syntax-entity-tag); } .markdown-style .token.maybe-class-name { color: var(--color-prettylights-syntax-variable); } .markdown-style .token.property-access, .markdown-style .token.operator, .markdown-style .token.boolean, .markdown-style .token.number, .markdown-style .token.selector .markdown-style .token.class, .markdown-style .token.attr-name, .markdown-style .token.string, .markdown-style .token.char, .markdown-style .token.builtin { color: var(--color-prettylights-syntax-constant); } .markdown-style .token.deleted { color: var(--color-prettylights-syntax-markup-deleted-text); } .markdown-style .token.property { color: var(--color-prettylights-syntax-constant); } .markdown-style .token.punctuation { color: var(--color-prettylights-syntax-markup-bold); } .markdown-style .token.function { color: var(--color-prettylights-syntax-entity); } .markdown-style .code-line .token.deleted { background-color: var(--color-prettylights-syntax-markup-deleted-bg); } .markdown-style .token.inserted { color: var(--color-prettylights-syntax-markup-inserted-text); } .markdown-style .code-line .token.inserted { background-color: var(--color-prettylights-syntax-markup-inserted-bg); } .markdown-style .token.variable { color: var(--color-prettylights-syntax-constant); } .markdown-style .token.entity, .markdown-style .token.url, .language-css .markdown-style .token.string, .style .markdown-style .token.string { color: var(--color-prettylights-syntax-string); } .markdown-style .token.color, .markdown-style .token.atrule, .markdown-style .token.attr-value, .markdown-style .token.function, .markdown-style .token.class-name { color: var(--color-prettylights-syntax-string); } .markdown-style .token.rule, .markdown-style .token.regex, .markdown-style .token.important, .markdown-style .token.keyword { color: var(--color-prettylights-syntax-keyword); } .markdown-style .token.coord { color: var(--color-prettylights-syntax-meta-diff-range); } .markdown-style .token.important, .markdown-style .token.bold { font-weight: bold; } .markdown-style .token.italic { font-style: italic; } .markdown-style .token.entity { cursor: help; }
+.markdown-style [data-catalyst] { display: block; } .markdown-style g-emoji { font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-size: 1em; font-style: normal !important; font-weight: 400; line-height: 1; vertical-align: -0.075em; } .markdown-style g-emoji img { width: 1em; height: 1em; } .markdown-style::before { display: table; content: ""; } .markdown-style::after { display: table; clear: both; content: ""; } .markdown-style>*:first-child { margin-top: 0 !important; } .markdown-style>*:last-child { margin-bottom: 0 !important; } .markdown-style a:not([href]) { color: inherit; text-decoration: none; } .markdown-style .absent { color: var(--color-danger-fg); } .markdown-style a.anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1; } .markdown-style a.anchor:focus { outline: none; } .markdown-style p, .markdown-style blockquote, .markdown-style ul, .markdown-style ol, .markdown-style dl, .markdown-style table, .markdown-style pre, .markdown-style details { margin-top: 0; margin-bottom: 16px; } .markdown-style blockquote>:first-child { margin-top: 0; } .markdown-style blockquote>:last-child { margin-bottom: 0; } .markdown-style sup>a::before { content: "["; } .markdown-style sup>a::after { content: "]"; }
+.markdown-style .octicon-video { border: 1px solid #d0d7de !important; border-radius: 6px !important; display: block; } .markdown-style .octicon-video summary { border-bottom: 1px solid #d0d7de !important; padding: 8px 16px !important; cursor: pointer; } .markdown-style .octicon-video > video { display: block !important; max-width: 100% !important; padding: 2px; box-sizing: border-box; border-bottom-right-radius: 6px !important; border-bottom-left-radius: 6px !important; } .markdown-style details.octicon-video:not([open])>*:not(summary) { display: none !important; } .markdown-style details.octicon-video:not([open]) > summary { border-bottom: 0 !important; } .markdown-style h1 .octicon-link, .markdown-style h2 .octicon-link, .markdown-style h3 .octicon-link, .markdown-style h4 .octicon-link, .markdown-style h5 .octicon-link, .markdown-style h6 .octicon-link { color: var(--color-fg-default); vertical-align: middle; visibility: hidden; } .markdown-style h1:hover .anchor, .markdown-style h2:hover .anchor, .markdown-style h3:hover .anchor, .markdown-style h4:hover .anchor, .markdown-style h5:hover .anchor, .markdown-style h6:hover .anchor { text-decoration: none; } .markdown-style h1:hover .anchor .octicon-link, .markdown-style h2:hover .anchor .octicon-link, .markdown-style h3:hover .anchor .octicon-link, .markdown-style h4:hover .anchor .octicon-link, .markdown-style h5:hover .anchor .octicon-link, .markdown-style h6:hover .anchor .octicon-link { visibility: visible; } .markdown-style h1 tt, .markdown-style h1 code, .markdown-style h2 tt, .markdown-style h2 code, .markdown-style h3 tt, .markdown-style h3 code, .markdown-style h4 tt, .markdown-style h4 code, .markdown-style h5 tt, .markdown-style h5 code, .markdown-style h6 tt, .markdown-style h6 code { padding: 0 .2em; font-size: inherit; } .markdown-style ul.no-list, .markdown-style ol.no-list { padding: 0; list-style-type: none; } .markdown-style ol[type="1"] { list-style-type: decimal; } .markdown-style ol[type=a] { list-style-type: lower-alpha; } .markdown-style ol[type=i] { list-style-type: lower-roman; } .markdown-style div>ol:not([type]) { list-style-type: decimal; } .markdown-style ul ul, .markdown-style ul ol, .markdown-style ol ol, .markdown-style ol ul { margin-top: 0; margin-bottom: 0; } .markdown-style li>p { margin-top: 16px; } .markdown-style li+li { margin-top: .25em; } .markdown-style dl { padding: 0; } .markdown-style dl dt { padding: 0; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: 600; } .markdown-style dl dd { padding: 0 16px; margin-bottom: 16px; } .markdown-style table th { font-weight: 600; } .markdown-style table th, .markdown-style table td { padding: 6px 13px; border: 1px solid var(--color-border-default); } .markdown-style table tr { background-color: var(--color-canvas-default); border-top: 1px solid var(--color-border-muted); } .markdown-style table tr:nth-child(2n) { background-color: var(--color-canvas-subtle); } .markdown-style table img { background-color: transparent; vertical-align: middle; } .markdown-style img[align=right] { padding-left: 20px; } .markdown-style img[align=left] { padding-right: 20px; } .markdown-style .emoji { max-width: none; vertical-align: text-top; background-color: transparent; } .markdown-style span.frame { display: block; overflow: hidden; } .markdown-style span.frame>span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0 0; overflow: hidden; border: 1px solid var(--color-border-default); } .markdown-style span.frame span img { display: block; float: left; } .markdown-style span.frame span span { display: block; padding: 5px 0 0; clear: both; color: var(--color-fg-default); } .markdown-style span.align-center { display: block; overflow: hidden; clear: both; } .markdown-style span.align-center>span { display: block; margin: 13px auto 0; overflow: hidden; text-align: center; } .markdown-style span.align-center span img { margin: 0 auto; text-align: center; } .markdown-style span.align-right { display: block; overflow: hidden; clear: both; } .markdown-style span.align-right>span { display: block; margin: 13px 0 0; overflow: hidden; text-align: right; } .markdown-style span.align-right span img { margin: 0; text-align: right; } .markdown-style span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; } .markdown-style span.float-left span { margin: 13px 0 0; } .markdown-style span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; } .markdown-style span.float-right>span { display: block; margin: 13px auto 0; overflow: hidden; text-align: right; } .markdown-style code, .markdown-style tt { padding: .2em .4em; margin: 0; font-size: 85%; background-color: var(--color-neutral-muted); border-radius: 6px; } .markdown-style code br, .markdown-style tt br { display: none; } .markdown-style del code { text-decoration: inherit; } .markdown-style pre code { font-size: 100%; } .markdown-style pre>code { padding: 0; margin: 0; word-break: normal; white-space: pre; background: transparent; border: 0; } .markdown-style pre { position: relative; font-size: 85%; line-height: 1.45; background-color: var(--color-canvas-subtle); border-radius: 6px; } .markdown-style pre code, .markdown-style pre tt { display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0; } .markdown-style pre > code { padding: 16px; overflow: auto; display: block; } .markdown-style .csv-data td, .markdown-style .csv-data th { padding: 5px; overflow: hidden; font-size: 12px; line-height: 1; text-align: left; white-space: nowrap; } .markdown-style .csv-data .blob-num { padding: 10px 8px 9px; text-align: right; background: var(--color-canvas-default); border: 0; } .markdown-style .csv-data tr { border-top: 0; } .markdown-style .csv-data th { font-weight: 600; background: var(--color-canvas-subtle); border-top: 0; } .markdown-style .footnotes { font-size: 12px; color: var(--color-fg-muted); border-top: 1px solid var(--color-border-default); } .markdown-style .footnotes ol { padding-left: 16px; } .markdown-style .footnotes li { position: relative; } .markdown-style .footnotes li:target::before { position: absolute; top: -8px; right: -8px; bottom: -8px; left: -24px; pointer-events: none; content: ""; border: 2px solid var(--color-accent-emphasis); border-radius: 6px; } .markdown-style .footnotes li:target { color: var(--color-fg-default); } .markdown-style .footnotes .data-footnote-backref g-emoji { font-family: monospace; } .markdown-style .task-list-item { list-style-type: none; } .markdown-style .task-list-item label { font-weight: 400; } .markdown-style .task-list-item.enabled label { cursor: pointer; } .markdown-style .task-list-item+.task-list-item { margin-top: 3px; } .markdown-style .task-list-item .handle { display: none; } .markdown-style .task-list-item-checkbox, .markdown-style input[type="checkbox"] { margin: 0 .2em .25em -1.6em; vertical-align: middle; } .markdown-style .contains-task-list:dir(rtl) .task-list-item-checkbox, .markdown-style .contains-task-list:dir(rtl) input[type="checkbox"] { margin: 0 -1.6em .25em .2em; } .markdown-style ::-webkit-calendar-picker-indicator { filter: invert(50%); }
+
+/** copy button style **/
+.markdown-style pre .copied {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  color: #a5afbb;
+  top: 6px;
+  right: 6px;
+  border-radius: 5px;
+  background: #82828226;
+  padding: 6px;
+  font-size: 12px;
+  transition: all .3s;
+}
+.markdown-style pre .copied:not(.active) { visibility: hidden; }
+.markdown-style pre:hover .copied { visibility: visible; }
+.markdown-style pre:hover .copied:hover { background: #4caf50; color: #fff; }
+.markdown-style pre:hover .copied:active,
+.markdown-style pre .copied.active { background: #2e9b33; color: #fff; }
+.markdown-style pre .copied svg { position: relative; }
+.markdown-style pre .copied .octicon-copy { display: block; }
+.markdown-style pre .copied .octicon-check { display: none; }
+.markdown-style pre .active .octicon-copy { display: none; }
+.markdown-style pre .active .octicon-check { display: block; }
+
+/** octicon style **/
+.markdown-style h1:hover a.anchor .octicon-link:before,
+.markdown-style h2:hover a.anchor .octicon-link:before,
+.markdown-style h3:hover a.anchor .octicon-link:before,
+.markdown-style h4:hover a.anchor .octicon-link:before,
+.markdown-style h5:hover a.anchor .octicon-link:before,
+.markdown-style h6:hover a.anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-style ::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 8px;
+}
+
+.markdown-style ::-webkit-scrollbar-thumb {
+  background: var(--color-fg-muted);
+  border-radius: 10px;
+}
+.mermaid {
+  display: flex;
+  justify-content: center;
+  background: #ffffff !important;
+}
+.mermaid svg {
+  background: #ffffff !important;
+}
+
+/* Styling for the floating sidebar TOC */
+.sidebar-toc {
+  position: fixed;
+  top: 60px;
+  left: 15px;
+  width: 250px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 15px;
+  background-color: var(--color-canvas-subtle);
+  border: 1px solid var(--color-border-default);
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+.sidebar-toc h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border-bottom: 1px solid var(--color-border-muted);
+  padding-bottom: 8px;
+}
+.sidebar-toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.sidebar-toc li {
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.sidebar-toc li ul {
+  padding-left: 12px;
+  margin-top: 6px;
+}
+.sidebar-toc li ul ul {
+  padding-left: 12px;
+  margin-top: 4px;
+  font-size: 13px;
+}
+.sidebar-toc li ul ul a {
+  color: var(--color-fg-muted);
+}
+.sidebar-toc a {
+  color: var(--color-fg-default);
+  text-decoration: none;
+}
+.sidebar-toc a:hover {
+  color: var(--color-accent-fg);
+  text-decoration: underline;
+}
+
+/* Adjust main content when sidebar is shown */
+@media (min-width: 1300px) {
+  .markdown-style {
+    margin-left: 300px !important;
+    max-width: calc(100% - 340px) !important;
+  }
+}
+
+@media (max-width: 1299px) {
+  .sidebar-toc {
+    display: none;
+  }
+}
+
+@media print {
+  .sidebar-toc {
+    display: none;
+  }
+  .markdown-style {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Inline TOC adjustments */
+.inline-toc {
+  display: block;
+}
+
+@media (min-width: 1300px) {
+  .inline-toc {
+    display: none;
+  }
+}
+
+@media print {
+  .inline-toc {
+    display: block !important;
+  }
+}
+
+/* Scroll to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-canvas-subtle);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-fg-default);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;
+  transform: translateY(10px);
+  backdrop-filter: blur(8px);
+  outline: none;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: var(--color-accent-emphasis);
+  color: #ffffff;
+  border-color: var(--color-accent-emphasis);
+  transform: translateY(-2px);
+}
+
+@media print {
+  #back-to-top {
+    display: none !important;
+  }
+}
+</style>
+  </head>
+  <body><dark-mode style="position: fixed; top: 8px; left: 10px; z-index: 999;" dark="Dark" light="Light" permanent="true"></dark-mode><script>const t=document;const e="_dark_mode_theme_";const s="permanent";const o="colorschemechange";const i="permanentcolorscheme";const h="light";const r="dark";const n=(t,e,s=e)=>{Object.defineProperty(t,s,{enumerable:true,get(){const t=this.getAttribute(e);return t===null?"":t},set(t){this.setAttribute(e,t)}})};const c=(t,e,s=e)=>{Object.defineProperty(t,s,{enumerable:true,get(){return this.hasAttribute(e)},set(t){if(t){this.setAttribute(e,"")}else{this.removeAttribute(e)}}})};class a extends HTMLElement{static get observedAttributes(){return["mode",h,r,s]}LOCAL_NANE=e;constructor(){super();this.t()}connectedCallback(){n(this,"mode");n(this,r);n(this,h);c(this,s);const a=localStorage.getItem(e);if(a&&[h,r].includes(a)){this.mode=a;this.permanent=true}if(this.permanent&&!a){localStorage.setItem(e,this.mode)}const l=[h,r].includes(a);if(this.permanent&&a){this.o()}else{if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){this.mode=r;this.o()}if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches){this.mode=h;this.o()}}if(!this.permanent&&!l){window.matchMedia("(prefers-color-scheme: light)").onchange=t=>{this.mode=t.matches?h:r;this.o()};window.matchMedia("(prefers-color-scheme: dark)").onchange=t=>{this.mode=t.matches?r:h;this.o()}}const d=new MutationObserver(((s,h)=>{this.mode=t.documentElement.dataset.colorMode;if(this.permanent&&l){localStorage.setItem(e,this.mode);this.i(i,{permanent:this.permanent})}this.h();this.i(o,{colorScheme:this.mode})}));d.observe(t.documentElement,{attributes:true});this.i(o,{colorScheme:this.mode});this.h()}attributeChangedCallback(t,s,o){if(t==="mode"&&s!==o&&[h,r].includes(o)){const t=localStorage.getItem(e);if(this.mode===t){this.mode=o;this.h();this.o()}else if(this.mode&&this.mode!==t){this.h();this.o()}}else if((t===h||t===r)&&s!==o){this.h()}if(t==="permanent"&&typeof this.permanent==="boolean"){this.permanent?localStorage.setItem(e,this.mode):localStorage.removeItem(e)}}o(){t.documentElement.setAttribute("data-color-mode",this.mode)}h(){this.icon.textContent=this.mode===h?"🌒":"🌞";this.text.textContent=this.mode===h?this.getAttribute(r):this.getAttribute(h);if(!this.text.textContent&&this.text.parentElement&&this.text){this.text.parentElement.removeChild(this.text)}}t(){var s=this.attachShadow({mode:"open"});this.label=t.createElement("span");this.label.setAttribute("class","wrapper");this.label.onclick=()=>{this.mode=this.mode===h?r:h;if(this.permanent){localStorage.setItem(e,this.mode)}this.o();this.h()};s.appendChild(this.label);this.icon=t.createElement("span");this.icon.part="icon";this.label.appendChild(this.icon);this.text=t.createElement("span");this.text.part="text";this.label.appendChild(this.text);const o=`
+[data-color-mode*='dark'], [data-color-mode*='dark'] body {
+  color-scheme: dark;
+  --color-theme-bg: #0d1117;
+  --color-theme-text: #c9d1d9;
+  background-color: var(--color-theme-bg);
+  color: var(--color-theme-text);
+}
+
+[data-color-mode*='light'], [data-color-mode*='light'] body {
+  color-scheme: light;
+  --color-theme-bg: #fff;
+  --color-theme-text: #24292f;
+  background-color: var(--color-theme-bg);
+  color: var(--color-theme-text);
+}`;const i="_dark_mode_style_";const n=t.getElementById(i);if(!n){var c=t.createElement("style");c.id=i;c.textContent=o;t.head.appendChild(c)}var a=t.createElement("style");a.textContent=`
+    .wrapper { cursor: pointer; user-select: none; position: relative; }
+    .wrapper > span + span { margin-left: .4rem; }
+    `;s.appendChild(a)}i(t,e){this.dispatchEvent(new CustomEvent(t,{bubbles:true,composed:true,detail:e}))}}customElements.define("dark-mode",a);</script>
+<div class="sidebar-toc">
+  <h3>MỤC LỤC</h3>
+  <ul>
+  <li><a href="#overview">1. Overview</a></li>
+  <li><a href="#prerequisites">2. Prerequisites</a></li>
+  <li><a href="#getting-started">3. Getting Started</a>  <ul>
+    <li><a href="#login-dashboard">3.1 Login & Main Dashboard</a>  </li>
+    <li><a href="#basic-operations">3.2 Basic Operations</a>  </li>
+    <li><a href="#status-definitions">3.3 Status Definitions</a>  </li>
+    <li><a href="#e2e-workflows">3.4 Core Business Workflows</a>  </ul>
+</li>
+</li>
+  <li><a href="#step-by-step-guide">4. Step-by-Step Guide</a>  <ul>
+    <li><a href="#sales">4.1 🌟 PHÂN HỆ BÁN HÀNG</a>    <ul>
+      <li><a href="#sales-config">4.1.1 Cấu hình</a>      <ul>
+        <li><a href="#sales-teams">4.1.1.1 Đội ngũ bán hàng</a>      </li>
+        <li><a href="#quotation-templates">4.1.1.2 Mẫu báo giá</a>      </ul>
+</li>
+    </li>
+      <li><a href="#sales-products">4.1.2 Sản phẩm</a>      <ul>
+        <li><a href="#sales-products-main">4.1.2.1 Sản phẩm</a>      </li>
+        <li><a href="#sales-product-variants">4.1.2.2 Biến thể sản phẩm</a>      </li>
+        <li><a href="#pricelists">4.1.2.3 Bảng giá</a>      </li>
+        <li><a href="#discount-loyalty">4.1.2.4 Khuyến mãi & Khách hàng thân thiết</a>      </li>
+        <li><a href="#gift-cards-ewallet">4.1.2.5 Thẻ quà tặng & Ví điện tử</a>      </ul>
+</li>
+    </li>
+      <li><a href="#sales-orders">4.1.3 Đơn hàng</a>      <ul>
+        <li><a href="#quotations">4.1.3.1 Báo giá</a>      </li>
+        <li><a href="#sales-orders-main">4.1.3.2 Đơn bán hàng</a>      </li>
+        <li><a href="#sales-customers">4.1.3.3 Khách hàng</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#purchase">4.2 👑 PHÂN HỆ MUA HÀNG</a>    <ul>
+      <li><a href="#purchase-config">4.2.1 Cấu hình</a>      <ul>
+        <li><a href="#vendor-pricelists">4.2.1.1 Bảng giá của nhà cung cấp</a>      </li>
+        <li><a href="#attributes">4.2.1.2 Thuộc tính sản phẩm</a>      </li>
+        <li><a href="#product-categories">4.2.1.3 Nhóm sản phẩm</a>      </li>
+        <li><a href="#units-packagings">4.2.1.4 Đơn vị tính & Quy cách đóng gói</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-products">4.2.2 Sản phẩm</a>      <ul>
+        <li><a href="#purchase-products-main">4.2.2.1 Sản phẩm</a>      </li>
+        <li><a href="#purchase-product-variants">4.2.2.2 Biến thể sản phẩm</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-orders">4.2.3 Đơn hàng</a>      <ul>
+        <li><a href="#rfq">4.2.3.1 Yêu cầu báo giá</a>      </li>
+        <li><a href="#po">4.2.3.2 Đơn mua hàng</a>      </li>
+        <li><a href="#vendors">4.2.3.3 Nhà cung cấp</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#invoicing">4.3 🛡️ PHÂN HỆ HÓA ĐƠN</a>    <ul>
+      <li><a href="#invoicing-config">4.3.1 Cấu hình</a>      <ul>
+        <li><a href="#taxes">4.3.1.1 Cấu hình thuế</a>      </li>
+        <li><a href="#journals">4.3.1.2 Sổ nhật ký</a>      </li>
+        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp</a>      <ul>
+        <li><a href="#bills">4.3.2.1 Hóa đơn nhà cung cấp</a>      </li>
+        <li><a href="#refunds">4.3.2.2 Hóa đơn trả lại / Hoàn tiền</a>      </li>
+        <li><a href="#vendor-payments">4.3.2.3 Thanh toán cho nhà cung cấp</a>      </li>
+        <li><a href="#invoicing-vendor-products">4.3.2.4 Sản phẩm</a>      </li>
+        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-customers">4.3.3 Khách hàng</a>      <ul>
+        <li><a href="#invoices">4.3.3.1 Hóa đơn khách hàng</a>      </li>
+        <li><a href="#credit-notes">4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ</a>      </li>
+        <li><a href="#customer-payments">4.3.3.3 Ghi nhận thanh toán của khách hàng</a>      </li>
+        <li><a href="#invoicing-customer-products">4.3.3.4 Sản phẩm</a>      </li>
+        <li><a href="#invoicing-customers-main">4.3.3.5 Khách hàng</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#inventory">4.4 📦 PHÂN HỆ KHO</a>    <ul>
+      <li><a href="#inventory-config">4.4.1 Cấu hình</a>      <ul>
+        <li><a href="#warehouses">4.4.1.1 Kho hàng</a>      </li>
+        <li><a href="#operations-types">4.4.1.2 Loại hoạt động</a>      </ul>
+</li>
+    </li>
+      <li><a href="#inventory-operations">4.4.2 Hoạt động kho</a>      <ul>
+        <li><a href="#receipts">4.4.2.1 Nhận hàng</a>      </li>
+        <li><a href="#deliveries">4.4.2.2 Giao hàng</a>      </li>
+        <li><a href="#internal-transfers">4.4.2.3 Chuyển kho nội bộ</a>      </li>
+        <li><a href="#physical-inventory">4.4.2.4 Kiểm kho định kỳ</a>      </li>
+        <li><a href="#scrap-orders">4.4.2.5 Phiếu loại bỏ / Hủy hàng</a>      </li>
+        <li><a href="#product-returns">4.4.2.6 Product Returns</a>      </li>
+        <li><a href="#inventory-overview">4.4.2.7 Tổng quan kho</a>      </li>
+        <li><a href="#inventory-mto">4.4.2.8 Make to Order  Procurement Workflow</a>      </ul>
+</li>
+    </ul>
+</li>
+  </ul>
+</li>
+</li>
+  <li><a href="#faq">5. Exceptions & Troubleshooting</a></li>
+  <li><a href="#glossary">6. Glossary</a></li>
+  </ul>
+</div>
+<div style="max-width: 960px; margin: 0 auto 60px auto; padding: 8px;max-width: 960px;" class="markdown-style">
+    <style>
+/* Đảm bảo cột đầu tiên của bảng luôn rộng và không bị xuống dòng */
+table th:first-child, table td:first-child {
+    white-space: nowrap !important;
+    min-width: 220px !important;
+    font-weight: bold;
+}
+</style>
+    <h1 id="tài-liệu-hướng-dẫn-sử-dụng-user-manual"><a class="anchor" aria-hidden="true" tabindex="-1" href="#tài-liệu-hướng-dẫn-sử-dụng-user-manual"><span class="octicon octicon-link"></span></a>Tài liệu Hướng dẫn Sử dụng (User Manual)</h1>
+    <h1 id="hệ-thống-quản-lý-doanh-nghiệp-elite-erp-elt-erp"><a class="anchor" aria-hidden="true" tabindex="-1" href="#hệ-thống-quản-lý-doanh-nghiệp-elite-erp-elt-erp"><span class="octicon octicon-link"></span></a>Hệ thống Quản lý Doanh nghiệp Elite ERP (ELT-ERP)</h1>
+    <hr>
+    <table>
+      <thead>
+        <tr>
+          <th>Document Info</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Document Code</strong></td>
+          <td>ELT_UM_ERP_CORE</td>
+        </tr>
+        <tr>
+          <td><strong>Version</strong></td>
+          <td>V1.0</td>
+        </tr>
+        <tr>
+          <td><strong>Last Updated</strong></td>
+          <td>24/05/2026</td>
+        </tr>
+        <tr>
+          <td><strong>Author</strong></td>
+          <td>Hoàng Thúy / BA</td>
+        </tr>
+        <tr>
+          <td><strong>Target Audience</strong></td>
+          <td>Board of Directors, Managers, Operational Staff</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="inline-toc">
+      <h1 id="mục-lục"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-lục"><span class="octicon octicon-link"></span></a>MỤC LỤC</h1>
+      <ol>
+  <li><a href="#overview">1. Overview (Giới thiệu tổng quan)</a></li>
+  <li><a href="#prerequisites">2. Prerequisites (Các điều kiện cần có)</a></li>
+  <li><a href="#getting-started">3. Getting Started (Làm quen hệ thống)</a>  <ul>
+    <li><a href="#login-dashboard">3.1 Login & Main Dashboard</a>  </li>
+    <li><a href="#basic-operations">3.2 Basic Operations</a>  </li>
+    <li><a href="#status-definitions">3.3 Status Definitions (Ý nghĩa các trạng thái)</a>  </li>
+    <li><a href="#e2e-workflows">3.4 Core Business Workflows (Quy trình vận hành liên kết)</a>  </ul>
+</li>
+</li>
+  <li><a href="#step-by-step-guide">4. Step-by-Step Guide (Hướng dẫn các bước thực hiện)</a>  <ul>
+    <li><a href="#sales">4.1 🌟 PHÂN HỆ BÁN HÀNG (Sales)</a>    <ul>
+      <li><a href="#sales-config">4.1.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#sales-teams">4.1.1.1 Đội ngũ bán hàng (Sales Teams)</a>      </li>
+        <li><a href="#quotation-templates">4.1.1.2 Mẫu báo giá (Quotation Templates)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#sales-products">4.1.2 Sản phẩm (Products)</a>      <ul>
+        <li><a href="#sales-products-main">4.1.2.1 Sản phẩm (Products)</a>      </li>
+        <li><a href="#sales-product-variants">4.1.2.2 Biến thể sản phẩm (Product Variants)</a>      </li>
+        <li><a href="#pricelists">4.1.2.3 Bảng giá (Pricelists)</a>      </li>
+        <li><a href="#discount-loyalty">4.1.2.4 Khuyến mãi & Khách hàng thân thiết (Discount & Loyalty)</a>      </li>
+        <li><a href="#gift-cards-ewallet">4.1.2.5 Thẻ quà tặng & Ví điện tử (Gift cards & eWallet)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#sales-orders">4.1.3 Đơn hàng (Orders)</a>      <ul>
+        <li><a href="#quotations">4.1.3.1 Báo giá (Quotations)</a>      </li>
+        <li><a href="#sales-orders-main">4.1.3.2 Đơn bán hàng (Sales Orders)</a>      </li>
+        <li><a href="#sales-customers">4.1.3.3 Khách hàng (Customers)</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#purchase">4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)</a>    <ul>
+      <li><a href="#purchase-config">4.2.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#vendor-pricelists">4.2.1.1 Bảng giá của nhà cung cấp (Vendor Pricelists)</a>      </li>
+        <li><a href="#attributes">4.2.1.2 Thuộc tính sản phẩm (Attributes)</a>      </li>
+        <li><a href="#product-categories">4.2.1.3 Nhóm sản phẩm (Categories)</a>      </li>
+        <li><a href="#units-packagings">4.2.1.4 Đơn vị tính & Quy cách đóng gói (Units & Packagings)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-products">4.2.2 Sản phẩm (Products)</a>      <ul>
+        <li><a href="#purchase-products-main">4.2.2.1 Sản phẩm (Products)</a>      </li>
+        <li><a href="#purchase-product-variants">4.2.2.2 Biến thể sản phẩm (Product Variants)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-orders">4.2.3 Đơn hàng (Orders)</a>      <ul>
+        <li><a href="#rfq">4.2.3.1 Yêu cầu báo giá (Requests for Quotation)</a>      </li>
+        <li><a href="#po">4.2.3.2 Đơn mua hàng (Purchase Orders)</a>      </li>
+        <li><a href="#vendors">4.2.3.3 Nhà cung cấp (Vendors)</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#invoicing">4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)</a>    <ul>
+      <li><a href="#invoicing-config">4.3.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#taxes">4.3.1.1 Cấu hình thuế (Configuration > Taxes)</a>      </li>
+        <li><a href="#journals">4.3.1.2 Sổ nhật ký (Journals)</a>      </li>
+        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán (Payment Terms)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp (Vendor)</a>      <ul>
+        <li><a href="#bills">4.3.2.1 Hóa đơn nhà cung cấp (Bills)</a>      </li>
+        <li><a href="#refunds">4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)</a>      </li>
+        <li><a href="#vendor-payments">4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)</a>      </li>
+        <li><a href="#invoicing-vendor-products">4.3.2.4 Sản phẩm (Products)</a>      </li>
+        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp (Vendors)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-customers">4.3.3 Khách hàng (Customers)</a>      <ul>
+        <li><a href="#invoices">4.3.3.1 Hóa đơn khách hàng (Invoices)</a>      </li>
+        <li><a href="#credit-notes">4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ (Credit Notes)</a>      </li>
+        <li><a href="#customer-payments">4.3.3.3 Ghi nhận thanh toán của khách hàng (Customer Payments)</a>      </li>
+        <li><a href="#invoicing-customer-products">4.3.3.4 Sản phẩm (Products)</a>      </li>
+        <li><a href="#invoicing-customers-main">4.3.3.5 Khách hàng (Customers)</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#inventory">4.4 📦 PHÂN HỆ KHO (Inventory)</a>    <ul>
+      <li><a href="#inventory-config">4.4.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#warehouses">4.4.1.1 Kho hàng (Warehouses)</a>      </li>
+        <li><a href="#operations-types">4.4.1.2 Loại hoạt động (Operations Types)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#inventory-operations">4.4.2 Hoạt động kho (Operations)</a>      <ul>
+        <li><a href="#receipts">4.4.2.1 Nhận hàng (Receipts)</a>      </li>
+        <li><a href="#deliveries">4.4.2.2 Giao hàng (Deliveries)</a>      </li>
+        <li><a href="#internal-transfers">4.4.2.3 Chuyển kho nội bộ (Internal Transfers)</a>      </li>
+        <li><a href="#physical-inventory">4.4.2.4 Kiểm kho định kỳ (Physical Inventory)</a>      </li>
+        <li><a href="#scrap-orders">4.4.2.5 Phiếu loại bỏ / Hủy hàng (Scrap Orders)</a>      </li>
+        <li><a href="#product-returns">4.4.2.6 Product Returns (Quy trình Trả hàng)</a>      </li>
+        <li><a href="#inventory-overview">4.4.2.7 Tổng quan kho (Inventory Overview)</a>      </li>
+        <li><a href="#inventory-mto">4.4.2.8 Make to Order (MTO) Procurement Workflow</a>      </ul>
+</li>
+    </ul>
+</li>
+  </ul>
+</li>
+</li>
+  <li><a href="#faq">5. Exceptions & Troubleshooting (Luồng ngoại lệ & Xử lý sự cố)</a></li>
+  <li><a href="#glossary">6. Glossary (Giải nghĩa thuật ngữ)</a></li>
+      </ol>
+      <hr>
+    </div>
+    <p><a id="overview"></a></p>
+    <h1 id="1-overview-giới-thiệu-tổng-quan"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-overview-giới-thiệu-tổng-quan"><span class="octicon octicon-link"></span></a><strong>1. Overview (Giới thiệu tổng quan)</strong></h1>
+    <p>This User Manual provides standard operating procedures on the Elite ERP system. It helps users master core business processes, from initial setup (Configuration) to executing daily transactions, covering 4 main modules: <strong>Sales</strong>, <strong>Purchase</strong>, <strong>Invoicing</strong>, and <strong>Inventory</strong>.</p>
+    <hr>
+    <p><a id="prerequisites"></a></p>
+    <h1 id="2-prerequisites-các-điều-kiện-cần-có"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-prerequisites-các-điều-kiện-cần-có"><span class="octicon octicon-link"></span></a><strong>2. Prerequisites (Các điều kiện cần có)</strong></h1>
+    <p>To use the functions described in this manual, users must ensure the following conditions:</p>
+    <ul class="contains-task-list">
+      <li class="task-list-item"><input type="checkbox" disabled> The user account has access rights to the: <strong>Sales, Purchase, Invoicing, and Inventory modules.</strong></li>
+      <li class="task-list-item"><input type="checkbox" disabled> Foundational data is ready: <strong>The system has been configured with initial foundational data (Company info, Chart of Accounts).</strong></li>
+    </ul>
+    <hr>
+    <p><a id="getting-started"></a></p>
+    <h1 id="3-getting-started-làm-quen-hệ-thống"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-getting-started-làm-quen-hệ-thống"><span class="octicon octicon-link"></span></a><strong>3. Getting Started (Làm quen hệ thống)</strong></h1>
+    <p>Before diving into detailed operations, users should master basic interactions on the Odoo (Elite ERP) interface:</p>
+    <p><a id="login-dashboard"></a></p>
+    <h2 id="31-login--main-dashboard"><a class="anchor" aria-hidden="true" tabindex="-1" href="#31-login--main-dashboard"><span class="octicon octicon-link"></span></a><strong>3.1 Login &#x26; Main Dashboard</strong></h2>
+    <ul>
+      <li>
+        <strong>Login:</strong> Access the system URL <a href="https://elite.erp.watatek.com/">https://elite.erp.watatek.com</a>, enter the Email and Password provided by the administrator.
+        
+        <img src="./images/en/login.png" alt="Login Screen">
+      </li>
+      <li><strong>Main Dashboard:</strong> Displays the Apps the user has access to. Click the grid icon in the top left to open the app menu at any time.</li>
+    </ul>
+    <p><a id="basic-operations"></a></p>
+    <h2 id="32-basic-operations"><a class="anchor" aria-hidden="true" tabindex="-1" href="#32-basic-operations"><span class="octicon octicon-link"></span></a><strong>3.2 Basic Operations</strong></h2>
+    <ul>
+      <li><strong>Standard Views:</strong>
+        <ul>
+          <li><strong>Kanban:</strong> Card-based view (often used for stages like Quotation -> Sent -> Won).</li>
+          <li><strong>List:</strong> View multiple records in a table format.</li>
+          <li><strong>Form:</strong> View details of a single record.</li>
+        </ul>
+      </li>
+      <li><strong>Filters &#x26; Search:</strong> Use the search bar at the top to filter data or group data (Group By).</li>
+    </ul>
+    <p><a id="status-definitions"></a></p>
+    <h2 id="33-status-definitions-ý-nghĩa-các-trạng-thái"><a class="anchor" aria-hidden="true" tabindex="-1" href="#33-status-definitions-ý-nghĩa-các-trạng-thái"><span class="octicon octicon-link"></span></a><strong>3.3 Status Definitions (Ý nghĩa các trạng thái)</strong></h2>
+    <p>Below is the status workflow for core documents in the system:</p>
+    <ul>
+      <li><strong>Sales:</strong> Quotation (Draft) -> Quotation Sent -> Sales Order (Confirmed) -> Cancelled.</li>
+      <li><strong>Purchase:</strong> RFQ (Draft) -> RFQ Sent -> Purchase Order (Confirmed) -> Cancelled.</li>
+      <li><strong>Inventory:</strong> Draft -> Waiting -> Ready -> Done.</li>
+      <li><strong>Invoicing:</strong> Draft -> Posted (Accounting recognized) -> Cancelled.</li>
+    </ul>
+    
+    <h2 id="e2e-workflows"><a class="anchor" aria-hidden="true" tabindex="-1" href="#e2e-workflows"><span class="octicon octicon-link"></span></a><strong>3.4 Core Business Workflows (Quy trình vận hành liên kết)</strong></h2>
+    <p>To operate the system efficiently, departments must collaborate and follow these sequential workflows. Click on any step to view the detailed guide.</p>
+    
+    <h3 id="341-procure-to-pay-workflow"><strong>3.4.1 Procure-to-Pay Workflow (Quy trình Mua hàng &amp; Nhập kho)</strong></h3>
+    <p>Applicable when the business needs to procure goods from a Vendor:</p>
+    
+    <pre class="mermaid">
+  graph TD
+      A[Purchase Staff: Create Draft RFQ] --> B[Purchase Staff: Send RFQ &amp; Confirm PO]
+      B --> C[Warehouse Keeper: Receive Goods &amp; Validate Receipt]
+      C --> D[Purchase Accountant: Create Vendor Bill from PO]
+      D --> E[Payment Accountant: Register Payment to complete liability]
+    </pre>
+    
+    <ol>
+      <li><strong>Request for Quotation (RFQ):</strong> The <em>Purchase Department</em> creates a draft <a href="#rfq">Request for Quotation (RFQ)</a> in the system and sends it to the Vendor.</li>
+      <li><strong>Confirm Purchase Order (PO):</strong> Once the price is agreed upon, the <em>Purchase Department</em> confirms the RFQ into an official <a href="#po">Purchase Order (PO)</a>. The system automatically creates a draft <a href="#receipts">Receipt</a> in the Inventory module.</li>
+      <li><strong>Receive Goods into Stock:</strong> Upon delivery, the <em>Warehouse Keeper</em> inspects the items, verifies the quantities, and <a href="#receipts">Validates the Receipt</a> to increase system stock.</li>
+      <li><strong>Create Vendor Bill:</strong> The <em>Purchase Accountant</em> creates a <a href="#bills">Vendor Bill</a> from the PO and clicks <strong>Confirm</strong> (or <strong>Post</strong>) to recognize the liability.</li>
+      <li><strong>Register Payment:</strong> The <em>Payment Accountant</em> executes the payment and clicks <a href="#vendor-payments">Register Payment</a> on the Vendor Bill to complete the transaction.</li>
+    </ol>
+    
+    <h3 id="342-order-to-cash-workflow"><strong>3.4.2 Order-to-Cash Workflow (Quy trình Bán hàng &amp; Xuất kho)</strong></h3>
+    <p>Applicable when selling goods to a Customer:</p>
+    
+    <pre class="mermaid">
+  graph TD
+      A[Sales Staff: Create &amp; Send Quotation] --> B[Sales Staff: Confirm Sales Order SO]
+      B --> C[Warehouse Keeper: Prepare Goods &amp; Validate Delivery]
+      C --> D[Billing Accountant: Create &amp; Confirm Customer Invoice from SO]
+      D --> E[Payment Accountant: Receive Payment &amp; Register Payment]
+    </pre>
+    
+    <ol>
+      <li><strong>Create Quotation:</strong> The <em>Sales Department</em> creates a draft <a href="#quotations">Quotation</a> and sends it to the Customer.</li>
+      <li><strong>Confirm Sales Order (SO):</strong> Once confirmed by the customer, the <em>Sales Department</em> confirms the Quotation into an official <a href="#sales-orders-main">Sales Order (SO)</a>. The system automatically creates a draft <a href="#deliveries">Delivery Order</a> in the Inventory module.</li>
+      <li><strong>Deliver Goods:</strong> The <em>Warehouse Keeper</em> prepares the items, inspects the quantities, and <a href="#deliveries">Validates the Delivery Order</a> to reduce system stock and ship to the customer.</li>
+      <li><strong>Create Customer Invoice:</strong> The <em>Billing Accountant / Sales Department</em> creates a <a href="#invoices">Customer Invoice</a> from the SO and clicks <strong>Confirm</strong> (or <strong>Post</strong>) to recognize revenue and receivables.</li>
+      <li><strong>Register Payment:</strong> Upon receiving payment, the <em>Payment Accountant</em> clicks <a href="#customer-payments">Register Payment</a> on the Invoice to complete the transaction.</li>
+    </ol>
+    <hr>
+    <p><a id="step-by-step-guide"></a></p>
+    <h1 id="4-step-by-step-guide-hướng-dẫn-các-bước-thực-hiện"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4-step-by-step-guide-hướng-dẫn-các-bước-thực-hiện"><span class="octicon octicon-link"></span></a><strong>4. Step-by-Step Guide (Hướng dẫn các bước thực hiện)</strong></h1>
+    <p>Below is the detailed operations for each business module:</p>
+    <p><a id="sales"></a></p>
+    <h2 id="41--phân-hệ-bán-hàng-sales"><a class="anchor" aria-hidden="true" tabindex="-1" href="#41--phân-hệ-bán-hàng-sales"><span class="octicon octicon-link"></span></a><strong>4.1 🌟 PHÂN HỆ BÁN HÀNG (Sales)</strong></h2>
+    <p><a id="sales-config"></a></p>
+    <h3 id="411-cấu-hình-configuration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#411-cấu-hình-configuration"><span class="octicon octicon-link"></span></a><strong>4.1.1 Cấu hình (Configuration)</strong></h3>
+    <p><a id="sales-teams"></a></p>
+    <h4 id="4111-đội-ngũ-bán-hàng-sales-teams"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4111-đội-ngũ-bán-hàng-sales-teams"><span class="octicon octicon-link"></span></a><strong>4.1.1.1 Đội ngũ bán hàng (Sales Teams)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Giúp tổ chức và phân chia nhân sự phòng kinh doanh thành các đội nhóm kinh doanh độc lập (Bán lẻ, Bán dự án, Kênh đại lý). Giúp gán mục tiêu doanh số riêng biệt cho từng nhóm và theo dõi sát sao hiệu suất.</p>
+    <h5 id="giải-thích-các-trường-thông-tin"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Sales Team (*)</strong></td>
+          <td align="left">Tên đội ngũ bán hàng.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Team Leader</strong></td>
+          <td align="left">Trưởng nhóm quản lý trực tiếp đội ngũ.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Invoicing Target</strong></td>
+          <td align="left">Chỉ tiêu doanh thu bán hàng tối thiểu nhóm cần đạt được.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Members</strong></td>
+          <td align="left">Danh sách nhân viên trực thuộc đội ngũ.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> click <strong>"Configuration"</strong> -> chọn <strong>"Sales Teams"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Trên màn hình Kanban hiển thị, nhấp nút <strong>"New"</strong> (hoặc click vào thẻ nhóm để chỉnh sửa):
+        
+        <img src="images/sales_teams.png" alt="Đội ngũ bán hàng">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Nhập <strong>Tên nhóm</strong>, chỉ định <strong>Team Leader</strong> và gán chỉ tiêu <strong>Invoicing Target</strong>:
+        
+        <img src="images/steps/team_form_filled.png" alt="Chi tiết biểu mẫu Đội ngũ bán hàng">
+      </li>
+      <li><strong>Step 4:</strong> Tại mục <strong>Members</strong>, nhấn <strong>Add</strong> để thêm nhân viên vào đội. Nhấn <strong>Save</strong> (Đám mây) để lưu lại.</li>
+    </ul>
+    <hr>
+    <p><a id="quotation-templates"></a></p>
+    <h4 id="4112-mẫu-báo-giá-quotation-templates"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4112-mẫu-báo-giá-quotation-templates"><span class="octicon octicon-link"></span></a><strong>4.1.1.2 Mẫu báo giá (Quotation Templates)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-1"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Tạo ra các biểu mẫu báo giá chuẩn được soạn thảo sẵn cho các nhóm sản phẩm đi kèm nhau. Giúp nhân viên kinh doanh tạo báo giá gửi khách hàng nhanh chóng, giảm thiểu sai sót nhập liệu.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-1"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Quotation Template (*)</strong></td>
+          <td align="left">Tên mẫu báo giá gợi nhớ (Ví dụ: Combo nội thất văn phòng).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Quotation Validity</strong></td>
+          <td align="left">Số ngày báo giá có hiệu lực kể từ khi tạo (Ví dụ: 30 ngày).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Lines (Tab)</strong></td>
+          <td align="left">Danh sách sản phẩm và số lượng được cấu hình sẵn cho mẫu.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-1"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> click <strong>"Configuration"</strong> -> chọn <strong>"Quotation Templates"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để tạo mẫu báo giá mới (hoặc chọn một mẫu có sẵn):
+        
+        <img src="images/quotation_templates.png" alt="Mẫu báo giá">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Nhập <strong>Tên mẫu</strong>, số ngày hết hạn tại <strong>Quotation Validity</strong>, và cấu hình các sản phẩm đi kèm:
+        
+        <img src="images/steps/quotation_template_form_filled.png" alt="Chi tiết biểu mẫu Mẫu báo giá">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để lưu. Khi tạo Báo giá mới, nhân viên chỉ cần chọn Mẫu này để hệ thống tự động điền toàn bộ dòng sản phẩm.</li>
+    </ul>
+    <hr>
+    <p><a id="sales-products"></a></p>
+    <h3 id="412-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#412-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.1.2 Sản phẩm (Products)</strong></h3>
+    <p><a id="sales-products-main"></a></p>
+    <h4 id="4121-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4121-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.1.2.1 Sản phẩm (Products)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-2"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Khai báo thông tin danh mục hàng hóa, dịch vụ kinh doanh của doanh nghiệp.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-2"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Product Name (*)</strong></td>
+          <td align="left">Tên sản phẩm hiển thị trên các giao dịch mua/bán (Ví dụ: Cabinet with Doors).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Product Type (*)</strong></td>
+          <td align="left">Phân loại sản phẩm: <strong>Storable</strong> (Quản lý tồn kho vật lý), <strong>Consumable</strong> (Tiêu dùng nhanh), hoặc <strong>Service</strong> (Dịch vụ).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Sales Price</strong></td>
+          <td align="left">Giá bán lẻ mặc định chưa thuế.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Sales Taxes</strong></td>
+          <td align="left">Thuế suất GTGT bán ra áp dụng mặc định.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-2"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> chọn menu <strong>"Products"</strong> -> click <strong>"Products"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để mở form sản phẩm (hoặc click chọn sản phẩm có sẵn để xem chi tiết):
+        
+        <img src="images/steps/product_form_filled.png" alt="Chi tiết biểu mẫu Sản phẩm">
+      </li>
+      <li><strong>Step 3:</strong> Enter product name, select Product Type, set <strong>"Sales Price"</strong> and <strong>"Customer Taxes"</strong> in the <strong>"General Information"</strong> tab.</li>
+      <li>
+        <strong>Step 4:</strong> (Optional) Switch to the <strong>"Attributes &#x26; Variants"</strong> tab to set characteristics (Color, Size) if the product has multiple versions.
+        
+        <img src="images/en/steps/product_tab_attributes.png" alt="Attributes &#x26; Variants Tab Configuration">
+      </li>
+      <li>
+        <strong>Step 5:</strong> (Optional) Switch to the <strong>"Sales"</strong> tab to configure invoicing policies and advanced sales settings.
+        
+        <img src="images/en/steps/product_tab_sales.png" alt="Sales Tab Configuration">
+      </li>
+      <li>
+        <strong>Step 6:</strong> (Optional) Switch to the <strong>"Price"</strong> tab to manage pricing rules or promotions.
+        
+        <img src="images/en/steps/product_tab_price.png" alt="Price Tab Configuration">
+      </li>
+      <li>
+        <strong>Step 7:</strong> (Optional) Switch to the <strong>"Purchase"</strong> tab to set preferred vendors, vendor taxes, and control policies.
+        
+        <img src="images/en/steps/product_tab_purchase.png" alt="Purchase Tab Configuration">
+      </li>
+      <li>
+        <strong>Step 8:</strong> (Optional) Switch to the <strong>"Inventory"</strong> tab to enable stock tracking (for storable goods) and input weight.
+        
+        <img src="images/en/steps/product_tab_inventory.png" alt="Inventory Tab Configuration">
+      </li>
+      <li><strong>Step 9:</strong> Click the <strong>"Save"</strong> button to complete registration.</li>
+    </ul>
+    <hr>
+    <p><a id="sales-product-variants"></a></p>
+    <h4 id="4122-biến-thể-sản-phẩm-product-variants"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4122-biến-thể-sản-phẩm-product-variants"><span class="octicon octicon-link"></span></a><strong>4.1.2.2 Biến thể sản phẩm (Product Variants)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-3"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-3"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý các thuộc tính khác nhau của cùng một mã sản phẩm (Ví dụ: Tủ Cabinet có các biến thể về Màu sắc: Trắng, Đen, Vân gỗ; hoặc Kích thước).</p>
+    <h5 id="giải-thích-các-trường-thông-tin-3"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-3"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Attribute (*)</strong></td>
+          <td align="left">Thuộc tính phân loại sản phẩm (Ví dụ: Color, Size).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Values</strong></td>
+          <td align="left">Giá trị của thuộc tính (Ví dụ: Black, White, Grey).</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-3"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-3"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Mở biểu mẫu chi tiết của Sản phẩm đã tạo tại Mục 1.2.1.</li>
+      <li><strong>Step 2:</strong> Di chuyển đến tab <strong>"Attributes &#x26; Variants"</strong> và nhấn <strong>"Add a line"</strong>.</li>
+      <li><strong>Step 3:</strong> Chọn thuộc tính tại cột <strong>Attribute</strong> và nhập/chọn các giá trị biến thể tại cột <strong>Values</strong>.</li>
+      <li><strong>Step 4:</strong> Hệ thống sẽ tự động sinh ra danh sách các mã biến thể sản phẩm tương ứng. Nhấn <strong>Save</strong> để áp dụng.</li>
+    </ul>
+    <hr>
+    <p><a id="pricelists"></a></p>
+    <h4 id="4123-bảng-giá-pricelists"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4123-bảng-giá-pricelists"><span class="octicon octicon-link"></span></a><strong>4.1.2.3 Bảng giá (Pricelists)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-4"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-4"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Thiết lập các chính sách giá đặc thù cho từng nhóm đối tượng khách hàng (VIP, đại lý, bán sỉ) hoặc áp dụng các chiến dịch giảm giá theo khoảng thời gian cụ thể.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-4"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-4"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Pricelist Name (*)</strong></td>
+          <td align="left">Tên bảng giá (Ví dụ: Bảng giá đại lý Cấp 1).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Currency (*)</strong></td>
+          <td align="left">Loại tiền tệ áp dụng (VND, USD).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Rules (Tab)</strong></td>
+          <td align="left">Các quy tắc tính giá: Áp dụng cho toàn bộ sản phẩm, danh mục sản phẩm, hoặc sản phẩm cụ thể.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-4"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-4"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> chọn menu <strong>"Products"</strong> -> click <strong>"Pricelists"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để mở form thiết lập bảng giá:
+        
+        <img src="images/pricelists.png" alt="Bảng giá">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Cấu hình chi tiết các quy tắc tính giá tại phần <strong>Price Rules</strong>:
+        
+        <img src="images/steps/pricelist_form_filled.png" alt="Chi tiết biểu mẫu Bảng giá">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để lưu. Bảng giá này có thể được gán mặc định trong hồ sơ Khách hàng.</li>
+    </ul>
+    <hr>
+    <p><a id="discount-loyalty"></a></p>
+    <h4 id="4124-khuyến-mãi--khách-hàng-thân-thiết-discount--loyalty"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4124-khuyến-mãi--khách-hàng-thân-thiết-discount--loyalty"><span class="octicon octicon-link"></span></a><strong>4.1.2.4 Khuyến mãi &#x26; Khách hàng thân thiết (Discount &#x26; Loyalty)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-5"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-5"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Xây dựng các chiến dịch marketing thúc đẩy doanh số thông qua chương trình khuyến mãi (mua 1 tặng 1, chiết khấu hóa đơn) hoặc tích điểm đổi quà cho khách hàng thân thiết.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-5"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-5"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Program Name (*)</strong></td>
+          <td align="left">Tên chương trình (Ví dụ: Khuyến mãi Hè 2026).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Program Type (*)</strong></td>
+          <td align="left">Phân loại: <strong>Promotions</strong> (Khuyến mãi), <strong>Loyalty Cards</strong> (Tích điểm), <strong>Coupons</strong> (Mã giảm giá).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Conditional rules</strong></td>
+          <td align="left">Các điều kiện áp dụng (Ví dụ: Giá trị đơn hàng tối thiểu từ 1,000,000 đ).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Rewards</strong></td>
+          <td align="left">Phần thưởng nhận được (Ví dụ: Giảm 50,000 đ, miễn phí vận chuyển).</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-5"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-5"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> chọn menu <strong>"Products"</strong> -> click <strong>"Discount &#x26; Loyalty"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để cấu hình chiến dịch mới:
+        
+        <img src="images/discount_loyalty.png" alt="Khuyến mãi &#x26; Khách hàng thân thiết">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Thiết lập chi tiết điều kiện mua hàng tối thiểu (Rules) và phần thưởng nhận được (Rewards):
+        
+        <img src="images/steps/discount_loyalty_form_filled.png" alt="Chi tiết chương trình Khuyến mãi">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để kích hoạt chương trình trên hệ thống.</li>
+    </ul>
+    <hr>
+    <p><a id="gift-cards-ewallet"></a></p>
+    <h4 id="4125-thẻ-quà-tặng--ví-điện-tử-gift-cards--ewallet"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4125-thẻ-quà-tặng--ví-điện-tử-gift-cards--ewallet"><span class="octicon octicon-link"></span></a><strong>4.1.2.5 Thẻ quà tặng &#x26; Ví điện tử (Gift cards &#x26; eWallet)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-6"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-6"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Phát hành và quản lý số dư thẻ quà tặng (Gift cards) hoặc ví điện tử (eWallet) của khách hàng để phục vụ thanh toán trừ dần trực tiếp trên đơn hàng.</p>
+    <h5 id="các-bước-thực-hiện-6"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-6"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> chọn menu <strong>"Products"</strong> -> click <strong>"Gift cards &#x26; eWallet"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để thiết lập chương trình phát hành thẻ hoặc ví:
+        
+        <img src="images/gift_cards_ewallet.png" alt="Thẻ quà tặng &#x26; Ví điện tử">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Cấu hình chi tiết mệnh giá mặc định, mã số serial hoặc liên kết ví điện tử:
+        
+        <img src="images/steps/gift_cards_ewallet_form_filled.png" alt="Chi tiết biểu mẫu Thẻ quà tặng &#x26; Ví điện tử">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để hoàn tất.</li>
+    </ul>
+    <hr>
+    <p><a id="sales-orders"></a></p>
+    <h3 id="413-đơn-hàng-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#413-đơn-hàng-orders"><span class="octicon octicon-link"></span></a><strong>4.1.3 Đơn hàng (Orders)</strong></h3>
+    <p><a id="quotations"></a></p>
+    <h4 id="4131-báo-giá-quotations"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4131-báo-giá-quotations"><span class="octicon octicon-link"></span></a><strong>4.1.3.1 Báo giá (Quotations)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-7"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-7"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Khởi tạo và gửi báo giá chi tiết cho khách hàng. Đây là bước giao dịch đầu tiên với khách hàng trước khi ký kết đơn hàng.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-6"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-6"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Customer (*)</strong></td>
+          <td align="left">Khách hàng nhận báo giá.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Expiration</strong></td>
+          <td align="left">Ngày hết hạn hiệu lực của báo giá.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Payment Terms</strong></td>
+          <td align="left">Điều khoản thanh toán thỏa thuận (Thanh toán ngay, 15 ngày...).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Product (*)</strong></td>
+          <td align="left">Sản phẩm, số lượng và đơn giá thỏa thuận bán lẻ.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-7"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-7"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> chọn menu <strong>"Orders"</strong> -> click <strong>"Quotations"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để mở form báo giá mới:
+        
+        <img src="images/quotation_form.png" alt="Lập báo giá nháp">
+      </li>
+      <li><strong>Step 3:</strong> Select the <strong>Customer</strong>, expiration date <strong>Expiration</strong>, and payment terms <strong>Payment Terms</strong> in the <strong>Order Lines</strong> tab.</li>
+      <li><strong>Step 4:</strong> In the <strong>Order Lines</strong> tab, click <strong>Add a product</strong> to select the product, enter quantity, and sales price.</li>
+      <li>
+        <strong>Step 5:</strong> (Optional) Switch to the <strong>"Other Info"</strong> tab to assign Sales Team, select Payment Terms, or delivery policy.
+        
+        <img src="images/en/steps/sales_tab_other.png" alt="Sales Order Other Info Tab">
+      </li>
+      <li><strong>Step 6:</strong> Click the <strong>"Save"</strong> button to save the quotation in draft status (<strong>Quotation</strong>). Click <strong>"Send by Email"</strong> to email it, or click <strong>"Confirm"</strong> to convert the quotation into a Sales Order (SO).</li>
+    </ul>
+    <hr>
+    <p><a id="sales-orders-main"></a></p>
+    <h4 id="4132-đơn-bán-hàng-sales-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4132-đơn-bán-hàng-sales-orders"><span class="octicon octicon-link"></span></a><strong>4.1.3.2 Đơn bán hàng (Sales Orders)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-8"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-8"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Chuyển đổi Báo giá nháp thành Đơn bán hàng chính thức (Sales Order - SO) sau khi khách hàng đồng ý ký kết, ghi nhận doanh thu dự kiến và kích hoạt luồng xuất kho hàng hóa.</p>
+    <h5 id="các-bước-thực-hiện-8"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-8"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Mở Báo giá (Quotation) cần xác nhận đang ở trạng thái nháp.</li>
+      <li><strong>Step 2:</strong> Kiểm tra lại toàn bộ thông tin sản phẩm, số lượng, điều khoản thanh toán.</li>
+      <li><strong>Step 3:</strong> Nhấp chọn nút <strong>[Confirm]</strong> ở góc trên bên trái màn hình.</li>
+      <li>
+        <strong>Step 4:</strong> Hệ thống chuyển trạng thái báo giá sang <strong>Sales Order</strong> (Đơn bán hàng chính thức):
+        
+        <img src="images/sales_order.png" alt="Đơn bán hàng đã xác nhận">
+      </li>
+      <li><strong>Step 5:</strong> Một phiếu xuất kho nháp (Delivery Order) sẽ được tự động tạo lập bên phân hệ Kho hàng để thủ kho chuẩn bị hàng hóa.</li>
+    </ul>
+    <hr>
+    <p><a id="sales-customers"></a></p>
+    <h4 id="4133-khách-hàng-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4133-khách-hàng-customers"><span class="octicon octicon-link"></span></a><strong>4.1.3.3 Khách hàng (Customers)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-9"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-9"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý danh sách và thông tin liên hệ của khách hàng mua sản phẩm trực tiếp từ phân hệ Sales, giúp nhân viên kinh doanh nhanh chóng tra cứu lịch sử mua hàng, công nợ và thông tin liên lạc.</p>
+    <h5 id="các-bước-thực-hiện-9"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-9"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Sales"</strong> -> chọn menu <strong>"Orders"</strong> -> click <strong>"Customers"</strong>.</li>
+      <li><strong>Step 2:</strong> Giao diện hiển thị danh mục các khách hàng hiện tại dưới dạng thẻ hình ảnh.</li>
+      <li><strong>Step 3:</strong> Nhấp nút <strong>"New"</strong> để khai báo khách hàng mới hoặc click trực tiếp vào một thẻ khách hàng để xem chi tiết hồ sơ liên hệ, công nợ và lịch sử đơn hàng.</li>
+    </ul>
+    <hr>
+    <p><a id="purchase"></a></p>
+    <h2 id="42--phân-hệ-mua-hàng-purchase"><a class="anchor" aria-hidden="true" tabindex="-1" href="#42--phân-hệ-mua-hàng-purchase"><span class="octicon octicon-link"></span></a><strong>4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)</strong></h2>
+    <p><a id="purchase-config"></a></p>
+    <h3 id="421-cấu-hình-configuration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#421-cấu-hình-configuration"><span class="octicon octicon-link"></span></a><strong>4.2.1 Cấu hình (Configuration)</strong></h3>
+    <p><a id="vendor-pricelists"></a></p>
+    <h4 id="4211-bảng-giá-của-nhà-cung-cấp-vendor-pricelists"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4211-bảng-giá-của-nhà-cung-cấp-vendor-pricelists"><span class="octicon octicon-link"></span></a><strong>4.2.1.1 Bảng giá của nhà cung cấp (Vendor Pricelists)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-10"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Bảng giá của nhà cung cấp (Vendor Pricelist) được sử dụng để quản lý thông tin giá mua của từng sản phẩm từ các nhà cung cấp khác nhau. Hệ thống tự động áp đơn giá mua chính xác vào RFQ khi chọn nhà cung cấp và số lượng tối thiểu tương ứng đã thỏa thuận trước đó.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-7"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-7"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Vendor (*)</strong></td>
+          <td align="left">Nhà cung cấp áp dụng bảng giá.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Vendor Product Name / Code</strong></td>
+          <td align="left">Tên hoặc mã sản phẩm của nhà cung cấp (tự động in trên PO thay cho tên nội bộ).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Minimal Quantity</strong></td>
+          <td align="left">Số lượng mua tối thiểu để được hưởng đơn giá này.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Price (*)</strong></td>
+          <td align="left">Đơn giá mua thỏa thuận chưa thuế.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Delivery Lead Time</strong></td>
+          <td align="left">Số ngày từ lúc xác nhận đơn hàng đến lúc NCC giao hàng về kho.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-10"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Vendor Pricelists"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấp nút <strong>"New"</strong> để tạo quy tắc giá mua mới:
+        
+        <img src="images/vendor_pricelists.png" alt="Bảng giá nhà cung cấp">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Điền thông tin <strong>Vendor</strong>, <strong>Product</strong>, số lượng tối thiểu và đơn giá mua tương ứng:
+        
+        <img src="images/steps/vendor_pricelist_form_filled.png" alt="Chi tiết biểu mẫu Bảng giá nhà cung cấp">
+      </li>
+      <li><strong>Step 4:</strong> Nhập <strong>Delivery Lead Time</strong> và nhấn <strong>Save</strong> để lưu.</li>
+    </ul>
+    <hr>
+    <p><a id="attributes"></a></p>
+    <h4 id="4212-thuộc-tính-sản-phẩm-attributes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4212-thuộc-tính-sản-phẩm-attributes"><span class="octicon octicon-link"></span></a><strong>4.2.1.2 Thuộc tính sản phẩm (Attributes)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-11"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-11"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý danh mục các thuộc tính vật lý hoặc tính chất của sản phẩm mua sắm (Màu sắc, kích thước, chất liệu) giúp đồng bộ dữ liệu thuộc tính dùng chung trên toàn hệ thống.</p>
+    <h5 id="các-bước-thực-hiện-11"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-11"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Attributes"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để định nghĩa một thuộc tính mới:
+        
+        <img src="images/attributes.png" alt="Thuộc tính sản phẩm">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Định nghĩa tên thuộc tính và nhập các giá trị tùy chọn tại phần <strong>Values</strong>:
+        
+        <img src="images/steps/attribute_form_filled.png" alt="Chi tiết biểu mẫu Thuộc tính sản phẩm">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để lưu trữ.</li>
+    </ul>
+    <hr>
+    <p><a id="product-categories"></a></p>
+    <h4 id="4213-nhóm-sản-phẩm-categories"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4213-nhóm-sản-phẩm-categories"><span class="octicon octicon-link"></span></a><strong>4.2.1.3 Nhóm sản phẩm (Categories)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-12"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-12"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Phân nhóm danh mục sản phẩm (Product Categories) phục vụ định khoản kế toán tự động (tài khoản kho, tài khoản giá vốn) và thiết lập phương pháp tính giá trị hàng tồn kho.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-8"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-8"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Category Name (*)</strong></td>
+          <td align="left">Tên nhóm sản phẩm (Ví dụ: Office Furniture).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Costing Method</strong></td>
+          <td align="left">Phương pháp tính giá vốn hàng tồn kho: <strong>Standard Price</strong> (Giá tiêu chuẩn), <strong>FIFO</strong> (Nhập trước xuất trước), hoặc <strong>AVCO</strong> (Giá bình quân gia quyền).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Inventory Valuation</strong></td>
+          <td align="left">Định giá kho: <strong>Manual</strong> (Báo cáo kho thủ công) hoặc <strong>Automated</strong> (Kế toán ghi sổ kho tự động sau mỗi lần nhập/xuất).</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-12"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-12"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Product Categories"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để tạo nhóm sản phẩm mới:
+        
+        <img src="images/product_categories.png" alt="Nhóm sản phẩm">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Nhập <strong>Category Name</strong>, cấu hình phương pháp tính giá vốn <strong>Costing Method</strong> và định giá kho tự động <strong>Inventory Valuation</strong>:
+        
+        <img src="images/steps/product_category_form_filled.png" alt="Chi tiết biểu mẫu Nhóm sản phẩm">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để hoàn tất.</li>
+    </ul>
+    <hr>
+    <p><a id="units-packagings"></a></p>
+    <h4 id="4214-đơn-vị-tính--quy-cách-đóng-gói-units--packagings"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4214-đơn-vị-tính--quy-cách-đóng-gói-units--packagings"><span class="octicon octicon-link"></span></a><strong>4.2.1.4 Đơn vị tính &#x26; Quy cách đóng gói (Units &#x26; Packagings)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-13"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-13"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý các loại Đơn vị tính (UoM) phục vụ quy đổi đơn vị mua sắm khác với đơn vị bán (Ví dụ: mua theo Thùng nhưng bán lẻ theo Cái) và quy định số lượng sản phẩm trên mỗi gói hàng (Packagings) khi giao nhận.</p>
+    <h5 id="các-bước-thực-hiện-13"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-13"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li>
+        <strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Units of Measure"</strong> để định cấu hình nhóm quy đổi đơn vị tính:
+        
+        <img src="images/units_of_measure.png" alt="Đơn vị tính">
+      </li>
+      <li>
+        <strong>Step 2:</strong> Cấu hình chi tiết tỷ lệ quy đổi trong nhóm đơn vị tính:
+        
+        <img src="images/steps/unit_of_measure_form_filled.png" alt="Chi tiết biểu mẫu Đơn vị tính">
+      </li>
+      <li><strong>Step 3:</strong> Để thiết lập quy cách đóng gói cho sản phẩm cụ thể: Mở hồ sơ sản phẩm đó -> di chuyển đến tab <strong>Purchase</strong> -> điền thông tin đóng gói tại mục <strong>Packaging</strong> (Ví dụ: <code>Box of 10</code> chứa 10 sản phẩm). Nhấn <strong>Save</strong> để lưu.</li>
+    </ul>
+    <hr>
+    <p><a id="purchase-products"></a></p>
+    <h3 id="422-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#422-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.2.2 Sản phẩm (Products)</strong></h3>
+    <p><a id="purchase-products-main"></a></p>
+    <h4 id="4221-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4221-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.2.2.1 Sản phẩm (Products)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-14"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-14"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Khai báo và quản lý thông tin các mặt hàng, vật tư, nguyên liệu cần mua sắm phục vụ cho nhu cầu hoạt động sản xuất kinh doanh của công ty.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-9"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-9"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin</strong></h5>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Trường thông tin
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Ý nghĩa &#x26; Quy tắc nhập</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>Cost</strong></td>
+          <td align="left">Giá vốn hoặc giá mua tham chiếu của sản phẩm.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Purchase Taxes</strong></td>
+          <td align="left">Thuế suất GTGT đầu vào áp dụng mặc định khi mua hàng.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Control Policy</strong></td>
+          <td align="left">Chính sách kiểm tra hóa đơn: <strong>On ordered quantities</strong> (Theo số lượng đặt mua) hoặc <strong>On received quantities</strong> (Theo số lượng thực tế nhận vào kho).</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="các-bước-thực-hiện-14"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-14"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn <strong>"Products"</strong> -> click <strong>"Products"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để khai báo sản phẩm cần mua:
+        
+        <img src="images/purchase_products.png" alt="Sản phẩm mua vào">
+      </li>
+      <li><strong>Step 3:</strong> Điền thông tin giá vốn tại ô <strong>Cost</strong>, chọn <strong>Purchase Taxes</strong> và thiết lập <strong>Control Policy</strong> kiểm soát hóa đơn. Nhấn <strong>Save</strong> để lưu.</li>
+    </ul>
+    <hr>
+    <p><a id="purchase-product-variants"></a></p>
+    <h4 id="4222-biến-thể-sản-phẩm-product-variants"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4222-biến-thể-sản-phẩm-product-variants"><span class="octicon octicon-link"></span></a><strong>4.2.2.2 Biến thể sản phẩm (Product Variants)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-15"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-15"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Tra cứu nhanh danh sách các biến thể hàng hóa đã tạo để cập nhật riêng giá vốn (Cost) hoặc giá mua thỏa thuận cho từng biến thể cụ thể (Ví dụ: Tủ Cabinet màu trắng có giá mua cao hơn màu đen).</p>
+    <h5 id="các-bước-thực-hiện-15"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-15"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn <strong>"Products"</strong> -> click <strong>"Product Variants"</strong>.</li>
+      <li><strong>Step 2:</strong> Hệ thống hiển thị danh sách tất cả các biến thể đang có trên hệ thống. Nhấp chọn biến thể cần cấu hình để cập nhật thông tin đặc thù.</li>
+    </ul>
+    <hr>
+    <p><a id="purchase-orders"></a></p>
+    <h3 id="423-đơn-hàng-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#423-đơn-hàng-orders"><span class="octicon octicon-link"></span></a><strong>4.2.3 Đơn hàng (Orders)</strong></h3>
+    <p><a id="rfq"></a></p>
+    <h4 id="4231-yêu-cầu-báo-giá-requests-for-quotation"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4231-yêu-cầu-báo-giá-requests-for-quotation"><span class="octicon octicon-link"></span></a><strong>4.2.3.1 Yêu cầu báo giá (Requests for Quotation)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-16"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-16"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Khởi tạo chứng từ Yêu cầu báo giá gửi đến nhà cung cấp để đối chiếu và lưu thông tin báo giá nháp trên hệ thống.</p>
+    <h5 id="các-bước-thực-hiện-16"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-16"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Tại thanh menu bên trái, nhấp chọn phân hệ <strong>"Purchase"</strong> (Mua hàng) để truy cập danh sách các Yêu cầu báo giá.</li>
+      <li><strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> ở góc trên bên trái màn hình.</li>
+      <li><strong>Step 3:</strong> Click the <strong>"Vendor"</strong> field, type <code>Acme Corporation</code> and select the vendor.</li>
+      <li><strong>Step 4:</strong> Go down to the <strong>Products</strong> tab, click <strong>"Add a product"</strong>, select product <code>Cabinet with Doors</code> (Code <code>[E-COM11]</code>), and set the purchase quantity to <code>5.00</code>.</li>
+      <li>
+        <strong>Step 5:</strong> (Optional) Switch to the <strong>"Other Information"</strong> tab to check financial position, buyer, or payment terms.
+        
+        <img src="images/en/steps/purchase_tab_other.png" alt="Purchase Order Other Info Tab">
+      </li>
+      <li>
+        <strong>Step 6:</strong> Click the cloud save icon (<strong>Save manually</strong>) or click <strong>"Confirm Order"</strong> to convert it to a Purchase Order (PO).
+        
+        <img src="images/rfq_form.png" alt="RFQ Draft Form">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="po"></a></p>
+    <h4 id="4232-đơn-mua-hàng-purchase-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4232-đơn-mua-hàng-purchase-orders"><span class="octicon octicon-link"></span></a><strong>4.2.3.2 Đơn mua hàng (Purchase Orders)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-17"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-17"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Xác nhận RFQ thành Đơn mua hàng chính thức (PO) gửi sang nhà cung cấp để thực hiện giao hàng, ghi nhận công nợ và tự động sinh phiếu nhập kho tương ứng.</p>
+    <h5 id="các-bước-thực-hiện-17"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-17"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Mở Yêu cầu báo giá (RFQ) đã tạo ở Mục 2.3.1.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấp nút <strong>[Confirm Order]</strong> ở góc trái trên của màn hình:
+        
+        <img src="images/po_confirmed.png" alt="Xác nhận PO">
+      </li>
+      <li><strong>Step 3:</strong> Hệ thống cập nhật trạng thái đơn hàng sang <strong>Purchase Order</strong> và tự động sinh phiếu nhập kho nháp liên kết.</li>
+    </ul>
+    <hr>
+    <p><a id="vendors"></a></p>
+    <h4 id="4233-nhà-cung-cấp-vendors"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4233-nhà-cung-cấp-vendors"><span class="octicon octicon-link"></span></a><strong>4.2.3.3 Nhà cung cấp (Vendors)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-18"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-18"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý hồ sơ, lịch sử giao dịch và tài khoản thanh toán của các nhà cung cấp sản phẩm và dịch vụ đầu vào cho công ty.</p>
+    <h5 id="các-bước-thực-hiện-18"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-18"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Purchase"</strong> -> chọn menu <strong>"Orders"</strong> -> click <strong>"Vendors"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Hệ thống hiển thị danh sách các nhà cung cấp:
+        
+        <img src="images/vendors.png" alt="Danh sách Nhà cung cấp">
+      </li>
+      <li><strong>Step 3:</strong> Nhấn <strong>New</strong> để tạo hồ sơ nhà cung cấp mới hoặc chọn nhà cung cấp hiện có để xem lịch sử giao dịch mua sắm.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing"></a></p>
+    <h2 id="43-️-phân-hệ-hóa-đơn-invoicing"><a class="anchor" aria-hidden="true" tabindex="-1" href="#43-️-phân-hệ-hóa-đơn-invoicing"><span class="octicon octicon-link"></span></a><strong>4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)</strong></h2>
+    <p><a id="invoicing-config"></a></p>
+    <h3 id="431-cấu-hình-configuration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#431-cấu-hình-configuration"><span class="octicon octicon-link"></span></a><strong>4.3.1 Cấu hình (Configuration)</strong></h3>
+    <p><a id="taxes"></a></p>
+    <h4 id="4311-cấu-hình-thuế-configuration--taxes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4311-cấu-hình-thuế-configuration--taxes"><span class="octicon octicon-link"></span></a><strong>4.3.1.1 Cấu hình thuế (Configuration > Taxes)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-19"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-19"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Cấu hình các loại thuế suất giá trị gia tăng (VAT) đầu vào và đầu ra áp dụng cho sản phẩm. Thiết lập này giúp hệ thống định khoản tự động tài khoản thuế phải nộp hoặc thuế được khấu trừ tương ứng khi ghi sổ hóa đơn.</p>
+    <h5 id="giải-thích-các-trường-thông-tin-10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-10"><span class="octicon octicon-link"></span></a><strong>Explanation of Fields &amp; Tab Configurations</strong></h5>
+    <ul>
+      <li><strong>General Information:</strong>
+        <ul>
+          <li><strong>Tax Name (*):</strong> The display name of the tax (e.g., <code>VAT 10% Sales</code>).</li>
+          <li><strong>Tax Type (*):</strong> Scope of application: <strong>Sales</strong> (for outgoing customer invoices) or <strong>Purchase</strong> (for incoming vendor bills).</li>
+          <li><strong>Tax Computation (*):</strong> Calculation method, typically select <strong>Percentage of Price</strong>.</li>
+          <li><strong>Amount:</strong> The tax rate value (e.g., <code>10.00</code> representing 10%).</li>
+        </ul>
+      </li>
+      <li><strong>Definition Tab:</strong>
+        <p>Specifies how the base amount (Base) and calculated tax amount (Tax) are mapped to journal accounts on Invoices and Refunds:</p>
+        <ul>
+          <li><strong>Base:</strong> Price before tax. Leave the Account field <strong>empty</strong> (the system will automatically use the income/expense account of the product).</li>
+          <li><strong>Tax:</strong> Calculated tax amount. Enter <code>%</code> as <code>100.00</code>, set <code>Based on</code> to <code>Tax</code> and choose the corresponding <strong>Account</strong> (e.g., <code>333100</code> for sales tax, <code>131000</code>/<code>1331</code> for purchase tax).</li>
+          <li><strong>Tax Grid:</strong> Assign to the corresponding box on the VAT declaration form if automatic tax return generation is required (leave blank otherwise).</li>
+        </ul>
+      </li>
+      <li><strong>Advanced Options Tab:</strong>
+        <ul>
+          <li><strong>Label on Invoices:</strong> A short label displayed to customers on printed invoices (e.g., <code>VAT 10%</code>).</li>
+          <li><strong>Tax Group:</strong> Category grouping for taxes (e.g., group <code>VAT 10% Group</code>).</li>
+          <li><strong>Country:</strong> Select <code>Vietnam</code> to align with the correct currency and regulatory formats.</li>
+          <li><strong>Included in Price:</strong> Check this if the product price entered on orders is tax-inclusive (retail B2C); uncheck it if it is tax-exclusive (wholesale B2B).</li>
+          <li><strong>Affect Base of Subsequent Taxes:</strong> Check this if subsequent taxes should be computed on top of this tax (tax-on-tax, e.g., Special Consumption Tax calculated first, then VAT calculated on both product price + Special Consumption Tax).</li>
+        </ul>
+      </li>
+    </ul>
+    <h5 id="các-bước-thực-hiện-19"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-19"><span class="octicon octicon-link"></span></a><strong>Steps to Execute</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Select the <strong>"Invoicing"</strong> app -> click <strong>"Configuration"</strong> -> select <strong>"Taxes"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Click the <strong>"New"</strong> button to create a new tax:
+        
+        <img src="images/taxes.png" alt="Tax Configuration">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Enter the <strong>Tax Name</strong>, select the <strong>Tax Type</strong>, input the <strong>Amount</strong>, and configure account mappings and advanced options in the **Definition** and **Advanced Options** tabs as described above:
+        
+        <img src="images/steps/tax_form_filled.png" alt="Detailed Tax Form">
+        <br>
+        <em>Detailed configuration for Advanced Options tab:</em>
+        <br>
+        <img src="images/steps/tax_advanced_tab.png" alt="Advanced Options Tab Configuration">
+      </li>
+      <li><strong>Step 4:</strong> Click <strong>Save</strong> to save the tax.</li>
+    </ul>
+    <hr>
+    <p><a id="journals"></a></p>
+    <h4 id="4312-sổ-nhật-ký-journals"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4312-sổ-nhật-ký-journals"><span class="octicon octicon-link"></span></a><strong>4.3.1.2 Sổ nhật ký (Journals)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-20"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-20"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Thiết lập các sổ nhật ký kế toán để phân nhóm các nghiệp vụ tài chính phát sinh (Ví dụ: Sổ nhật ký Hóa đơn bán hàng, Sổ nhật ký Mua hàng, Nhật ký tài khoản Ngân hàng, Nhật ký Tiền mặt). Mỗi sổ nhật ký sẽ quản lý một chuỗi số chứng từ riêng biệt và tài khoản định khoản mặc định.</p>
+    <h5 id="các-bước-thực-hiện-20"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-20"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Select the <strong>"Invoicing"</strong> app -> select <strong>"Configuration"</strong> -> click <strong>"Journals"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Click the <strong>"New"</strong> button:
+        
+        <img src="images/journals.png" alt="Journal Configuration">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Enter the <strong>Journal Name</strong>, select the <strong>Type</strong> and enter the <strong>Short Code</strong>:
+        
+        <img src="images/steps/journal_form_filled.png" alt="Detailed Journal Form">
+      </li>
+      <li><strong>Step 4:</strong> Set the default cash/bank accounts for payment journals under the <strong>Journal Entries</strong> tab.</li>
+      <li>
+        <strong>Step 5:</strong> Under the <strong>Advanced Settings</strong> tab, configure corresponding account controls, product controls, or payment methods:
+        
+        <img src="images/steps/journal_advanced_tab.png" alt="Advanced Settings Tab Configuration">
+      </li>
+      <li><strong>Step 6:</strong> Click <strong>Save</strong> to save the journal.</li>
+    </ul>
+    <hr>
+    <p><a id="payment-terms"></a></p>
+    <h4 id="4313-điều-khoản-thanh-toán-payment-terms"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4313-điều-khoản-thanh-toán-payment-terms"><span class="octicon octicon-link"></span></a><strong>4.3.1.3 Điều khoản thanh toán (Payment Terms)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-21"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-21"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Định nghĩa các chính sách tín dụng và thời hạn thanh toán áp dụng cho khách hàng hoặc nhà cung cấp (Ví dụ: Thanh toán ngay, Thanh toán 30% đặt cọc, 70% sau 30 ngày giao hàng).</p>
+    <h5 id="các-bước-thực-hiện-21"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-21"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Payment Terms"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong>:
+        
+        <img src="images/payment_terms.png" alt="Điều khoản thanh toán">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Nhập tên điều khoản thanh toán và cấu hình các dòng quy tắc thanh toán chi tiết:
+        
+        <img src="images/steps/payment_term_form_filled.png" alt="Chi tiết biểu mẫu Điều khoản thanh toán">
+      </li>
+      <li><strong>Step 4:</strong> Nhấn <strong>Save</strong> để lưu.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing-vendor"></a></p>
+    <h3 id="432-nhà-cung-cấp-vendor"><a class="anchor" aria-hidden="true" tabindex="-1" href="#432-nhà-cung-cấp-vendor"><span class="octicon octicon-link"></span></a><strong>4.3.2 Nhà cung cấp (Vendor)</strong></h3>
+    <p><a id="bills"></a></p>
+    <h4 id="4321-hóa-đơn-nhà-cung-cấp-bills"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4321-hóa-đơn-nhà-cung-cấp-bills"><span class="octicon octicon-link"></span></a><strong>4.3.2.1 Hóa đơn nhà cung cấp (Bills)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-22"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-22"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Ghi nhận hóa đơn mua hàng do nhà cung cấp phát hành gửi đến doanh nghiệp để hạch toán chi phí đầu vào và ghi nhận công nợ phải trả (Accounts Payable).</p>
+    <h5 id="các-bước-thực-hiện-22"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-22"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Vendors"</strong> -> click <strong>"Bills"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để tạo hóa đơn NCC mới:
+        
+        <img src="images/vendor_bills.png" alt="Hóa đơn nhà cung cấp nháp">
+      </li>
+      <li><strong>Step 3:</strong> Enter vendor name in <strong>Vendor</strong>, invoice date in <strong>Bill Date</strong>, and product lines in the <strong>Invoice Lines</strong> tab.</li>
+      <li>
+        <strong>Step 4:</strong> (Optional) Switch to the <strong>"Other Info"</strong> tab to enter payment details such as payment terms, due date, and bank account.
+        
+        <img src="images/en/steps/invoice_tab_other.png" alt="Vendor Bill Other Info Tab">
+      </li>
+      <li><strong>Step 5:</strong> Click the <strong>"Save"</strong> button to save it as draft, and click <strong>"Confirm"</strong> to officially post the payable liability.</li>
+    </ul>
+    <hr>
+    <p><a id="refunds"></a></p>
+    <h4 id="4322-hóa-đơn-trả-lại--hoàn-tiền-refunds"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4322-hóa-đơn-trả-lại--hoàn-tiền-refunds"><span class="octicon octicon-link"></span></a><strong>4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-23"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-23"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Tạo chứng từ giảm trừ công nợ hoặc hoàn tiền từ nhà cung cấp (Vendor Credit Note) trong trường hợp doanh nghiệp trả lại hàng lỗi, hỏng hoặc được giảm giá mua hàng.</p>
+    <h5 id="các-bước-thực-hiện-23"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-23"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li>
+        <strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Vendors"</strong> -> click <strong>"Refunds"</strong> (hoở mở trực tiếp hóa đơn Bill gốc và chọn <strong>Add Credit Note</strong>):
+        
+        <img src="images/vendor_refunds.png" alt="Hóa đơn hoàn tiền NCC">
+      </li>
+      <li><strong>Step 2:</strong> Điền số tiền được hoàn trả hoặc cấn trừ, lý do hoàn tiền. Nhấn <strong>Save</strong> và <strong>Confirm</strong> để giảm trừ công nợ phải trả nhà cung cấp.</li>
+    </ul>
+    <hr>
+    <p><a id="vendor-payments"></a></p>
+    <h4 id="4323-thanh-toán-cho-nhà-cung-cấp-vendor-payments"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4323-thanh-toán-cho-nhà-cung-cấp-vendor-payments"><span class="octicon octicon-link"></span></a><strong>4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-24"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-24"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Ghi nhận bút toán chuyển khoản ngân hàng hoặc chi tiền mặt thực tế để thanh toán công nợ cho nhà cung cấp.</p>
+    <h5 id="các-bước-thực-hiện-24"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-24"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Vendors"</strong> -> click <strong>"Payments"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> (hoặc mở hóa đơn Bill gốc đang nợ và nhấn <strong>Register Payment</strong>):
+        
+        <img src="images/vendor_payments.png" alt="Ghi nhận thanh toán cho NCC">
+      </li>
+      <li><strong>Step 3:</strong> Chọn sổ nhật ký thanh toán (Tiền mặt/Ngân hàng), điền số tiền trả và chọn nhà cung cấp đối ứng. Nhấn <strong>Confirm</strong> để khấu trừ nợ phải trả.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing-vendor-products"></a></p>
+    <h4 id="4324-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4324-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.3.2.4 Sản phẩm (Products)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-25"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-25"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Tra cứu nhanh danh sách các mặt hàng mua vào để phục vụ làm Bills hoặc cấu hình tài khoản kế toán chi phí đầu vào tương ứng cho sản phẩm.</p>
+    <h5 id="các-bước-thực-hiện-25"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-25"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Vendors"</strong> -> click <strong>"Products"</strong>.</li>
+      <li><strong>Step 2:</strong> Click chọn sản phẩm cần cấu hình để điều chỉnh các tài khoản kế toán chi phí tại tab <strong>Income/Expense Accounts</strong>.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing-vendor-main"></a></p>
+    <h4 id="4325-nhà-cung-cấp-vendors"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4325-nhà-cung-cấp-vendors"><span class="octicon octicon-link"></span></a><strong>4.3.2.5 Nhà cung cấp (Vendors)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-26"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-26"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Xem và cấu hình thông tin danh bạ đối tác là nhà cung cấp, cấu hình tài khoản công nợ phải trả mặc định (Account Payable) phục vụ hạch toán mua hàng.</p>
+    <h5 id="các-bước-thực-hiện-26"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-26"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Vendors"</strong> -> click <strong>"Vendors"</strong>.</li>
+      <li><strong>Step 2:</strong> Chọn nhà cung cấp cần thiết lập, tại tab <strong>Accounting</strong>, gán tài khoản kế toán công nợ và nhấn <strong>Save</strong>.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing-customers"></a></p>
+    <h3 id="433-khách-hàng-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#433-khách-hàng-customers"><span class="octicon octicon-link"></span></a><strong>4.3.3 Khách hàng (Customers)</strong></h3>
+    <p><a id="invoices"></a></p>
+    <h4 id="4331-hóa-đơn-khách-hàng-invoices"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4331-hóa-đơn-khách-hàng-invoices"><span class="octicon octicon-link"></span></a><strong>4.3.3.1 Hóa đơn khách hàng (Invoices)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-27"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-27"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Ghi nhận doanh thu bán hàng và công nợ phải thu từ khách hàng (Accounts Receivable). Hóa đơn sau khi được ghi sổ sẽ cấp số hiệu chính thức và ghi nhận công nợ.</p>
+    <h5 id="các-bước-thực-hiện-27"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-27"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li>
+        <strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> (Hóa đơn) bên menu trái để xem danh sách hóa đơn hiện có:
+        
+        <img src="images/invoices.png" alt="Danh sách hóa đơn khách hàng">
+      </li>
+      <li><strong>Step 2:</strong> Nhấp nút <strong>"New"</strong> ở góc trên cùng bên trái.</li>
+      <li><strong>Step 3:</strong> Select the customer in the <strong>Customer</strong> field (e.g., <code>Acme Corporation</code>) and enter product lines in the <strong>Invoice Lines</strong> tab.</li>
+      <li><strong>Step 4:</strong> Set the quantity to <code>1.00</code>, the system automatically fetches the default price <code>140.00</code>.</li>
+      <li>
+        <strong>Step 5:</strong> (Optional) Switch to the <strong>"Other Info"</strong> tab to set bank accounts, payment terms, or salespersons.
+        
+        <img src="images/en/steps/invoice_tab_other.png" alt="Customer Invoice Other Info Tab">
+      </li>
+      <li>
+        <strong>Step 6:</strong> Save the invoice in draft status:
+        
+        <img src="images/invoice_form.png" alt="Draft Customer Invoice Form">
+      </li>
+      <li><strong>Step 7:</strong> Click <strong>"Confirm"</strong> at the top left to officially post the invoice.</li>
+      <li>
+        <strong>Step 8:</strong> Trạng thái chuyển sang <strong>Posted</strong>, hệ thống sinh số hóa đơn dạng <code>INV/2026/00010</code> và hiển thị khoản nợ cần thu ở trường <strong>Amount Due</strong>:
+        
+        <img src="images/invoice_confirmed.png" alt="Hóa đơn khách hàng đã ghi sổ">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="credit-notes"></a></p>
+    <h4 id="4332-ghi-chú-tín-dụng--giảm-trừ-nợ-credit-notes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4332-ghi-chú-tín-dụng--giảm-trừ-nợ-credit-notes"><span class="octicon octicon-link"></span></a><strong>4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ (Credit Notes)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-28"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-28"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Tạo hóa đơn giảm trừ công nợ (Credit Note) cho khách hàng trong trường hợp trả lại hàng hóa đã mua hoặc được chiết khấu, giảm giá sau khi hóa đơn chính thức đã xuất.</p>
+    <h5 id="các-bước-thực-hiện-28"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-28"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Mở Hóa đơn khách hàng (Invoice) cần giảm trừ đã ghi sổ.</li>
+      <li><strong>Step 2:</strong> Nhấp nút <strong>[Credit Note]</strong> ở thanh công cụ phía trên.</li>
+      <li>
+        <strong>Step 3:</strong> Nhập lý do giảm trừ nợ, chọn phương thức hoàn tiền và nhấn <strong>Confirm</strong> để tạo và ghi sổ hóa đơn giảm trừ công nợ:
+        
+        <img src="images/credit_notes.png" alt="Ghi chú tín dụng / Giảm trừ nợ">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="customer-payments"></a></p>
+    <h4 id="4333-ghi-nhận-thanh-toán-của-khách-hàng-customer-payments"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4333-ghi-nhận-thanh-toán-của-khách-hàng-customer-payments"><span class="octicon octicon-link"></span></a><strong>4.3.3.3 Ghi nhận thanh toán của khách hàng (Customer Payments)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-29"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-29"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Ghi nhận số tiền thu về từ khách hàng (chuyển khoản ngân hàng hoặc tiền mặt) để cấn trừ các hóa đơn còn nợ của họ trên hệ thống.</p>
+    <h5 id="các-bước-thực-hiện-29"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-29"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Mở hóa đơn bán hàng cần ghi nhận thanh toán đang có trạng thái <strong>Posted</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>[Pay]</strong> (hoặc <strong>Register Payment</strong>) ở góc trên bên trái:
+        
+        <img src="images/customer_payments.png" alt="Ghi nhận thanh toán từ khách hàng">
+      </li>
+      <li><strong>Step 3:</strong> Chọn Sổ nhật ký nhận tiền (Cash/Bank), số tiền nhận thực tế và nhấn <strong>Create Payment</strong>.</li>
+      <li><strong>Step 4:</strong> Hoặc đối với khách hàng có sẵn tiền đặt cọc trước đó: Cuộn xuống chân trang tại phần <strong>Outstanding credits</strong> và nhấn nút <strong>[Add]</strong> bên cạnh khoản tiền cọc để cấn trừ trực tiếp công nợ.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing-customer-products"></a></p>
+    <h4 id="4334-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4334-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.3.3.4 Sản phẩm (Products)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-30"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-30"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Tra cứu nhanh danh sách các mặt hàng bán ra để kiểm tra thông tin tài khoản doanh thu (Income Account) phục vụ xuất hóa đơn khách hàng.</p>
+    <h5 id="các-bước-thực-hiện-30"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-30"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Customers"</strong> -> click <strong>"Products"</strong>.</li>
+      <li><strong>Step 2:</strong> Cấu hình tài khoản kế toán ghi nhận doanh thu mặc định cho sản phẩm tại tab <strong>Accounting</strong>.</li>
+    </ul>
+    <hr>
+    <p><a id="invoicing-customers-main"></a></p>
+    <h4 id="4335-khách-hàng-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4335-khách-hàng-customers"><span class="octicon octicon-link"></span></a><strong>4.3.3.5 Khách hàng (Customers)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-31"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-31"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý danh sách khách hàng và thiết lập các thông tin tài khoản ngân hàng, tài khoản công nợ phải thu (Account Receivable) của khách hàng phục vụ cho phân hệ Kế toán.</p>
+    <h5 id="các-bước-thực-hiện-31"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-31"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Invoicing"</strong> -> di chuyển đến menu <strong>"Customers"</strong> -> click <strong>"Customers"</strong>.</li>
+      <li><strong>Step 2:</strong> Chọn khách hàng cần thiết lập, tại tab <strong>Accounting</strong>, gán tài khoản kế toán công nợ phải thu và nhấn <strong>Save</strong> để cập nhật.</li>
+    </ul>
+    <hr>
+    <p><a id="inventory"></a></p>
+    <h2 id="44--phân-hệ-kho-inventory"><a class="anchor" aria-hidden="true" tabindex="-1" href="#44--phân-hệ-kho-inventory"><span class="octicon octicon-link"></span></a><strong>4.4 📦 PHÂN HỆ KHO (Inventory)</strong></h2>
+    <p><a id="inventory-config"></a></p>
+    <h3 id="441-cấu-hình-configuration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#441-cấu-hình-configuration"><span class="octicon octicon-link"></span></a><strong>4.4.1 Cấu hình (Configuration)</strong></h3>
+    <p><a id="warehouses"></a></p>
+    <h4 id="4411-kho-hàng-warehouses"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4411-kho-hàng-warehouses"><span class="octicon octicon-link"></span></a><strong>4.4.1.1 Kho hàng (Warehouses)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-32"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-32"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quản lý các địa điểm vật lý hoặc kho hàng của doanh nghiệp (Ví dụ: Kho chính, Kho trung chuyển, Kho chi nhánh). Việc thiết lập kho hàng giúp hệ thống theo dõi chính xác lượng tồn kho và cấu hình các tuyến đường vận chuyển tự động.</p>
+    <h5 id="các-bước-thực-hiện-32"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-32"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Warehouses"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Hệ thống hiển thị danh sách các kho hàng:
+        
+        <img src="images/inventory_warehouses.png" alt="Danh sách Kho hàng">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Nhấp chọn một kho hàng (hoặc nhấn <strong>"New"</strong> để tạo mới) để xem thông tin chi tiết:
+        
+        <img src="images/steps/warehouse_form_filled.png" alt="Chi tiết biểu mẫu Kho hàng">
+      </li>
+      <li><strong>Step 4:</strong> Nhập tên kho hàng (<strong>Warehouse</strong>), mã viết tắt (<strong>Short Name</strong>), và địa chỉ kho. Nhấn <strong>Save</strong> để lưu.</li>
+    </ul>
+    <hr>
+    <p><a id="operations-types"></a></p>
+    <h4 id="4412-loại-hoạt-động-operations-types"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4412-loại-hoạt-động-operations-types"><span class="octicon octicon-link"></span></a><strong>4.4.1.2 Loại hoạt động (Operations Types)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-33"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-33"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Định nghĩa các loại giao dịch kho khác nhau (Ví dụ: Nhận hàng - Receipts, Giao hàng - Delivery Orders, Chuyển kho nội bộ - Internal Transfers). Mỗi loại hoạt động sẽ có quy trình xử lý, địa điểm kho nguồn/đích mặc định và chuỗi số phiếu riêng biệt.</p>
+    <h5 id="các-bước-thực-hiện-33"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-33"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn <strong>"Configuration"</strong> -> click <strong>"Operations Types"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Hệ thống hiển thị danh sách các loại hoạt động:
+        
+        <img src="images/inventory_operation_types.png" alt="Loại hoạt động kho">
+      </li>
+      <li>
+        <strong>Step 3:</strong> Nhấp chọn một loại hoạt động để xem chi tiết cấu hình:
+        
+        <img src="images/steps/operation_type_form_filled.png" alt="Chi tiết biểu mẫu Loại hoạt động">
+      </li>
+      <li><strong>Step 4:</strong> Định nghĩa tên loại hoạt động, chọn kho hàng áp dụng, địa điểm nguồn/đích mặc định và nhấn <strong>Save</strong>.</li>
+    </ul>
+    <hr>
+    <p><a id="inventory-operations"></a></p>
+    <h3 id="442-hoạt-động-kho-operations"><a class="anchor" aria-hidden="true" tabindex="-1" href="#442-hoạt-động-kho-operations"><span class="octicon octicon-link"></span></a><strong>4.4.2 Hoạt động kho (Operations)</strong></h3>
+    <p><a id="receipts"></a></p>
+    <h4 id="4421-nhận-hàng-receipts"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4421-nhận-hàng-receipts"><span class="octicon octicon-link"></span></a><strong>4.4.2.1 Nhận hàng (Receipts)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-34"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-34"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Thực hiện nhận hàng hóa từ nhà cung cấp vào kho dựa trên Đơn mua hàng (PO). Phiếu nhận hàng ghi nhận số lượng thực nhập, in phiếu nhập kho và cập nhật số lượng tồn kho tức thời.</p>
+    <h5 id="các-bước-thực-hiện-34"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-34"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn menu <strong>"Operations"</strong> -> click <strong>"Receipts"</strong> (hoặc nhấn vào nút <strong>"Receipts"</strong> trên bảng điều khiển Inventory Overview).</li>
+      <li><strong>Step 2:</strong> Chọn phiếu nhận hàng có trạng thái <strong>"Ready"</strong> liên kết với PO tương ứng.</li>
+      <li><strong>Step 3:</strong> Check the actual quantity received in the <strong>"Done"</strong> column of the <strong>Operations</strong> tab.</li>
+      <li>
+        <strong>Step 4:</strong> (Optional) Switch to the <strong>"Additional Info"</strong> tab to enter shipping partner info or verify source documents.
+        
+        <img src="images/en/steps/inventory_tab_additional.png" alt="Receipt Additional Info Tab">
+      </li>
+      <li>
+        <strong>Step 5:</strong> (Optional) Switch to the <strong>"Note"</strong> tab to add internal shipping notes or special instructions.
+        
+        <img src="images/en/steps/inventory_tab_note.png" alt="Receipt Note Tab">
+      </li>
+      <li>
+        <strong>Step 6:</strong> Click <strong>"Validate"</strong> to complete the stock receipt:
+        
+        <img src="images/inventory_receipt_validated.png" alt="Completed Inventory Receipt">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="deliveries"></a></p>
+    <h4 id="4422-giao-hàng-deliveries"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4422-giao-hàng-deliveries"><span class="octicon octicon-link"></span></a><strong>4.4.2.2 Giao hàng (Deliveries)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-35"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-35"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Xuất kho hàng hóa để giao cho khách hàng dựa trên Đơn bán hàng (SO). Phiếu giao hàng giúp kiểm tra tình trạng hàng trong kho, chuẩn bị hàng và xác nhận xuất kho chính thức.</p>
+    <h5 id="các-bước-thực-hiện-35"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-35"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn menu <strong>"Operations"</strong> -> click <strong>"Deliveries"</strong> (hoặc nhấn vào nút <strong>"Delivery Orders"</strong> trên bảng điều khiển Inventory Overview).</li>
+      <li><strong>Step 2:</strong> Chọn phiếu giao hàng tương ứng của Đơn bán hàng cần xuất.</li>
+      <li><strong>Step 3:</strong> Confirm the actual shipped quantity in the <strong>"Done"</strong> column of the <strong>Operations</strong> tab.</li>
+      <li>
+        <strong>Step 4:</strong> (Optional) Switch to the <strong>"Additional Info"</strong> tab to set shipping partner details or tracking numbers.
+        
+        <img src="images/en/steps/inventory_tab_additional.png" alt="Delivery Additional Info Tab">
+      </li>
+      <li>
+        <strong>Step 5:</strong> (Optional) Switch to the <strong>"Note"</strong> tab to add shipping notes.
+        
+        <img src="images/en/steps/inventory_tab_note.png" alt="Delivery Note Tab">
+      </li>
+      <li>
+        <strong>Step 6:</strong> Click <strong>"Validate"</strong> to officially complete the stock delivery:
+        
+        <img src="images/inventory_delivery_validated.png" alt="Completed Inventory Delivery">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="internal-transfers"></a></p>
+    <h4 id="4423-chuyển-kho-nội-bộ-internal-transfers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4423-chuyển-kho-nội-bộ-internal-transfers"><span class="octicon octicon-link"></span></a><strong>4.4.2.3 Chuyển kho nội bộ (Internal Transfers)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-35-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-35-1"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Transfer goods between physical warehouses or different locations within the same warehouse (e.g., transferring goods from the Main Warehouse to the Retail Store Warehouse, or moving defective items to a scrap/QC location). This process helps optimize stock availability and logistics workflows.</p>
+    <blockquote style="margin: 0; padding: 0 1em; color: var(--color-fg-muted); border-left: .25em solid var(--color-border-default);">
+      <p><strong>[IMPORTANT]</strong><br>
+      If you cannot see the <strong>Source Location</strong> and <strong>Destination Location</strong> fields, it is because <strong>Storage Locations</strong> has not been enabled in system settings. Contact your administrator to navigate to <strong>Inventory</strong> -> <strong>Configuration</strong> -> <strong>Settings</strong>, tick <strong>Storage Locations</strong>, and save.</p>
+    </blockquote>
+    <h5 id="các-bước-thực-hiện-35-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-35-1"><span class="octicon octicon-link"></span></a><strong>Steps to Execute</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Select the <strong>"Inventory"</strong> app -> select the <strong>"Operations"</strong> menu -> click <strong>"Transfers"</strong> (or click <strong>"New"</strong> under the <strong>Internal Transfers</strong> card on the Inventory Overview dashboard).
+        <br>
+        <img src="images/inventory_transfers.png" alt="Transfers List">
+      </li>
+      <li><strong>Step 2:</strong> Click the <strong>"New"</strong> button.</li>
+      <li>
+        <strong>Step 3:</strong> Select the <strong>Source Location</strong> and <strong>Destination Location</strong>. In the <strong>Operations</strong> tab, click <strong>"Add a line"</strong>, choose the product, and enter the <strong>Demand</strong> quantity:
+        <br>
+        <img src="images/steps/inventory_transfer_form.png" alt="Detailed Transfer Form">
+      </li>
+      <li><strong>Step 4:</strong> Click <strong>Save</strong>, then click <strong>Mark as Todo</strong> and <strong>Check Availability</strong> to reserve the stock.</li>
+      <li><strong>Step 5:</strong> Once the physical transfer is completed, enter the moved quantity in the <strong>Done</strong> column and click <strong>Validate</strong> to complete the transfer.</li>
+    </ul>
+    <blockquote style="margin: 15px 0; padding: 0 1em; color: var(--color-fg-muted); border-left: .25em solid var(--color-accent-emphasis);">
+      <p><strong>[IMPORTANT STOCK TRANSFER RULES]</strong><br>
+      • <strong>Source Stock Availability:</strong> The source location must have sufficient stock on hand to <strong>Validate</strong> the transfer. If stock is unavailable, the transfer remains in a <em>Waiting</em> state and cannot be completed.<br>
+      • <strong>Stock Reservation:</strong> Clicking <strong>Check Availability</strong> locks the required quantity in the source location under the <strong>Reserved</strong> column, preventing it from being allocated to other sales or transfer orders.<br>
+      • <strong>Lot/Serial Tracking:</strong> For products tracked by Lots or Serial Numbers, you must specify the exact Lot/Serial number being transferred under the operations detail. You cannot simply input a generic quantity.<br>
+      • <strong>Unit of Measure (UoM):</strong> Ensure that the correct UoM is used to prevent incorrect quantity conversions and inventory discrepancies.</p>
+    </blockquote>
+    <hr>
+    <p><a id="physical-inventory"></a></p>
+    <h4 id="4424-kiểm-kho-định-kỳ-physical-inventory"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4424-kiểm-kho-định-kỳ-physical-inventory"><span class="octicon octicon-link"></span></a><strong>4.4.2.4 Kiểm kho định kỳ (Physical Inventory)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-36"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-36"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Kiểm kê số lượng tồn kho thực tế tại kho và điều chỉnh số lượng tồn kho trên hệ thống nếu có chênh lệch, đảm bảo tính chính xác của số liệu kế toán kho.</p>
+    <h5 id="các-bước-thực-hiện-36"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-36"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn menu <strong>"Operations"</strong> -> click <strong>"Physical Inventory"</strong>.</li>
+      <li>
+        <strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để bắt đầu đợt kiểm kê, hoặc chọn các dòng sản phẩm hiển thị để điều chỉnh trực tiếp số lượng thực tế tại cột <strong>"Counted Quantity"</strong>:
+        
+        <img src="images/inventory_physical.png" alt="Kiểm kê kho">
+      </li>
+      <li><strong>Step 3:</strong> Sau khi nhập số lượng thực tế kiểm đếm, nhấn <strong>"Apply"</strong> để hệ thống tự động sinh bút toán điều chỉnh kho.</li>
+    </ul>
+    <hr>
+    <p><a id="scrap-orders"></a></p>
+    <h4 id="4425-phiếu-loại-bỏ--hủy-hàng-scrap-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4425-phiếu-loại-bỏ--hủy-hàng-scrap-orders"><span class="octicon octicon-link"></span></a><strong>4.4.2.5 Phiếu loại bỏ / Hủy hàng (Scrap Orders)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-37"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-37"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Loại bỏ hàng hóa bị hư hỏng, lỗi, hết hạn sử dụng ra khỏi kho và ghi nhận chi phí hao hụt kho tương ứng.</p>
+    <h5 id="các-bước-thực-hiện-37"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-37"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn menu <strong>"Operations"</strong> -> click <strong>"Scrap Orders"</strong>.</li>
+      <li><strong>Step 2:</strong> Nhấn nút <strong>"New"</strong> để tạo phiếu hủy hàng:
+        
+        <img src="images/inventory_scrap_form.png" alt="Phiếu hủy hàng">
+      </li>
+      <li><strong>Step 3:</strong> Chọn sản phẩm cần hủy, nhập số lượng hủy tại cột <strong>"Quantity"</strong>, và chọn kho chứa hàng lỗi. Nhấn <strong>Save</strong> và <strong>Validate</strong> để hoàn tất hủy hàng.</li>
+    </ul>
+    <hr>
+    <p><a id="product-returns"></a></p>
+    <h4 id="4426-quy-trình-trả-hàng-product-returns"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4426-quy-trình-trả-hàng-product-returns"><span class="octicon octicon-link"></span></a><strong>4.4.2.6 Product Returns (Quy trình Trả hàng)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-38"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-38"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Process returned products from customers (Customer Returns) or return defect/incorrect items to vendors (Vendor Returns). This workflow updates the stock levels accurately and serves as a basis for the accounting department to issue credit notes or refund bills.</p>
+    
+    <h5 id="các-bước-thực-hiện-38-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-38-1"><span class="octicon octicon-link"></span></a><strong>1. Customer Returns (Khách hàng trả lại hàng)</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Go to the <strong>Inventory</strong> app -> select <strong>Operations</strong> -> click <strong>Deliveries</strong> (or <strong>Transfers</strong>). Find and open the completed Delivery Order (with code <strong>OUT</strong>) corresponding to the original order being returned.</li>
+      <li><strong>Step 2:</strong> On the completed delivery form, click the <strong>[Return] (Trả hàng)</strong> button in the statusbar at the top:
+        <br>
+        <img src="images/steps/delivery_return_button.png" alt="Return button on delivery order">
+      </li>
+      <li><strong>Step 3:</strong> In the pop-up Return wizard, verify the product list and enter the returned quantities in the <strong>Quantity</strong> column:
+        <br>
+        <img src="images/steps/delivery_return_wizard.png" alt="Customer Return Wizard">
+      </li>
+      <li><strong>Step 4:</strong> Click the green <strong>[Return]</strong> button. The system automatically generates a new incoming receipt in a <strong>Ready</strong> state with the origin set to <em>"Return of [original OUT code]"</em>:
+        <br>
+        <img src="images/steps/delivery_return_picking_ready.png" alt="Return incoming receipt in Ready state">
+      </li>
+      <li><strong>Step 5:</strong> Check the returned goods physically, input the actual quantities in the <strong>Done</strong> column, and click <strong>[Validate]</strong> to return the items to stock:
+        <br>
+        <img src="images/steps/delivery_return_picking_validated.png" alt="Validated return incoming receipt">
+      </li>
+    </ul>
+
+    <h5 id="các-bước-thực-hiện-38-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-38-2"><span class="octicon octicon-link"></span></a><strong>2. Vendor Returns (Trả hàng cho Nhà cung cấp)</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Go to the <strong>Inventory</strong> app -> select <strong>Operations</strong> -> click <strong>Receipts</strong> (or <strong>Transfers</strong>). Find and open the completed Receipt (with code <strong>IN</strong>) corresponding to the original purchase order being returned.</li>
+      <li><strong>Step 2:</strong> Click the <strong>[Return] (Trả hàng)</strong> button in the statusbar at the top:
+        <br>
+        <img src="images/steps/receipt_return_button.png" alt="Return button on receipt">
+      </li>
+      <li><strong>Step 3:</strong> In the pop-up Return wizard, enter the product quantities to be sent back to the vendor:
+        <br>
+        <img src="images/steps/receipt_return_wizard.png" alt="Vendor Return Wizard">
+      </li>
+      <li><strong>Step 4:</strong> Click the <strong>[Return]</strong> button. The system automatically generates a new outgoing delivery in a <strong>Ready</strong> state with the origin set to <em>"Return of [original IN code]"</em>:
+        <br>
+        <img src="images/steps/receipt_return_picking_ready.png" alt="Return outgoing delivery in Ready state">
+      </li>
+      <li><strong>Step 5:</strong> Click <strong>[Validate]</strong> to complete the return shipment:
+        <br>
+        <img src="images/steps/receipt_return_picking_validated.png" alt="Validated return outgoing delivery">
+      </li>
+    </ul>
+    <hr>
+    <p><a id="inventory-overview"></a></p>
+    <h4 id="4427-tổng-quan-kho-inventory-overview"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4427-tổng-quan-kho-inventory-overview"><span class="octicon octicon-link"></span></a><strong>4.4.2.7 Tổng quan kho (Inventory Overview)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-39"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-39"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Bảng điều khiển trung tâm hiển thị trạng thái hoạt động của tất cả các loại hoạt động kho (Nhập kho, Xuất kho, Chuyển kho nội bộ) giúp thủ kho nắm bắt nhanh số lượng phiếu đang chờ xử lý (To Process), phiếu trễ hạn (Late), hoặc phiếu sẵn sàng thực hiện (Ready).</p>
+    <h5 id="các-bước-thực-hiện-39"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-39"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Step 1:</strong> Chọn phân hệ <strong>"Inventory"</strong> -> chọn menu <strong>"Operations"</strong> -> click <strong>"Inventory Overview"</strong> (hoặc click trực tiếp vào tab Inventory khi vào phân hệ).</li>
+      <li>
+        <strong>Step 2:</strong> Màn hình Kanban hiển thị các thẻ đại diện cho từng loại hoạt động kho:
+        
+        <img src="images/inventory_overview.png" alt="Tổng quan kho">
+      </li>
+      <li><strong>Step 3:</strong> Nhấp vào các phím chức năng trên thẻ để đi đến danh sách các phiếu kho tương ứng theo trạng thái cần xử lý.</li>
+    </ul>
+    <hr>
+    <p><a id="inventory-mto"></a></p>
+    <h4 id="4428-make-to-order-mto-procurement-workflow"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4428-make-to-order-mto-procurement-workflow"><span class="octicon octicon-link"></span></a><strong>4.4.2.8 Make to Order (MTO) Procurement Workflow</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-39-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-39-1"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>The MTO workflow is used for "Buy to Order" (Back-to-Back) business models. When a customer orders a product that is not stocked, the system automatically generates a draft Purchase Order (RFQ) for the designated vendor as soon as the Sales Order (SO) is confirmed. This keeps inventory costs low and automates cross-document references.</p>
+    <h5 id="các-bước-thực-hiện-39-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-39-2"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện cấu hình và vận hành</strong></h5>
+    
+    <h6><strong>1. Product Configuration</strong></h6>
+    <ul>
+      <li><strong>Step 1:</strong> Go to the <strong>Products</strong> app -> open the target product. Ensure both <strong>Sales</strong> and <strong>Purchase</strong> checkboxes are ticked at the top:
+        <br>
+        <img src="images/steps/product_mto_sales_purchase.png" alt="Enable sales and purchase on product">
+      </li>
+      <li><strong>Step 2:</strong> Select the <strong>Purchase</strong> tab -> click <strong>[Add a line]</strong> to assign a default Vendor and the purchase price:
+        <br>
+        <img src="images/steps/product_mto_vendor.png" alt="Configure default vendor on product">
+      </li>
+    </ul>
+
+        <h6><strong>2. Operating the Flow</strong></h6>
+    <ul>
+      <li><strong>Step 3:</strong> Create a new Sales Order (SO), select the product configured for MTO, enter the quantity, and click <strong>[Confirm]</strong>.</li>
+      <li><strong>Step 4:</strong> Once confirmed, a <strong>Purchase Orders</strong> smart button will appear at the top-right of the SO form, showing the number of generated POs:
+        <br>
+        <img src="images/steps/so_mto_confirmed.png" alt="SO MTO Purchase smart button">
+      </li>
+      <li><strong>Step 5:</strong> Go to the <strong>Purchase</strong> app -> open the draft Request for Quotation (RFQ) generated. In the <strong>Source Document</strong> field, you will see the referencing SO code:
+        <br>
+        <img src="images/steps/mto_rfq_draft.png" alt="Auto generated PO referencing the SO">
+      </li>
+    </ul>
+
+    <h6><strong>3. Warehouse Operations</strong></h6>
+    <ul>
+      <li><strong>Step 6:</strong> On the confirmed Sales Order (SO), click the <strong>Delivery</strong> smart button. The generated Delivery Order (OUT) will be in <strong>Waiting Another Operation</strong> status since the goods have not arrived:
+        <br>
+        <img src="images/steps/mto_out_waiting.png" alt="Delivery Order Waiting">
+      </li>
+      <li><strong>Step 7:</strong> Once the purchasing team confirms the PO, a vendor Receipt (IN) is generated. Go to the Inventory app -> open this receipt (it will be in <strong>Ready</strong> status):
+        <br>
+        <img src="images/steps/mto_in_ready.png" alt="Vendor Receipt Ready">
+      </li>
+      <li><strong>Step 8:</strong> The storekeeper receives the goods and clicks <strong>[Validate]</strong> on the receipt (IN). Odoo immediately auto-reserves this stock for the SO, and the Delivery Order (OUT) status changes to <strong>Ready</strong>:
+        <br>
+        <img src="images/steps/mto_out_ready.png" alt="Delivery Order Ready">
+      </li>
+      <li><strong>Step 9:</strong> Open the Delivery Order (OUT) again and click <strong>[Validate]</strong> to finally ship the goods to the customer.</li>
+    </ul>
+
+    <div class="alert alert-important" style="background-color: #fff8f8; border-left: 4px solid #ef4444; padding: 15px; margin: 15px 0;">
+      <h5 style="margin-top: 0; color: #ef4444;"><strong>Important Notes (Exceptions & Accounting)</strong></h5>
+      <p><strong>1. Order Cancellation:</strong> If the SO is cancelled after the PO has been generated, the automatic link is broken. The generated PO will NOT be automatically cancelled; the purchasing team must cancel it manually.</p>
+      <p><strong>2. Accounting & Invoicing Notes:</strong></p>
+      <ul>
+        <li><strong>Vendor Bills:</strong> It is recommended to use the <em>On Received Quantities</em> policy to pay vendors only for what is actually received.</li>
+        <li><strong>Customer Invoices:</strong> It is recommended to use the <em>On Delivered Quantities</em> invoicing policy to prevent invoicing before the actual delivery.</li>
+        <li><strong>Margin Control:</strong> Accounts should cross-reference the purchase price in the automatically generated PO with the sales price on the SO to check margins before confirming the PO.</li>
+      </ul>
+    </div>
+    <p><a id="exceptions-troubleshooting"></a></p>
+    <h1 id="5-exceptions--troubleshooting-luồng-ngoại-lệ--xử-lý-sự-cố"><a class="anchor" aria-hidden="true" tabindex="-1" href="#5-exceptions--troubleshooting-luồng-ngoại-lệ--xử-lý-sự-cố"><span class="octicon octicon-link"></span></a><strong>5. Exceptions &#x26; Troubleshooting (Luồng ngoại lệ &#x26; Xử lý sự cố)</strong></h1>
+    <p>During ERP operations, you may encounter exception workflows or need to cancel documents. Here is the handling guide:</p>
+    <p><a id="cancellation-workflows"></a></p>
+    <h2 id="51-cancellation--exception-workflows"><a class="anchor" aria-hidden="true" tabindex="-1" href="#51-cancellation--exception-workflows"><span class="octicon octicon-link"></span></a><strong>5.1 Cancellation &#x26; Exception Workflows</strong></h2>
+    <h5 id="1-how-to-cancel-a-salespurchase-order"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-how-to-cancel-a-salespurchase-order"><span class="octicon octicon-link"></span></a><strong>1. How to cancel a Sales/Purchase Order?</strong></h5>
+    <ul>
+      <li><strong>Case 1 (No deliveries, no invoices):</strong> Open the order and click <strong>[Cancel]</strong>.</li>
+      <li><strong>Case 2 (Deliveries or Invoices exist):</strong> You cannot cancel directly. You must:
+        <ul>
+          <li>Return the delivery orders.</li>
+          <li>Create a Credit Note for the invoice.</li>
+          <li>Then cancel the original order.</li>
+        </ul>
+      </li>
+    </ul>
+    <h5 id="2-returncancel-a-done-receipt-delivery-or-internal-transfer-order"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-returncancel-a-done-receipt-delivery-or-internal-transfer-order"><span class="octicon octicon-link"></span></a><strong>2. Return/Cancel a "Done" receipt, delivery, or internal transfer order?</strong></h5>
+    <ul>
+      <li>A completed transfer <strong>cannot be deleted or cancelled</strong> directly.</li>
+      <li><strong>Solution:</strong> Open the transfer, click <strong>[Return]</strong>. The system automatically generates a reverse transfer to return the stock to the original location (for internal transfers, goods will be moved back to the source location).</li>
+    </ul>
+    <h5 id="3-fix-a-posted-accounting-invoice"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-fix-a-posted-accounting-invoice"><span class="octicon octicon-link"></span></a><strong>3. Fix a "Posted" accounting invoice?</strong></h5>
+    <ul>
+      <li>Under accounting standards, posted invoices cannot be deleted.</li>
+      <li><strong>Solution:</strong> Click <strong>[Add Credit Note]</strong> to completely reverse the old invoice value, and then create a new invoice with correct details.</li>
+    </ul>
+    <p><a id="general-faq"></a></p>
+    <h2 id="52-general-faq"><a class="anchor" aria-hidden="true" tabindex="-1" href="#52-general-faq"><span class="octicon octicon-link"></span></a><strong>5.2 General FAQ</strong></h2>
+    <h5 id="1-cannot-validate-a-delivery-or-internal-transfer-order"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-cannot-validate-a-delivery-or-internal-transfer-order"><span class="octicon octicon-link"></span></a><strong>1. Cannot "Validate" a delivery or internal transfer order?</strong></h5>
+    <ul>
+      <li><strong>Cause:</strong> Not enough products in the source location (The "Reserved" column is red).</li>
+      <li><strong>Solution:</strong> Check the actual on-hand quantity in the source location, or check if another transfer has reserved this product.</li>
+    </ul>
+    <h5 id="2-created-an-internal-transfer-but-cannot-see-source-location-and-destination-location-fields"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-created-an-internal-transfer-but-cannot-see-source-location-and-destination-location-fields"><span class="octicon octicon-link"></span></a><strong>2. Created an internal transfer but cannot see "Source Location" and "Destination Location" fields?</strong></h5>
+    <ul>
+      <li><strong>Cause:</strong> The <strong>Storage Locations</strong> feature is not enabled in the settings.</li>
+      <li><strong>Solution:</strong> Contact the System Administrator to go to **Inventory** -> **Configuration** -> **Settings** -> check **Storage Locations** and save.</li>
+    </ul>
+    <h5 id="3-cannot-see-a-specific-menu"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-cannot-see-a-specific-menu"><span class="octicon octicon-link"></span></a><strong>3. Cannot see a specific menu?</strong></h5>
+    <ul>
+      <li><strong>Cause:</strong> Your account lacks the required access permissions.</li>
+      <li><strong>Solution:</strong> Contact the System Administrator to request the necessary permissions.</li>
+    </ul>
+    <hr>
+    <p><a id="glossary"></a></p>
+    <h1 id="6-glossary-giải-nghĩa-thuật-ngữ"><a class="anchor" aria-hidden="true" tabindex="-1" href="#6-glossary-giải-nghĩa-thuật-ngữ"><span class="octicon octicon-link"></span></a><strong>6. Glossary (Giải nghĩa thuật ngữ)</strong></h1>
+    <p>The table below summarizes common terms and acronyms used in Elite ERP to help new users:</p>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Term / Acronym
+            <div style="width: 250px;"></div>
+          </th>
+          <th align="left">Detailed Explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>ERP</strong> (Enterprise Resource Planning)</td>
+          <td align="left">The core platform of Elite ERP used to manage business operations.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>SO</strong> (Sales Order)</td>
+          <td align="left">A confirmed document indicating that a customer has agreed to purchase goods/services.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>PO</strong> (Purchase Order)</td>
+          <td align="left">An official document sent to a vendor to order goods.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>RFQ</strong> (Request for Quotation)</td>
+          <td align="left">A draft purchase order used to ask a vendor for pricing before confirming the purchase.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Credit Note</strong></td>
+          <td align="left">A document used to reverse the value of a posted invoice (e.g., when a customer returns goods or an invoice is incorrect).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Validate</strong></td>
+          <td align="left">The action of confirming a transaction in the system (e.g., Validating a delivery). Once validated, records usually cannot be deleted.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Posted</strong></td>
+          <td align="left">The status of an invoice when it has been officially recorded in the accounting journal.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Kanban</strong></td>
+          <td align="left">A <strong>Card-based</strong> view that allows dragging and dropping records across stages (Draft -> Sent -> Confirmed).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Scrap</strong></td>
+          <td align="left">Removing damaged or unusable products from inventory so they do not affect the available stock.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Variant</strong></td>
+          <td align="left">Different versions of the same product (e.g., A T-shirt has variants like Color: Red, Size: L).</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>/*! @uiw/copy-to-clipboard v1.0.12 | MIT (c) 2021 Kenny Wang | https://github.com/uiwjs/copy-to-clipboard.git */
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).copyTextToClipboard=t()}(this,(function(){"use strict";return function(e,t){const o=document.createElement("textarea");o.value=e,o.setAttribute("readonly",""),o.style={position:"absolute",left:"-9999px"},document.body.appendChild(o);const n=document.getSelection().rangeCount>0&&document.getSelection().getRangeAt(0);o.select();let c=!1;try{c=!!document.execCommand("copy")}catch(e){c=!1}document.body.removeChild(o),n&&document.getSelection&&(document.getSelection().removeAllRanges(),document.getSelection().addRange(n)),t&&t(c)}}));
+
+function copied(target, str) {
+  target.classList.add('active');
+  copyTextToClipboard(target.dataset.code, function() {
+    setTimeout(() => {
+      target.classList.remove('active');
+    }, 2000);
+  });
+}</script>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          background: '#ffffff',
+          primaryColor: '#f3f4f6',      // Light gray box background
+          primaryTextColor: '#1f2937',  // Dark gray text
+          primaryBorderColor: '#d1d5db', // Light gray border
+          lineColor: '#4b5563',          // Gray lines/arrows
+          secondaryColor: '#f9fafb',
+          tertiaryColor: '#f9fafb'
+        }
+      });
+    </script>
+    <button id="back-to-top" title="Scroll to top">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      </svg>
+    </button>
+    <script>
+      const backToTopBtn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+  </div></body>
+</html>

@@ -233,55 +233,114 @@
 <div class="sidebar-toc">
   <h3>MỤC LỤC</h3>
   <ul>
-    <li><a href="#overview">1. Giới thiệu tổng quan</a></li>
-    <li><a href="#prerequisites">2. Các điều kiện cần có</a></li>
-    <li><a href="#getting-started">3. Làm quen hệ thống</a>
-      <ul>
-        <li><a href="#login-dashboard">3.1 Đăng nhập &amp; Giao diện</a></li>
-        <li><a href="#basic-operations">3.2 Thao tác cơ bản</a></li>
-        <li><a href="#status-definitions">3.3 Trạng thái chứng từ</a></li>
-        <li><a href="#initial-setup-workflow">3.4 Trình tự thiết lập</a></li>
-        <li><a href="#e2e-workflows">3.5 Luồng vận hành liên kết</a></li>
-      </ul>
+  <li><a href="#overview">1. Giới thiệu tổng quan</a></li>
+  <li><a href="#prerequisites">2. Các điều kiện cần có</a></li>
+  <li><a href="#getting-started">3. Làm quen hệ thống</a>  <ul>
+    <li><a href="#login-dashboard">3.1 Đăng nhập & Giao diện chính</a>  </li>
+    <li><a href="#basic-operations">3.2 Các thao tác cơ bản</a>  </li>
+    <li><a href="#status-definitions">3.3 Ý nghĩa các Trạng thái chứng từ</a>  </li>
+    <li><a href="#initial-setup-workflow">3.4 Trình tự thiết lập hệ thống</a>  </li>
+    <li><a href="#e2e-workflows">3.5 Luồng quy trình vận hành liên kết</a>  </ul>
+</li>
+</li>
+  <li><a href="#step-by-step-guide">4. Hướng dẫn các bước thực hiện</a>  <ul>
+    <li><a href="#sales">4.1 🌟 PHÂN HỆ BÁN HÀNG</a>    <ul>
+      <li><a href="#sales-config">4.1.1 Cấu hình</a>      <ul>
+        <li><a href="#sales-teams">4.1.1.1 Đội ngũ bán hàng</a>      </li>
+        <li><a href="#quotation-templates">4.1.1.2 Mẫu báo giá</a>      </ul>
+</li>
     </li>
-    <li><a href="#step-by-step-guide">4. Hướng dẫn các bước</a>
-      <ul>
-        <li><a href="#sales">4.1 Phân hệ Bán hàng</a>
-          <ul>
-            <li><a href="#sales-config">4.1.1 Cấu hình</a></li>
-            <li><a href="#sales-products">4.1.2 Sản phẩm</a></li>
-            <li><a href="#sales-orders">4.1.3 Đơn hàng</a></li>
-          </ul>
-        </li>
-        <li><a href="#purchase">4.2 Phân hệ Mua hàng</a>
-          <ul>
-            <li><a href="#purchase-config">4.2.1 Cấu hình</a></li>
-            <li><a href="#purchase-products">4.2.2 Sản phẩm</a></li>
-            <li><a href="#purchase-orders">4.2.3 Đơn hàng</a></li>
-          </ul>
-        </li>
-        <li><a href="#invoicing">4.3 Phân hệ Hóa đơn</a>
-          <ul>
-            <li><a href="#invoicing-config">4.3.1 Cấu hình</a></li>
-            <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp</a></li>
-            <li><a href="#invoicing-customers">4.3.3 Khách hàng</a></li>
-          </ul>
-        </li>
-        <li><a href="#inventory">4.4 Phân hệ Kho</a>
-          <ul>
-            <li><a href="#inventory-config">4.4.1 Cấu hình</a></li>
-            <li><a href="#inventory-operations">4.4.2 Hoạt động kho</a></li>
-          </ul>
-        </li>
-      </ul>
+      <li><a href="#sales-products">4.1.2 Sản phẩm</a>      <ul>
+        <li><a href="#sales-products-main">4.1.2.1 Sản phẩm</a>      </li>
+        <li><a href="#sales-product-variants">4.1.2.2 Biến thể sản phẩm</a>      </li>
+        <li><a href="#pricelists">4.1.2.3 Bảng giá</a>      </li>
+        <li><a href="#discount-loyalty">4.1.2.4 Khuyến mãi & Khách hàng thân thiết</a>      </li>
+        <li><a href="#gift-cards-ewallet">4.1.2.5 Thẻ quà tặng & Ví điện tử</a>      </ul>
+</li>
     </li>
-    <li><a href="#exceptions-troubleshooting">5. Sự cố &amp; Ngoại lệ</a>
-      <ul>
-        <li><a href="#cancellation-workflows">5.1 Luồng Hủy &amp; Ngoại lệ</a></li>
-        <li><a href="#general-faq">5.2 Câu hỏi thường gặp khác</a></li>
-      </ul>
+      <li><a href="#sales-orders">4.1.3 Đơn hàng</a>      <ul>
+        <li><a href="#quotations">4.1.3.1 Báo giá</a>      </li>
+        <li><a href="#sales-orders-main">4.1.3.2 Đơn bán hàng</a>      </li>
+        <li><a href="#sales-customers">4.1.3.3 Khách hàng</a>      </li>
+        <li><a href="#import-sales-orders">4.1.3.4 Nhập Đơn bán hàng từ Excel/CSV</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#purchase">4.2 👑 PHÂN HỆ MUA HÀNG</a>    <ul>
+      <li><a href="#purchase-config">4.2.1 Cấu hình</a>      <ul>
+        <li><a href="#vendor-pricelists">4.2.1.1 Bảng giá của nhà cung cấp</a>      </li>
+        <li><a href="#attributes">4.2.1.2 Thuộc tính sản phẩm</a>      </li>
+        <li><a href="#product-categories">4.2.1.3 Nhóm sản phẩm</a>      </li>
+        <li><a href="#units-packagings">4.2.1.4 Đơn vị tính & Quy cách đóng gói</a>      </ul>
+</li>
     </li>
-    <li><a href="#glossary">6. Giải nghĩa thuật ngữ</a></li>
+      <li><a href="#purchase-products">4.2.2 Sản phẩm</a>      <ul>
+        <li><a href="#purchase-products-main">4.2.2.1 Sản phẩm</a>      </li>
+        <li><a href="#purchase-product-variants">4.2.2.2 Biến thể sản phẩm</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-orders">4.2.3 Đơn hàng</a>      <ul>
+        <li><a href="#rfq">4.2.3.1 Yêu cầu báo giá</a>      </li>
+        <li><a href="#po">4.2.3.2 Đơn mua hàng</a>      </li>
+        <li><a href="#vendors">4.2.3.3 Nhà cung cấp</a>      </li>
+        <li><a href="#import-purchase-orders">4.2.3.4 Nhập Đơn mua hàng từ Excel/CSV</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#invoicing">4.3 🛡️ PHÂN HỆ HÓA ĐƠN</a>    <ul>
+      <li><a href="#invoicing-config">4.3.1 Cấu hình</a>      <ul>
+        <li><a href="#taxes">4.3.1.1 Cấu hình thuế</a>      </li>
+        <li><a href="#journals">4.3.1.2 Sổ nhật ký</a>      </li>
+        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp</a>      <ul>
+        <li><a href="#bills">4.3.2.1 Hóa đơn nhà cung cấp</a>      </li>
+        <li><a href="#refunds">4.3.2.2 Hóa đơn trả lại / Hoàn tiền</a>      </li>
+        <li><a href="#vendor-payments">4.3.2.3 Thanh toán cho nhà cung cấp</a>      </li>
+        <li><a href="#invoicing-vendor-products">4.3.2.4 Sản phẩm</a>      </li>
+        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-customers">4.3.3 Khách hàng</a>      <ul>
+        <li><a href="#invoices">4.3.3.1 Hóa đơn khách hàng</a>      </li>
+        <li><a href="#credit-notes">4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ</a>      </li>
+        <li><a href="#customer-payments">4.3.3.3 Ghi nhận thanh toán của khách hàng</a>      </li>
+        <li><a href="#invoicing-customer-products">4.3.3.4 Sản phẩm</a>      </li>
+        <li><a href="#invoicing-customers-main">4.3.3.5 Khách hàng</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#inventory">4.4 📦 PHÂN HỆ KHO</a>    <ul>
+      <li><a href="#inventory-config">4.4.1 Cấu hình</a>      <ul>
+        <li><a href="#warehouses">4.4.1.1 Kho hàng</a>      </li>
+        <li><a href="#operations-types">4.4.1.2 Loại hoạt động</a>      </ul>
+</li>
+    </li>
+      <li><a href="#inventory-operations">4.4.2 Hoạt động kho</a>      <ul>
+        <li><a href="#receipts">4.4.2.1 Nhận hàng</a>      </li>
+        <li><a href="#deliveries">4.4.2.2 Giao hàng</a>      </li>
+        <li><a href="#internal-transfers">4.4.2.3 Chuyển kho nội bộ</a>      </li>
+        <li><a href="#physical-inventory">4.4.2.4 Kiểm kho định kỳ</a>      </li>
+        <li><a href="#scrap-orders">4.4.2.5 Phiếu loại bỏ / Hủy hàng</a>      </li>
+        <li><a href="#product-returns">4.4.2.6 Quy trình Trả hàng</a>      </li>
+        <li><a href="#inventory-overview">4.4.2.7 Tổng quan kho</a>      </li>
+        <!-- <li><a href="#inventory-mto">4.4.2.8 Quy trình Cung ứng theo đơn hàng</a> -->      </ul>
+</li>
+    </ul>
+</li>
+  </ul>
+</li>
+</li>
+  <li><a href="#exceptions-troubleshooting">5. Xử lý sự cố & Luồng ngoại lệ</a>  <ul>
+    <li><a href="#cancellation-workflows">5.1 Luồng Hủy & Xử lý ngoại lệ</a>  </li>
+    <li><a href="#general-faq">5.2 Câu hỏi thường gặp khác</a>  </ul>
+</li>
+</li>
+  <li><a href="#glossary">6. Giải nghĩa thuật ngữ</a></li>
   </ul>
 </div>
 <div style="max-width: 960px; margin: 0 auto 60px auto; padding: 8px;max-width: 960px;" class="markdown-style">
@@ -329,55 +388,114 @@ table th:first-child, table td:first-child {
     <div class="inline-toc">
       <h1 id="mục-lục"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-lục"><span class="octicon octicon-link"></span></a>MỤC LỤC</h1>
       <ol>
-        <li><a href="#overview">Giới thiệu tổng quan (Overview)</a></li>
-        <li><a href="#prerequisites">Các điều kiện cần có (Prerequisites)</a></li>
-        <li><a href="#getting-started">Làm quen hệ thống (Getting Started)</a>
-          <ul>
-            <li><a href="#login-dashboard">3.1 Đăng nhập &#x26; Giao diện chính</a></li>
-            <li><a href="#basic-operations">3.2 Các thao tác cơ bản</a></li>
-            <li><a href="#status-definitions">3.3 Ý nghĩa các Trạng thái chứng từ (Status Definitions)</a></li>
-            <li><a href="#initial-setup-workflow">3.4 Trình tự thiết lập hệ thống (Initial Setup Workflow)</a></li>
-            <li><a href="#e2e-workflows">3.5 Luồng quy trình vận hành liên kết (End-to-End Workflows)</a></li>
-          </ul>
-        </li>
-        <li><a href="#step-by-step-guide">Hướng dẫn các bước thực hiện (Step-by-Step Guide)</a>
-          <ul>
-            <li><a href="#sales">4.1 🌟 PHÂN HỆ BÁN HÀNG (Sales)</a>
-              <ul>
-                <li><a href="#sales-config">4.1.1 Cấu hình (Configuration)</a></li>
-                <li><a href="#sales-products">4.1.2 Sản phẩm (Products)</a></li>
-                <li><a href="#sales-orders">4.1.3 Đơn hàng (Orders)</a></li>
-              </ul>
-            </li>
-            <li><a href="#purchase">4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)</a>
-              <ul>
-                <li><a href="#purchase-config">4.2.1 Cấu hình (Configuration)</a></li>
-                <li><a href="#purchase-products">4.2.2 Sản phẩm (Products)</a></li>
-                <li><a href="#purchase-orders">4.2.3 Đơn hàng (Orders)</a></li>
-              </ul>
-            </li>
-            <li><a href="#invoicing">4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)</a>
-              <ul>
-                <li><a href="#invoicing-config">4.3.1 Cấu hình (Configuration)</a></li>
-                <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp (Vendor)</a></li>
-                <li><a href="#invoicing-customers">4.3.3 Khách hàng (Customers)</a></li>
-              </ul>
-            </li>
-            <li><a href="#inventory">4.4 📦 PHÂN HỆ KHO (Inventory)</a>
-              <ul>
-                <li><a href="#inventory-config">4.4.1 Cấu hình (Configuration)</a></li>
-                <li><a href="#inventory-operations">4.4.2 Hoạt động kho (Operations)</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#exceptions-troubleshooting">Xử lý sự cố &#x26; Luồng ngoại lệ (FAQ &#x26; Exceptions)</a>
-          <ul>
-            <li><a href="#cancellation-workflows">5.1 Luồng Hủy &#x26; Xử lý ngoại lệ (Cancellation Workflows)</a></li>
-            <li><a href="#general-faq">5.2 Câu hỏi thường gặp khác (General FAQ)</a></li>
-          </ul>
-        </li>
-        <li><a href="#glossary">Giải nghĩa thuật ngữ (Glossary)</a></li>
+  <li><a href="#overview">1. Giới thiệu tổng quan (Overview)</a></li>
+  <li><a href="#prerequisites">2. Các điều kiện cần có (Prerequisites)</a></li>
+  <li><a href="#getting-started">3. Làm quen hệ thống (Getting Started)</a>  <ul>
+    <li><a href="#login-dashboard">3.1 Đăng nhập & Giao diện chính</a>  </li>
+    <li><a href="#basic-operations">3.2 Các thao tác cơ bản</a>  </li>
+    <li><a href="#status-definitions">3.3 Ý nghĩa các Trạng thái chứng từ (Status Definitions)</a>  </li>
+    <li><a href="#initial-setup-workflow">3.4 Trình tự thiết lập hệ thống (Initial Setup Workflow)</a>  </li>
+    <li><a href="#e2e-workflows">3.5 Luồng quy trình vận hành liên kết (End-to-End Workflows)</a>  </ul>
+</li>
+</li>
+  <li><a href="#step-by-step-guide">4. Hướng dẫn các bước thực hiện (Step-by-Step Guide)</a>  <ul>
+    <li><a href="#sales">4.1 🌟 PHÂN HỆ BÁN HÀNG (Sales)</a>    <ul>
+      <li><a href="#sales-config">4.1.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#sales-teams">4.1.1.1 Đội ngũ bán hàng (Sales Teams)</a>      </li>
+        <li><a href="#quotation-templates">4.1.1.2 Mẫu báo giá (Quotation Templates)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#sales-products">4.1.2 Sản phẩm (Products)</a>      <ul>
+        <li><a href="#sales-products-main">4.1.2.1 Sản phẩm (Products)</a>      </li>
+        <li><a href="#sales-product-variants">4.1.2.2 Biến thể sản phẩm (Product Variants)</a>      </li>
+        <li><a href="#pricelists">4.1.2.3 Bảng giá (Pricelists)</a>      </li>
+        <li><a href="#discount-loyalty">4.1.2.4 Khuyến mãi & Khách hàng thân thiết (Discount & Loyalty)</a>      </li>
+        <li><a href="#gift-cards-ewallet">4.1.2.5 Thẻ quà tặng & Ví điện tử (Gift cards & eWallet)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#sales-orders">4.1.3 Đơn hàng (Orders)</a>      <ul>
+        <li><a href="#quotations">4.1.3.1 Báo giá (Quotations)</a>      </li>
+        <li><a href="#sales-orders-main">4.1.3.2 Đơn bán hàng (Sales Orders)</a>      </li>
+        <li><a href="#sales-customers">4.1.3.3 Khách hàng (Customers)</a>      </li>
+        <li><a href="#import-sales-orders">4.1.3.4 Nhập Đơn bán hàng từ Excel/CSV (Import Sales Orders)</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#purchase">4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)</a>    <ul>
+      <li><a href="#purchase-config">4.2.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#vendor-pricelists">4.2.1.1 Bảng giá của nhà cung cấp (Vendor Pricelists)</a>      </li>
+        <li><a href="#attributes">4.2.1.2 Thuộc tính sản phẩm (Attributes)</a>      </li>
+        <li><a href="#product-categories">4.2.1.3 Nhóm sản phẩm (Categories)</a>      </li>
+        <li><a href="#units-packagings">4.2.1.4 Đơn vị tính & Quy cách đóng gói (Units & Packagings)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-products">4.2.2 Sản phẩm (Products)</a>      <ul>
+        <li><a href="#purchase-products-main">4.2.2.1 Sản phẩm (Products)</a>      </li>
+        <li><a href="#purchase-product-variants">4.2.2.2 Biến thể sản phẩm (Product Variants)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#purchase-orders">4.2.3 Đơn hàng (Orders)</a>      <ul>
+        <li><a href="#rfq">4.2.3.1 Yêu cầu báo giá (Requests for Quotation)</a>      </li>
+        <li><a href="#po">4.2.3.2 Đơn mua hàng (Purchase Orders)</a>      </li>
+        <li><a href="#vendors">4.2.3.3 Nhà cung cấp (Vendors)</a>      </li>
+        <li><a href="#import-purchase-orders">4.2.3.4 Nhập Đơn mua hàng từ Excel/CSV (Import Purchase Orders)</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#invoicing">4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)</a>    <ul>
+      <li><a href="#invoicing-config">4.3.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#taxes">4.3.1.1 Cấu hình thuế (Configuration > Taxes)</a>      </li>
+        <li><a href="#journals">4.3.1.2 Sổ nhật ký (Journals)</a>      </li>
+        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán (Payment Terms)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp (Vendor)</a>      <ul>
+        <li><a href="#bills">4.3.2.1 Hóa đơn nhà cung cấp (Bills)</a>      </li>
+        <li><a href="#refunds">4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)</a>      </li>
+        <li><a href="#vendor-payments">4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)</a>      </li>
+        <li><a href="#invoicing-vendor-products">4.3.2.4 Sản phẩm (Products)</a>      </li>
+        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp (Vendors)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-customers">4.3.3 Khách hàng (Customers)</a>      <ul>
+        <li><a href="#invoices">4.3.3.1 Hóa đơn khách hàng (Invoices)</a>      </li>
+        <li><a href="#credit-notes">4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ (Credit Notes)</a>      </li>
+        <li><a href="#customer-payments">4.3.3.3 Ghi nhận thanh toán của khách hàng (Customer Payments)</a>      </li>
+        <li><a href="#invoicing-customer-products">4.3.3.4 Sản phẩm (Products)</a>      </li>
+        <li><a href="#invoicing-customers-main">4.3.3.5 Khách hàng (Customers)</a>      </ul>
+</li>
+    </ul>
+</li>
+  </li>
+    <li><a href="#inventory">4.4 📦 PHÂN HỆ KHO (Inventory)</a>    <ul>
+      <li><a href="#inventory-config">4.4.1 Cấu hình (Configuration)</a>      <ul>
+        <li><a href="#warehouses">4.4.1.1 Kho hàng (Warehouses)</a>      </li>
+        <li><a href="#operations-types">4.4.1.2 Loại hoạt động (Operations Types)</a>      </ul>
+</li>
+    </li>
+      <li><a href="#inventory-operations">4.4.2 Hoạt động kho (Operations)</a>      <ul>
+        <li><a href="#receipts">4.4.2.1 Nhận hàng (Receipts)</a>      </li>
+        <li><a href="#deliveries">4.4.2.2 Giao hàng (Deliveries)</a>      </li>
+        <li><a href="#internal-transfers">4.4.2.3 Chuyển kho nội bộ (Internal Transfers)</a>      </li>
+        <li><a href="#physical-inventory">4.4.2.4 Kiểm kho định kỳ (Physical Inventory)</a>      </li>
+        <li><a href="#scrap-orders">4.4.2.5 Phiếu loại bỏ / Hủy hàng (Scrap Orders)</a>      </li>
+        <li><a href="#product-returns">4.4.2.6 Quy trình Trả hàng (Product Returns)</a>      </li>
+        <li><a href="#inventory-overview">4.4.2.7 Tổng quan kho (Inventory Overview)</a>      </li>
+        <!-- <li><a href="#inventory-mto">4.4.2.8 Quy trình Cung ứng theo đơn hàng (Make to Order - MTO)</a> -->      </ul>
+</li>
+    </ul>
+</li>
+  </ul>
+</li>
+</li>
+  <li><a href="#exceptions-troubleshooting">5. Xử lý sự cố & Luồng ngoại lệ (FAQ & Exceptions)</a>  <ul>
+    <li><a href="#cancellation-workflows">5.1 Luồng Hủy & Xử lý ngoại lệ (Cancellation Workflows)</a>  </li>
+    <li><a href="#general-faq">5.2 Câu hỏi thường gặp khác (General FAQ)</a>  </ul>
+</li>
+</li>
+  <li><a href="#glossary">6. Giải nghĩa thuật ngữ (Glossary)</a></li>
       </ol>
       <hr>
     </div>
@@ -881,6 +999,28 @@ graph TD
       <li><strong>Bước 3:</strong> Nhấp nút <strong>"Mới"</strong> để khai báo khách hàng mới. Bạn có thể cập nhật thông tin liên lạc tại tab <strong>Liên hệ & Địa chỉ</strong> (Contacts & Addresses) và thiết lập điều khoản tại tab <strong>Bán hàng & Mua hàng</strong> (Sales & Purchase). Click trực tiếp vào một thẻ khách hàng để xem chi tiết hồ sơ.</li>
     </ul>
     <hr>
+    <p><a id="import-sales-orders"></a></p>
+    <h4 id="4134-nhập-đơn-bán-hàng-từ-excelcsv-import-sales-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4134-nhập-đơn-bán-hàng-từ-excelcsv-import-sales-orders"><span class="octicon octicon-link"></span></a><strong>4.1.3.4 Nhập Đơn bán hàng từ Excel/CSV (Import Sales Orders)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-import-so"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-import-so"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Hỗ trợ người dùng nhập liệu hàng loạt Đơn bán hàng (Sales Orders) vào hệ thống từ file Excel hoặc CSV, giúp tiết kiệm thời gian so với việc nhập thủ công từng đơn hàng, đặc biệt hữu ích khi lấy dữ liệu từ các hệ thống kênh bán lẻ khác.</p>
+    <h5 id="các-bước-thực-hiện-import-so"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-import-so"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Bước 1:</strong> Tại phân hệ <strong>"Bán hàng"</strong>, truy cập menu <strong>"Đơn hàng"</strong> -> click <strong>"Báo giá"</strong> hoặc <strong>"Đơn bán hàng"</strong>.</li>
+      <li>
+        <strong>Bước 2:</strong> Nhấp vào biểu tượng <strong>Favorites (Yêu thích)</strong> ⚙️ hoặc nút <strong>Actions (Hành động)</strong> ở thanh menu phía trên và chọn <strong>Import records (Nhập tập tin)</strong>.
+        
+        <img src="images/vi/steps/import_records_button.png" alt="Nút Import Records">
+      </li>
+      <li><strong>Bước 3:</strong> Nhấn nút <strong>Upload File (Tải lên tập tin)</strong> và chọn file Excel/CSV từ máy tính của bạn.</li>
+      <li>
+        <strong>Bước 4:</strong> Giao diện <strong>Map File Columns to Odoo Fields</strong> sẽ xuất hiện. Tại đây, hãy kiểm tra và ghép nối (mapping) các cột trong file của bạn sao cho khớp với các trường dữ liệu tương ứng trên hệ thống (ví dụ: <code>Order Reference</code>, <code>Customer</code>, <code>Product</code>, <code>Quantity</code>, <code>Unit Price</code>).
+        
+        <img src="images/vi/steps/import_mapping.png" alt="Giao diện Ghép nối dữ liệu">
+      </li>
+      <li><strong>Bước 5:</strong> Nhấn nút <strong>Test (Kiểm tra)</strong> để hệ thống rà soát lỗi dữ liệu. Nếu xuất hiện thông báo <em>Everything seems valid</em> (Mọi thứ có vẻ hợp lệ), tiếp tục bước sau.</li>
+      <li><strong>Bước 6:</strong> Nhấn nút <strong>Import (Nhập)</strong> để hệ thống tiến hành nạp các đơn bán hàng vào hệ thống.</li>
+    </ul>
+    <hr>
     <p><a id="purchase"></a></p>
     <h2 id="42--phân-hệ-mua-hàng-purchase"><a class="anchor" aria-hidden="true" tabindex="-1" href="#42--phân-hệ-mua-hàng-purchase"><span class="octicon octicon-link"></span></a><strong>4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)</strong></h2>
     <p><a id="purchase-config"></a></p>
@@ -1126,6 +1266,28 @@ graph TD
         <img src="images/vi/vendors.png" alt="Danh sách Nhà cung cấp">
       </li>
       <li><strong>Bước 3:</strong> Nhấn <strong>New</strong> để tạo hồ sơ nhà cung cấp mới. Khai báo thông tin liên hệ tại tab <strong>Liên hệ & Địa chỉ</strong> và thông tin đối tác tại tab <strong>Bán hàng & Mua hàng</strong>. Chọn nhà cung cấp hiện có để xem lịch sử giao dịch mua sắm.</li>
+    </ul>
+    <hr>
+    <p><a id="import-purchase-orders"></a></p>
+    <h4 id="4234-nhập-đơn-mua-hàng-từ-excelcsv-import-purchase-orders"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4234-nhập-đơn-mua-hàng-từ-excelcsv-import-purchase-orders"><span class="octicon octicon-link"></span></a><strong>4.2.3.4 Nhập Đơn mua hàng từ Excel/CSV (Import Purchase Orders)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-import-po"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-import-po"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Hỗ trợ người dùng nạp hàng loạt Yêu cầu báo giá (RFQ) hoặc Đơn mua hàng (PO) từ file Excel/CSV lên hệ thống một cách nhanh chóng, tránh nhầm lẫn khi phải tạo thủ công quá nhiều dòng sản phẩm.</p>
+    <h5 id="các-bước-thực-hiện-import-po"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-import-po"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+      <li><strong>Bước 1:</strong> Tại phân hệ <strong>"Mua hàng"</strong>, truy cập menu <strong>"Đơn hàng"</strong> -> click <strong>"Yêu cầu báo giá"</strong> hoặc <strong>"Đơn mua hàng"</strong>.</li>
+      <li>
+        <strong>Bước 2:</strong> Nhấp vào biểu tượng <strong>Favorites (Yêu thích)</strong> ⚙️ hoặc nút <strong>Actions (Hành động)</strong> ở thanh menu và chọn <strong>Import records (Nhập tập tin)</strong>.
+        
+        <img src="images/vi/steps/import_records_button.png" alt="Nút Import Records">
+      </li>
+      <li><strong>Bước 3:</strong> Nhấn nút <strong>Upload File (Tải lên tập tin)</strong> để chọn file dữ liệu mua hàng.</li>
+      <li>
+        <strong>Bước 4:</strong> Tiến hành ghép nối (mapping) các cột dữ liệu trên file Excel khớp với các trường dữ liệu trên hệ thống (ví dụ: <code>Vendor</code>, <code>Product</code>, <code>Quantity</code>, <code>Unit Price</code>).
+        
+        <img src="images/vi/steps/import_mapping.png" alt="Giao diện Ghép nối dữ liệu">
+      </li>
+      <li><strong>Bước 5:</strong> Nhấn <strong>Test (Kiểm tra)</strong> để kiểm tra tính hợp lệ của dữ liệu.</li>
+      <li><strong>Bước 6:</strong> Nhấn <strong>Import (Nhập)</strong> để hoàn tất việc nhập đơn mua hàng.</li>
     </ul>
     <hr>
     <p><a id="invoicing"></a></p>
@@ -1619,6 +1781,67 @@ graph TD
       </li>
       <li><strong>Bước 3:</strong> Nhấp vào các phím chức năng trên thẻ để đi đến danh sách các phiếu kho tương ứng theo trạng thái cần xử lý.</li>
     </ul>
+    <hr>
+<!--
+    <p><a id="inventory-mto"></a></p>
+    <h4 id="4428-quy-trình-cung-ứng-theo-đơn-hàng-make-to-order-mto"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4428-quy-trình-cung-ứng-theo-đơn-hàng-make-to-order-mto"><span class="octicon octicon-link"></span></a><strong>4.4.2.8 Quy trình Cung ứng theo đơn hàng (Make to Order - MTO)</strong></h4>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-39-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-39-1"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Quy trình MTO áp dụng cho mô hình "Mua hàng rồi giao hàng" (Back-to-Back). Khi khách hàng đặt mua một sản phẩm nhưng sản phẩm đó không có sẵn hoặc bạn không muốn lưu trữ tồn kho cố định, hệ thống sẽ tự động tạo một Yêu cầu báo giá mua hàng (PO nháp) gửi cho nhà cung cấp tương ứng ngay khi Đơn bán hàng (SO) được xác nhận. Điều này giúp tối ưu hóa vốn lưu động và tự động liên kết dòng chảy chứng từ.</p>
+    <h5 id="các-bước-thực-hiện-39-2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-39-2"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện cấu hình và vận hành</strong></h5>
+    
+    <h6><strong>1. Cấu hình sản phẩm</strong></h6>
+    <ul>
+      <li><strong>Bước 1:</strong> Vào phân hệ <strong>Sản phẩm</strong> -> mở sản phẩm cần thiết lập. Đảm bảo tích chọn cả <strong>Sales (Bán hàng)</strong> và <strong>Purchase (Mua hàng)</strong> ở đầu trang:
+        <br>
+        <img src="images/vi/steps/product_mto_sales_purchase.png" alt="Kích hoạt bán và mua trên sản phẩm">
+      </li>
+      <li><strong>Bước 2:</strong> Chọn tab <strong>Mua hàng (Purchase)</strong> -> bấm <strong>[Thêm một dòng]</strong> để gán Nhà cung cấp mặc định và giá mua tương ứng:
+        <br>
+        <img src="images/vi/steps/product_mto_vendor.png" alt="Cấu hình nhà cung cấp cho sản phẩm">
+      </li>
+    </ul>
+
+    <h6><strong>2. Vận hành luồng tự động</strong></h6>
+    <ul>
+      <li><strong>Bước 3:</strong> Tạo một Đơn bán hàng (SO) mới, chọn sản phẩm đã cấu hình MTO ở trên, nhập số lượng bán và bấm <strong>[Xác nhận]</strong>.</li>
+      <li><strong>Bước 4:</strong> Trên giao diện đơn bán hàng SO sau khi xác nhận, bạn sẽ thấy xuất hiện một nút thông minh <strong>Đơn mua hàng (Purchase Orders)</strong> hiển thị số lượng đơn mua tự động sinh ra:
+        <br>
+        <img src="images/vi/steps/so_mto_confirmed.png" alt="Smart button Đơn mua trên đơn bán">
+      </li>
+      <li><strong>Bước 5:</strong> Vào phân hệ <strong>Mua hàng</strong> -> mở đơn Yêu cầu báo giá (PO nháp) vừa được tự động sinh ra. Bạn sẽ thấy trường <strong>Tài liệu nguồn (Source Document)</strong> hiển thị mã đơn bán hàng SO tương ứng để truy vết chéo:
+        <br>
+        <img src="images/vi/steps/mto_rfq_draft.png" alt="Đơn mua nháp tự động tham chiếu đơn bán">
+      </li>
+    </ul>
+
+    <h6><strong>3. Thao tác đối với bộ phận Kho vận (Warehouse)</strong></h6>
+    <ul>
+      <li><strong>Bước 6:</strong> Trên đơn bán hàng (SO), nhấp vào nút thông minh <strong>Giao hàng (Delivery)</strong>. Bạn sẽ thấy Phiếu xuất kho (OUT) đang ở trạng thái <strong>Chờ hoạt động khác (Waiting Another Operation)</strong> do chưa có hàng nhập về:
+        <br>
+        <img src="images/vi/steps/mto_out_waiting.png" alt="Phiếu xuất kho chờ hàng">
+      </li>
+      <li><strong>Bước 7:</strong> Sau khi bộ phận mua hàng xác nhận đơn mua (PO) thành công, một phiếu nhập kho (IN) từ nhà cung cấp được sinh ra. Truy cập phân hệ Kho -> mở phiếu nhập kho này (đang ở trạng thái <strong>Sẵn sàng</strong>):
+        <br>
+        <img src="images/vi/steps/mto_in_ready.png" alt="Phiếu nhập kho sẵn sàng">
+      </li>
+      <li><strong>Bước 8:</strong> Thủ kho tiến hành nhận hàng và bấm <strong>[Xác nhận]</strong> phiếu nhập kho (IN). Ngay lập tức, hệ thống tự động giữ hàng (Auto-reservation) cho đơn bán (SO), trạng thái phiếu xuất kho (OUT) sẽ tự động chuyển sang <strong>Sẵn sàng (Ready)</strong>:
+        <br>
+        <img src="images/vi/steps/mto_out_ready.png" alt="Phiếu xuất kho sẵn sàng giao">
+      </li>
+      <li><strong>Bước 9:</strong> Thủ kho mở lại phiếu xuất kho (OUT) và bấm <strong>[Xác nhận]</strong> để hoàn tất việc xuất giao hàng cho khách.</li>
+    </ul>
+
+    <div class="alert alert-important" style="background-color: #fff8f8; border-left: 4px solid #ef4444; padding: 15px; margin: 15px 0;">
+      <h5 style="margin-top: 0; color: #ef4444;"><strong>Các lưu ý quan trọng (Ngoại lệ & Kế toán)</strong></h5>
+      <p><strong>1. Hủy đơn hàng (Cancellation):</strong> Nếu SO bị hủy sau khi PO đã được sinh ra, liên kết tự động sẽ bị đứt. Đơn mua PO sẽ không tự động hủy, bộ phận mua hàng phải chủ động xử lý PO thủ công.</p>
+      <p><strong>2. Lưu ý đối với bộ phận Kế toán & Hóa đơn (Invoicing):</strong></p>
+      <ul>
+        <li><strong>Chính sách hóa đơn mua:</strong> Khuyên dùng <em>Theo số lượng đã nhận (Received Quantities)</em> để chỉ thanh toán cho NCC đúng lượng hàng thực tế đã nhập kho.</li>
+        <li><strong>Chính sách hóa đơn bán:</strong> Khuyên dùng <em>Theo số lượng đã giao (Delivered Quantities)</em> để tránh xuất hóa đơn bán trước khi hàng thực tế được xuất kho giao cho khách.</li>
+        <li><strong>Kiểm soát biên lợi nhuận:</strong> Kế toán cần đối chiếu giá mua trên PO tự động sinh với giá bán trên SO để kiểm soát biên lợi nhuận trước khi nhân viên mua hàng chốt đơn mua.</li>
+      </ul>
+    </div>
+-->
     <hr>
     <p><a id="exceptions-troubleshooting"></a></p>
     <h1 id="5-xử-lý-sự-cố--luồng-ngoại-lệ-faq--exceptions"><a class="anchor" aria-hidden="true" tabindex="-1" href="#5-xử-lý-sự-cố--luồng-ngoại-lệ-faq--exceptions"><span class="octicon octicon-link"></span></a><strong>5. Xử lý sự cố &#x26; Luồng ngoại lệ (FAQ &#x26; Exceptions)</strong></h1>
