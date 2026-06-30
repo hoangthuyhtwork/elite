@@ -1851,18 +1851,18 @@ graph TD
     <h5 id="1-cách-hủy-đơn-bán-hàng--mua-hàng-khi-khách-đổi-ý"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-cách-hủy-đơn-bán-hàng--mua-hàng-khi-khách-đổi-ý"><span class="octicon octicon-link"></span></a><strong>1. Cách hủy Đơn bán hàng / Mua hàng khi khách đổi ý?</strong></h5>
     <ul>
       <li><strong>Trường hợp 1 (Chưa giao/nhận hàng, chưa xuất hóa đơn):</strong> Truy cập vào đơn hàng và bấm nút <strong>[Hủy] (Cancel)</strong>. Đơn hàng sẽ chuyển sang trạng thái Đã hủy.</li>
-      <li><strong>Trường hợp 2 (Đã giao/nhận hàng hoặc Đã lên hóa đơn):</strong> Bạn không thể hủy trực tiếp. Bạn phải:
+      <li><strong>Trường hợp 2 (Đã giao/nhận hàng hoặc Đã lên hóa đơn):</strong> Bạn không thể hủy trực tiếp. Bạn phải thực hiện theo thứ tự sau:
         <ul>
-          <li>Hủy/Trả lại (Return) phiếu kho.</li>
-          <li>Tạo Ghi chú tín dụng (Credit Note) để hủy hóa đơn.</li>
-          <li>Sau đó mới có thể hủy Đơn hàng gốc.</li>
+          <li><strong>Bước 1 (Xử lý Kho):</strong> Mở phiếu kho đã hoàn thành, bấm nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tạo một <strong>Phiếu xuất kho / Phiếu nhập kho</strong> mới. Bạn phải mở phiếu mới này và nhấn <strong>[Xác nhận] (Validate)</strong> để hoàn tất việc trả hàng.</li>
+          <li><strong>Bước 2 (Xử lý Kế toán - nếu có):</strong> Nếu đơn hàng đã lên Hóa đơn, bạn mở Hóa đơn đó ra và tạo <strong>Ghi chú tín dụng (Credit Note)</strong> để hủy công nợ.</li>
+          <li><strong>Bước 3 (Hủy Đơn hàng):</strong> Sau khi xử lý xong kho và kế toán, quay lại Đơn bán hàng/Mua hàng gốc và nhấn nút <strong>[Hủy] (Cancel)</strong>. <em>(Lưu ý: Nếu bạn chọn "Chuyển thành Nháp" để sửa lại đơn và Xác nhận lại, hệ thống sẽ tự động tạo một Phiếu kho hoàn toàn mới. Các phiếu kho cũ đã hoàn tất sẽ được giữ nguyên để lưu vết lịch sử)</em>.</li>
         </ul>
       </li>
     </ul>
     <h5 id="2-hủyhoàn-trả-phiếu-nhậpxuấtchuyển-kho-nội-bộ-đã-hoàn-thành"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-hủyhoàn-trả-phiếu-nhậpxuấtchuyển-kho-nội-bộ-đã-hoàn-thành"><span class="octicon octicon-link"></span></a><strong>2. Hủy/Hoàn trả phiếu Nhập/Xuất/Chuyển kho nội bộ đã "Hoàn thành"?</strong></h5>
     <ul>
       <li>Phiếu kho đã hoàn thành (Done) <strong>không thể xóa hoặc hủy</strong> trực tiếp.</li>
-      <li><strong>Xử lý:</strong> Mở phiếu kho đó, bấm nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tự động tạo một phiếu kho đảo ngược (Reverse Transfer) để đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).</li>
+      <li><strong>Xử lý:</strong> Mở phiếu kho đó, bấm nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tự động tạo một phiếu đảo ngược (ví dụ: <strong>Phiếu xuất kho / Phiếu nhập kho</strong>) ở trạng thái <strong>Sẵn sàng (Ready)</strong>. Bạn cần <strong>[Xác nhận] (Validate)</strong> phiếu mới này để chính thức đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).</li>
     </ul>
     <h5 id="3-xử-lý-hóa-đơn-kế-toán-đã-vào-sổ-posted-bị-sai"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-xử-lý-hóa-đơn-kế-toán-đã-vào-sổ-posted-bị-sai"><span class="octicon octicon-link"></span></a><strong>3. Xử lý hóa đơn kế toán đã "Vào sổ" (Posted) bị sai?</strong></h5>
     <ul>

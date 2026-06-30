@@ -1068,14 +1068,14 @@ Trong quá trình vận hành ERP, bạn có thể gặp các luồng ngoại l�
 
 ##### **1. Cách hủy Đơn bán hàng / Mua hàng khi khách đổi ý?**
 - **Trường hợp 1 (Chưa giao/nhận hàng, chưa xuất hóa đơn):** Truy cập vào đơn hàng và bấm nút **[Hủy] (Cancel)**. Đơn hàng sẽ chuyển sang trạng thái Đã hủy.
-- **Trường hợp 2 (Đã giao/nhận hàng hoặc Đã lên hóa đơn):** Bạn không thể hủy trực tiếp. Bạn phải:
-  - Hủy/Trả lại (Return) phiếu kho.
-  - Tạo Ghi chú tín dụng (Credit Note) để hủy hóa đơn.
-  - Sau đó mới có thể hủy Đơn hàng gốc.
+- **Trường hợp 2 (Đã giao/nhận hàng hoặc Đã lên hóa đơn):** Bạn không thể hủy trực tiếp. Bạn phải thực hiện theo thứ tự sau:
+  - **Bước 1 (Xử lý Kho):** Mở phiếu kho đã hoàn thành, bấm nút **[Trả hàng] (Return)**. Hệ thống sẽ tạo một **Phiếu xuất kho / Phiếu nhập kho** mới. Bạn phải mở phiếu mới này và nhấn **[Xác nhận] (Validate)** để hoàn tất việc trả hàng.
+  - **Bước 2 (Xử lý Kế toán - nếu có):** Nếu đơn hàng đã lên Hóa đơn, bạn mở Hóa đơn đó ra và tạo **Ghi chú tín dụng (Credit Note)** để hủy công nợ.
+  - **Bước 3 (Hủy Đơn hàng):** Sau khi xử lý xong kho và kế toán, quay lại Đơn bán hàng/Mua hàng gốc và nhấn nút **[Hủy] (Cancel)**. *(Lưu ý: Nếu bạn chọn "Chuyển thành Nháp" để sửa lại đơn và Xác nhận lại, hệ thống sẽ tự động tạo một Phiếu kho hoàn toàn mới. Các phiếu kho cũ đã hoàn tất sẽ được giữ nguyên để lưu vết lịch sử).*
 
 ##### **2. Hủy/Hoàn trả phiếu Nhập/Xuất/Chuyển kho nội bộ đã "Hoàn thành"?**
 - Phiếu kho đã hoàn thành (Done) **không thể xóa hoặc hủy** trực tiếp.
-- **Xử lý:** Mở phiếu kho đó, bấm nút **[Trả hàng] (Return)**. Hệ thống sẽ tự động tạo một phiếu kho đảo ngược (Reverse Transfer) để đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).
+- **Xử lý:** Mở phiếu kho đó, bấm nút **[Trả hàng] (Return)**. Hệ thống sẽ tự động tạo một phiếu đảo ngược (ví dụ: **Phiếu xuất kho / Phiếu nhập kho**) ở trạng thái **Sẵn sàng (Ready)**. Bạn cần **[Xác nhận] (Validate)** phiếu mới này để chính thức đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).
 
 ##### **3. Xử lý hóa đơn kế toán đã "Vào sổ" (Posted) bị sai?**
 - Theo chuẩn mực kế toán, không thể xóa hóa đơn đã vào sổ.
