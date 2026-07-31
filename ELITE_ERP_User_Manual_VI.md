@@ -15,8 +15,8 @@ table th:first-child, table td:first-child {
 | Thông tin tài liệu | Chi tiết |
 |---|---|
 | **Mã tài liệu** | ELT_UM_ERP_CORE |
-| **Phiên bản** | V1.0 |
-| **Ngày cập nhật** | 24/05/2026 |
+| **Phiên bản** | V2.0 |
+| **Ngày cập nhật** | 28/07/2026 |
 | **Người biên soạn** | Hoàng Thúy / BA |
 | **Đối tượng áp dụng** | Ban Giám đốc, Quản lý, Nhân viên Vận hành |
 
@@ -66,18 +66,23 @@ table th:first-child, table td:first-child {
       - [4.3.1.1 Cấu hình thuế (Configuration > Taxes)](#taxes)
       - [4.3.1.2 Sổ nhật ký (Journals)](#journals)
       - [4.3.1.3 Điều khoản thanh toán (Payment Terms)](#payment-terms)
+      - [4.3.1.4 Quản lý Hệ thống Tài khoản Kế toán (Chart of Accounts)](#chart-of-accounts)
     - [4.3.2 Nhà cung cấp (Vendor)](#invoicing-vendor)
       - [4.3.2.1 Hóa đơn nhà cung cấp (Bills)](#bills)
       - [4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)](#refunds)
       - [4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)](#vendor-payments)
       - [4.3.2.4 Sản phẩm (Products)](#invoicing-vendor-products)
       - [4.3.2.5 Nhà cung cấp (Vendors)](#invoicing-vendor-main)
+      - [4.3.2.6 Ghi nhận hóa đơn Chi phí & Chi phí khác (Other Expenses - TK 642, 811)](#other-expenses)
     - [4.3.3 Khách hàng (Customers)](#invoicing-customers)
       - [4.3.3.1 Hóa đơn khách hàng (Invoices)](#invoices)
       - [4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ (Credit Notes)](#credit-notes)
       - [4.3.3.3 Ghi nhận thanh toán của khách hàng (Customer Payments)](#customer-payments)
       - [4.3.3.4 Sản phẩm (Products)](#invoicing-customer-products)
       - [4.3.3.5 Khách hàng (Customers)](#invoicing-customers-main)
+    - [4.3.4 Kế toán tổng hợp & Bút toán (Accounting Operations & Journal Entries)](#accounting-operations)
+      - [4.3.4.1 Quản lý Bút toán Nhật ký (Manage Journal Entries)](#journal-entries-cru)
+    - [4.3.5 Báo cáo & Phân tích (Reporting & Analysis)](#invoicing-reporting)
   - [4.4 📦 PHÂN HỆ KHO (Inventory)](#inventory)
     - [4.4.1 Cấu hình (Configuration)](#inventory-config)
       - [4.4.1.1 Kho hàng (Warehouses)](#warehouses)
@@ -90,10 +95,11 @@ table th:first-child, table td:first-child {
       - [4.4.2.5 Phiếu loại bỏ / Hủy hàng (Scrap Orders)](#scrap-orders)
       - [4.4.2.6 Quy trình Trả hàng (Product Returns)](#product-returns)
       - [4.4.2.7 Tổng quan kho (Inventory Overview)](#inventory-overview)
-      <!-- - [4.4.2.8 Quy trình Cung ứng theo đơn hàng (Make to Order - MTO)](#inventory-mto) -->
+      - [4.4.2.8 Quy trình Cung ứng theo đơn hàng (Make to Order - MTO)](#inventory-mto)
 1. [5. Xử lý sự cố & Luồng ngoại lệ (FAQ & Exceptions)](#exceptions-troubleshooting)
   - [5.1 Luồng Hủy & Xử lý ngoại lệ (Cancellation Workflows)](#cancellation-workflows)
   - [5.2 Câu hỏi thường gặp khác (General FAQ)](#general-faq)
+  - [5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)](#accounting-faq)
 1. [6. Giải nghĩa thuật ngữ (Glossary)](#glossary)
 ---
 
@@ -626,6 +632,13 @@ Hỗ trợ người dùng nạp hàng loạt Yêu cầu báo giá (RFQ) hoặc �
 <a id="invoicing"></a>
 ## **4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)**
 
+> [!IMPORTANT]
+> **Giới hạn hệ thống (Scope & Limitations):**
+> Elite ERP cấu hình tiêu chuẩn hiện sử dụng phân hệ **Hóa đơn (Invoicing)** làm trung tâm xử lý thu chi, giúp bao phủ hoàn hảo luồng Mua - Bán - Thu - Chi và sinh bút toán tự động/thủ công. Tuy nhiên, nó KHÔNG phải là phân hệ **Kế toán chuyên sâu (Full Accounting)**. Do đó, hệ thống sẽ giới hạn 3 tính năng nâng cao sau:
+> 1. **Không có tính năng Khóa sổ kế toán (Lock Dates):** Không thể khóa sổ cuối kỳ để chặn sửa đổi lùi ngày. Kế toán trưởng cần quản lý thủ công thông qua việc phân quyền chặt chẽ.
+> 2. **Không có Đối soát sao kê tự động (Bank Reconciliation):** Việc ghi nhận thanh toán sẽ thao tác thủ công trên từng chứng từ (Register Payment) thay vì import file sao kê từ ngân hàng để máy tự động gạch nợ hàng loạt.
+> 3. **Giới hạn Báo cáo tài chính:** Hệ thống cung cấp công cụ Phân tích Hóa đơn/Dòng tiền xuất sắc nhưng chưa đóng gói sẵn Bảng Cân đối kế toán (Balance Sheet), Kết quả kinh doanh (P&L) hay Bảng cân đối phát sinh. Kế toán cần tự kết xuất sổ nhật ký ra Excel để lên báo cáo khi cần.
+
 <a id="invoicing-config"></a>
 ### **4.3.1 Cấu hình (Configuration)**
 
@@ -699,6 +712,34 @@ Thiết lập các sổ nhật ký kế toán để phân nhóm các nghiệp v�
 
 ---
 
+<a id="chart-of-accounts"></a>
+#### **4.3.1.4 Quản lý Hệ thống Tài khoản Kế toán (Chart of Accounts)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Hệ thống tài khoản kế toán (Chart of Accounts - COA) là nền tảng cốt lõi để phân loại và định khoản toàn bộ các nghiệp vụ kinh tế phát sinh của doanh nghiệp (theo chuẩn mực Thông tư 200/2014/TT-BTC như: TK 111 - Tiền mặt, TK 112 - Tiền gửi Ngân hàng, TK 131 - Phải thu khách hàng, TK 331 - Phải trả người bán, TK 642 - Chi phí quản lý kinh doanh, TK 811 - Chi phí khác). Ngay cả khi chỉ sử dụng phân hệ Hóa đơn (Invoicing) mà không cài module Kế toán chuyên sâu, bạn vẫn cần quản lý và định danh chính xác danh mục tài khoản này để phục vụ hạch toán bút toán và chi phí.
+
+##### **Giải thích các trường thông tin trên Tài khoản**
+* **Mã tài khoản (Code - *):** Số hiệu tài khoản theo chuẩn Thông tư 200 (Ví dụ: `1111`, `131`, `331`, `6422`, `811`).
+* **Tên tài khoản (Account Name - *):** Tên định danh của tài khoản (Ví dụ: `Tiền Việt Nam`, `Phải thu của khách hàng`, `Chi phí dịch vụ mua ngoài`).
+* **Loại tài khoản (Type - *):** Quyết định tính chất số dư và cách lên báo cáo của tài khoản. Các nhóm chính trong hệ thống gồm:
+  * *Tài sản / Phải thu / Ngân hàng và Tiền mặt* (nhóm TK 1, 2).
+  * *Nợ phải trả / Phải trả / Vốn chủ sở hữu* (nhóm TK 3, 4).
+  * *Thu nhập / Thu nhập khác* (nhóm TK 5, 7).
+  * *Chi phí / Khấu hao / Chi phí trực tiếp / Chi phí khác* (nhóm TK 6, 8).
+* **Cho phép đối soát (Reconcile):** Đánh dấu cờ này nếu tài khoản cần theo dõi chi tiết công nợ hoặc đối soát từng chứng từ (Bắt buộc bật đối với TK `131`, `331` và tài khoản Ngân hàng/Tiền mặt).
+* **Thuế mặc định (Default Taxes):** Gán mức thuế VAT mặc định tự động áp dụng khi chọn tài khoản này trên hóa đơn.
+
+##### **Các bước thực hiện**
+- **Bước 1:** Tại phân hệ **"Hóa đơn"** -> click menu **"Cấu hình"** -> chọn **"Danh mục tài khoản"** (Chart of Accounts).
+- **Bước 2 (Tạo mới - Create):** Nhấn nút **[Mới]** (New), nhập **Mã tài khoản**, **Tên tài khoản** và chọn chính xác **Loại tài khoản**:
+   ![Tạo mới tài khoản kế toán TT200](images/vi/steps/chart_of_accounts.png)
+- **Bước 3 (Tra cứu - Read):** Sử dụng thanh tìm kiếm trên cùng để lọc theo Mã tài khoản (Ví dụ gõ `642` hoặc `811`) hoặc lọc theo Nhóm tài khoản (Tài sản, Nợ phải trả, Chi phí).
+- **Bước 4 (Sửa đổi - Update):** Nhấp trực tiếp vào dòng tài khoản cần điều chỉnh tên hoặc thiết lập cờ **Cho phép đối soát** -> nhấn **[Lưu]** (Save).
+
+> [!IMPORTANT]
+> **Lưu ý nghiệp vụ cấu hình tài khoản:** Tuyệt đối không thay đổi **Loại tài khoản** (Type) đối với các tài khoản đang có số dư hoặc đã phát sinh bút toán hạch toán, vì điều này có thể làm sai lệch cấu trúc cân đối kế toán của toàn hệ thống.
+
+---
+
 <a id="invoicing-vendor"></a>
 ### **4.3.2 Nhà cung cấp (Vendor)**
 
@@ -764,6 +805,31 @@ Xem và cấu hình thông tin danh bạ đối tác là nhà cung cấp, cấu 
 ##### **Các bước thực hiện**
 - **Bước 1:** Chọn phân hệ **"Hóa đơn"** -> di chuyển đến menu **"Nhà cung cấp"** -> click **"Nhà cung cấp"**.
 - **Bước 2:** Chọn nhà cung cấp cần thiết lập, tại tab **Kế toán**, gán tài khoản kế toán công nợ và nhấn **Save**.
+
+---
+
+<a id="other-expenses"></a>
+#### **4.3.2.6 Ghi nhận hóa đơn Chi phí & Chi phí khác (Other Expenses - TK 642, 811)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Trong hoạt động doanh nghiệp, ngoài các hóa đơn nhập mua hàng hóa nhập kho (được sinh tự động từ Đơn mua hàng PO), kế toán thường xuyên phải xử lý và hạch toán các hóa đơn chi phí dịch vụ mua ngoài, chi phí thuê văn phòng, tiền điện nước (TK 642) hoặc các khoản chi phí khác, chi phí bất thường (TK 811). Với phân hệ Hóa đơn (Invoicing), bạn hoàn toàn có thể ghi nhận trực tiếp các hóa đơn chi phí này vào sổ nhật ký mua hàng mà không cần cài module Kế toán phức tạp.
+
+##### **Giải thích các trường thông tin trên Hóa đơn chi phí**
+* **Nhà cung cấp (Vendor - *):** Đơn vị cung cấp dịch vụ hoặc hóa đơn (Ví dụ: Công ty Điện lực, Chủ cho thuê văn phòng).
+* **Ngày hóa đơn (Bill Date - *):** Ngày ghi trên hóa đơn VAT hoặc ngày phát sinh chi phí.
+* **Số hóa đơn (Vendor Reference / Bill Reference):** Số ký hiệu và số hóa đơn thực tế để phục vụ kê khai thuế và tra cứu.
+* **Tab Chi tiết hóa đơn (Invoice Lines):**
+  * **Sản phẩm / Diễn giải:** Nhập trực tiếp nội dung chi tiêu (Ví dụ: `Chi phí thuê văn phòng tháng 07/2026`, `Chi phí tiếp khách`). Bạn không bắt buộc phải chọn mã sản phẩm trong danh mục nếu đây là khoản chi một lần.
+  * **Tài khoản (Account - *):** Chọn tài khoản chi phí TT200 phù hợp (Ví dụ: `6427 - Chi phí dịch vụ mua ngoài`, `6422 - Chi phí vật liệu quản lý`, hoặc `811 - Chi phí khác`).
+  * **Số lượng & Giá (Quantity & Price):** Nhập số lượng và đơn giá chưa thuế.
+  * **Thuế (Taxes):** Chọn mức thuế GTGT đầu vào (Ví dụ `VAT 10%`, `VAT 8%` hoặc `Không chịu thuế`) để hệ thống tự động tách thuế vào tài khoản `1331 - Thuế GTGT được khấu trừ`.
+
+##### **Các bước thực hiện**
+- **Bước 1 (Create):** Vào phân hệ **"Hóa đơn"** -> chọn menu **"Nhà cung cấp"** -> click **"Hóa đơn nhà cung cấp"** (Bills) -> bấm nút **[Mới]** (New).
+- **Bước 2:** Chọn **Nhà cung cấp**, nhập **Ngày hóa đơn** và **Số hóa đơn**.
+- **Bước 3:** Tại tab **Chi tiết hóa đơn**, thêm dòng chi phí mới, ghi diễn giải nội dung chi tiêu và gán đúng **Tài khoản chi phí** (TK 642 hoặc 811):
+   ![Ghi nhận hóa đơn chi phí dịch vụ và chi phí khác](images/vi/steps/expense_bill_analytic.png)
+- **Bước 4 (Post/Confirm):** Kiểm tra tổng tiền chưa thuế, tiền thuế VAT đầu vào và tổng thanh toán -> Bấm **[Xác nhận]** (Confirm). Hóa đơn chuyển sang trạng thái **Đã ghi sổ** và hệ thống tự động sinh bút toán hạch toán Nợ TK Chi phí (642/811), Nợ TK Thuế (1331) / Có TK Phải trả người bán (331).
+- **Bước 5 (Read & Update):** Khi hóa đơn ở trạng thái Nháp, bạn có thể tự do chỉnh sửa tài khoản chi phí và số tiền. Khi đã ghi sổ, bấm nút **[Thanh toán]** (Register Payment) khi chi tiền mặt hoặc chuyển khoản để tất toán công nợ chi phí này.
 
 ---
 
@@ -839,6 +905,86 @@ Quản lý danh sách khách hàng và thiết lập các thông tin tài khoả
 ##### **Các bước thực hiện**
 - **Bước 1:** Chọn phân hệ **"Hóa đơn"** -> di chuyển đến menu **"Khách hàng"** -> click **"Khách hàng"**.
 - **Bước 2:** Chọn khách hàng cần thiết lập, tại tab **Kế toán**, gán tài khoản kế toán công nợ phải thu và nhấn **Save** để cập nhật.
+
+---
+
+<a id="accounting-operations"></a>
+### **4.3.4 Kế toán tổng hợp & Bút toán (Accounting Operations & Journal Entries)**
+
+<a id="journal-entries-cru"></a>
+#### **4.3.4.1 Quản lý Bút toán Nhật ký (Manage Journal Entries)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Bên cạnh việc phát sinh tự động từ hóa đơn bán hàng và hóa đơn mua hàng, bộ phận kế toán cần thực hiện lập thủ công các chứng từ kết chuyển, bút toán điều chỉnh, hạch toán chi phí tiền lương, khấu hao tài sản hoặc trích trước chi phí theo đúng Thông tư 200/2014/TT-BTC. Trình đơn Bút toán nhật ký (Journal Entries) trong phân hệ Hóa đơn cung cấp đầy đủ công cụ để lập (Create), tra cứu (Read), điều chỉnh (Update) và ghi sổ chứng từ tổng hợp.
+
+##### **Giải thích các trường thông tin trên Bút toán**
+* **Sổ nhật ký (Journal - *):** Chọn sổ nhật ký phù hợp với nghiệp vụ phát sinh (Ví dụ: `Sổ các thao tác khác / Miscellaneous Operations`, `Sổ Tiền mặt`, `Sổ Ngân hàng`).
+* **Ngày kế toán (Accounting Date - *):** Ngày ghi nhận chứng từ vào sổ cái (thường là ngày phát sinh nghiệp vụ hoặc ngày cuối kỳ hạch toán).
+* **Tham chiếu (Reference):** Số chứng từ gốc hoặc diễn giải tóm tắt nghiệp vụ (Ví dụ: `Hạch toán tiền lương T07/2026`).
+* **Tab Chi tiết bút toán (Journal Items):**
+  * **Tài khoản (Account - *):** Chọn tài khoản theo Hệ thống tài khoản TT200 (Ví dụ: `6422 - Chi phí vật liệu quản lý`, `3341 - Must trả người lao động`).
+  * **Đối tác (Partner):** Chọn Khách hàng, Nhà cung cấp hoặc Nhân viên liên quan (bắt buộc đối với các tài khoản công nợ `131`, `331`, `141`, `334`...).
+  * **Nhãn (Label):** Diễn giải chi tiết nghiệp vụ cho dòng hạch toán tương ứng.
+  * **Nợ (Debit) / Có (Credit):** Nhập số tiền phát sinh bên Nợ hoặc bên Có. Tổng Nợ và Tổng Có của bút toán bắt buộc phải cân bằng nhau.
+
+##### **Các bước thực hiện**
+- **Bước 1 (Create - Tạo mới):** Tại phân hệ **"Hóa đơn"** -> chọn menu **"Kế toán"** (hoặc Các thao tác khác) -> click **"Bút toán nhật ký"** (Journal Entries) -> nhấn nút **[Mới]** (New).
+- **Bước 2:** Chọn **Sổ nhật ký**, nhập **Ngày kế toán** và **Tham chiếu**.
+- **Bước 3:** Tại tab **Chi tiết bút toán**, nhấn **[Thêm một dòng]**, chọn Tài khoản Nợ TT200, chọn Đối tác (nếu có) và nhập số tiền Nợ:
+   ![Nhập dòng tài khoản Nợ trong bút toán](images/vi/steps/journal_entry_debit_line.png)
+- **Bước 4:** Nhấn **[Thêm một dòng]** tiếp theo, chọn Tài khoản Có TT200 tương ứng để cân bằng chứng từ:
+   ![Nhập dòng tài khoản Có cân bằng bút toán](images/vi/steps/journal_entry_credit_line.png)
+- **Bước 5 (Post - Ghi sổ):** Kiểm tra Tổng số tiền Nợ = Tổng số tiền Có. Nhấn nút **[Vào sổ]** (Post) để chính thức ghi nhận nghiệp vụ vào sổ cái kế toán:
+   ![Vào sổ bút toán thành công](images/vi/steps/journal_entry_posted.png)
+- **Bước 6 (Read - Tra cứu):** Tại màn hình danh sách Bút toán nhật ký, sử dụng bộ lọc tìm kiếm theo số chứng từ, theo tài khoản, hoặc lọc theo trạng thái **Đã vào sổ** (Posted) / **Nháp** (Draft).
+- **Bước 7 (Update & Reverse - Sửa đổi & Đảo bút toán):**
+  * *Khi chứng từ đang ở trạng thái Nháp:* Bạn tự do chỉnh sửa tài khoản, số tiền hoặc bấm biểu tượng bánh răng chọn **"Xóa"** (Delete).
+  * *Khi chứng từ Đã vào sổ:* Để đảm bảo tính toàn vẹn và dấu vết kiểm toán theo chuẩn TT200, hệ thống khóa không cho sửa xóa trực tiếp. Bạn bấm nút **[Đảo ngược bút toán]** (Reverse Entry) ở góc trên, hệ thống sẽ sinh bút toán đảo chiều Nợ/Có để triệt tiêu số dư sai một cách hợp lệ:
+   ![Đảo ngược bút toán đã vào sổ](images/vi/steps/journal_entry_reverse.png)
+
+---
+
+<a id="automated-journal-entries"></a>
+#### **4.3.4.2 Cách hệ thống sinh bút toán tự động (Automated Journal Entries)**
+##### **Cơ chế hoạt động**
+Trong Odoo, bạn không cần phải tạo thủ công 100% các bút toán. Hầu hết các nghiệp vụ cốt lõi như Bán hàng, Mua hàng và Thanh toán đều được hệ thống **tự động hạch toán** (sinh bút toán) dựa trên cấu hình tài khoản (Chart of Accounts) mặc định của Sản phẩm, Khách hàng, Nhà cung cấp và Thuế.
+
+##### **Cách xem chi tiết một bút toán tự động**
+Để hiểu rõ hệ thống đang hạch toán dòng tiền như thế nào, bạn có thể kiểm tra trực tiếp ngay trên bất kỳ Hóa đơn hoặc Chứng từ thanh toán nào:
+
+- **Bước 1:** Mở một Hóa đơn khách hàng (hoặc Hóa đơn nhà cung cấp) đã được **[Xác nhận]** (Đã vào sổ).
+- **Bước 2:** Chuyển sang tab **"Chi tiết bút toán" (Journal Items)** nằm ngay bên cạnh tab Chi tiết hóa đơn.
+- **Bước 3:** Tại đây, hệ thống sẽ hiển thị minh bạch các cặp định khoản Nợ/Có. Ví dụ, với một Hóa đơn bán hàng thông thường, hệ thống tự động sinh các dòng hạch toán như sau:
+  - **Nợ TK 131 (Phải thu khách hàng):** Tổng số tiền khách hàng phải thanh toán (Ghi nhận vào công nợ).
+  - **Có TK 511 (Doanh thu bán hàng):** Giá trị tiền hàng trước thuế.
+  - **Có TK 3331 (Thuế GTGT đầu ra):** Số tiền thuế VAT phát sinh (nếu có).
+   ![Chi tiết bút toán tự động phát sinh từ hóa đơn](images/vi/steps/automated_journal_entries.png)
+
+> [!TIP]
+> **Mẹo:** Việc thường xuyên xem tab "Chi tiết bút toán" giúp kế toán viên kiểm soát chéo sự chính xác của các tài khoản doanh thu/chi phí được cấu hình ẩn dưới sản phẩm, đảm bảo báo cáo tài chính luôn chuẩn xác theo Thông tư 200.
+
+---
+
+<a id="invoicing-reporting"></a>
+### **4.3.5 Báo cáo & Phân tích (Reporting & Analysis)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các chỉ số tài chính cốt lõi (Doanh thu, Chi phí, Dòng tiền) theo thời gian thực (Real-time) ngay trên hệ thống mà không cần chờ đến kỳ báo cáo thuế, phục vụ việc ra quyết định kinh doanh kịp thời.
+
+##### **Các bước thực hiện xem báo cáo**
+
+**1. Xem Báo cáo Doanh thu & Chi phí (Invoices Analysis):**
+- **Bước 1:** Tại module **Hóa đơn (Invoicing)**, chọn menu **Báo cáo (Reporting)** -> **Phân tích hóa đơn (Invoices Analysis)**.
+- **Bước 2:** Hệ thống hiển thị biểu đồ phân tích.
+  - Để xem **Doanh thu**: Mặc định hệ thống đang lọc các "Hóa đơn khách hàng". Bạn có thể nhóm theo *Khách hàng*, *Nhân viên kinh doanh*, hoặc *Nhóm sản phẩm* để xem chi tiết nguồn thu.
+  - Để xem **Chi phí**: Bấm vào thanh tìm kiếm, gỡ bỏ bộ lọc "Hóa đơn khách hàng", sau đó chọn bộ lọc **Hóa đơn nhà cung cấp (Vendor Bills)**. Biểu đồ sẽ lập tức chuyển sang thống kê tổng các chi phí vận hành và mua sắm.
+   ![Báo cáo phân tích hóa đơn và doanh thu](images/vi/steps/invoices_analysis.png)
+- **Bước 3:** (Tùy chọn) Lưu cấu hình bộ lọc này vào mục **Yêu thích (Favorites) -> Lưu tìm kiếm hiện tại** để truy cập nhanh cho lần sau.
+
+**2. Xem Dòng tiền thực tế (Cash & Bank Dashboard):**
+- **Bước 1:** Truy cập module **Hóa đơn (Invoicing)** -> Chọn menu **Bảng thông tin (Dashboard)**.
+- **Bước 2:** Trên màn hình Kanban, quan sát hai thẻ sổ nhật ký quan trọng nhất: **Tiền mặt (Cash)** và **Ngân hàng (Bank)**.
+- **Bước 3:** Tại mỗi thẻ, bạn sẽ thấy ngay con số **Số dư hiện tại (Current Balance)** phản ánh lượng tiền thực tế đang có.
+- **Bước 4:** Để xem chi tiết các dòng tiền vào/ra (thu tiền khách, trả tiền nhà cung cấp), hãy nhấp vào chữ **Giao dịch (Transactions)** hoặc **Sổ cái (General Ledger)** ngay trên thẻ sổ đó.
+   ![Bảng thông tin dòng tiền và ngân hàng](images/vi/steps/invoicing_dashboard.png)
 
 ---
 
@@ -1016,7 +1162,6 @@ Bảng điều khiển trung tâm hiển thị trạng thái hoạt động củ
 
 ---
 
-<!--
 <a id="inventory-mto"></a>
 #### **4.4.2.8 Quy trình Cung ứng theo đơn hàng (Make to Order - MTO)**
 ##### **Mục đích & Ý nghĩa nghiệp vụ**
@@ -1054,7 +1199,6 @@ Quy trình MTO áp dụng cho mô hình "Mua hàng rồi giao hàng" (Back-to-Ba
 > * **Chính sách hóa đơn mua:** Khuyên dùng **Theo số lượng đã nhận (Received Quantities)** để chỉ thanh toán cho NCC đúng lượng hàng thực tế đã nhập kho.
 > * **Chính sách hóa đơn bán:** Khuyên dùng **Theo số lượng đã giao (Delivered Quantities)** để tránh xuất hóa đơn bán trước khi hàng thực tế được xuất kho giao cho khách.
 > * **Kiểm soát biên lợi nhuận:** Kế toán cần đối chiếu giá mua trên PO tự động sinh với giá bán trên SO để kiểm soát biên lợi nhuận trước khi nhân viên mua hàng chốt đơn mua.
--->
 
 ---
 
@@ -1068,18 +1212,19 @@ Trong quá trình vận hành ERP, bạn có thể gặp các luồng ngoại l�
 
 ##### **1. Cách hủy Đơn bán hàng / Mua hàng khi khách đổi ý?**
 - **Trường hợp 1 (Chưa giao/nhận hàng, chưa xuất hóa đơn):** Truy cập vào đơn hàng và bấm nút **[Hủy] (Cancel)**. Đơn hàng sẽ chuyển sang trạng thái Đã hủy.
-- **Trường hợp 2 (Đã giao/nhận hàng hoặc Đã lên hóa đơn):** Bạn không thể hủy trực tiếp. Bạn phải thực hiện theo thứ tự sau:
-  - **Bước 1 (Xử lý Kho):** Mở phiếu kho đã hoàn thành, bấm nút **[Trả hàng] (Return)**. Hệ thống sẽ tạo một **Phiếu xuất kho / Phiếu nhập kho** mới. Bạn phải mở phiếu mới này và nhấn **[Xác nhận] (Validate)** để hoàn tất việc trả hàng.
-  - **Bước 2 (Xử lý Kế toán - nếu có):** Nếu đơn hàng đã lên Hóa đơn, bạn mở Hóa đơn đó ra và tạo **Ghi chú tín dụng (Credit Note)** để hủy công nợ.
-  - **Bước 3 (Hủy Đơn hàng):** Sau khi xử lý xong kho và kế toán, quay lại Đơn bán hàng/Mua hàng gốc và nhấn nút **[Hủy] (Cancel)**. *(Lưu ý: Nếu bạn chọn "Chuyển thành Nháp" để sửa lại đơn và Xác nhận lại, hệ thống sẽ tự động tạo một Phiếu kho hoàn toàn mới. Các phiếu kho cũ đã hoàn tất sẽ được giữ nguyên để lưu vết lịch sử).*
+- **Trường hợp 2 (Đã giao/nhận hàng hoặc Đã lên hóa đơn):** Bạn không thể hủy trực tiếp. Bạn phải:
+  - Hủy/Trả lại (Return) phiếu kho.
+  - Tạo Ghi chú tín dụng (Credit Note) để hủy hóa đơn.
+  - Sau đó mới có thể hủy Đơn hàng gốc.
 
 ##### **2. Hủy/Hoàn trả phiếu Nhập/Xuất/Chuyển kho nội bộ đã "Hoàn thành"?**
 - Phiếu kho đã hoàn thành (Done) **không thể xóa hoặc hủy** trực tiếp.
-- **Xử lý:** Mở phiếu kho đó, bấm nút **[Trả hàng] (Return)**. Hệ thống sẽ tự động tạo một phiếu đảo ngược (ví dụ: **Phiếu xuất kho / Phiếu nhập kho**) ở trạng thái **Sẵn sàng (Ready)**. Bạn cần **[Xác nhận] (Validate)** phiếu mới này để chính thức đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).
+- **Xử lý:** Mở phiếu kho đó, bấm nút **[Trả hàng] (Return)**. Hệ thống sẽ tự động tạo một phiếu kho đảo ngược (Reverse Transfer) để đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).
 
-##### **3. Xử lý hóa đơn kế toán đã "Vào sổ" (Posted) bị sai?**
-- Theo chuẩn mực kế toán, không thể xóa hóa đơn đã vào sổ.
-- **Xử lý:** Bấm **[Thêm Ghi chú tín dụng] (Add Credit Note)** để đảo ngược toàn bộ giá trị của hóa đơn cũ, ghi nhận lý do hủy. Sau đó bạn có thể tạo một hóa đơn mới hoàn toàn.
+##### **3. Xử lý Hóa đơn hoặc Bút toán kế toán đã "Vào sổ" (Posted) bị sai?**
+- Theo chuẩn mực kế toán (TT200), **không được phép xóa** các chứng từ đã vào sổ để bảo toàn dấu vết kiểm toán.
+- **Đối với Hóa đơn (Invoices/Bills):** Bấm **[Thêm Ghi chú tín dụng] (Add Credit Note)** để đảo ngược toàn bộ giá trị của hóa đơn cũ, sau đó tạo một hóa đơn mới hoàn toàn.
+- **Đối với Bút toán tay (Manual Journals):** Bấm nút **[Đảo ngược bút toán] (Reverse Entry)** để hệ thống tự động sinh một bút toán đảo chiều (Nợ thành Có, Có thành Nợ) nhằm triệt tiêu số dư sai hợp lệ.
 
 <a id="general-faq"></a>
 ## **5.2 Câu hỏi thường gặp khác (General FAQ)**
@@ -1095,6 +1240,24 @@ Trong quá trình vận hành ERP, bạn có thể gặp các luồng ngoại l�
 ##### **3. Không thấy menu chức năng?**
 - **Nguyên nhân:** Tài khoản của bạn chưa được phân quyền truy cập.
 - **Xử lý:** Liên hệ Quản trị viên hệ thống (Admin) để được cấp quyền bổ sung.
+
+<a id="accounting-faq"></a>
+## **5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)**
+
+##### **1. Tại sao tôi không thấy nút "Đảo ngược bút toán" (Reverse Entry) trên chứng từ?**
+- **Nguyên nhân 1:** Bút toán của bạn đang ở trạng thái **Nháp (Draft)**. Lúc này chứng từ chưa phát sinh hiệu lực tài chính, bạn có thể sửa số liệu trực tiếp hoặc bấm biểu tượng bánh răng để "Xóa" nên hệ thống không hiển thị nút Đảo ngược. Nút Đảo ngược chỉ hiện ra khi chứng từ đã **Vào sổ (Posted)**.
+- **Nguyên nhân 2:** Nếu bạn đang xem Hóa đơn bán hàng/mua hàng, nút đảo ngược sẽ được gọi dưới tên thương mại là **"Thêm Giấy báo Có" (Add Credit Note)** thay vì "Đảo ngược bút toán".
+
+##### **2. Khi nào bắt buộc phải sinh "Bút toán tay" (Manual Journal Entries)?**
+Hệ thống đã tự động hóa luồng Mua, Bán và Kho. Bạn chỉ phải tự sinh bút toán tay cho các nghiệp vụ nội bộ hoặc điều chỉnh cuối kỳ như:
+- Khấu hao tài sản / Phân bổ chi phí trả trước.
+- Kết chuyển doanh thu, chi phí cuối kỳ để xác định kết quả kinh doanh.
+- Hạch toán tiền lương và các khoản trích theo lương.
+- Trích lập các khoản dự phòng hoặc điều chỉnh sai sót số dư.
+
+##### **3. Hạch toán chi phí lương và tiền điện theo TT200 khác nhau thế nào trên hệ thống?**
+- **Tiền lương:** Không dùng "Hóa đơn nhà cung cấp" vì nhân viên không phải là nhà cung cấp. Bạn phải tạo **Bút toán tay (Manual Journal)**, phân bổ chi phí về đúng đầu bộ phận (Ví dụ: Nợ 622, 641, 642 / Có 334).
+- **Tiền điện/nước/mặt bằng:** Là dịch vụ mua từ bên ngoài, bắt buộc dùng **Hóa đơn nhà cung cấp (Vendor Bills)**. Nếu cần chia cho nhiều bộ phận (Xưởng, Showroom, Văn phòng), bạn chỉ việc thêm nhiều dòng (Invoice Lines) trên cùng một hóa đơn và gán trực tiếp tài khoản chi phí (6277, 6417, 6427) cho từng dòng.
 
 ---
 
@@ -1115,3 +1278,9 @@ Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hi�
 | **Kanban** | Chế độ xem dữ liệu dạng **Thẻ**, cho phép kéo thả chứng từ qua lại giữa các giai đoạn (Draft -> Sent -> Confirmed). |
 | **Scrap** | **Loại bỏ / Phế liệu:** Đưa sản phẩm hư hỏng ra khỏi kho để không làm ảnh hưởng đến tồn kho thực tế bán được. |
 | **Variant** | **Biến thể sản phẩm:** Các phiên bản khác nhau của cùng một sản phẩm (VD: Áo thun có biến thể là Màu Đỏ, Size L). |
+| **COA** (Chart of Accounts) | **Hệ thống Tài khoản Kế toán:** Danh mục phân loại tài sản, nợ, nguồn vốn, doanh thu, chi phí. |
+| **Journal** | **Sổ nhật ký:** Nơi ghi chép các nghiệp vụ kinh tế phát sinh theo nhóm (VD: Sổ Tiền mặt, Sổ Mua hàng). |
+| **Journal Entry** | **Bút toán nhật ký:** Bản ghi giao dịch tài chính vào hệ thống, đảm bảo nguyên tắc Tổng Nợ = Tổng Có. |
+| **Journal Item** | **Chi tiết bút toán:** Một dòng ghi Nợ hoặc Có đơn lẻ cấu thành nên một Bút toán nhật ký. |
+| **Manual Journal** | **Bút toán tay:** Bút toán do kế toán tự tạo thủ công thay vì được sinh tự động từ các phân hệ khác (VD: lương, khấu hao). |
+| **Reverse Entry** | **Đảo ngược bút toán:** Bút toán đảo chiều (Nợ thành Có, Có thành Nợ) sinh ra để triệt tiêu số dư của chứng từ sai sót. |

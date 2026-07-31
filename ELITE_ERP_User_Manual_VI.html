@@ -293,7 +293,8 @@
       <li><a href="#invoicing-config">4.3.1 Cấu hình</a>      <ul>
         <li><a href="#taxes">4.3.1.1 Cấu hình thuế</a>      </li>
         <li><a href="#journals">4.3.1.2 Sổ nhật ký</a>      </li>
-        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán</a>      </ul>
+        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán</a>      </li>
+        <li><a href="#chart-of-accounts">4.3.1.4 Quản lý Hệ thống Tài khoản Kế toán</a>      </ul>
 </li>
     </li>
       <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp</a>      <ul>
@@ -301,7 +302,8 @@
         <li><a href="#refunds">4.3.2.2 Hóa đơn trả lại / Hoàn tiền</a>      </li>
         <li><a href="#vendor-payments">4.3.2.3 Thanh toán cho nhà cung cấp</a>      </li>
         <li><a href="#invoicing-vendor-products">4.3.2.4 Sản phẩm</a>      </li>
-        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp</a>      </ul>
+        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp</a>      </li>
+        <li><a href="#other-expenses">4.3.2.6 Ghi nhận hóa đơn Chi phí & Chi phí khác</a>      </ul>
 </li>
     </li>
       <li><a href="#invoicing-customers">4.3.3 Khách hàng</a>      <ul>
@@ -311,6 +313,14 @@
         <li><a href="#invoicing-customer-products">4.3.3.4 Sản phẩm</a>      </li>
         <li><a href="#invoicing-customers-main">4.3.3.5 Khách hàng</a>      </ul>
 </li>
+    </li>
+      <li><a href="#accounting-operations">4.3.4 Kế toán tổng hợp & Bút toán</a>      <ul>
+        <li><a href="#journal-entries-cru">4.3.4.1 Quản lý Bút toán Nhật ký</a></li>
+        <li><a href="#automated-journal-entries">4.3.4.2 Cách hệ thống sinh bút toán tự động</a></li>
+      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-reporting">4.3.5 Báo cáo &amp; Phân tích</a>      </li>
     </ul>
 </li>
   </li>
@@ -369,11 +379,11 @@ table th:first-child, table td:first-child {
         </tr>
         <tr>
           <td><strong>Phiên bản</strong></td>
-          <td>V1.0</td>
+          <td>V2.0</td>
         </tr>
         <tr>
           <td><strong>Ngày cập nhật</strong></td>
-          <td>24/05/2026</td>
+          <td>28/07/2026</td>
         </tr>
         <tr>
           <td><strong>Người biên soạn</strong></td>
@@ -448,7 +458,8 @@ table th:first-child, table td:first-child {
       <li><a href="#invoicing-config">4.3.1 Cấu hình (Configuration)</a>      <ul>
         <li><a href="#taxes">4.3.1.1 Cấu hình thuế (Configuration > Taxes)</a>      </li>
         <li><a href="#journals">4.3.1.2 Sổ nhật ký (Journals)</a>      </li>
-        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán (Payment Terms)</a>      </ul>
+        <li><a href="#payment-terms">4.3.1.3 Điều khoản thanh toán (Payment Terms)</a>      </li>
+        <li><a href="#chart-of-accounts">4.3.1.4 Quản lý Hệ thống Tài khoản Kế toán (Chart of Accounts)</a>      </ul>
 </li>
     </li>
       <li><a href="#invoicing-vendor">4.3.2 Nhà cung cấp (Vendor)</a>      <ul>
@@ -456,7 +467,8 @@ table th:first-child, table td:first-child {
         <li><a href="#refunds">4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)</a>      </li>
         <li><a href="#vendor-payments">4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)</a>      </li>
         <li><a href="#invoicing-vendor-products">4.3.2.4 Sản phẩm (Products)</a>      </li>
-        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp (Vendors)</a>      </ul>
+        <li><a href="#invoicing-vendor-main">4.3.2.5 Nhà cung cấp (Vendors)</a>      </li>
+        <li><a href="#other-expenses">4.3.2.6 Ghi nhận hóa đơn Chi phí & Chi phí khác (Other Expenses)</a>      </ul>
 </li>
     </li>
       <li><a href="#invoicing-customers">4.3.3 Khách hàng (Customers)</a>      <ul>
@@ -466,6 +478,14 @@ table th:first-child, table td:first-child {
         <li><a href="#invoicing-customer-products">4.3.3.4 Sản phẩm (Products)</a>      </li>
         <li><a href="#invoicing-customers-main">4.3.3.5 Khách hàng (Customers)</a>      </ul>
 </li>
+    </li>
+      <li><a href="#accounting-operations">4.3.4 Kế toán tổng hợp & Bút toán (Accounting Operations)</a>      <ul>
+        <li><a href="#journal-entries-cru">4.3.4.1 Quản lý Bút toán Nhật ký (Manage Journal Entries)</a></li>
+        <li><a href="#automated-journal-entries">4.3.4.2 Cách hệ thống sinh bút toán tự động (Automated Journal Entries)</a></li>
+      </ul>
+</li>
+    </li>
+      <li><a href="#invoicing-reporting">4.3.5 Báo cáo &amp; Phân tích (Reporting &amp; Analysis)</a>      </li>
     </ul>
 </li>
   </li>
@@ -492,7 +512,8 @@ table th:first-child, table td:first-child {
 </li>
   <li><a href="#exceptions-troubleshooting">5. Xử lý sự cố & Luồng ngoại lệ (FAQ & Exceptions)</a>  <ul>
     <li><a href="#cancellation-workflows">5.1 Luồng Hủy & Xử lý ngoại lệ (Cancellation Workflows)</a>  </li>
-    <li><a href="#general-faq">5.2 Câu hỏi thường gặp khác (General FAQ)</a>  </ul>
+    <li><a href="#general-faq">5.2 Câu hỏi thường gặp khác (General FAQ)</a>  </li>
+    <li><a href="#accounting-faq">5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)</a>  </ul>
 </li>
 </li>
   <li><a href="#glossary">6. Giải nghĩa thuật ngữ (Glossary)</a></li>
@@ -1291,264 +1312,356 @@ graph TD
     </ul>
     <hr>
     <p><a id="invoicing"></a></p>
-    <h2 id="43-️-phân-hệ-hóa-đơn-invoicing"><a class="anchor" aria-hidden="true" tabindex="-1" href="#43-️-phân-hệ-hóa-đơn-invoicing"><span class="octicon octicon-link"></span></a><strong>4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)</strong></h2>
+    <h2 id="43-phan-he-hoa-on-invoicing"><a class="anchor" aria-hidden="true" tabindex="-1" href="#43-phan-he-hoa-on-invoicing"><span class="octicon octicon-link"></span></a><strong>4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)</strong></h2>
+    <div class="markdown-alert markdown-alert-important">
+      <p class="markdown-alert-title"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.75.75 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+      <p><strong>Giới hạn hệ thống (Scope &amp; Limitations):</strong><br />
+Elite ERP cấu hình tiêu chuẩn hiện sử dụng phân hệ <strong>Hóa đơn (Invoicing)</strong> làm trung tâm xử lý thu chi, giúp bao phủ hoàn hảo luồng Mua - Bán - Thu - Chi và sinh bút toán tự động/thủ công. Tuy nhiên, nó KHÔNG phải là phân hệ <strong>Kế toán chuyên sâu (Full Accounting)</strong>. Do đó, hệ thống sẽ giới hạn 3 tính năng nâng cao sau:</p>
+      <ol>
+        <li><strong>Không có tính năng Khóa sổ kế toán (Lock Dates):</strong> Không thể khóa sổ cuối kỳ để chặn sửa đổi lùi ngày. Kế toán trưởng cần quản lý thủ công thông qua việc phân quyền chặt chẽ.</li>
+        <li><strong>Không có Đối soát sao kê tự động (Bank Reconciliation):</strong> Việc ghi nhận thanh toán sẽ thao tác thủ công trên từng chứng từ (Register Payment) thay vì import file sao kê từ ngân hàng để máy tự động gạch nợ hàng loạt.</li>
+        <li><strong>Giới hạn Báo cáo tài chính:</strong> Hệ thống cung cấp công cụ Phân tích Hóa đơn/Dòng tiền xuất sắc nhưng chưa đóng gói sẵn Bảng Cân đối kế toán (Balance Sheet), Kết quả kinh doanh (P&amp;L) hay Bảng cân đối phát sinh. Kế toán cần tự kết xuất sổ nhật ký ra Excel để lên báo cáo khi cần.</li>
+      </ol>
+    </div>
     <p><a id="invoicing-config"></a></p>
-    <h3 id="431-cấu-hình-configuration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#431-cấu-hình-configuration"><span class="octicon octicon-link"></span></a><strong>4.3.1 Cấu hình (Configuration)</strong></h3>
+    <h3 id="431-cau-hinh-configuration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#431-cau-hinh-configuration"><span class="octicon octicon-link"></span></a><strong>4.3.1 Cấu hình (Configuration)</strong></h3>
     <p><a id="taxes"></a></p>
-    <h4 id="4311-cấu-hình-thuế-configuration--taxes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4311-cấu-hình-thuế-configuration--taxes"><span class="octicon octicon-link"></span></a><strong>4.3.1.1 Cấu hình thuế (Configuration > Taxes)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-19"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-19"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4311-cau-hinh-thue-configuration-taxes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4311-cau-hinh-thue-configuration-taxes"><span class="octicon octicon-link"></span></a><strong>4.3.1.1 Cấu hình thuế (Configuration &gt; Taxes)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Cấu hình các loại thuế suất giá trị gia tăng (VAT) đầu vào và đầu ra áp dụng cho sản phẩm. Thiết lập này giúp hệ thống định khoản tự động tài khoản thuế phải nộp hoặc thuế được khấu trừ tương ứng khi ghi sổ hóa đơn.</p>
-    <h5 id="giải-thích-các-trường-thông-tin-10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giải-thích-các-trường-thông-tin-10"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin &amp; Cấu hình các Tab</strong></h5>
+    <h5 id="giai-thich-cac-truong-thong-tin-cau-hinh-cac-tab"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giai-thich-cac-truong-thong-tin-cau-hinh-cac-tab"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin &amp; Cấu hình các Tab</strong></h5>
     <ul>
-      <li><strong>Thông tin chung:</strong>
-        <ul>
-          <li><strong>Tên thuế (*):</strong> Tên hiển thị của loại thuế (Ví dụ: <code>VAT 10% bán ra</code>).</li>
-          <li><strong>Loại thuế (*):</strong> Phân loại phạm vi áp dụng: <strong>Sales</strong> (Thuế đầu ra khi bán hàng) hoặc <strong>Purchase</strong> (Thuế đầu vào khi mua hàng).</li>
-          <li><strong>Cách tính thuế (*):</strong> Phương pháp tính, thường chọn <strong>Phần trăm của giá</strong> (Percentage of Price).</li>
-          <li><strong>Giá trị:</strong> Giá trị thuế suất (Ví dụ: <code>10.00</code> tương đương 10%).</li>
-        </ul>
-      </li>
-      <li><strong>Tab Định nghĩa (Definition):</strong>
-        <p>Quy định cách hạch toán tiền hàng trước thuế (Cơ sở) và tiền thuế (Thuế) vào sổ cái khi phát sinh Hóa đơn (Invoices) hoặc đơn Hoàn tiền (Refunds):</p>
-        <ul>
-          <li><strong>Cơ sở (Base):</strong> Tiền hàng trước thuế. Dòng này để trống phần Tài khoản kế toán (hệ thống tự lấy tài khoản doanh thu/chi phí của sản phẩm).</li>
-          <li><strong>Thuế (Tax):</strong> Tiền thuế suất được tính ra. Dòng này cần nhập <code>%</code> là <code>100.00</code>, <code>Dựa trên</code> chọn <code>thuế</code> và chọn <strong>Tài khoản</strong> kế toán phù hợp (Ví dụ: <code>333100</code> cho thuế bán ra, <code>131000</code>/<code>1331</code> cho thuế mua vào).</li>
-          <li><strong>Lưới thuế (Tax Grid):</strong> Gán chỉ tiêu tương ứng trên Tờ khai thuế GTGT nếu cần kết xuất tờ khai tự động (để trống nếu không dùng).</li>
-        </ul>
-      </li>
-      <li><strong>Tab Tùy chọn nâng cao (Advanced Options):</strong>
-        <ul>
-          <li><strong>Nhãn thuế trên hóa đơn:</strong> Ký hiệu ngắn in ra cho khách hàng xem trên hóa đơn (Ví dụ: <code>VAT 10%</code>).</li>
-          <li><strong>Nhóm thuế:</strong> Phân loại nhóm thuế (Ví dụ: nhóm <code>Nhóm thuế VAT 10%</code>).</li>
-          <li><strong>Quốc gia:</strong> Chọn <code>Việt Nam</code> để đồng bộ đúng chuẩn tiền tệ và định dạng pháp lý.</li>
-          <li><strong>Bao gồm trong giá:</strong> Tích chọn nếu đơn giá sản phẩm nhập trên đơn hàng là giá đã gồm thuế (bán lẻ B2C); bỏ tích nếu là giá chưa gồm thuế (bán buôn B2B).</li>
-          <li><strong>Ảnh hưởng cơ sở tính thuế kế tiếp:</strong> Tích chọn nếu tính thuế chồng thuế (ví dụ: thuế tiêu thụ đặc biệt tính cộng vào giá cơ sở rồi mới tính thuế GTGT).</li>
-        </ul>
-      </li>
+    <li><strong>Thông tin chung:</strong></li>
+    <li><strong>Tên thuế (*):</strong> Tên hiển thị của loại thuế (Ví dụ: <code>VAT 10% bán ra</code>).</li>
+    <li><strong>Loại thuế (*):</strong> Phân loại phạm vi áp dụng: <strong>Sales</strong> (Thuế đầu ra khi bán hàng) hoặc <strong>Purchase</strong> (Thuế đầu vào khi mua hàng).</li>
+    <li><strong>Cách tính thuế (*):</strong> Phương pháp tính, thường chọn <strong>Phần trăm của giá</strong> (Percentage of Price).</li>
+    <li>
+    <p><strong>Giá trị:</strong> Giá trị thuế suất (Ví dụ: <code>10.00</code> tương đương 10%).</p>
+    </li>
+    <li>
+    <p><strong>Tab Định nghĩa (Definition):</strong>
+      Quy định cách hạch toán tiền hàng trước thuế (Cơ sở) và tiền thuế (Thuế) vào sổ cái khi phát sinh Hóa đơn (Invoices) hoặc đơn Hoàn tiền (Refunds):</p>
+    </li>
+    <li><strong>Cơ sở (Base):</strong> Tiền hàng trước thuế. Dòng này để trống phần Tài khoản kế toán (hệ thống tự lấy tài khoản doanh thu/chi phí của sản phẩm).</li>
+    <li><strong>Thuế (Tax):</strong> Tiền thuế suất được tính ra. Dòng này cần nhập <code>%</code> là <code>100.00</code>, <code>Dựa trên</code> chọn <code>thuế</code> và chọn <strong>Tài khoản</strong> kế toán phù hợp (Ví dụ: <code>333100</code> cho thuế bán ra, <code>131000</code>/<code>1331</code> cho thuế mua vào).</li>
+    <li>
+    <p><strong>Lưới thuế (Tax Grid):</strong> Gán chỉ tiêu tương ứng trên Tờ khai thuế GTGT nếu cần kết xuất tờ khai tự động (để trống nếu không dùng).</p>
+    </li>
+    <li>
+    <p><strong>Tab Tùy chọn nâng cao (Advanced Options):</strong></p>
+    </li>
+    <li><strong>Nhãn thuế trên hóa đơn:</strong> Ký hiệu ngắn in ra cho khách hàng xem trên hóa đơn (Ví dụ: <code>VAT 10%</code>).</li>
+    <li><strong>Nhóm thuế:</strong> Phân loại nhóm thuế (Ví dụ: nhóm <code>Nhóm thuế VAT 10%</code>).</li>
+    <li><strong>Quốc gia:</strong> Chọn <code>Việt Nam</code> để đồng bộ đúng chuẩn tiền tệ và định dạng pháp lý.</li>
+    <li><strong>Bao gồm trong giá:</strong> Tích chọn nếu đơn giá sản phẩm nhập trên đơn hàng là giá đã gồm thuế (bán lẻ B2C); bỏ tích nếu là giá chưa gồm thuế (bán buôn B2B).</li>
+    <li><strong>Ảnh hưởng cơ sở tính thuế kế tiếp:</strong> Tích chọn nếu tính thuế chồng thuế (ví dụ: thuế tiêu thụ đặc biệt tính cộng vào giá cơ sở rồi mới tính thuế GTGT).</li>
     </ul>
-    <h5 id="các-bước-thực-hiện-19"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-19"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> click <strong>"Cấu hình"</strong> -> chọn <strong>"Thuế"</strong>.</li>
-      <li>
-        <strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> để tạo thuế mới:
-        
-        <img src="images/vi/taxes.png" alt="Cấu hình thuế">
-      </li>
-      <li>
-        <strong>Bước 3:</strong> Điền <strong>Tên thuế</strong>, chọn loại <strong>Loại thuế</strong>, nhập <strong>Giá trị</strong> thuế suất, đồng thời cấu hình các thông tin hạch toán và tùy chọn nâng cao tại 2 tab <strong>Định nghĩa</strong> &amp; <strong>Tùy chọn nâng cao</strong> như hướng dẫn trên:
-        
-        <img src="images/vi/steps/tax_form_filled.png" alt="Chi tiết biểu mẫu Cấu hình thuế">
-        <br>
-        <em>Chi tiết tab Tùy chọn nâng cao:</em>
-        <br>
-        <img src="images/vi/steps/tax_advanced_tab.png" alt="Cấu hình tab Tùy chọn nâng cao">
-      </li>
-      <li><strong>Bước 4:</strong> Nhấn <strong>Save</strong> để lưu.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; click <strong>"Cấu hình"</strong> -&gt; chọn <strong>"Thuế"</strong>.</li>
+    <li><strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> để tạo thuế mới:
+       <img alt="Cấu hình thuế" src="images/vi/taxes.png" /></li>
+    <li><strong>Bước 3:</strong> Điền <strong>Tên thuế</strong>, chọn loại <strong>Loại thuế</strong>, nhập <strong>Giá trị</strong> thuế suất, đồng thời cấu hình các thông tin hạch toán và tùy chọn nâng cao tại 2 tab <strong>Định nghĩa</strong> &amp; <strong>Tùy chọn nâng cao</strong> như hướng dẫn trên:
+       <img alt="Chi tiết biểu mẫu Cấu hình thuế" src="images/vi/steps/tax_form_filled.png" /></li>
+    <li><em>Chi tiết tab Tùy chọn nâng cao:</em>
+       <img alt="Cấu hình tab Tùy chọn nâng cao" src="images/vi/steps/tax_advanced_tab.png" /></li>
+    <li><strong>Bước 4:</strong> Nhấn <strong>Save</strong> để lưu.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="journals"></a></p>
-    <h4 id="4312-sổ-nhật-ký-journals"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4312-sổ-nhật-ký-journals"><span class="octicon octicon-link"></span></a><strong>4.3.1.2 Sổ nhật ký (Journals)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-20"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-20"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4312-so-nhat-ky-journals"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4312-so-nhat-ky-journals"><span class="octicon octicon-link"></span></a><strong>4.3.1.2 Sổ nhật ký (Journals)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_1"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Thiết lập các sổ nhật ký kế toán để phân nhóm các nghiệp vụ tài chính phát sinh (Ví dụ: Sổ nhật ký Hóa đơn bán hàng, Sổ nhật ký Mua hàng, Nhật ký tài khoản Ngân hàng, Nhật ký Tiền mặt). Mỗi sổ nhật ký sẽ quản lý một chuỗi số chứng từ riêng biệt và tài khoản định khoản mặc định.</p>
-    <h5 id="các-bước-thực-hiện-20"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-20"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_1"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> chọn <strong>"Cấu hình"</strong> -> click <strong>"Sổ nhật ký"</strong>.</li>
-      <li>
-        <strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong>:
-        
-        <img src="images/vi/journals.png" alt="Sổ nhật ký kế toán">
-      </li>
-      <li>
-        <strong>Bước 3:</strong> Điền tên <strong>Tên sổ nhật ký</strong>, chọn loại <strong>Loại</strong> và mã chứng từ <strong>Mã ngắn</strong>:
-        
-        <img src="images/vi/steps/journal_form_filled.png" alt="Chi tiết biểu mẫu Sổ nhật ký kế toán">
-      </li>
-      <li><strong>Bước 4:</strong> Thiết lập tài khoản tiền mặt/ngân hàng mặc định đối với nhật ký thanh toán tại tab <strong>Mục nhập Sổ nhật ký</strong> (Journal Entries).</li>
-      <li>
-        <strong>Bước 5:</strong> Tại tab <strong>Cài đặt nâng cao</strong> (Advanced Settings), cấu hình tài khoản kiểm soát, kiểm soát sản phẩm, hoặc phương thức thanh toán tương ứng:
-        
-        <img src="images/vi/steps/journal_advanced_tab.png" alt="Cấu hình tab Cài đặt nâng cao">
-      </li>
-      <li><strong>Bước 6:</strong> Nhấn <strong>Save</strong> để lưu.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; chọn <strong>"Cấu hình"</strong> -&gt; click <strong>"Sổ nhật ký"</strong>.</li>
+    <li><strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong>:
+       <img alt="Sổ nhật ký kế toán" src="images/vi/journals.png" /></li>
+    <li><strong>Bước 3:</strong> Điền tên <strong>Tên sổ nhật ký</strong>, chọn loại <strong>Loại</strong> và mã chứng từ <strong>Mã ngắn</strong>:
+       <img alt="Chi tiết biểu mẫu Sổ nhật ký kế toán" src="images/vi/steps/journal_form_filled.png" /></li>
+    <li><strong>Bước 4:</strong> Thiết lập tài khoản tiền mặt/ngân hàng mặc định đối với nhật ký thanh toán tại tab <strong>Mục nhập Sổ nhật ký</strong> (Journal Entries).</li>
+    <li><strong>Bước 5:</strong> Tại tab <strong>Cài đặt nâng cao</strong> (Advanced Settings), cấu hình tài khoản kiểm soát, kiểm soát sản phẩm, hoặc phương thức thanh toán tương ứng:
+       <img alt="Cấu hình tab Cài đặt nâng cao" src="images/vi/steps/journal_advanced_tab.png" /></li>
+    <li><strong>Bước 6:</strong> Nhấn <strong>Save</strong> để lưu.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="payment-terms"></a></p>
-    <h4 id="4313-điều-khoản-thanh-toán-payment-terms"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4313-điều-khoản-thanh-toán-payment-terms"><span class="octicon octicon-link"></span></a><strong>4.3.1.3 Điều khoản thanh toán (Payment Terms)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-21"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-21"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4313-ieu-khoan-thanh-toan-payment-terms"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4313-ieu-khoan-thanh-toan-payment-terms"><span class="octicon octicon-link"></span></a><strong>4.3.1.3 Điều khoản thanh toán (Payment Terms)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_2"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Định nghĩa các chính sách tín dụng và thời hạn thanh toán áp dụng cho khách hàng hoặc nhà cung cấp (Ví dụ: Thanh toán ngay, Thanh toán 30% đặt cọc, 70% sau 30 ngày giao hàng).</p>
-    <h5 id="các-bước-thực-hiện-21"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-21"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_2"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_2"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> chọn <strong>"Cấu hình"</strong> -> click <strong>"Điều khoản thanh toán"</strong>.</li>
-      <li>
-        <strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong>:
-        
-        <img src="images/vi/payment_terms.png" alt="Điều khoản thanh toán">
-      </li>
-      <li>
-        <strong>Bước 3:</strong> Nhập tên điều khoản thanh toán và cấu hình các dòng quy tắc thanh toán chi tiết:
-        
-        <img src="images/vi/steps/payment_term_form_filled.png" alt="Chi tiết biểu mẫu Điều khoản thanh toán">
-      </li>
-      <li><strong>Bước 4:</strong> Nhấn <strong>Save</strong> để lưu.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; chọn <strong>"Cấu hình"</strong> -&gt; click <strong>"Điều khoản thanh toán"</strong>.</li>
+    <li><strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong>:
+       <img alt="Điều khoản thanh toán" src="images/vi/payment_terms.png" /></li>
+    <li><strong>Bước 3:</strong> Nhập tên điều khoản thanh toán và cấu hình các dòng quy tắc thanh toán chi tiết:
+       <img alt="Chi tiết biểu mẫu Điều khoản thanh toán" src="images/vi/steps/payment_term_form_filled.png" /></li>
+    <li><strong>Bước 4:</strong> Nhấn <strong>Save</strong> để lưu.</li>
     </ul>
-    <hr>
+    <hr />
+    <p><a id="chart-of-accounts"></a></p>
+    <h4 id="4314-quan-ly-he-thong-tai-khoan-ke-toan-chart-of-accounts"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4314-quan-ly-he-thong-tai-khoan-ke-toan-chart-of-accounts"><span class="octicon octicon-link"></span></a><strong>4.3.1.4 Quản lý Hệ thống Tài khoản Kế toán (Chart of Accounts)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_3"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_3"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Hệ thống tài khoản kế toán (Chart of Accounts - COA) là nền tảng cốt lõi để phân loại và định khoản toàn bộ các nghiệp vụ kinh tế phát sinh của doanh nghiệp (theo chuẩn mực Thông tư 200/2014/TT-BTC như: TK 111 - Tiền mặt, TK 112 - Tiền gửi Ngân hàng, TK 131 - Phải thu khách hàng, TK 331 - Phải trả người bán, TK 642 - Chi phí quản lý kinh doanh, TK 811 - Chi phí khác). Ngay cả khi chỉ sử dụng phân hệ Hóa đơn (Invoicing) mà không cài module Kế toán chuyên sâu, bạn vẫn cần quản lý và định danh chính xác danh mục tài khoản này để phục vụ hạch toán bút toán và chi phí.</p>
+    <h5 id="giai-thich-cac-truong-thong-tin-tren-tai-khoan"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giai-thich-cac-truong-thong-tin-tren-tai-khoan"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin trên Tài khoản</strong></h5>
+    <ul>
+    <li><strong>Mã tài khoản (Code - *):</strong> Số hiệu tài khoản theo chuẩn Thông tư 200 (Ví dụ: <code>1111</code>, <code>131</code>, <code>331</code>, <code>6422</code>, <code>811</code>).</li>
+    <li><strong>Tên tài khoản (Account Name - *):</strong> Tên định danh của tài khoản (Ví dụ: <code>Tiền Việt Nam</code>, <code>Phải thu của khách hàng</code>, <code>Chi phí dịch vụ mua ngoài</code>).</li>
+    <li><strong>Loại tài khoản (Type - *):</strong> Quyết định tính chất số dư và cách lên báo cáo của tài khoản. Các nhóm chính trong hệ thống gồm:</li>
+    <li><em>Tài sản / Phải thu / Ngân hàng và Tiền mặt</em> (nhóm TK 1, 2).</li>
+    <li><em>Nợ phải trả / Phải trả / Vốn chủ sở hữu</em> (nhóm TK 3, 4).</li>
+    <li><em>Thu nhập / Thu nhập khác</em> (nhóm TK 5, 7).</li>
+    <li><em>Chi phí / Khấu hao / Chi phí trực tiếp / Chi phí khác</em> (nhóm TK 6, 8).</li>
+    <li><strong>Cho phép đối soát (Reconcile):</strong> Đánh dấu cờ này nếu tài khoản cần theo dõi chi tiết công nợ hoặc đối soát từng chứng từ (Bắt buộc bật đối với TK <code>131</code>, <code>331</code> và tài khoản Ngân hàng/Tiền mặt).</li>
+    <li><strong>Thuế mặc định (Default Taxes):</strong> Gán mức thuế VAT mặc định tự động áp dụng khi chọn tài khoản này trên hóa đơn.</li>
+    </ul>
+    <h5 id="cac-buoc-thuc-hien-cru-tai-khoan"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien-cru-tai-khoan"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+    <li><strong>Bước 1:</strong> Tại phân hệ <strong>"Hóa đơn"</strong> -&gt; click menu <strong>"Cấu hình"</strong> -&gt; chọn <strong>"Danh mục tài khoản"</strong> (Chart of Accounts).</li>
+    <li><strong>Bước 2 (Tạo mới - Create):</strong> Nhấn nút <strong>[Mới]</strong> (New), nhập <strong>Mã tài khoản</strong>, <strong>Tên tài khoản</strong> và chọn chính xác <strong>Loại tài khoản</strong>:
+       <img alt="Tạo mới tài khoản kế toán TT200" src="images/vi/steps/chart_of_accounts.png" /></li>
+    <li><strong>Bước 3 (Tra cứu - Read):</strong> Sử dụng thanh tìm kiếm trên cùng để lọc theo Mã tài khoản (Ví dụ gõ <code>642</code> hoặc <code>811</code>) hoặc lọc theo Nhóm tài khoản (Tài sản, Nợ phải trả, Chi phí).</li>
+    <li><strong>Bước 4 (Sửa đổi - Update):</strong> Nhấp trực tiếp vào dòng tài khoản cần điều chỉnh tên hoặc thiết lập cờ <strong>Cho phép đối soát</strong> -&gt; nhấn <strong>[Lưu]</strong> (Save).</li>
+    </ul>
+    <div class="alert alert-important" style="background-color: #fff8f8; border-left: 4px solid #ef4444; padding: 15px; margin: 15px 0;">
+    <p><strong>Lưu ý nghiệp vụ cấu hình tài khoản:</strong> Tuyệt đối không thay đổi <strong>Loại tài khoản</strong> (Type) đối với các tài khoản đang có số dư hoặc đã phát sinh bút toán hạch toán, vì điều này có thể làm sai lệch cấu trúc cân đối kế toán của toàn hệ thống.</p>
+    </div>
+    <hr />
     <p><a id="invoicing-vendor"></a></p>
-    <h3 id="432-nhà-cung-cấp-vendor"><a class="anchor" aria-hidden="true" tabindex="-1" href="#432-nhà-cung-cấp-vendor"><span class="octicon octicon-link"></span></a><strong>4.3.2 Nhà cung cấp (Vendor)</strong></h3>
+    <h3 id="432-nha-cung-cap-vendor"><a class="anchor" aria-hidden="true" tabindex="-1" href="#432-nha-cung-cap-vendor"><span class="octicon octicon-link"></span></a><strong>4.3.2 Nhà cung cấp (Vendor)</strong></h3>
     <p><a id="bills"></a></p>
-    <h4 id="4321-hóa-đơn-nhà-cung-cấp-bills"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4321-hóa-đơn-nhà-cung-cấp-bills"><span class="octicon octicon-link"></span></a><strong>4.3.2.1 Hóa đơn nhà cung cấp (Bills)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-22"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-22"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4321-hoa-on-nha-cung-cap-bills"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4321-hoa-on-nha-cung-cap-bills"><span class="octicon octicon-link"></span></a><strong>4.3.2.1 Hóa đơn nhà cung cấp (Bills)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_4"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_4"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Ghi nhận hóa đơn mua hàng do nhà cung cấp phát hành gửi đến doanh nghiệp để hạch toán chi phí đầu vào và ghi nhận công nợ phải trả (Accounts Payable).</p>
-    <h5 id="các-bước-thực-hiện-22"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-22"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_3"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_3"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Nhà cung cấp"</strong> -> click <strong>"Hóa đơn nhà cung cấp"</strong>.</li>
-      <li>
-        <strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> để tạo hóa đơn NCC mới:
-        
-        <img src="images/vi/vendor_bills.png" alt="Hóa đơn nhà cung cấp nháp">
-      </li>
-      <li><strong>Bước 3:</strong> Nhập tên nhà cung cấp tại <strong>Nhà cung cấp</strong>, ngày hóa đơn tại <strong>Ngày hóa đơn</strong> và các dòng sản phẩm tại tab <strong>Chi tiết hóa đơn</strong> (Bút toán).</li>
-      <li>
-        <strong>Bước 4:</strong> (Tùy chọn) Chuyển sang tab <strong>"Thông tin khác"</strong> để nhập thông tin thanh toán như tài khoản ngân hàng thụ hưởng, điều khoản thanh toán và ngày đến hạn.
-        
-        <img src="images/vi/steps/invoice_tab_other.png" alt="Giao diện Tab Thông tin khác của Hóa đơn nhà cung cấp">
-      </li>
-      <li><strong>Bước 5:</strong> Nhấn <strong>Save</strong> để lưu nháp và nhấn <strong>Confirm</strong> để chính thức ghi sổ công nợ phải trả.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Nhà cung cấp"</strong> -&gt; click <strong>"Hóa đơn nhà cung cấp"</strong>.</li>
+    <li><strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> để tạo hóa đơn NCC mới:
+       <img alt="Hóa đơn nhà cung cấp nháp" src="images/vi/vendor_bills.png" /></li>
+    <li><strong>Bước 3:</strong> Nhập tên nhà cung cấp tại <strong>Nhà cung cấp</strong>, ngày hóa đơn tại <strong>Ngày hóa đơn</strong> và các dòng sản phẩm tại tab <strong>Chi tiết hóa đơn</strong> (Bút toán).</li>
+    <li><strong>Bước 4:</strong> (Tùy chọn) Chuyển sang tab <strong>"Thông tin khác"</strong> để nhập thông tin thanh toán như tài khoản ngân hàng thụ hưởng, điều khoản thanh toán và ngày đến hạn.
+       <img alt="Giao diện Tab Thông tin khác của Hóa đơn nhà cung cấp" src="images/vi/steps/invoice_tab_other.png" /></li>
+    <li><strong>Bước 5:</strong> Nhấn <strong>Save</strong> để lưu nháp và nhấn <strong>Confirm</strong> để chính thức ghi sổ công nợ phải trả.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="refunds"></a></p>
-    <h4 id="4322-hóa-đơn-trả-lại--hoàn-tiền-refunds"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4322-hóa-đơn-trả-lại--hoàn-tiền-refunds"><span class="octicon octicon-link"></span></a><strong>4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-23"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-23"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4322-hoa-on-tra-lai-hoan-tien-refunds"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4322-hoa-on-tra-lai-hoan-tien-refunds"><span class="octicon octicon-link"></span></a><strong>4.3.2.2 Hóa đơn trả lại / Hoàn tiền (Refunds)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_5"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_5"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Tạo chứng từ giảm trừ công nợ hoặc hoàn tiền từ nhà cung cấp (Vendor Credit Note) trong trường hợp doanh nghiệp trả lại hàng lỗi, hỏng hoặc được giảm giá mua hàng.</p>
-    <h5 id="các-bước-thực-hiện-23"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-23"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_4"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_4"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li>
-        <strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Nhà cung cấp"</strong> -> click <strong>"Hoàn tiền"</strong> (hoở mở trực tiếp hóa đơn Bill gốc và chọn <strong>Thêm ghi chú tín dụng</strong>):
-        
-        <img src="images/vi/vendor_refunds.png" alt="Hóa đơn hoàn tiền NCC">
-      </li>
-      <li><strong>Bước 2:</strong> Điền số tiền được hoàn trả hoặc cấn trừ, lý do hoàn tiền. Nhấn <strong>Save</strong> và <strong>Confirm</strong> để giảm trừ công nợ phải trả nhà cung cấp.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Nhà cung cấp"</strong> -&gt; click <strong>"Hoàn tiền"</strong> (hoở mở trực tiếp hóa đơn Bill gốc và chọn <strong>Thêm ghi chú tín dụng</strong>):
+       <img alt="Hóa đơn hoàn tiền NCC" src="images/vi/vendor_refunds.png" /></li>
+    <li><strong>Bước 2:</strong> Điền số tiền được hoàn trả hoặc cấn trừ, lý do hoàn tiền. Nhấn <strong>Save</strong> và <strong>Confirm</strong> để giảm trừ công nợ phải trả nhà cung cấp.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="vendor-payments"></a></p>
-    <h4 id="4323-thanh-toán-cho-nhà-cung-cấp-vendor-payments"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4323-thanh-toán-cho-nhà-cung-cấp-vendor-payments"><span class="octicon octicon-link"></span></a><strong>4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-24"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-24"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4323-thanh-toan-cho-nha-cung-cap-vendor-payments"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4323-thanh-toan-cho-nha-cung-cap-vendor-payments"><span class="octicon octicon-link"></span></a><strong>4.3.2.3 Thanh toán cho nhà cung cấp (Vendor Payments)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_6"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_6"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Ghi nhận bút toán chuyển khoản ngân hàng hoặc chi tiền mặt thực tế để thanh toán công nợ cho nhà cung cấp.</p>
-    <h5 id="các-bước-thực-hiện-24"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-24"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_5"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_5"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Nhà cung cấp"</strong> -> click <strong>"Payments"</strong>.</li>
-      <li>
-        <strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> (hoặc mở hóa đơn Bill gốc đang nợ và nhấn <strong>Ghi nhận thanh toán</strong>):
-        
-        <img src="images/vi/vendor_payments.png" alt="Ghi nhận thanh toán cho NCC">
-      </li>
-      <li><strong>Bước 3:</strong> Chọn sổ nhật ký thanh toán (Tiền mặt/Ngân hàng), điền số tiền trả và chọn nhà cung cấp đối ứng. Nhấn <strong>Confirm</strong> để khấu trừ nợ phải trả.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Nhà cung cấp"</strong> -&gt; click <strong>"Payments"</strong>.</li>
+    <li><strong>Bước 2:</strong> Nhấn nút <strong>"Mới"</strong> (hoặc mở hóa đơn Bill gốc đang nợ và nhấn <strong>Ghi nhận thanh toán</strong>):
+       <img alt="Ghi nhận thanh toán cho NCC" src="images/vi/vendor_payments.png" /></li>
+    <li><strong>Bước 3:</strong> Chọn sổ nhật ký thanh toán (Tiền mặt/Ngân hàng), điền số tiền trả và chọn nhà cung cấp đối ứng. Nhấn <strong>Confirm</strong> để khấu trừ nợ phải trả.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="invoicing-vendor-products"></a></p>
-    <h4 id="4324-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4324-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.3.2.4 Sản phẩm (Products)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-25"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-25"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4324-san-pham-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4324-san-pham-products"><span class="octicon octicon-link"></span></a><strong>4.3.2.4 Sản phẩm (Products)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_7"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_7"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Tra cứu nhanh danh sách các mặt hàng mua vào để phục vụ làm Bills hoặc cấu hình tài khoản kế toán chi phí đầu vào tương ứng cho sản phẩm.</p>
-    <h5 id="các-bước-thực-hiện-25"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-25"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_6"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_6"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Nhà cung cấp"</strong> -> click <strong>"Sản phẩm"</strong>.</li>
-      <li><strong>Bước 2:</strong> Click chọn sản phẩm cần cấu hình để điều chỉnh các tài khoản kế toán chi phí tại tab <strong>Income/Expense Accounts</strong>.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Nhà cung cấp"</strong> -&gt; click <strong>"Sản phẩm"</strong>.</li>
+    <li><strong>Bước 2:</strong> Click chọn sản phẩm cần cấu hình để điều chỉnh các tài khoản kế toán chi phí tại tab <strong>Income/Expense Accounts</strong>.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="invoicing-vendor-main"></a></p>
-    <h4 id="4325-nhà-cung-cấp-vendors"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4325-nhà-cung-cấp-vendors"><span class="octicon octicon-link"></span></a><strong>4.3.2.5 Nhà cung cấp (Vendors)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-26"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-26"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4325-nha-cung-cap-vendors"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4325-nha-cung-cap-vendors"><span class="octicon octicon-link"></span></a><strong>4.3.2.5 Nhà cung cấp (Vendors)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_8"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_8"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Xem và cấu hình thông tin danh bạ đối tác là nhà cung cấp, cấu hình tài khoản công nợ phải trả mặc định (Account Payable) phục vụ hạch toán mua hàng.</p>
-    <h5 id="các-bước-thực-hiện-26"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-26"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_7"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_7"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Nhà cung cấp"</strong> -> click <strong>"Nhà cung cấp"</strong>.</li>
-      <li><strong>Bước 2:</strong> Chọn nhà cung cấp cần thiết lập, tại tab <strong>Kế toán</strong>, gán tài khoản kế toán công nợ và nhấn <strong>Save</strong>.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Nhà cung cấp"</strong> -&gt; click <strong>"Nhà cung cấp"</strong>.</li>
+    <li><strong>Bước 2:</strong> Chọn nhà cung cấp cần thiết lập, tại tab <strong>Kế toán</strong>, gán tài khoản kế toán công nợ và nhấn <strong>Save</strong>.</li>
     </ul>
-    <hr>
+    <hr />
+    <p><a id="other-expenses"></a></p>
+    <h4 id="4326-ghi-nhan-hoa-on-chi-phi-chi-phi-khac-other-expenses-tk-642-811"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4326-ghi-nhan-hoa-on-chi-phi-chi-phi-khac-other-expenses-tk-642-811"><span class="octicon octicon-link"></span></a><strong>4.3.2.6 Ghi nhận hóa đơn Chi phí &amp; Chi phí khác (Other Expenses - TK 642, 811)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_9"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_9"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Trong hoạt động doanh nghiệp, ngoài các hóa đơn nhập mua hàng hóa nhập kho (được sinh tự động từ Đơn mua hàng PO), kế toán thường xuyên phải xử lý và hạch toán các hóa đơn chi phí dịch vụ mua ngoài, chi phí thuê văn phòng, tiền điện nước (TK 642) hoặc các khoản chi phí khác, chi phí bất thường (TK 811). Với phân hệ Hóa đơn (Invoicing), bạn hoàn toàn có thể ghi nhận trực tiếp các hóa đơn chi phí này vào sổ nhật ký mua hàng mà không cần cài module Kế toán phức tạp.</p>
+    <h5 id="giai-thich-cac-truong-thong-tin-tren-hoa-on-chi-phi"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giai-thich-cac-truong-thong-tin-tren-hoa-on-chi-phi"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin trên Hóa đơn chi phí</strong></h5>
+    <ul>
+    <li><strong>Nhà cung cấp (Vendor - *):</strong> Đơn vị cung cấp dịch vụ hoặc hóa đơn (Ví dụ: Công ty Điện lực, Chủ cho thuê văn phòng).</li>
+    <li><strong>Ngày hóa đơn (Bill Date - *):</strong> Ngày ghi trên hóa đơn VAT hoặc ngày phát sinh chi phí.</li>
+    <li><strong>Số hóa đơn (Vendor Reference / Bill Reference):</strong> Số ký hiệu và số hóa đơn thực tế để phục vụ kê khai thuế và tra cứu.</li>
+    <li><strong>Tab Chi tiết hóa đơn (Invoice Lines):</strong></li>
+    <li><strong>Sản phẩm / Diễn giải:</strong> Nhập trực tiếp nội dung chi tiêu (Ví dụ: <code>Chi phí thuê văn phòng tháng 07/2026</code>, <code>Chi phí tiếp khách</code>). Bạn không bắt buộc phải chọn mã sản phẩm trong danh mục nếu đây là khoản chi một lần.</li>
+    <li><strong>Tài khoản (Account - *):</strong> Chọn tài khoản chi phí TT200 phù hợp (Ví dụ: <code>6427 - Chi phí dịch vụ mua ngoài</code>, <code>6422 - Chi phí vật liệu quản lý</code>, hoặc <code>811 - Chi phí khác</code>).</li>
+    <li><strong>Số lượng &amp; Giá (Quantity &amp; Price):</strong> Nhập số lượng và đơn giá chưa thuế.</li>
+    <li><strong>Thuế (Taxes):</strong> Chọn mức thuế GTGT đầu vào (Ví dụ <code>VAT 10%</code>, <code>VAT 8%</code> hoặc <code>Không chịu thuế</code>) để hệ thống tự động tách thuế vào tài khoản <code>1331 - Thuế GTGT được khấu trừ</code>.</li>
+    </ul>
+    <h5 id="cac-buoc-thuc-hien-cru-chi-phi-khac"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien-cru-chi-phi-khac"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+    <li><strong>Bước 1 (Create):</strong> Vào phân hệ <strong>"Hóa đơn"</strong> -&gt; chọn menu <strong>"Nhà cung cấp"</strong> -&gt; click <strong>"Hóa đơn nhà cung cấp"</strong> (Bills) -&gt; bấm nút <strong>[Mới]</strong> (New).</li>
+    <li><strong>Bước 2:</strong> Chọn <strong>Nhà cung cấp</strong>, nhập <strong>Ngày hóa đơn</strong> và <strong>Số hóa đơn</strong>.</li>
+    <li><strong>Bước 3:</strong> Tại tab <strong>Chi tiết hóa đơn</strong>, thêm dòng chi phí mới, ghi diễn giải nội dung chi tiêu và gán đúng <strong>Tài khoản chi phí</strong> (TK 642 hoặc 811):
+       <img alt="Ghi nhận hóa đơn chi phí dịch vụ và chi phí khác" src="images/vi/steps/expense_bill_analytic.png" /></li>
+    <li><strong>Bước 4 (Post/Confirm):</strong> Kiểm tra tổng tiền chưa thuế, tiền thuế VAT đầu vào và tổng thanh toán -&gt; Bấm <strong>[Xác nhận]</strong> (Confirm). Hóa đơn chuyển sang trạng thái <strong>Đã ghi sổ</strong> và hệ thống tự động sinh bút toán hạch toán Nợ TK Chi phí (642/811), Nợ TK Thuế (1331) / Có TK Phải trả người bán (331).</li>
+    <li><strong>Bước 5 (Read &amp; Update):</strong> Khi hóa đơn ở trạng thái Nháp, bạn có thể tự do chỉnh sửa tài khoản chi phí và số tiền. Khi đã ghi sổ, bấm nút <strong>[Thanh toán]</strong> (Register Payment) khi chi tiền mặt hoặc chuyển khoản để tất toán công nợ chi phí này.</li>
+    </ul>
+    <hr />
     <p><a id="invoicing-customers"></a></p>
-    <h3 id="433-khách-hàng-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#433-khách-hàng-customers"><span class="octicon octicon-link"></span></a><strong>4.3.3 Khách hàng (Customers)</strong></h3>
+    <h3 id="433-khach-hang-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#433-khach-hang-customers"><span class="octicon octicon-link"></span></a><strong>4.3.3 Khách hàng (Customers)</strong></h3>
     <p><a id="invoices"></a></p>
-    <h4 id="4331-hóa-đơn-khách-hàng-invoices"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4331-hóa-đơn-khách-hàng-invoices"><span class="octicon octicon-link"></span></a><strong>4.3.3.1 Hóa đơn khách hàng (Invoices)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-27"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-27"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4331-hoa-on-khach-hang-invoices"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4331-hoa-on-khach-hang-invoices"><span class="octicon octicon-link"></span></a><strong>4.3.3.1 Hóa đơn khách hàng (Invoices)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_10"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Ghi nhận doanh thu bán hàng và công nợ phải thu từ khách hàng (Accounts Receivable). Hóa đơn sau khi được ghi sổ sẽ cấp số hiệu chính thức và ghi nhận công nợ.</p>
-    <h5 id="các-bước-thực-hiện-27"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-27"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_8"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_8"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li>
-        <strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> bên menu trái để xem danh sách hóa đơn hiện có:
-        
-        <img src="images/vi/invoices.png" alt="Danh sách hóa đơn khách hàng">
-      </li>
-      <li><strong>Bước 2:</strong> Nhấp nút <strong>"Mới"</strong> ở góc trên cùng bên trái.</li>
-      <li><strong>Bước 3:</strong> Chọn khách hàng tại ô <strong>Customer</strong> (Ví dụ: <code>Acme Corporation</code>) và nhập sản phẩm tại tab <strong>Chi tiết hóa đơn</strong> (Invoice Lines).</li>
-      <li><strong>Bước 4:</strong> Nhập số lượng bán là <code>1.00</code>, hệ thống tự lấy giá bán mặc định <code>140.00</code>.</li>
-      <li>
-        <strong>Bước 5:</strong> (Tùy chọn) Chuyển sang tab <strong>"Thông tin khác"</strong> để cài đặt tài khoản ngân hàng nhận tiền, điều khoản thanh toán hoặc người bán phụ trách.
-        
-        <img src="images/vi/steps/invoice_tab_other.png" alt="Giao diện Tab Thông tin khác của Hóa đơn khách hàng">
-      </li>
-      <li>
-        <strong>Bước 6:</strong> Lưu hóa đơn ở trạng thái nháp:
-        
-        <img src="images/vi/invoice_form.png" alt="Tạo hóa đơn khách hàng nháp">
-      </li>
-      <li><strong>Bước 7:</strong> Nhấp chọn nút <strong>[Xác nhận]</strong> ở góc trái trên để chính thức ghi sổ hóa đơn.</li>
-      <li>
-        <strong>Bước 8:</strong> Trạng thái chuyển sang <strong>Đã ghi sổ</strong>, hệ thống sinh số hóa đơn dạng <code>INV/2026/00010</code> và hiển thị khoản nợ cần thu ở trường <strong>Amount Due</strong>:
-        
-        <img src="images/vi/invoice_confirmed.png" alt="Hóa đơn khách hàng đã ghi sổ">
-      </li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> bên menu trái để xem danh sách hóa đơn hiện có:
+       <img alt="Danh sách hóa đơn khách hàng" src="images/vi/invoices.png" /></li>
+    <li><strong>Bước 2:</strong> Nhấp nút <strong>"Mới"</strong> ở góc trên cùng bên trái.</li>
+    <li><strong>Bước 3:</strong> Chọn khách hàng tại ô <strong>Customer</strong> (Ví dụ: <code>Acme Corporation</code>) và nhập sản phẩm tại tab <strong>Chi tiết hóa đơn</strong> (Invoice Lines).</li>
+    <li><strong>Bước 4:</strong> Nhập số lượng bán là <code>1.00</code>, hệ thống tự lấy giá bán mặc định <code>140.00</code>.</li>
+    <li><strong>Bước 5:</strong> (Tùy chọn) Chuyển sang tab <strong>"Thông tin khác"</strong> để cài đặt tài khoản ngân hàng nhận tiền, điều khoản thanh toán hoặc người bán phụ trách.
+       <img alt="Giao diện Tab Thông tin khác của Hóa đơn khách hàng" src="images/vi/steps/invoice_tab_other.png" /></li>
+    <li><strong>Bước 6:</strong> Lưu hóa đơn ở trạng thái nháp:
+       <img alt="Tạo hóa đơn khách hàng nháp" src="images/vi/invoice_form.png" /></li>
+    <li><strong>Bước 7:</strong> Nhấp chọn nút <strong>[Xác nhận]</strong> ở góc trái trên để chính thức ghi sổ hóa đơn.</li>
+    <li><strong>Bước 8:</strong> Trạng thái chuyển sang <strong>Đã ghi sổ</strong>, hệ thống sinh số hóa đơn dạng <code>INV/2026/00010</code> và hiển thị khoản nợ cần thu ở trường <strong>Amount Due</strong>:
+       <img alt="Hóa đơn khách hàng đã ghi sổ" src="images/vi/invoice_confirmed.png" /></li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="credit-notes"></a></p>
-    <h4 id="4332-ghi-chú-tín-dụng--giảm-trừ-nợ-credit-notes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4332-ghi-chú-tín-dụng--giảm-trừ-nợ-credit-notes"><span class="octicon octicon-link"></span></a><strong>4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ (Credit Notes)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-28"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-28"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4332-ghi-chu-tin-dung-giam-tru-no-credit-notes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4332-ghi-chu-tin-dung-giam-tru-no-credit-notes"><span class="octicon octicon-link"></span></a><strong>4.3.3.2 Ghi chú tín dụng / Giảm trừ nợ (Credit Notes)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_11"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_11"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Tạo hóa đơn giảm trừ công nợ (Credit Note) cho khách hàng trong trường hợp trả lại hàng hóa đã mua hoặc được chiết khấu, giảm giá sau khi hóa đơn chính thức đã xuất.</p>
-    <h5 id="các-bước-thực-hiện-28"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-28"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_9"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_9"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Mở Hóa đơn khách hàng (Invoice) cần giảm trừ đã ghi sổ.</li>
-      <li><strong>Bước 2:</strong> Nhấp nút <strong>[Ghi chú tín dụng]</strong> ở thanh công cụ phía trên.</li>
-      <li>
-        <strong>Bước 3:</strong> Nhập lý do giảm trừ nợ, chọn phương thức hoàn tiền và nhấn <strong>Confirm</strong> để tạo và ghi sổ hóa đơn giảm trừ công nợ:
-        
-        <img src="images/vi/credit_notes.png" alt="Ghi chú tín dụng / Giảm trừ nợ">
-      </li>
+    <li><strong>Bước 1:</strong> Mở Hóa đơn khách hàng (Invoice) cần giảm trừ đã ghi sổ.</li>
+    <li><strong>Bước 2:</strong> Nhấp nút <strong>[Ghi chú tín dụng]</strong> ở thanh công cụ phía trên.</li>
+    <li><strong>Bước 3:</strong> Nhập lý do giảm trừ nợ, chọn phương thức hoàn tiền và nhấn <strong>Confirm</strong> để tạo và ghi sổ hóa đơn giảm trừ công nợ:
+       <img alt="Ghi chú tín dụng / Giảm trừ nợ" src="images/vi/credit_notes.png" /></li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="customer-payments"></a></p>
-    <h4 id="4333-ghi-nhận-thanh-toán-của-khách-hàng-customer-payments"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4333-ghi-nhận-thanh-toán-của-khách-hàng-customer-payments"><span class="octicon octicon-link"></span></a><strong>4.3.3.3 Ghi nhận thanh toán của khách hàng (Customer Payments)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-29"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-29"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4333-ghi-nhan-thanh-toan-cua-khach-hang-customer-payments"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4333-ghi-nhan-thanh-toan-cua-khach-hang-customer-payments"><span class="octicon octicon-link"></span></a><strong>4.3.3.3 Ghi nhận thanh toán của khách hàng (Customer Payments)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_12"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_12"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Ghi nhận số tiền thu về từ khách hàng (chuyển khoản ngân hàng hoặc tiền mặt) để cấn trừ các hóa đơn còn nợ của họ trên hệ thống.</p>
-    <h5 id="các-bước-thực-hiện-29"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-29"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_10"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_10"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Mở hóa đơn bán hàng cần ghi nhận thanh toán đang có trạng thái <strong>Đã ghi sổ</strong>.</li>
-      <li>
-        <strong>Bước 2:</strong> Nhấn nút <strong>[Thanh toán]</strong> (hoặc <strong>Ghi nhận thanh toán</strong>) ở góc trên bên trái:
-        
-        <img src="images/vi/customer_payments.png" alt="Ghi nhận thanh toán từ khách hàng">
-      </li>
-      <li><strong>Bước 3:</strong> Chọn Sổ nhật ký nhận tiền (Cash/Bank), số tiền nhận thực tế và nhấn <strong>Create Payment</strong>.</li>
-      <li><strong>Bước 4:</strong> Hoặc đối với khách hàng có sẵn tiền đặt cọc trước đó: Cuộn xuống chân trang tại phần <strong>Outstanding credits</strong> và nhấn nút <strong>[Add]</strong> bên cạnh khoản tiền cọc để cấn trừ trực tiếp công nợ.</li>
+    <li><strong>Bước 1:</strong> Mở hóa đơn bán hàng cần ghi nhận thanh toán đang có trạng thái <strong>Đã ghi sổ</strong>.</li>
+    <li><strong>Bước 2:</strong> Nhấn nút <strong>[Thanh toán]</strong> (hoặc <strong>Ghi nhận thanh toán</strong>) ở góc trên bên trái:
+       <img alt="Ghi nhận thanh toán từ khách hàng" src="images/vi/customer_payments.png" /></li>
+    <li><strong>Bước 3:</strong> Chọn Sổ nhật ký nhận tiền (Cash/Bank), số tiền nhận thực tế và nhấn <strong>Create Payment</strong>.</li>
+    <li><strong>Bước 4:</strong> Hoặc đối với khách hàng có sẵn tiền đặt cọc trước đó: Cuộn xuống chân trang tại phần <strong>Outstanding credits</strong> và nhấn nút <strong>[Add]</strong> bên cạnh khoản tiền cọc để cấn trừ trực tiếp công nợ.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="invoicing-customer-products"></a></p>
-    <h4 id="4334-sản-phẩm-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4334-sản-phẩm-products"><span class="octicon octicon-link"></span></a><strong>4.3.3.4 Sản phẩm (Products)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-30"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-30"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4334-san-pham-products"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4334-san-pham-products"><span class="octicon octicon-link"></span></a><strong>4.3.3.4 Sản phẩm (Products)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_13"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_13"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Tra cứu nhanh danh sách các mặt hàng bán ra để kiểm tra thông tin tài khoản doanh thu (Income Account) phục vụ xuất hóa đơn khách hàng.</p>
-    <h5 id="các-bước-thực-hiện-30"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-30"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_11"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_11"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Khách hàng"</strong> -> click <strong>"Sản phẩm"</strong>.</li>
-      <li><strong>Bước 2:</strong> Cấu hình tài khoản kế toán ghi nhận doanh thu mặc định cho sản phẩm tại tab <strong>Kế toán</strong>.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Khách hàng"</strong> -&gt; click <strong>"Sản phẩm"</strong>.</li>
+    <li><strong>Bước 2:</strong> Cấu hình tài khoản kế toán ghi nhận doanh thu mặc định cho sản phẩm tại tab <strong>Kế toán</strong>.</li>
     </ul>
-    <hr>
+    <hr />
     <p><a id="invoicing-customers-main"></a></p>
-    <h4 id="4335-khách-hàng-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4335-khách-hàng-customers"><span class="octicon octicon-link"></span></a><strong>4.3.3.5 Khách hàng (Customers)</strong></h4>
-    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-31"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-31"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
+    <h4 id="4335-khach-hang-customers"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4335-khach-hang-customers"><span class="octicon octicon-link"></span></a><strong>4.3.3.5 Khách hàng (Customers)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_14"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_14"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
     <p>Quản lý danh sách khách hàng và thiết lập các thông tin tài khoản ngân hàng, tài khoản công nợ phải thu (Account Receivable) của khách hàng phục vụ cho phân hệ Kế toán.</p>
-    <h5 id="các-bước-thực-hiện-31"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-31"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <h5 id="cac-buoc-thuc-hien_12"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien_12"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
-      <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -> di chuyển đến menu <strong>"Khách hàng"</strong> -> click <strong>"Khách hàng"</strong>.</li>
-      <li><strong>Bước 2:</strong> Chọn khách hàng cần thiết lập, tại tab <strong>Kế toán</strong>, gán tài khoản kế toán công nợ phải thu và nhấn <strong>Save</strong> để cập nhật.</li>
+    <li><strong>Bước 1:</strong> Chọn phân hệ <strong>"Hóa đơn"</strong> -&gt; di chuyển đến menu <strong>"Khách hàng"</strong> -&gt; click <strong>"Khách hàng"</strong>.</li>
+    <li><strong>Bước 2:</strong> Chọn khách hàng cần thiết lập, tại tab <strong>Kế toán</strong>, gán tài khoản kế toán công nợ phải thu và nhấn <strong>Save</strong> để cập nhật.</li>
     </ul>
-    <hr>
+    <hr />
+    <p><a id="accounting-operations"></a></p>
+    <h3 id="434-ke-toan-tong-hop-but-toan-accounting-operations-journal-entries"><a class="anchor" aria-hidden="true" tabindex="-1" href="#434-ke-toan-tong-hop-but-toan-accounting-operations-journal-entries"><span class="octicon octicon-link"></span></a><strong>4.3.4 Kế toán tổng hợp &amp; Bút toán (Accounting Operations &amp; Journal Entries)</strong></h3>
+    <p><a id="journal-entries-cru"></a></p>
+    <h4 id="4341-thao-tac-cru-but-toan-nhat-ky-journal-entries-cru"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4341-thao-tac-cru-but-toan-nhat-ky-journal-entries-cru"><span class="octicon octicon-link"></span></a><strong>4.3.4.1 Quản lý Bút toán Nhật ký (Manage Journal Entries)</strong></h4>
+    <h5 id="muc-ich-y-nghia-nghiep-vu_15"><a class="anchor" aria-hidden="true" tabindex="-1" href="#muc-ich-y-nghia-nghiep-vu_15"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Bên cạnh việc phát sinh tự động từ hóa đơn bán hàng và hóa đơn mua hàng, bộ phận kế toán cần thực hiện lập thủ công các chứng từ kết chuyển, bút toán điều chỉnh, hạch toán chi phí tiền lương, khấu hao tài sản hoặc trích trước chi phí theo đúng Thông tư 200/2014/TT-BTC. Trình đơn Bút toán nhật ký (Journal Entries) trong phân hệ Hóa đơn cung cấp đầy đủ công cụ để lập (Create), tra cứu (Read), điều chỉnh (Update) và ghi sổ chứng từ tổng hợp.</p>
+    <h5 id="giai-thich-cac-truong-thong-tin-tren-but-toan"><a class="anchor" aria-hidden="true" tabindex="-1" href="#giai-thich-cac-truong-thong-tin-tren-but-toan"><span class="octicon octicon-link"></span></a><strong>Giải thích các trường thông tin trên Bút toán</strong></h5>
+    <ul>
+    <li><strong>Sổ nhật ký (Journal - *):</strong> Chọn sổ nhật ký phù hợp với nghiệp vụ phát sinh (Ví dụ: <code>Sổ các thao tác khác / Miscellaneous Operations</code>, <code>Sổ Tiền mặt</code>, <code>Sổ Ngân hàng</code>).</li>
+    <li><strong>Ngày kế toán (Accounting Date - *):</strong> Ngày ghi nhận chứng từ vào sổ cái (thường là ngày phát sinh nghiệp vụ hoặc ngày cuối kỳ hạch toán).</li>
+    <li><strong>Tham chiếu (Reference):</strong> Số chứng từ gốc hoặc diễn giải tóm tắt nghiệp vụ (Ví dụ: <code>Hạch toán tiền lương T07/2026</code>).</li>
+    <li><strong>Tab Chi tiết bút toán (Journal Items):</strong></li>
+    <li><strong>Tài khoản (Account - *):</strong> Chọn tài khoản theo Hệ thống tài khoản TT200 (Ví dụ: <code>6422 - Chi phí vật liệu quản lý</code>, <code>3341 - Must trả người lao động</code>).</li>
+    <li><strong>Đối tác (Partner):</strong> Chọn Khách hàng, Nhà cung cấp hoặc Nhân viên liên quan (bắt buộc đối với các tài khoản công nợ <code>131</code>, <code>331</code>, <code>141</code>, <code>334</code>...).</li>
+    <li><strong>Nhãn (Label):</strong> Diễn giải chi tiết nghiệp vụ cho dòng hạch toán tương ứng.</li>
+    <li><strong>Nợ (Debit) / Có (Credit):</strong> Nhập số tiền phát sinh bên Nợ hoặc bên Có. Tổng Nợ và Tổng Có của bút toán bắt buộc phải cân bằng nhau.</li>
+    </ul>
+    <h5 id="cac-buoc-thuc-hien-cru-but-toan"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cac-buoc-thuc-hien-cru-but-toan"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
+    <ul>
+    <li><strong>Bước 1 (Create - Tạo mới):</strong> Tại phân hệ <strong>"Hóa đơn"</strong> -&gt; chọn menu <strong>"Kế toán"</strong> (hoặc Các thao tác khác) -&gt; click <strong>"Bút toán nhật ký"</strong> (Journal Entries) -&gt; nhấn nút <strong>[Mới]</strong> (New).</li>
+    <li><strong>Bước 2:</strong> Chọn <strong>Sổ nhật ký</strong>, nhập <strong>Ngày kế toán</strong> và <strong>Tham chiếu</strong>.</li>
+    <li><strong>Bước 3:</strong> Tại tab <strong>Chi tiết bút toán</strong>, nhấn <strong>[Thêm một dòng]</strong>, chọn Tài khoản Nợ TT200, chọn Đối tác (nếu có) và nhập số tiền Nợ:
+       <img alt="Nhập dòng tài khoản Nợ trong bút toán" src="images/vi/steps/journal_entry_debit_line.png" /></li>
+    <li><strong>Bước 4:</strong> Nhấn <strong>[Thêm một dòng]</strong> tiếp theo, chọn Tài khoản Có TT200 tương ứng để cân bằng chứng từ:
+       <img alt="Nhập dòng tài khoản Có cân bằng bút toán" src="images/vi/steps/journal_entry_credit_line.png" /></li>
+    <li><strong>Bước 5 (Post - Ghi sổ):</strong> Kiểm tra Tổng số tiền Nợ = Tổng số tiền Có. Nhấn nút <strong>[Vào sổ]</strong> (Post) để chính thức ghi nhận nghiệp vụ vào sổ cái kế toán:
+       <img alt="Vào sổ bút toán thành công" src="images/vi/steps/journal_entry_posted.png" /></li>
+    <li><strong>Bước 6 (Read - Tra cứu):</strong> Tại màn hình danh sách Bút toán nhật ký, sử dụng bộ lọc tìm kiếm theo số chứng từ, theo tài khoản, hoặc lọc theo trạng thái <strong>Đã vào sổ</strong> (Posted) / <strong>Nháp</strong> (Draft).</li>
+    <li><strong>Bước 7 (Update &amp; Reverse - Sửa đổi &amp; Đảo bút toán):</strong></li>
+    <li><em>Khi chứng từ đang ở trạng thái Nháp:</em> Bạn tự do chỉnh sửa tài khoản, số tiền hoặc bấm biểu tượng bánh răng chọn <strong>"Xóa"</strong> (Delete).</li>
+    <li><em>Khi chứng từ Đã vào sổ:</em> Để đảm bảo tính toàn vẹn và dấu vết kiểm toán theo chuẩn TT200, hệ thống khóa không cho sửa xóa trực tiếp. Bạn bấm nút <strong>[Đảo ngược bút toán]</strong> (Reverse Entry) ở góc trên, hệ thống sẽ sinh bút toán đảo chiều Nợ/Có để triệt tiêu số dư sai một cách hợp lệ:
+       <img alt="Đảo ngược bút toán đã vào sổ" src="images/vi/steps/journal_entry_reverse.png" /></li>
+    </ul>
+    <hr />
+    <p><a id="automated-journal-entries"></a></p>
+    <h4 id="4342-cach-he-thong-sinh-but-toan-tu-dong-automated-journal-entries"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4342-cach-he-thong-sinh-but-toan-tu-dong-automated-journal-entries"><span class="octicon octicon-link"></span></a><strong>4.3.4.2 Cách hệ thống sinh bút toán tự động (Automated Journal Entries)</strong></h4>
+    <h5 id="co-che-hoat-dong"><a class="anchor" aria-hidden="true" tabindex="-1" href="#co-che-hoat-dong"><span class="octicon octicon-link"></span></a><strong>Cơ chế hoạt động</strong></h5>
+    <p>Trong Odoo, bạn không cần phải tạo thủ công 100% các bút toán. Hầu hết các nghiệp vụ cốt lõi như Bán hàng, Mua hàng và Thanh toán đều được hệ thống <strong>tự động hạch toán</strong> (sinh bút toán) dựa trên cấu hình tài khoản (Chart of Accounts) mặc định của Sản phẩm, Khách hàng, Nhà cung cấp và Thuế.</p>
+    <h5 id="cach-xem-chi-tiet-mot-but-toan-tu-dong"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cach-xem-chi-tiet-mot-but-toan-tu-dong"><span class="octicon octicon-link"></span></a><strong>Cách xem chi tiết một bút toán tự động</strong></h5>
+    <p>Để hiểu rõ hệ thống đang hạch toán dòng tiền như thế nào, bạn có thể kiểm tra trực tiếp ngay trên bất kỳ Hóa đơn hoặc Chứng từ thanh toán nào:</p>
+    <ul>
+    <li><strong>Bước 1:</strong> Mở một Hóa đơn khách hàng (hoặc Hóa đơn nhà cung cấp) đã được <strong>[Xác nhận]</strong> (Đã vào sổ).</li>
+    <li><strong>Bước 2:</strong> Chuyển sang tab <strong>"Chi tiết bút toán" (Journal Items)</strong> nằm ngay bên cạnh tab Chi tiết hóa đơn.</li>
+    <li><strong>Bước 3:</strong> Tại đây, hệ thống sẽ hiển thị minh bạch các cặp định khoản Nợ/Có. Ví dụ, với một Hóa đơn bán hàng thông thường, hệ thống tự động sinh các dòng hạch toán như sau:
+    <ul>
+      <li><strong>Nợ TK 131 (Phải thu khách hàng):</strong> Tổng số tiền khách hàng phải thanh toán (Ghi nhận vào công nợ).</li>
+      <li><strong>Có TK 511 (Doanh thu bán hàng):</strong> Giá trị tiền hàng trước thuế.</li>
+      <li><strong>Có TK 3331 (Thuế GTGT đầu ra):</strong> Số tiền thuế VAT phát sinh (nếu có).</li>
+    </ul>
+       <img alt="Chi tiết bút toán tự động phát sinh từ hóa đơn" src="images/vi/steps/automated_journal_entries.png" /></li>
+    </ul>
+    <div class="markdown-alert markdown-alert-tip" dir="auto">
+    <p class="markdown-alert-title">
+    <svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
+    <p><strong>Mẹo:</strong> Việc thường xuyên xem tab "Chi tiết bút toán" giúp kế toán viên kiểm soát chéo sự chính xác của các tài khoản doanh thu/chi phí được cấu hình ẩn dưới sản phẩm, đảm bảo báo cáo tài chính luôn chuẩn xác theo Thông tư 200.</p>
+    </div>
+    <hr />
+    <p><a id="invoicing-reporting"></a></p>
+    <h3 id="435-báo-cáo--phân-tích-reporting--analysis"><a class="anchor" aria-hidden="true" tabindex="-1" href="#435-báo-cáo--phân-tích-reporting--analysis"><span class="octicon octicon-link"></span></a><strong>4.3.5 Báo cáo &amp; Phân tích (Reporting &amp; Analysis)</strong></h3>
+    <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-reporting"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-reporting"><span class="octicon octicon-link"></span></a><strong>Mục đích &amp; Ý nghĩa nghiệp vụ</strong></h5>
+    <p>Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các chỉ số tài chính cốt lõi (Doanh thu, Chi phí, Dòng tiền) theo thời gian thực (Real-time) ngay trên hệ thống mà không cần chờ đến kỳ báo cáo thuế, phục vụ việc ra quyết định kinh doanh kịp thời.</p>
+    <h5 id="các-bước-thực-hiện-xem-báo-cáo"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-xem-báo-cáo"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện xem báo cáo</strong></h5>
+    <p><strong>1. Xem Báo cáo Doanh thu &amp; Chi phí (Invoices Analysis):</strong></p>
+    <ul>
+    <li><strong>Bước 1:</strong> Tại module <strong>Hóa đơn (Invoicing)</strong>, chọn menu <strong>Báo cáo (Reporting)</strong> -&gt; <strong>Phân tích hóa đơn (Invoices Analysis)</strong>.</li>
+    <li><strong>Bước 2:</strong> Hệ thống hiển thị biểu đồ phân tích.
+    <ul>
+    <li>Để xem <strong>Doanh thu</strong>: Mặc định hệ thống đang lọc các "Hóa đơn khách hàng". Bạn có thể nhóm theo <em>Khách hàng</em>, <em>Nhân viên kinh doanh</em>, hoặc <em>Nhóm sản phẩm</em> để xem chi tiết nguồn thu.</li>
+    <li>Để xem <strong>Chi phí</strong>: Bấm vào thanh tìm kiếm, gỡ bỏ bộ lọc "Hóa đơn khách hàng", sau đó chọn bộ lọc <strong>Hóa đơn nhà cung cấp (Vendor Bills)</strong>. Biểu đồ sẽ lập tức chuyển sang thống kê tổng các chi phí vận hành và mua sắm.</li>
+    </ul>
+    <img alt="Báo cáo phân tích hóa đơn và doanh thu" src="images/vi/steps/invoices_analysis.png" />
+    </li>
+    <li><strong>Bước 3:</strong> (Tùy chọn) Lưu cấu hình bộ lọc này vào mục <strong>Yêu thích (Favorites) -&gt; Lưu tìm kiếm hiện tại</strong> để truy cập nhanh cho lần sau.</li>
+    </ul>
+    <p><strong>2. Xem Dòng tiền thực tế (Cash &amp; Bank Dashboard):</strong></p>
+    <ul>
+    <li><strong>Bước 1:</strong> Truy cập module <strong>Hóa đơn (Invoicing)</strong> -&gt; Chọn menu <strong>Bảng thông tin (Dashboard)</strong>.</li>
+    <li><strong>Bước 2:</strong> Trên màn hình Kanban, quan sát hai thẻ sổ nhật ký quan trọng nhất: <strong>Tiền mặt (Cash)</strong> và <strong>Ngân hàng (Bank)</strong>.</li>
+    <li><strong>Bước 3:</strong> Tại mỗi thẻ, bạn sẽ thấy ngay con số <strong>Số dư hiện tại (Current Balance)</strong> phản ánh lượng tiền thực tế đang có.</li>
+    <li><strong>Bước 4:</strong> Để xem chi tiết các dòng tiền vào/ra (thu tiền khách, trả tiền nhà cung cấp), hãy nhấp vào chữ <strong>Giao dịch (Transactions)</strong> hoặc <strong>Sổ cái (General Ledger)</strong> ngay trên thẻ sổ đó.<br/>
+    <img alt="Bảng thông tin dòng tiền và ngân hàng" src="images/vi/steps/invoicing_dashboard.png" /></li>
+    </ul>
+    <hr />
     <p><a id="inventory"></a></p>
     <h2 id="44--phân-hệ-kho-inventory"><a class="anchor" aria-hidden="true" tabindex="-1" href="#44--phân-hệ-kho-inventory"><span class="octicon octicon-link"></span></a><strong>4.4 📦 PHÂN HỆ KHO (Inventory)</strong></h2>
     <p><a id="inventory-config"></a></p>
@@ -1864,10 +1977,11 @@ graph TD
       <li>Phiếu kho đã hoàn thành (Done) <strong>không thể xóa hoặc hủy</strong> trực tiếp.</li>
       <li><strong>Xử lý:</strong> Mở phiếu kho đó, bấm nút <strong>[Trả hàng] (Return)</strong>. Hệ thống sẽ tự động tạo một phiếu đảo ngược (ví dụ: <strong>Phiếu xuất kho / Phiếu nhập kho</strong>) ở trạng thái <strong>Sẵn sàng (Ready)</strong>. Bạn cần <strong>[Xác nhận] (Validate)</strong> phiếu mới này để chính thức đưa tồn kho về đúng địa điểm cũ (đối với chuyển kho nội bộ, hàng sẽ được chuyển ngược về địa điểm nguồn).</li>
     </ul>
-    <h5 id="3-xử-lý-hóa-đơn-kế-toán-đã-vào-sổ-posted-bị-sai"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-xử-lý-hóa-đơn-kế-toán-đã-vào-sổ-posted-bị-sai"><span class="octicon octicon-link"></span></a><strong>3. Xử lý hóa đơn kế toán đã "Vào sổ" (Posted) bị sai?</strong></h5>
+    <h5 id="3-xử-lý-hóa-đơn-hoặc-bút-toán-kế-toán-đã-vào-sổ-posted-bị-sai"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-xử-lý-hóa-đơn-hoặc-bút-toán-kế-toán-đã-vào-sổ-posted-bị-sai"><span class="octicon octicon-link"></span></a><strong>3. Xử lý Hóa đơn hoặc Bút toán kế toán đã "Vào sổ" (Posted) bị sai?</strong></h5>
     <ul>
-      <li>Theo chuẩn mực kế toán, không thể xóa hóa đơn đã vào sổ.</li>
-      <li><strong>Xử lý:</strong> Bấm <strong>[Thêm Ghi chú tín dụng] (Add Credit Note)</strong> để đảo ngược toàn bộ giá trị của hóa đơn cũ, ghi nhận lý do hủy. Sau đó bạn có thể tạo một hóa đơn mới hoàn toàn.</li>
+      <li>Theo chuẩn mực kế toán (TT200), <strong>không được phép xóa</strong> các chứng từ đã vào sổ để bảo toàn dấu vết kiểm toán.</li>
+      <li><strong>Đối với Hóa đơn (Invoices/Bills):</strong> Bấm <strong>[Thêm Ghi chú tín dụng] (Add Credit Note)</strong> để đảo ngược toàn bộ giá trị của hóa đơn cũ, sau đó tạo một hóa đơn mới hoàn toàn.</li>
+      <li><strong>Đối với Bút toán tay (Manual Journals):</strong> Bấm nút <strong>[Đảo ngược bút toán] (Reverse Entry)</strong> để hệ thống tự động sinh một bút toán đảo chiều (Nợ thành Có, Có thành Nợ) nhằm triệt tiêu số dư sai hợp lệ.</li>
     </ul>
     <p><a id="general-faq"></a></p>
     <h2 id="52-câu-hỏi-thường-gặp-khác-general-faq"><a class="anchor" aria-hidden="true" tabindex="-1" href="#52-câu-hỏi-thường-gặp-khác-general-faq"><span class="octicon octicon-link"></span></a><strong>5.2 Câu hỏi thường gặp khác (General FAQ)</strong></h2>
@@ -1886,7 +2000,28 @@ graph TD
       <li><strong>Nguyên nhân:</strong> Tài khoản của bạn chưa được phân quyền truy cập.</li>
       <li><strong>Xử lý:</strong> Liên hệ Quản trị viên hệ thống (Admin) để được cấp quyền bổ sung.</li>
     </ul>
-    <hr>
+    <hr />
+    <p><a id="accounting-faq"></a></p>
+    <h2 id="53-câu-hỏi-nghiệp-vụ-kế-toán-accounting-faq"><a class="anchor" aria-hidden="true" tabindex="-1" href="#53-câu-hỏi-nghiệp-vụ-kế-toán-accounting-faq"><span class="octicon octicon-link"></span></a><strong>5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)</strong></h2>
+    <h5 id="1-tại-sao-tôi-không-thấy-nút-đảo-ngược-bút-toán-reverse-entry-trên-chứng-từ"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-tại-sao-tôi-không-thấy-nút-đảo-ngược-bút-toán-reverse-entry-trên-chứng-từ"><span class="octicon octicon-link"></span></a><strong>1. Tại sao tôi không thấy nút "Đảo ngược bút toán" (Reverse Entry) trên chứng từ?</strong></h5>
+    <ul>
+    <li><strong>Nguyên nhân 1:</strong> Bút toán của bạn đang ở trạng thái <strong>Nháp (Draft)</strong>. Lúc này chứng từ chưa phát sinh hiệu lực tài chính, bạn có thể sửa số liệu trực tiếp hoặc bấm biểu tượng bánh răng để "Xóa" nên hệ thống không hiển thị nút Đảo ngược. Nút Đảo ngược chỉ hiện ra khi chứng từ đã <strong>Vào sổ (Posted)</strong>.</li>
+    <li><strong>Nguyên nhân 2:</strong> Nếu bạn đang xem Hóa đơn bán hàng/mua hàng, nút đảo ngược sẽ được gọi dưới tên thương mại là <strong>"Thêm Giấy báo Có" (Add Credit Note)</strong> thay vì "Đảo ngược bút toán".</li>
+    </ul>
+    <h5 id="2-khi-nào-bắt-buộc-phải-sinh-bút-toán-tay-manual-journal-entries"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-khi-nào-bắt-buộc-phải-sinh-bút-toán-tay-manual-journal-entries"><span class="octicon octicon-link"></span></a><strong>2. Khi nào bắt buộc phải sinh "Bút toán tay" (Manual Journal Entries)?</strong></h5>
+    <p>Hệ thống đã tự động hóa luồng Mua, Bán và Kho. Bạn chỉ phải tự sinh bút toán tay cho các nghiệp vụ nội bộ hoặc điều chỉnh cuối kỳ như:</p>
+    <ul>
+    <li>Khấu hao tài sản / Phân bổ chi phí trả trước.</li>
+    <li>Kết chuyển doanh thu, chi phí cuối kỳ để xác định kết quả kinh doanh.</li>
+    <li>Hạch toán tiền lương và các khoản trích theo lương.</li>
+    <li>Trích lập các khoản dự phòng hoặc điều chỉnh sai sót số dư.</li>
+    </ul>
+    <h5 id="3-hạch-toán-chi-phí-lương-và-tiền-điện-theo-tt200-khác-nhau-thế-nào-trên-hệ-thống"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-hạch-toán-chi-phí-lương-và-tiền-điện-theo-tt200-khác-nhau-thế-nào-trên-hệ-thống"><span class="octicon octicon-link"></span></a><strong>3. Hạch toán chi phí lương và tiền điện theo TT200 khác nhau thế nào trên hệ thống?</strong></h5>
+    <ul>
+    <li><strong>Tiền lương:</strong> Không dùng "Hóa đơn nhà cung cấp" vì nhân viên không phải là nhà cung cấp. Bạn phải tạo <strong>Bút toán tay (Manual Journal)</strong>, phân bổ chi phí về đúng đầu bộ phận (Ví dụ: Nợ 622, 641, 642 / Có 334).</li>
+    <li><strong>Tiền điện/nước/mặt bằng:</strong> Là dịch vụ mua từ bên ngoài, bắt buộc dùng <strong>Hóa đơn nhà cung cấp (Vendor Bills)</strong>. Nếu cần chia cho nhiều bộ phận (Xưởng, Showroom, Văn phòng), bạn chỉ việc thêm nhiều dòng (Invoice Lines) trên cùng một hóa đơn và gán trực tiếp tài khoản chi phí (6277, 6417, 6427) cho từng dòng.</li>
+    </ul>
+    <hr />
     <p><a id="glossary"></a></p>
     <h1 id="6-giải-nghĩa-thuật-ngữ-glossary"><a class="anchor" aria-hidden="true" tabindex="-1" href="#6-giải-nghĩa-thuật-ngữ-glossary"><span class="octicon octicon-link"></span></a><strong>6. Giải nghĩa thuật ngữ (Glossary)</strong></h1>
     <p>Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hiện trên giao diện Elite ERP nhằm giúp người dùng mới dễ dàng nắm bắt:</p>
@@ -1939,6 +2074,30 @@ graph TD
         <tr>
           <td align="left"><strong>Variant</strong></td>
           <td align="left"><strong>Biến thể sản phẩm:</strong> Các phiên bản khác nhau của cùng một sản phẩm (VD: Áo thun có biến thể là Màu Đỏ, Size L).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>COA</strong> (Chart of Accounts)</td>
+          <td align="left"><strong>Hệ thống Tài khoản Kế toán:</strong> Danh mục phân loại tài sản, nợ, nguồn vốn, doanh thu, chi phí.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Journal</strong></td>
+          <td align="left"><strong>Sổ nhật ký:</strong> Nơi ghi chép các nghiệp vụ kinh tế phát sinh theo nhóm (VD: Sổ Tiền mặt, Sổ Mua hàng).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Journal Entry</strong></td>
+          <td align="left"><strong>Bút toán nhật ký:</strong> Bản ghi giao dịch tài chính vào hệ thống, đảm bảo nguyên tắc Tổng Nợ = Tổng Có.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Journal Item</strong></td>
+          <td align="left"><strong>Chi tiết bút toán:</strong> Một dòng ghi Nợ hoặc Có đơn lẻ cấu thành nên một Bút toán nhật ký.</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Manual Journal</strong></td>
+          <td align="left"><strong>Bút toán tay:</strong> Bút toán do kế toán tự tạo thủ công thay vì được sinh tự động từ các phân hệ khác (VD: lương, khấu hao).</td>
+        </tr>
+        <tr>
+          <td align="left"><strong>Reverse Entry</strong></td>
+          <td align="left"><strong>Đảo ngược bút toán:</strong> Bút toán đảo chiều (Nợ thành Có, Có thành Nợ) sinh ra để triệt tiêu số dư của chứng từ sai sót.</td>
         </tr>
       </tbody>
     </table>
