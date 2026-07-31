@@ -974,13 +974,26 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 
 **1. Xem Báo cáo Doanh thu & Chi phí (Invoices Analysis):**
 - **Bước 1:** Tại module **Hóa đơn (Invoicing)**, chọn menu **Báo cáo (Reporting)** -> **Phân tích hóa đơn (Invoices Analysis)**.
-- **Bước 2:** Hệ thống hiển thị biểu đồ phân tích.
-  - Để xem **Doanh thu**: Mặc định hệ thống đang lọc các "Hóa đơn khách hàng". Bạn có thể nhóm theo *Khách hàng*, *Nhân viên kinh doanh*, hoặc *Nhóm sản phẩm* để xem chi tiết nguồn thu.
-  - Để xem **Chi phí**: Bấm vào thanh tìm kiếm, gỡ bỏ bộ lọc "Hóa đơn khách hàng", sau đó chọn bộ lọc **Hóa đơn nhà cung cấp (Vendor Bills)**. Biểu đồ sẽ lập tức chuyển sang thống kê tổng các chi phí vận hành và mua sắm.
-   ![Báo cáo phân tích hóa đơn và doanh thu](images/vi/steps/invoices_analysis.png)
+- **Bước 2:** Nhìn lên thanh tìm kiếm, hệ thống đang mặc định lọc `[Khách hàng]`.
+  - Để xem **Doanh thu (Thu)**: Giữ nguyên bộ lọc. Ở nút **Thước đo (Measures)**, chọn **Số tiền trước thuế (Untaxed Amount)**. Bạn có thể nhóm theo *Khách hàng* hoặc *Tháng* để xem biểu đồ tăng trưởng.
+  - Để xem **Chi phí (Chi)**: Bấm dấu **X** để tắt bộ lọc `[Khách hàng]`. Bấm vào thanh tìm kiếm, chọn **Bộ lọc (Filters)** -> **Hóa đơn nhà cung cấp (Vendor Bills)**. Biểu đồ sẽ lập tức hiển thị tổng tiền đã chi.
+  - Để xem **Lãi Gộp (Gross Profit)**: Lọc theo `[Khách hàng]`, ở nút **Thước đo (Measures)**, chọn **Biên lợi nhuận (Margin)**.
+
+> [!NOTE]
+> **Giải nghĩa số tiền trên biểu đồ (K, M, G):**
+> Khi số tiền quá lớn, trục dọc của biểu đồ sẽ được viết tắt theo chuẩn quốc tế để chống rối mắt:
+> - **K (Kilo):** Ngàn (Ví dụ: 500K = 500.000 VNĐ)
+> - **M (Mega):** Triệu (Ví dụ: 500M = 500.000.000 VNĐ - 500 triệu)
+> - **G (Giga):** Tỷ (Ví dụ: 2,00G = 2.000.000.000 VNĐ - 2 tỷ đồng)
+
 - **Bước 3:** (Tùy chọn) Lưu cấu hình bộ lọc này vào mục **Yêu thích (Favorites) -> Lưu tìm kiếm hiện tại** để truy cập nhanh cho lần sau.
 
-**2. Xem Dòng tiền thực tế (Cash & Bank Dashboard):**
+**2. Xem Báo cáo Kế toán phân tích - Lãi/Lỗ ròng (Analytic Reporting):**
+- **Bước 1:** Chọn menu **Báo cáo (Reporting)** -> **Báo cáo Kế toán phân tích (Analytic Reporting)**.
+- **Bước 2:** Báo cáo này giúp xem **Lãi / Lỗ ròng (Net Profit)** của từng Dự án hoặc Phòng ban cụ thể (vì nó đã cộng trừ chéo cả hóa đơn bán và hóa đơn mua cùng gắn 1 thẻ phân tích).
+- **Bước 3:** Sử dụng **Nhóm theo (Group By)** -> Chọn **Dự án / Hợp đồng lớn** (Hoặc Thêm nhóm tùy chỉnh nếu bị ẩn) để bung giao diện báo cáo Lãi/Lỗ theo từng dự án (Ví dụ: Dự án SunGroup Lỗ 30tr, Dự án Masterise Lãi 50tr).
+
+**3. Xem Dòng tiền thực tế (Cash & Bank Dashboard):**
 - **Bước 1:** Truy cập module **Hóa đơn (Invoicing)** -> Chọn menu **Bảng thông tin (Dashboard)**.
 - **Bước 2:** Trên màn hình Kanban, quan sát hai thẻ sổ nhật ký quan trọng nhất: **Tiền mặt (Cash)** và **Ngân hàng (Bank)**.
 - **Bước 3:** Tại mỗi thẻ, bạn sẽ thấy ngay con số **Số dư hiện tại (Current Balance)** phản ánh lượng tiền thực tế đang có.

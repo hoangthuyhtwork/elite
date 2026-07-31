@@ -1646,16 +1646,34 @@ Elite ERP cấu hình tiêu chuẩn hiện sử dụng phân hệ <strong>Hóa �
     <p><strong>1. Xem Báo cáo Doanh thu &amp; Chi phí (Invoices Analysis):</strong></p>
     <ul>
     <li><strong>Bước 1:</strong> Tại module <strong>Hóa đơn (Invoicing)</strong>, chọn menu <strong>Báo cáo (Reporting)</strong> -&gt; <strong>Phân tích hóa đơn (Invoices Analysis)</strong>.</li>
-    <li><strong>Bước 2:</strong> Hệ thống hiển thị biểu đồ phân tích.
+    <li><strong>Bước 2:</strong> Nhìn lên thanh tìm kiếm, hệ thống đang mặc định lọc <code>[Khách hàng]</code>.
     <ul>
-    <li>Để xem <strong>Doanh thu</strong>: Mặc định hệ thống đang lọc các "Hóa đơn khách hàng". Bạn có thể nhóm theo <em>Khách hàng</em>, <em>Nhân viên kinh doanh</em>, hoặc <em>Nhóm sản phẩm</em> để xem chi tiết nguồn thu.</li>
-    <li>Để xem <strong>Chi phí</strong>: Bấm vào thanh tìm kiếm, gỡ bỏ bộ lọc "Hóa đơn khách hàng", sau đó chọn bộ lọc <strong>Hóa đơn nhà cung cấp (Vendor Bills)</strong>. Biểu đồ sẽ lập tức chuyển sang thống kê tổng các chi phí vận hành và mua sắm.</li>
+    <li>Để xem <strong>Doanh thu (Thu)</strong>: Giữ nguyên bộ lọc. Ở nút <strong>Thước đo (Measures)</strong>, chọn <strong>Số tiền trước thuế (Untaxed Amount)</strong>. Bạn có thể nhóm theo <em>Khách hàng</em> hoặc <em>Tháng</em> để xem biểu đồ tăng trưởng.</li>
+    <li>Để xem <strong>Chi phí (Chi)</strong>: Bấm dấu <strong>X</strong> để tắt bộ lọc <code>[Khách hàng]</code>. Bấm vào thanh tìm kiếm, chọn <strong>Bộ lọc (Filters)</strong> -&gt; <strong>Hóa đơn nhà cung cấp (Vendor Bills)</strong>. Biểu đồ sẽ lập tức hiển thị tổng tiền đã chi.</li>
+    <li>Để xem <strong>Lãi Gộp (Gross Profit)</strong>: Lọc theo <code>[Khách hàng]</code>, ở nút <strong>Thước đo (Measures)</strong>, chọn <strong>Biên lợi nhuận (Margin)</strong>.</li>
     </ul>
-    <img alt="Báo cáo phân tích hóa đơn và doanh thu" src="images/vi/steps/invoices_analysis.png" />
     </li>
+    </ul>
+    <div class="markdown-alert markdown-alert-note">
+    <p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
+    <p><strong>Giải nghĩa số tiền trên biểu đồ (K, M, G):</strong><br />
+Khi số tiền quá lớn, trục dọc của biểu đồ sẽ được viết tắt theo chuẩn quốc tế để chống rối mắt:</p>
+    <ul>
+    <li><strong>K (Kilo):</strong> Ngàn (Ví dụ: 500K = 500.000 VNĐ)</li>
+    <li><strong>M (Mega):</strong> Triệu (Ví dụ: 500M = 500.000.000 VNĐ - 500 triệu)</li>
+    <li><strong>G (Giga):</strong> Tỷ (Ví dụ: 2,00G = 2.000.000.000 VNĐ - 2 tỷ đồng)</li>
+    </ul>
+    </div>
+    <ul>
     <li><strong>Bước 3:</strong> (Tùy chọn) Lưu cấu hình bộ lọc này vào mục <strong>Yêu thích (Favorites) -&gt; Lưu tìm kiếm hiện tại</strong> để truy cập nhanh cho lần sau.</li>
     </ul>
-    <p><strong>2. Xem Dòng tiền thực tế (Cash &amp; Bank Dashboard):</strong></p>
+    <p><strong>2. Xem Báo cáo Kế toán phân tích - Lãi/Lỗ ròng (Analytic Reporting):</strong></p>
+    <ul>
+    <li><strong>Bước 1:</strong> Chọn menu <strong>Báo cáo (Reporting)</strong> -&gt; <strong>Báo cáo Kế toán phân tích (Analytic Reporting)</strong>.</li>
+    <li><strong>Bước 2:</strong> Báo cáo này giúp xem <strong>Lãi / Lỗ ròng (Net Profit)</strong> của từng Dự án hoặc Phòng ban cụ thể (vì nó đã cộng trừ chéo cả hóa đơn bán và hóa đơn mua cùng gắn 1 thẻ phân tích).</li>
+    <li><strong>Bước 3:</strong> Sử dụng <strong>Nhóm theo (Group By)</strong> -&gt; Chọn <strong>Dự án / Hợp đồng lớn</strong> (Hoặc Thêm nhóm tùy chỉnh nếu bị ẩn) để bung giao diện báo cáo Lãi/Lỗ theo từng dự án (Ví dụ: Dự án SunGroup Lỗ 30tr, Dự án Masterise Lãi 50tr).</li>
+    </ul>
+    <p><strong>3. Xem Dòng tiền thực tế (Cash &amp; Bank Dashboard):</strong></p>
     <ul>
     <li><strong>Bước 1:</strong> Truy cập module <strong>Hóa đơn (Invoicing)</strong> -&gt; Chọn menu <strong>Bảng thông tin (Dashboard)</strong>.</li>
     <li><strong>Bước 2:</strong> Trên màn hình Kanban, quan sát hai thẻ sổ nhật ký quan trọng nhất: <strong>Tiền mặt (Cash)</strong> và <strong>Ngân hàng (Bank)</strong>.</li>
