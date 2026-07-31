@@ -994,8 +994,13 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 > [!TIP]
 > **Mẹo xem con số chính xác không cần rê chuột:**
 > Theo mặc định, biểu đồ làm ẩn các con số để tránh rối mắt. Nếu muốn xem bảng số liệu chi tiết chính xác đến từng đồng (giống Excel), hãy nhấp vào biểu tượng **Bảng lưới (Pivot)** nằm ở góc trên cùng bên phải (ngay cạnh biểu tượng biểu đồ). Bạn có thể bấm nút **Tải xuống xlsx** (Biểu tượng mũi tên tải xuống) để xuất báo cáo này ra Excel.
+> 
+> ![Nút chuyển chế độ Bảng lưới (Pivot)](images/vi/steps/invoices_analysis_pivot_btn.png)
+> ![Giao diện Bảng lưới (Pivot View)](images/vi/steps/invoices_analysis_pivot_view.png)
 
 - **Bước 3:** (Tùy chọn) Lưu cấu hình bộ lọc này vào mục **Yêu thích (Favorites) -> Lưu tìm kiếm hiện tại** để truy cập nhanh cho lần sau.
+
+![Lưu tìm kiếm vào Yêu thích](images/vi/steps/invoices_analysis_favorites.png)
 
 **2. Xem Báo cáo Kế toán phân tích - Lãi/Lỗ ròng (Analytic Reporting):**
 - **Bước 1:** Chọn menu **Báo cáo (Reporting)** -> **Báo cáo Kế toán phân tích (Analytic Reporting)**.
