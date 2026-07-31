@@ -1294,4 +1294,4 @@ Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hi�
 | Phiên bản | Ngày cập nhật | Nội dung thay đổi | Người cập nhật |
 | :--- | :--- | :--- | :--- |
 | **v1.0** | 2026-06-01 | Khởi tạo tài liệu Hướng dẫn sử dụng gốc, bao gồm các phân hệ Bán hàng, Mua hàng, Hóa đơn cơ bản và Kho hàng. | HT |
-| **v2.0** | 2026-07-31 | - Bổ sung chi tiết luồng nghiệp vụ Kế toán (TT200).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn.<br>- Bổ sung giải đáp FAQ Kế toán (Bút toán đảo, Hạch toán lương/điện).<br>- Cập nhật bổ sung các thuật ngữ Kế toán vào Glossary.<br>- Cập nhật hình ảnh minh họa cho các luồng Bút toán và Báo cáo kế toán. | Antigravity AI |
+| **v2.0** | 2026-07-31 | - Bổ sung chi tiết luồng nghiệp vụ Kế toán (TT200).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn.<br>- Bổ sung giải đáp FAQ Kế toán (Bút toán đảo, Hạch toán lương/điện).<br>- Cập nhật bổ sung các thuật ngữ Kế toán vào Glossary.<br>- Cập nhật hình ảnh minh họa cho các luồng Bút toán và Báo cáo kế toán. | Hoàng Thúy |
