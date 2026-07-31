@@ -982,7 +982,7 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 
 ![Báo cáo phân tích hóa đơn và doanh thu](images/vi/steps/invoices_analysis.png)
 
-![Bảng chọn Chỉ số (Measures)](images/vi/steps/invoices_analysis_measures.png)
+<img src="images/vi/steps/invoices_analysis_measures.png" alt="Bảng chọn Chỉ số (Measures)" width="100%">
 
 > [!NOTE]
 > **Giải nghĩa số tiền trên biểu đồ (K, M, G):**
