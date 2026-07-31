@@ -101,6 +101,7 @@ table th:first-child, table td:first-child {
   - [5.2 Câu hỏi thường gặp khác (General FAQ)](#general-faq)
   - [5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)](#accounting-faq)
 1. [6. Giải nghĩa thuật ngữ (Glossary)](#glossary)
+1. [7. Lịch sử thay đổi (Changelog)](#changelog)
 ---
 
 <a id="overview"></a>
@@ -1284,3 +1285,13 @@ Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hi�
 | **Journal Item** | **Chi tiết bút toán:** Một dòng ghi Nợ hoặc Có đơn lẻ cấu thành nên một Bút toán nhật ký. |
 | **Manual Journal** | **Bút toán tay:** Bút toán do kế toán tự tạo thủ công thay vì được sinh tự động từ các phân hệ khác (VD: lương, khấu hao). |
 | **Reverse Entry** | **Đảo ngược bút toán:** Bút toán đảo chiều (Nợ thành Có, Có thành Nợ) sinh ra để triệt tiêu số dư của chứng từ sai sót. |
+
+---
+
+<a id="changelog"></a>
+# **7. Lịch sử thay đổi (Changelog)**
+
+| Phiên bản | Ngày cập nhật | Nội dung thay đổi | Người cập nhật |
+| :--- | :--- | :--- | :--- |
+| **v1.0** | 2026-06-01 | Khởi tạo tài liệu Hướng dẫn sử dụng gốc, bao gồm các phân hệ Bán hàng, Mua hàng, Hóa đơn cơ bản và Kho hàng. | HT |
+| **v2.0** | 2026-07-31 | - Bổ sung chi tiết luồng nghiệp vụ Kế toán (TT200).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn.<br>- Bổ sung giải đáp FAQ Kế toán (Bút toán đảo, Hạch toán lương/điện).<br>- Cập nhật bổ sung các thuật ngữ Kế toán vào Glossary.<br>- Cập nhật hình ảnh minh họa cho các luồng Bút toán và Báo cáo kế toán. | Antigravity AI |
