@@ -976,6 +976,9 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 - **Bước 1:** Tại module **Hóa đơn (Invoicing)**, chọn menu **Báo cáo (Reporting)** -> **Phân tích hóa đơn (Invoices Analysis)**.
 - **Bước 2:** Nhìn lên thanh tìm kiếm, hệ thống đang mặc định lọc `[Khách hàng]`.
   - Để xem **Doanh thu (Thu)**: Giữ nguyên bộ lọc. Ở nút **Chỉ số (Measures)**, chọn **Số tiền trước thuế (Untaxed Amount)**. Bạn có thể nhóm theo *Khách hàng* hoặc *Tháng* để xem biểu đồ tăng trưởng.
+
+  ![Bảng chọn Chỉ số (Measures)](images/vi/steps/invoices_analysis_measures.png)
+
   - Để xem **Chi phí (Chi)**: Bấm dấu **X** để tắt bộ lọc `[Khách hàng]`. Bấm vào thanh tìm kiếm, chọn **Bộ lọc (Filters)** -> **Hóa đơn nhà cung cấp (Vendor Bills)**. Biểu đồ sẽ lập tức hiển thị tổng tiền đã chi.
   - Để xem **Lãi Gộp (Gross Profit)**: Lọc theo `[Khách hàng]`, ở nút **Chỉ số (Measures)**, chọn **Biên lợi nhuận (Margin)**.
 
