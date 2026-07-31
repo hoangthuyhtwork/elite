@@ -979,6 +979,8 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
   - Để xem **Chi phí (Chi)**: Bấm dấu **X** để tắt bộ lọc `[Khách hàng]`. Bấm vào thanh tìm kiếm, chọn **Bộ lọc (Filters)** -> **Hóa đơn nhà cung cấp (Vendor Bills)**. Biểu đồ sẽ lập tức hiển thị tổng tiền đã chi.
   - Để xem **Lãi Gộp (Gross Profit)**: Lọc theo `[Khách hàng]`, ở nút **Thước đo (Measures)**, chọn **Biên lợi nhuận (Margin)**.
 
+![Báo cáo phân tích hóa đơn và doanh thu](images/vi/steps/invoices_analysis.png)
+
 > [!NOTE]
 > **Giải nghĩa số tiền trên biểu đồ (K, M, G):**
 > Khi số tiền quá lớn, trục dọc của biểu đồ sẽ được viết tắt theo chuẩn quốc tế để chống rối mắt:
