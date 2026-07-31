@@ -988,6 +988,10 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 > - **M (Mega):** Triệu (Ví dụ: 500M = 500.000.000 VNĐ - 500 triệu)
 > - **G (Giga):** Tỷ (Ví dụ: 2,00G = 2.000.000.000 VNĐ - 2 tỷ đồng)
 
+> [!TIP]
+> **Mẹo xem con số chính xác không cần rê chuột:**
+> Theo mặc định, biểu đồ làm ẩn các con số để tránh rối mắt. Nếu sếp muốn xem bảng số liệu chi tiết chính xác đến từng đồng (giống Excel), hãy nhấp vào biểu tượng **Bảng lưới (Pivot)** nằm ở góc trên cùng bên phải (ngay cạnh biểu tượng biểu đồ). Bạn có thể bấm nút **Tải xuống xlsx** (Biểu tượng mũi tên tải xuống) để xuất báo cáo này ra Excel.
+
 - **Bước 3:** (Tùy chọn) Lưu cấu hình bộ lọc này vào mục **Yêu thích (Favorites) -> Lưu tìm kiếm hiện tại** để truy cập nhanh cho lần sau.
 
 **2. Xem Báo cáo Kế toán phân tích - Lãi/Lỗ ròng (Analytic Reporting):**
