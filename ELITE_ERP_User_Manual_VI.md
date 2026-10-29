@@ -15,8 +15,8 @@ table th:first-child, table td:first-child {
 | Thông tin tài liệu | Chi tiết |
 |---|---|
 | **Mã tài liệu** | ELT_UM_ERP_CORE |
-| **Phiên bản** | V2.0 |
-| **Ngày cập nhật** | 28/07/2026 |
+| **Phiên bản** | V2.1 |
+| **Ngày cập nhật** | 29/10/2026 |
 | **Người biên soạn** | Hoàng Thúy / BA |
 | **Đối tượng áp dụng** | Ban Giám đốc, Quản lý, Nhân viên Vận hành |
 
@@ -28,6 +28,7 @@ table th:first-child, table td:first-child {
 1. [3. Làm quen hệ thống (Getting Started)](#getting-started)
   - [3.1 Đăng nhập & Giao diện chính](#login-dashboard)
   - [3.2 Các thao tác cơ bản](#basic-operations)
+    - [3.2.1 Xuất dữ liệu ra Excel/CSV (Export Data)](#export-data)
   - [3.3 Ý nghĩa các Trạng thái chứng từ (Status Definitions)](#status-definitions)
   - [3.4 Trình tự thiết lập hệ thống (Initial Setup Workflow)](#initial-setup-workflow)
   - [3.5 Luồng quy trình vận hành liên kết (End-to-End Workflows)](#e2e-workflows)
@@ -47,6 +48,7 @@ table th:first-child, table td:first-child {
       - [4.1.3.2 Đơn bán hàng (Sales Orders)](#sales-orders-main)
       - [4.1.3.3 Khách hàng (Customers)](#sales-customers)
       - [4.1.3.4 Nhập Đơn bán hàng từ Excel/CSV (Import Sales Orders)](#import-sales-orders)
+      - [4.1.3.5 Xuất Đơn bán hàng & Khách hàng ra Excel/CSV (Export Sales Data)](#export-sales-orders)
   - [4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)](#purchase)
     - [4.2.1 Cấu hình (Configuration)](#purchase-config)
       - [4.2.1.1 Bảng giá của nhà cung cấp (Vendor Pricelists)](#vendor-pricelists)
@@ -61,6 +63,7 @@ table th:first-child, table td:first-child {
       - [4.2.3.2 Đơn mua hàng (Purchase Orders)](#po)
       - [4.2.3.3 Nhà cung cấp (Vendors)](#vendors)
       - [4.2.3.4 Nhập Đơn mua hàng từ Excel/CSV (Import Purchase Orders)](#import-purchase-orders)
+      - [4.2.3.5 Xuất Đơn mua hàng & Nhà cung cấp ra Excel/CSV (Export Purchase Data)](#export-purchase-orders)
   - [4.3 🛡️ PHÂN HỆ HÓA ĐƠN (Invoicing)](#invoicing)
     - [4.3.1 Cấu hình (Configuration)](#invoicing-config)
       - [4.3.1.1 Cấu hình thuế (Configuration > Taxes)](#taxes)
@@ -82,6 +85,8 @@ table th:first-child, table td:first-child {
       - [4.3.3.5 Khách hàng (Customers)](#invoicing-customers-main)
     - [4.3.4 Kế toán tổng hợp & Bút toán (Accounting Operations & Journal Entries)](#accounting-operations)
       - [4.3.4.1 Quản lý Bút toán Nhật ký (Manage Journal Entries)](#journal-entries-cru)
+      - [4.3.4.2 Cách hệ thống sinh bút toán tự động (Automated Journal Entries)](#automated-journal-entries)
+      - [4.3.4.3 Kết xuất Hóa đơn & Sổ nhật ký ra Excel/CSV (Export Accounting Data)](#export-accounting-data)
     - [4.3.5 Báo cáo & Phân tích (Reporting & Analysis)](#invoicing-reporting)
   - [4.4 📦 PHÂN HỆ KHO (Inventory)](#inventory)
     - [4.4.1 Cấu hình (Configuration)](#inventory-config)
@@ -134,7 +139,41 @@ Trước khi đi vào các nghiệp vụ chi tiết, người dùng cần nắm 
   - **Kanban:** Hiển thị dạng thẻ (thường dùng cho các giai đoạn như Báo giá -> Đã gửi -> Đã chốt).
   - **List (Danh sách):** Xem nhiều bản ghi dạng bảng.
   - **Form (Biểu mẫu):** Xem chi tiết một bản ghi.
-- **Bộ lọc & Tìm kiếm:** Sử dụng thanh tìm kiếm ở trên cùng để lọc dữ liệu (Filters) hoặc nhóm dữ liệu (Group By).
+  - **Pivot (Bảng lưới) & Graph (Biểu đồ):** Xem số liệu tổng hợp đa chiều và biểu đồ trực quan.
+- **Bộ lọc & Tìm kiếm:** Sử dụng thanh tìm kiếm ở trên cùng để lọc dữ liệu (**Bộ lọc / Filters**), nhóm dữ liệu (**Nhóm theo / Group By**) hoặc lưu bộ lọc thường dùng (**Yêu thích / Favorites**).
+
+<a id="export-data"></a>
+### **3.2.1 Xuất dữ liệu ra Excel/CSV (Export Data)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Hỗ trợ người dùng kết xuất danh sách bản ghi ở bất kỳ phân hệ nào (Đơn bán hàng, Đơn mua hàng, Hóa đơn, Bút toán nhật ký, Sản phẩm, Khách hàng, Tồn kho...) ra tập tin **Excel (`.xlsx`)** hoặc **CSV (`.csv`)** để lưu trữ, đối chiếu số liệu, lập báo cáo quản trị hoặc chỉnh sửa hàng loạt rồi nhập (Import) ngược lại vào hệ thống.
+
+##### **Giải thích các tùy chọn trên cửa sổ Xuất dữ liệu (Export Data)**
+| Trường / Tùy chọn <div style="width: 250px;"></div> | Ý nghĩa & Quy tắc sử dụng |
+| :--- | :--- |
+| **Định dạng xuất (Export Format)** | Chọn **XLSX** để xuất file Excel tiêu chuẩn (giữ nguyên định dạng cột, số tiền, ngày tháng) hoặc chọn **CSV** để xuất file văn bản phân cách bằng dấu phẩy. |
+| **Tôi muốn cập nhật dữ liệu (I want to update data)** | Tích chọn ô này nếu bạn muốn xuất dữ liệu ra Excel để **chỉnh sửa hàng loạt rồi Nhập (Import) ngược lại** vào hệ thống. Khi tích chọn, hệ thống sẽ tự động kèm theo cột định danh gốc (`External ID`) và lọc ra các trường cho phép cập nhật. |
+| **Các trường hiện có (Available fields)** | Khung bên trái liệt kê toàn bộ các trường thông tin của chứng từ. Nhập từ khóa vào ô **Tìm kiếm (Search)** để tìm nhanh trường cần lấy, bấm biểu tượng mũi tên `>` để mở rộng các bảng con (ví dụ: *Chi tiết đơn hàng*, *Chi tiết hóa đơn*), và bấm dấu cộng **`+`** để đưa trường đó sang danh sách xuất. |
+| **Các trường cần xuất (Fields to export)** | Khung bên phải hiển thị các cột sẽ xuất hiện trong file Excel tải về. Bạn có thể giữ chuột kéo thả để đổi thứ tự cột hoặc bấm biểu tượng thùng rác `🗑️` để loại bỏ cột không cần thiết. |
+| **Mẫu (Template)** | Lưu lại cấu hình các cột đã chọn (chọn **Mẫu mới / New template** và đặt tên) để những lần xuất sau chỉ cần chọn lại mẫu mà không phải tích chọn lại từng trường. |
+
+##### **Các cách thực hiện xuất dữ liệu**
+
+**Cách 1: Xuất nhanh các cột đang hiển thị trên màn hình Danh sách (Quick Export)**
+- **Bước 1:** Chuyển chế độ xem sang dạng **Danh sách (List View)** (biểu tượng danh sách ở góc trên bên phải).
+- **Bước 2:** Sử dụng thanh tìm kiếm để lọc ra các bản ghi cần xuất (nếu muốn).
+- **Bước 3:** Nhấn trực tiếp vào biểu tượng **Xuất tất cả (Export All)** (hình mũi tên tải xuống `📥` nằm ngay bên cạnh nút **Mới / New** ở góc trên bên trái) để tải ngay file Excel chứa đúng các cột đang hiển thị trên màn hình.
+
+**Cách 2: Xuất tùy chỉnh các trường dữ liệu chi tiết (Custom Export)**
+- **Bước 1:** Tại màn hình **Danh sách (List View)** của phân hệ bất kỳ, tích chọn ô vuông (checkbox) ở đầu các dòng dữ liệu cần xuất. Để chọn toàn bộ danh sách, tích vào ô vuông ở tiêu đề bảng rồi nhấn **Chọn tất cả (Select all)**.
+- **Bước 2:** Nhấn vào nút **[Hành động] (Actions / Tác vụ)** ⚙️ xuất hiện ở thanh công cụ phía trên -> chọn **[Xuất] (Export)**.
+- **Bước 3:** Tại cửa sổ **Xuất dữ liệu (Export Data)**:
+  - Chọn định dạng **XLSX** (hoặc **CSV**).
+  - Từ cột **Các trường hiện có (Available fields)** bên trái, bấm dấu **`+`** tại các trường thông tin muốn lấy sang cột **Các trường cần xuất (Fields to export)** bên phải (hoặc chọn một **Mẫu / Template** đã lưu sẵn).
+- **Bước 4:** Nhấn nút **[Xuất] (Export)** ở góc dưới bên trái để tải file về máy tính.
+
+> [!TIP]
+> **Mẹo xuất chi tiết từng dòng sản phẩm trên Đơn hàng / Hóa đơn:**
+> Mặc định danh sách bên ngoài chỉ xuất thông tin chung của chứng từ (Số đơn, Khách hàng, Tổng tiền). Nếu muốn xuất chi tiết từng mặt hàng bên trong đơn, tại cột **Các trường hiện có**, hãy bấm vào mũi tên mở rộng mục **Chi tiết đơn hàng (Order Lines)** hoặc **Chi tiết hóa đơn (Invoice Lines)**, sau đó bấm dấu **`+`** chọn thêm các trường con như: `Chi tiết đơn hàng/Sản phẩm`, `Chi tiết đơn hàng/Số lượng`, `Chi tiết đơn hàng/Đơn giá`, `Chi tiết đơn hàng/Thành tiền`.
 
 <a id="status-definitions"></a>
 ## **3.3 Ý nghĩa các Trạng thái chứng từ (Status Definitions)**
@@ -450,6 +489,23 @@ Hỗ trợ người dùng nhập liệu hàng loạt Đơn bán hàng (Sales Ord
 
 ---
 
+<a id="export-sales-orders"></a>
+#### **4.1.3.5 Xuất Đơn bán hàng & Khách hàng ra Excel/CSV (Export Sales Data)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Hỗ trợ bộ phận Kinh doanh và Quản lý kết xuất danh sách Báo giá, Đơn bán hàng (Sales Orders) hoặc hồ sơ Khách hàng ra file Excel/CSV để tổng hợp doanh số theo kỳ, đối chiếu hoa hồng nhân viên kinh doanh hoặc gửi danh sách đơn hàng cho bộ phận vận chuyển.
+
+##### **Các bước thực hiện**
+- **Bước 1:** Tại phân hệ **"Bán hàng"**, truy cập menu **"Đơn hàng"** -> chọn **"Đơn bán hàng"** (hoặc **"Báo giá"** / **"Khách hàng"**). Chuyển sang chế độ xem **Danh sách (List View)**.
+- **Bước 2:** Sử dụng thanh tìm kiếm để lọc các đơn hàng cần xuất (ví dụ: lọc theo *Tháng đặt hàng*, *Nhân viên kinh doanh*, hoặc trạng thái *Đơn bán hàng*), sau đó tích chọn ô vuông (checkbox) ở đầu các dòng cần xuất (hoặc tích ô vuông trên tiêu đề cột để chọn toàn bộ).
+- **Bước 3:** Nhấn nút **[Hành động] (Actions / Tác vụ)** ⚙️ ở thanh công cụ phía trên -> chọn **[Xuất] (Export)**.
+- **Bước 4:** Trong cửa sổ **Xuất dữ liệu (Export Data)**:
+  - Chọn định dạng **XLSX**.
+  - Các trường mặc định của đơn bán hàng (`Mã đơn hàng`, `Ngày đặt hàng`, `Khách hàng`, `Nhân viên kinh doanh`, `Tổng`, `Trạng thái`) đã được chọn sẵn ở cột bên phải.
+  - Nếu cần xuất chi tiết từng mặt hàng trong đơn, tại cột bên trái (**Các trường hiện có**), bấm mở rộng mục **Chi tiết đơn hàng (Order Lines)** và bấm dấu **`+`** chọn thêm: `Chi tiết đơn hàng/Sản phẩm`, `Chi tiết đơn hàng/Số lượng`, `Chi tiết đơn hàng/Đơn giá`, `Chi tiết đơn hàng/Thành tiền`.
+- **Bước 5:** Nhấn nút **[Xuất] (Export)** để tải file Excel về máy tính.
+
+---
+
 <a id="purchase"></a>
 ## **4.2 👑 PHÂN HỆ MUA HÀNG (Purchase)**
 
@@ -627,6 +683,20 @@ Hỗ trợ người dùng nạp hàng loạt Yêu cầu báo giá (RFQ) hoặc �
    ![Giao diện Ghép nối dữ liệu](images/vi/steps/import_mapping.png)
 - **Bước 5:** Nhấn **Test (Kiểm tra)** để kiểm tra tính hợp lệ của dữ liệu.
 - **Bước 6:** Nhấn **Import (Nhập)** để hoàn tất việc nhập đơn mua hàng.
+
+---
+
+<a id="export-purchase-orders"></a>
+#### **4.2.3.5 Xuất Đơn mua hàng & Nhà cung cấp ra Excel/CSV (Export Purchase Data)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Hỗ trợ nhân viên thu mua kết xuất danh sách Yêu cầu báo giá (RFQ), Đơn mua hàng (PO) hoặc danh bạ Nhà cung cấp ra file Excel/CSV để đối chiếu tiến độ giao hàng, kiểm soát chi phí mua sắm theo kỳ hoặc gửi bảng tổng hợp cho bộ phận Kế toán thanh toán.
+
+##### **Các bước thực hiện**
+- **Bước 1:** Tại phân hệ **"Mua hàng"**, truy cập menu **"Đơn hàng"** -> chọn **"Đơn mua hàng"** (hoặc **"Yêu cầu báo giá"** / **"Nhà cung cấp"**). Đảm bảo đang ở chế độ xem **Danh sách (List View)**.
+- **Bước 2:** Lọc dữ liệu theo kỳ hoặc theo Nhà cung cấp nếu cần, sau đó tích chọn ô vuông (checkbox) ở đầu các dòng đơn mua hàng muốn kết xuất.
+- **Bước 3:** Nhấn nút **[Hành động] (Actions / Tác vụ)** ⚙️ -> chọn **[Xuất] (Export)**.
+- **Bước 4:** Trong cửa sổ **Xuất dữ liệu (Export Data)**, chọn định dạng **XLSX**, bổ sung thêm các trường từ cột **Các trường hiện có** (ví dụ: mở rộng *Chi tiết đơn mua hàng / Order Lines* để lấy chi tiết mặt hàng, số lượng nhận, đơn giá mua) sang cột **Các trường cần xuất**.
+- **Bước 5:** Nhấn nút **[Xuất] (Export)** để tải file Excel về máy.
 
 ---
 
@@ -965,6 +1035,27 @@ Trong Odoo, bạn không cần phải tạo thủ công 100% các bút toán. H�
 
 ---
 
+<a id="export-accounting-data"></a>
+#### **4.3.4.3 Kết xuất Hóa đơn & Sổ nhật ký ra Excel/CSV (Export Accounting Data)**
+##### **Mục đích & Ý nghĩa nghiệp vụ**
+Hỗ trợ kế toán viên kết xuất toàn bộ danh sách Hóa đơn bán ra, Hóa đơn mua vào hoặc Sổ nhật ký chung (Bút toán nhật ký / Chi tiết bút toán Nợ - Có) ra file Excel (`.xlsx`) để tổng hợp bảng kê thuế GTGT, đối chiếu công nợ phải thu/phải trả, hoặc lập Bảng cân đối phát sinh và Báo cáo tài chính cuối kỳ.
+
+##### **Các bước thực hiện**
+- **Bước 1:** Tại phân hệ **"Hóa đơn"**, truy cập vào danh sách cần kết xuất:
+  - Để xuất bảng kê hóa đơn bán: Chọn menu **"Khách hàng"** -> **"Hóa đơn"**.
+  - Để xuất bảng kê hóa đơn mua: Chọn menu **"Nhà cung cấp"** -> **"Hóa đơn"**.
+  - Để xuất sổ nhật ký kế toán: Chọn menu **"Kế toán"** -> **"Bút toán nhật ký"** (hoặc **"Chi tiết bút toán"**).
+- **Bước 2:** Sử dụng thanh tìm kiếm để lọc theo kỳ kế toán (ví dụ: *Ngày lập hóa đơn: Tháng này* hoặc *Quý trước*) và trạng thái **Đã vào sổ (Posted)**.
+- **Bước 3:** Tích chọn ô vuông ở góc trên bên trái bảng dữ liệu để chọn toàn bộ bản ghi trong trang (nếu có nhiều trang, nhấn thêm dòng chữ **Chọn tất cả / Select all**).
+- **Bước 4:** Nhấn nút **[Hành động] (Actions / Tác vụ)** ⚙️ -> chọn **[Xuất] (Export)**.
+- **Bước 5:** Tại cửa sổ **Xuất dữ liệu (Export Data)**:
+  - Chọn định dạng **XLSX**.
+  - Để xuất chi tiết định khoản Nợ/Có của từng bút toán: Mở rộng mục **Chi tiết bút toán (Journal Items)** ở cột bên trái và bấm **`+`** chọn thêm các trường: `Chi tiết bút toán/Tài khoản`, `Chi tiết bút toán/Đối tác`, `Chi tiết bút toán/Nhãn`, `Chi tiết bút toán/Nợ`, `Chi tiết bút toán/Có`.
+  - *(Khuyên dùng)* Nhấn vào ô **Mẫu (Template)** -> chọn **Mẫu mới (New template)** và lưu tên mẫu (ví dụ: `Mau_So_Nhat_Ky_Chung`) để tái sử dụng cho các kỳ kế toán sau.
+- **Bước 6:** Nhấn **[Xuất] (Export)** để tải file Excel về máy tính.
+
+---
+
 <a id="invoicing-reporting"></a>
 ### **4.3.5 Báo cáo & Phân tích (Reporting & Analysis)**
 ##### **Mục đích & Ý nghĩa nghiệp vụ**
@@ -982,7 +1073,7 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 
 ![Báo cáo phân tích hóa đơn và doanh thu](images/vi/steps/invoices_analysis.png)
 
-![Bảng chọn Chỉ số (Measures)](images/vi/steps/invoices_analysis_measures.png)
+<img src="images/vi/steps/invoices_analysis_measures.png" alt="Bảng chọn Chỉ số (Measures)" width="80%">
 
 > [!NOTE]
 > **Giải nghĩa số tiền trên biểu đồ (K, M, G):**
@@ -995,11 +1086,11 @@ Hỗ trợ Ban giám đốc và Kế toán quản trị truy xuất nhanh các c
 > **Mẹo xem con số chính xác không cần rê chuột:**
 > Theo mặc định, biểu đồ làm ẩn các con số để tránh rối mắt. Nếu muốn xem bảng số liệu chi tiết chính xác đến từng đồng (giống Excel), hãy nhấp vào biểu tượng **Bảng lưới (Pivot)** nằm ở góc trên cùng bên phải (ngay cạnh biểu tượng biểu đồ). Bạn có thể bấm nút **Tải xuống xlsx** (Biểu tượng mũi tên tải xuống) để xuất báo cáo này ra Excel.
 > 
-> ![Giao diện Bảng lưới (Pivot View)](images/vi/steps/invoices_analysis_pivot_view.png)
+> <img src="images/vi/steps/invoices_analysis_pivot_view.png" alt="Giao diện Bảng lưới (Pivot View)" width="80%">
 
 - **Bước 3:** (Tùy chọn) Lưu cấu hình bộ lọc này vào mục **Yêu thích (Favorites) -> Lưu tìm kiếm hiện tại** để truy cập nhanh cho lần sau.
 
-![Lưu tìm kiếm vào Yêu thích](images/vi/steps/invoices_analysis_favorites.png)
+<img src="images/vi/steps/invoices_analysis_favorites.png" alt="Lưu tìm kiếm vào Yêu thích" width="80%">
 
 **2. Xem Báo cáo Kế toán phân tích - Lãi/Lỗ ròng (Analytic Reporting):**
 - **Bước 1:** Chọn menu **Báo cáo (Reporting)** -> **Báo cáo Kế toán phân tích (Analytic Reporting)**.
@@ -1321,3 +1412,5 @@ Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hi�
 | :--- | :--- | :--- | :--- |
 | **v1.0** | 2026-06-01 | Khởi tạo tài liệu Hướng dẫn sử dụng gốc, bao gồm các phân hệ Bán hàng, Mua hàng, Hóa đơn cơ bản và Kho hàng. | HT |
 | **v2.0** | 2026-07-31 | - Bổ sung mục **4.3.4 Kế toán tổng hợp & Bút toán** (bao gồm Bút toán tự động, Bút toán tay).<br>- Bổ sung mục **4.3.5 Báo cáo & Phân tích** (Invoices Analysis & Cash/Bank Dashboard).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn ở mục **4.3**.<br>- Bổ sung mục **5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)**.<br>- Cập nhật thêm thuật ngữ (COA, Journal, Reverse Entry...) vào **6. Giải nghĩa thuật ngữ**.<br>- Bổ sung mục **7. Lịch sử thay đổi (Changelog)**. | Hoàng Thúy |
+| **v2.1** | 2026-10-29 | - Bổ sung mục **3.2.1 Xuất dữ liệu ra Excel/CSV (Export Data)** hướng dẫn chi tiết thao tác xuất nhanh (Quick Export), xuất tùy chỉnh trường dữ liệu (Custom Export) và lưu mẫu xuất.<br>- Bổ sung mục **4.1.3.5 Xuất Đơn bán hàng & Khách hàng ra Excel/CSV**.<br>- Bổ sung mục **4.2.3.5 Xuất Đơn mua hàng & Nhà cung cấp ra Excel/CSV**.<br>- Bổ sung mục **4.3.4.3 Kết xuất Hóa đơn & Sổ nhật ký ra Excel/CSV** phục vụ báo cáo thuế và kế toán. | Hoàng Thúy |
+
