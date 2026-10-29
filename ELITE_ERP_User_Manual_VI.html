@@ -1743,30 +1743,78 @@ Elite ERP cấu hình tiêu chuẩn hiện sử dụng phân hệ <strong>Hóa �
     </div>
     <hr />
     <p><a id="export-accounting-data"></a></p>
-    <h4 id="4343-kết-xuất-hóa-đơn--sổ-nhật-ký-ra-excelcsv-export-accounting-data"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4343-kết-xuất-hóa-đơn--sổ-nhật-ký-ra-excelcsv-export-accounting-data"><span class="octicon octicon-link"></span></a><strong>4.3.4.3 Kết xuất Hóa đơn &#x26; Sổ nhật ký ra Excel/CSV (Export Accounting Data)</strong></h4>
+    <h4 id="4343-kết-xuất-hóa-đơn--sổ-nhật-ký-ra-excelcsv-export-accounting-data"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4343-kết-xuất-hóa-đơn--sổ-nhật-ký-ra-excelcsv-export-accounting-data"><span class="octicon octicon-link"></span></a><strong>4.3.4.3 Kết xuất Hóa đơn &#x26; Sổ nhật ký / Sổ chi tiết Tài khoản ra Excel/CSV (Export Accounting Data)</strong></h4>
     <h5 id="mục-đích--ý-nghĩa-nghiệp-vụ-export-acc"><a class="anchor" aria-hidden="true" tabindex="-1" href="#mục-đích--ý-nghĩa-nghiệp-vụ-export-acc"><span class="octicon octicon-link"></span></a><strong>Mục đích &#x26; Ý nghĩa nghiệp vụ</strong></h5>
-    <p>Hỗ trợ kế toán viên kết xuất toàn bộ danh sách Hóa đơn bán ra, Hóa đơn mua vào hoặc Sổ nhật ký chung (Bút toán nhật ký / Chi tiết bút toán Nợ - Có) ra file Excel (<code>.xlsx</code>) để tổng hợp bảng kê thuế GTGT, đối chiếu công nợ phải thu/phải trả, hoặc lập Bảng cân đối phát sinh và Báo cáo tài chính cuối kỳ.</p>
+    <p>Hỗ trợ kế toán viên kết xuất toàn bộ danh sách Hóa đơn bán ra, Hóa đơn mua vào, Sổ nhật ký chung hoặc <strong>Sổ chi tiết của từng Tài khoản kế toán cụ thể</strong> (ví dụ: TK <code>511</code> - Doanh thu, TK <code>632</code> - Giá vốn hàng bán, TK <code>641/642</code> - Chi phí, TK <code>131/331</code> - Công nợ...) ra file Excel (<code>.xlsx</code>) để tổng hợp bảng kê thuế GTGT, đối chiếu số phát sinh Nợ/Có, hoặc lập Bảng cân đối phát sinh và Báo cáo tài chính cuối kỳ.</p>
     <h5 id="các-bước-thực-hiện-export-acc"><a class="anchor" aria-hidden="true" tabindex="-1" href="#các-bước-thực-hiện-export-acc"><span class="octicon octicon-link"></span></a><strong>Các bước thực hiện</strong></h5>
     <ul>
       <li><strong>Bước 1:</strong> Tại phân hệ <strong>"Hóa đơn"</strong>, truy cập vào danh sách cần kết xuất:
         <ul>
           <li>Để xuất bảng kê hóa đơn bán: Chọn menu <strong>"Khách hàng"</strong> -> <strong>"Hóa đơn"</strong>.</li>
           <li>Để xuất bảng kê hóa đơn mua: Chọn menu <strong>"Nhà cung cấp"</strong> -> <strong>"Hóa đơn"</strong>.</li>
-          <li>Để xuất sổ nhật ký kế toán: Chọn menu <strong>"Kế toán"</strong> -> <strong>"Bút toán nhật ký"</strong> (hoặc <strong>"Chi tiết bút toán"</strong>).</li>
+          <li>Để xuất sổ nhật ký hoặc sổ chi tiết tài khoản: Chọn menu <strong>"Kế toán"</strong> -> <strong>"Bút toán"</strong> (hoặc <strong>"Hạng mục bút toán / Chi tiết bút toán"</strong>).</li>
         </ul>
       </li>
-      <li><strong>Bước 2:</strong> Sử dụng thanh tìm kiếm để lọc theo kỳ kế toán (ví dụ: <em>Ngày lập hóa đơn: Tháng này</em> hoặc <em>Quý trước</em>) và trạng thái <strong>Đã vào sổ (Posted)</strong>.</li>
+      <li><strong>Bước 2 (Lọc dữ liệu theo Kỳ và theo Tài khoản kế toán):</strong>
+        <ul>
+          <li>Sử dụng thanh tìm kiếm để lọc trạng thái <strong>Đã vào sổ (Posted)</strong> và lọc theo kỳ kế toán (ví dụ: <em>Ngày: Tháng 09/2026</em> hoặc dùng <em>Bộ lọc tùy chỉnh: Ngày trong khoảng từ đầu tháng đến cuối tháng</em>).</li>
+          <li><strong>Cách lọc riêng một Tài khoản kế toán bất kỳ (Ví dụ: cần đổ dữ liệu TK <code>632</code>, <code>511</code>, <code>642</code>...):</strong>
+            <ul>
+              <li><em>Tại màn hình <strong>Hạng mục bút toán (Chi tiết bút toán)</strong>:</em> Gõ trực tiếp mã tài khoản (ví dụ: <code>632</code>) vào ô tìm kiếm -> chọn dòng <strong>Tìm kiếm Tài khoản cho: 632</strong>.</li>
+              <li><em>Tại màn hình <strong>Bút toán (Journal Entries)</strong>:</em> Do thanh tìm kiếm mặc định chỉ tìm theo thông tin bìa chứng từ (<code>Số</code>, <code>Tham chiếu</code>, <code>Đối tác</code>), bạn hãy bấm vào thanh tìm kiếm -> chọn <strong>"Bộ lọc tuỳ chỉnh..." (Custom Filter...)</strong> ở cuối danh sách -> chọn trường <strong><code>Hạng mục bút toán &gt; Tài khoản</code></strong> (hoặc <strong><code>Tài khoản</code></strong>) -> điều kiện <strong><code>chứa</code></strong> -> nhập mã tài khoản cần lấy (ví dụ: <code>632</code>) -> nhấn <strong>[Áp dụng]</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><strong>Bước 3:</strong> Tích chọn ô vuông ở góc trên bên trái bảng dữ liệu để chọn toàn bộ bản ghi trong trang (nếu có nhiều trang, nhấn thêm dòng chữ <strong>Chọn tất cả / Select all</strong>).</li>
       <li><strong>Bước 4:</strong> Nhấn nút <strong>[Hành động] (Actions / Tác vụ)</strong> ⚙️ -> chọn <strong>[Xuất] (Export)</strong>.</li>
       <li><strong>Bước 5:</strong> Tại cửa sổ <strong>Xuất dữ liệu (Export Data)</strong>:
         <ul>
           <li>Chọn định dạng <strong>XLSX</strong>.</li>
-          <li>Để xuất chi tiết định khoản Nợ/Có của từng bút toán: Mở rộng mục <strong>Chi tiết bút toán (Journal Items)</strong> ở cột bên trái và bấm <strong><code>+</code></strong> chọn thêm các trường: <code>Chi tiết bút toán/Tài khoản</code>, <code>Chi tiết bút toán/Đối tác</code>, <code>Chi tiết bút toán/Nhãn</code>, <code>Chi tiết bút toán/Nợ</code>, <code>Chi tiết bút toán/Có</code>.</li>
+          <li>Để xuất chi tiết định khoản Nợ/Có của từng dòng hạch toán: Mở rộng mục <strong>Hạng mục bút toán / Chi tiết bút toán (Journal Items)</strong> ở cột bên trái và bấm <strong><code>+</code></strong> chọn thêm các trường: <code>Chi tiết bút toán/Tài khoản</code>, <code>Chi tiết bút toán/Đối tác</code>, <code>Chi tiết bút toán/Nhãn</code>, <code>Chi tiết bút toán/Nợ</code>, <code>Chi tiết bút toán/Có</code>.</li>
           <li><em>(Khuyên dùng)</em> Nhấn vào ô <strong>Mẫu (Template)</strong> -> chọn <strong>Mẫu mới (New template)</strong> và lưu tên mẫu (ví dụ: <code>Mau_So_Nhat_Ky_Chung</code>) để tái sử dụng cho các kỳ kế toán sau.</li>
         </ul>
       </li>
       <li><strong>Bước 6:</strong> Nhấn <strong>[Xuất] (Export)</strong> để tải file Excel về máy tính.</li>
     </ul>
+    <h5 id="quy-tắc-đọc-số-liệu-cột-nợ-có"><a class="anchor" aria-hidden="true" tabindex="-1" href="#quy-tắc-đọc-số-liệu-cột-nợ-có"><span class="octicon octicon-link"></span></a><strong>Quy tắc đọc số liệu cột Nợ (Debit) / Có (Credit) trên file Excel theo nhóm Tài khoản (Chuẩn TT200)</strong></h5>
+    <p>Khi kết xuất Sổ chi tiết tài khoản ra Excel, kế toán căn cứ vào bản chất đầu tài khoản để lấy đúng cột số liệu phát sinh trong kỳ:</p>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Nhóm Tài khoản (Theo TT200) <div style="width: 250px;"></div></th>
+          <th align="left">Ý nghĩa cột NỢ (Debit)</th>
+          <th align="left">Ý nghĩa cột CÓ (Credit)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><strong>1. Nhóm Chi phí &#x26; Giá vốn (Đầu 6, 8)</strong><br><em>(VD: TK 632 - Giá vốn, TK 641, 642, 811)</em></td>
+          <td align="left"><strong>Phát sinh TĂNG trong kỳ</strong><br><em>(VD: Giá vốn của hàng xuất bán cho khách trong tháng; chi phí phát sinh).</em></td>
+          <td align="left"><strong>Phát sinh GIẢM / Kết chuyển</strong><br><em>(VD: Giá vốn hàng bán bị khách trả lại nhập kho; hoặc bút toán kết chuyển cuối kỳ sang TK 911).</em></td>
+        </tr>
+        <tr>
+          <td align="left"><strong>2. Nhóm Doanh thu &#x26; Thu nhập (Đầu 5, 7)</strong><br><em>(VD: TK 511 - Doanh thu, TK 515, 711)</em></td>
+          <td align="left"><strong>Phát sinh GIẢM / Kết chuyển</strong><br><em>(VD: Giảm trừ doanh thu, hàng bán bị trả lại; hoặc kết chuyển cuối kỳ sang TK 911).</em></td>
+          <td align="left"><strong>Phát sinh TĂNG trong kỳ</strong><br><em>(VD: Doanh thu bán hàng và cung cấp dịch vụ phát sinh trong tháng).</em></td>
+        </tr>
+        <tr>
+          <td align="left"><strong>3. Nhóm Tài sản &#x26; Phải thu (Đầu 1, 2)</strong><br><em>(VD: TK 111, 112, 131 - Phải thu KH, 156 - Kho)</em></td>
+          <td align="left"><strong>Phát sinh TĂNG trong kỳ</strong><br><em>(VD: Thu tiền, nhập kho hàng hóa, phát sinh tăng nợ phải thu của khách).</em></td>
+          <td align="left"><strong>Phát sinh GIẢM trong kỳ</strong><br><em>(VD: Chi tiền, xuất kho hàng hóa, khách hàng thanh toán công nợ).</em></td>
+        </tr>
+        <tr>
+          <td align="left"><strong>4. Nhóm Nợ phải trả &#x26; Nguồn vốn (Đầu 3, 4)</strong><br><em>(VD: TK 331 - Phải trả NCC, 3331 - Thuế, 334)</em></td>
+          <td align="left"><strong>Phát sinh GIẢM trong kỳ</strong><br><em>(VD: Thanh toán tiền nợ cho nhà cung cấp, khấu trừ/nộp thuế).</em></td>
+          <td align="left"><strong>Phát sinh TĂNG trong kỳ</strong><br><em>(VD: Mua hàng ghi nhận nợ nhà cung cấp, thuế GTGT đầu ra phải nộp).</em></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="markdown-alert markdown-alert-note" dir="auto">
+      <p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
+      <p><strong>Mẹo kết xuất Giá vốn hàng xuất bán từ phân hệ Kho (Khi tính giá tồn kho Thủ công):</strong><br />
+      Trong trường hợp Nhóm sản phẩm đang thiết lập <em>Định giá tồn kho Thủ công (Manual)</em> (hệ thống chưa tự động sinh bút toán <code>Nợ 632 / Có 156</code> ngay lúc xuất kho) và kế toán cần đổ danh sách hàng đã xuất bán trong tháng để tính giá vốn: Hãy truy cập phân hệ <strong>Tồn kho (Inventory)</strong> -> <strong>Báo cáo (Reporting)</strong> -> <strong>Lịch sử di chuyển (Moves History)</strong> (hoặc <strong>Hoạt động -> Giao hàng</strong>), lọc trạng thái <strong>Hoàn thành (Done)</strong> theo tháng cần lấy -> chọn <strong>Xuất (Export)</strong> và lấy các cột: <code>Sản phẩm</code>, <code>Số lượng</code>, <code>Sản phẩm/Chi phí (Giá vốn)</code> để tính tổng giá vốn xuất kho trong kỳ.</p>
+    </div>
     <hr />
     <p><a id="invoicing-reporting"></a></p>
     <h3 id="435-báo-cáo--phân-tích-reporting--analysis"><a class="anchor" aria-hidden="true" tabindex="-1" href="#435-báo-cáo--phân-tích-reporting--analysis"><span class="octicon octicon-link"></span></a><strong>4.3.5 Báo cáo &amp; Phân tích (Reporting &amp; Analysis)</strong></h3>
@@ -2179,6 +2227,16 @@ Theo mặc định, biểu đồ làm ẩn các con số để tránh rối mắ
     <ul>
     <li><strong>Tiền lương:</strong> Không dùng "Hóa đơn nhà cung cấp" vì nhân viên không phải là nhà cung cấp. Bạn phải tạo <strong>Bút toán tay (Manual Journal)</strong>, phân bổ chi phí về đúng đầu bộ phận (Ví dụ: Nợ 622, 641, 642 / Có 334).</li>
     <li><strong>Tiền điện/nước/mặt bằng:</strong> Là dịch vụ mua từ bên ngoài, bắt buộc dùng <strong>Hóa đơn nhà cung cấp (Vendor Bills)</strong>. Nếu cần chia cho nhiều bộ phận (Xưởng, Showroom, Văn phòng), bạn chỉ việc thêm nhiều dòng (Invoice Lines) trên cùng một hóa đơn và gán trực tiếp tài khoản chi phí (6277, 6417, 6427) cho từng dòng.</li>
+    </ul>
+    <h5 id="4-tại-sao-khi-gõ-mã-tài-khoản-vào-ô-tìm-kiếm-của-màn-hình-bút-toán-lại-không-ra-kết-quả"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4-tại-sao-khi-gõ-mã-tài-khoản-vào-ô-tìm-kiếm-của-màn-hình-bút-toán-lại-không-ra-kết-quả"><span class="octicon octicon-link"></span></a><strong>4. Tại sao khi gõ mã tài khoản (VD: 632, 511, 131...) vào ô tìm kiếm của màn hình "Bút toán" lại không ra kết quả?</strong></h5>
+    <ul>
+    <li><strong>Nguyên nhân:</strong> Màn hình <strong>Bút toán (Journal Entries)</strong> hiển thị thông tin tổng hợp của cả chứng từ (<code>Số chứng từ</code>, <code>Đối tác</code>, <code>Sổ nhật ký</code>, <code>Tham chiếu</code>), trong khi mỗi chứng từ chứa nhiều dòng tài khoản Nợ/Có khác nhau ở bên trong nên thanh tìm kiếm mặc định không lọc trực tiếp theo mã tài khoản.</li>
+    <li><strong>Cách xử lý để lọc và kết xuất theo Tài khoản:</strong>
+      <ul>
+        <li><strong>Cách 1:</strong> Truy cập menu <strong>Kế toán</strong> -> chọn <strong>Hạng mục bút toán (Chi tiết bút toán / Journal Items)</strong>, sau đó gõ mã tài khoản (ví dụ: <code>632</code>) vào ô tìm kiếm và chọn <strong>Tìm kiếm Tài khoản cho: 632</strong>.</li>
+        <li><strong>Cách 2 (Ngay trên màn hình Bút toán):</strong> Bấm vào thanh tìm kiếm -> chọn <strong>"Bộ lọc tuỳ chỉnh..." (Custom Filter...)</strong> ở dưới cùng -> chọn trường <strong><code>Hạng mục bút toán &gt; Tài khoản</code></strong> -> điều kiện <strong><code>chứa</code></strong> -> gõ mã tài khoản cần tìm (ví dụ: <code>632</code>) -> nhấn <strong>[Áp dụng]</strong>. Sau đó tích chọn tất cả và bấm <strong>Tác vụ ⚙️ -> Xuất (Export)</strong> (Xem chi tiết quy tắc đọc cột Nợ/Có tại mục <a href="#export-accounting-data">4.3.4.3</a>).</li>
+      </ul>
+    </li>
     </ul>
     <hr />
     <p><a id="glossary"></a></p>
