@@ -15,8 +15,8 @@ table th:first-child, table td:first-child {
 | Thông tin tài liệu | Chi tiết |
 |---|---|
 | **Mã tài liệu** | ELT_UM_ERP_CORE |
-| **Phiên bản** | V2.1 |
-| **Ngày cập nhật** | 29/10/2026 |
+| **Phiên bản** | V2.0 |
+| **Ngày cập nhật** | 28/07/2026 |
 | **Người biên soạn** | Hoàng Thúy / BA |
 | **Đối tượng áp dụng** | Ban Giám đốc, Quản lý, Nhân viên Vận hành |
 
@@ -1412,5 +1412,4 @@ Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hi�
 | :--- | :--- | :--- | :--- |
 | **v1.0** | 2026-06-01 | Khởi tạo tài liệu Hướng dẫn sử dụng gốc, bao gồm các phân hệ Bán hàng, Mua hàng, Hóa đơn cơ bản và Kho hàng. | HT |
 | **v2.0** | 2026-07-31 | - Bổ sung mục **4.3.4 Kế toán tổng hợp & Bút toán** (bao gồm Bút toán tự động, Bút toán tay).<br>- Bổ sung mục **4.3.5 Báo cáo & Phân tích** (Invoices Analysis & Cash/Bank Dashboard).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn ở mục **4.3**.<br>- Bổ sung mục **5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)**.<br>- Cập nhật thêm thuật ngữ (COA, Journal, Reverse Entry...) vào **6. Giải nghĩa thuật ngữ**.<br>- Bổ sung mục **7. Lịch sử thay đổi (Changelog)**. | Hoàng Thúy |
-| **v2.1** | 2026-10-29 | - Bổ sung mục **3.2.1 Xuất dữ liệu ra Excel/CSV (Export Data)** hướng dẫn chi tiết thao tác xuất nhanh (Quick Export), xuất tùy chỉnh trường dữ liệu (Custom Export) và lưu mẫu xuất.<br>- Bổ sung mục **4.1.3.5 Xuất Đơn bán hàng & Khách hàng ra Excel/CSV**.<br>- Bổ sung mục **4.2.3.5 Xuất Đơn mua hàng & Nhà cung cấp ra Excel/CSV**.<br>- Bổ sung mục **4.3.4.3 Kết xuất Hóa đơn & Sổ nhật ký ra Excel/CSV** phục vụ báo cáo thuế và kế toán. | Hoàng Thúy |
 
