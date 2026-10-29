@@ -1060,7 +1060,9 @@ Hỗ trợ kế toán viên kết xuất toàn bộ danh sách Hóa đơn bán r
   - Sử dụng thanh tìm kiếm để lọc trạng thái **Đã vào sổ (Posted)** và lọc theo kỳ kế toán (ví dụ: *Ngày: Tháng 09/2026* hoặc dùng *Bộ lọc tùy chỉnh: Ngày trong khoảng từ đầu tháng đến cuối tháng*).
   - **Cách lọc riêng một Tài khoản kế toán bất kỳ (Ví dụ: cần đổ dữ liệu TK `632`, `511`, `642`...):**
     - *Tại màn hình **Hạng mục bút toán (Chi tiết bút toán)**:* Gõ trực tiếp mã tài khoản (ví dụ: `632`) vào ô tìm kiếm -> chọn dòng **Tìm kiếm Tài khoản cho: 632**.
+       ![Tìm kiếm Tài khoản 632 trên màn hình Hạng mục bút toán](images/vi/steps/export_filter_journal_items_632.png)
     - *Tại màn hình **Bút toán (Journal Entries)**:* Do thanh tìm kiếm mặc định chỉ tìm theo thông tin bìa chứng từ (`Số`, `Tham chiếu`, `Đối tác`), bạn hãy bấm vào thanh tìm kiếm -> chọn **"Bộ lọc tuỳ chỉnh..." (Custom Filter...)** ở cuối danh sách -> chọn trường **`Hạng mục bút toán > Tài khoản`** (hoặc **`Tài khoản`**) -> điều kiện **`chứa`** -> nhập mã tài khoản cần lấy (ví dụ: `632`) -> nhấn **[Áp dụng]**.
+       ![Mở Bộ lọc theo Ngày và Bộ lọc tuỳ chỉnh trên màn hình Bút toán](images/vi/steps/export_custom_filter_journal_entries_632.png)
 - **Bước 3:** Tích chọn ô vuông ở góc trên bên trái bảng dữ liệu để chọn toàn bộ bản ghi trong trang (nếu có nhiều trang, nhấn thêm dòng chữ **Chọn tất cả / Select all**).
 - **Bước 4:** Nhấn nút **[Hành động] (Actions / Tác vụ)** ⚙️ -> chọn **[Xuất] (Export)**.
    ![Lọc Hạng mục bút toán theo Tài khoản 632 và chọn Tác vụ Xuất](images/vi/steps/export_journal_items_filter_632.png)
