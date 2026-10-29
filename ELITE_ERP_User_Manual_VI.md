@@ -559,17 +559,24 @@ Phân nhóm danh mục sản phẩm (Product Categories) phục vụ định kho
 ##### **Giải thích các trường thông tin**
 | Trường thông tin <div style="width: 250px;"></div> | Ý nghĩa & Quy tắc nhập |
 | :--- | :--- |
-| **Tên nhóm (*)** | Tên nhóm sản phẩm (Ví dụ: Office Furniture). |
-| **Phương pháp tính giá** | Phương pháp tính giá vốn hàng tồn kho: **Giá tiêu chuẩn** (Giá tiêu chuẩn), **FIFO** (Nhập trước xuất trước), hoặc **Giá bình quân** (Giá bình quân gia quyền). |
-| **Định giá tồn kho** | Định giá kho: **Thủ công** (Báo cáo kho thủ công) hoặc **Tự động** (Kế toán ghi sổ kho tự động sau mỗi lần nhập/xuất). |
+| **Tên nhóm (*)** | Tên nhóm sản phẩm (Ví dụ: Văn Phòng Phẩm, Office Furniture). |
+| **Phương pháp tính giá (Costing Method)** | Phương pháp tính giá vốn hàng tồn kho:<br>- **Giá tiêu chuẩn (Standard Price):** Giá vốn cố định do người dùng tự nhập tay tại ô *Chi phí (Cost)* trên thẻ sản phẩm.<br>- **FIFO (Nhập trước xuất trước):** Tự động tính giá vốn xuất kho theo lô nhập trước.<br>- **Giá bình quân (Average Cost - AVCO):** Tự động tính lại đơn giá vốn bình quân gia quyền sau mỗi lần nhập kho mua hàng. |
+| **Định giá tồn kho (Inventory Valuation)** | Chế độ hạch toán kế toán kho:<br>- **Thủ công / Định kỳ (`Periodic at closing`):** Hệ thống **không** tự sinh bút toán giá vốn (`Nợ 632 / Có 156`) cho từng lần xuất bán; khi mua hàng (`BILL`) hệ thống hạch toán trực tiếp vào *Tài khoản chi phí* và chờ kế toán tự kết chuyển tồn kho cuối kỳ.<br>- **Tự động (`Automated` / `Perpetual`):** Hệ thống **tự động sinh bút toán** cho cả chiều Mua hàng nhập kho (`152/156`) lẫn chiều Xuất bán hàng (`Nợ 632 / Có 152, 156`) theo từng giao dịch. |
+| **Thuộc tính Tài khoản (Account Properties)** | Các tài khoản kế toán mặc định gắn cho nhóm sản phẩm (Chuẩn TT200):<br>- **Tài khoản doanh thu (Income Account):** Mặc định `5110 - Doanh thu bán hàng và cung cấp dịch vụ` (dùng khi xác nhận Hóa đơn bán `INV`).<br>- **Tài khoản chi phí (Expense Account):** Mặc định `6320 - Giá vốn hàng bán` (ghi nhận giá vốn hàng xuất bán; hoặc ghi nhận chi phí mua hàng nếu để chế độ *Periodic*).<br>- **Tài khoản kho (Stock Account / Stock Valuation):** Chọn `1561 - Giá mua hàng hóa` (đối với hàng thương mại) hoặc `1520 - Nguyên liệu, vật liệu`.<br>- **Tài khoản nhập/xuất kho / Biến động (Stock Input / Output / Variation):** Tài khoản trung gian đối ứng khi nhập kho mua hàng và xuất kho bán hàng (thường gắn `6320` hoặc tài khoản trung gian kho). |
+
+##### **Hướng dẫn chọn cấu hình để ghi nhận đúng cả chiều Mua hàng và Bán hàng**
+| Nhu cầu vận hành của Kế toán <div style="width: 250px;"></div> | Cách thiết lập trên Nhóm sản phẩm (Product Category) | Cơ chế hệ thống tự động hạch toán |
+| :--- | :--- | :--- |
+| **1. Hạch toán Tự động cả Mua lẫn Bán (Kê khai thường xuyên - Khuyên dùng)** | - **Inventory Valuation:** Chọn **`Automated` (Tự động)**.<br>- **Costing Method:** Chọn **`Average Cost (AVCO)`** hoặc **`FIFO`** *(nếu để `Standard Price` bắt buộc phải nhập tay `Cost > 0` trên từng sản phẩm)*.<br>- **Stock Account:** `1561` (hoặc `1520`).<br>- **Expense Account:** `6320`. | - **Khi Mua hàng & Nhập kho (`BILL` / `WH/IN`):** Ghi nhận tăng giá trị tồn kho vào `TK 1561/1520` (đối ứng `331` qua tài khoản trung gian).<br>- **Khi Bán hàng & Xuất kho (`WH/OUT` / `INV`):** Ghi nhận doanh thu (`Nợ 131 / Có 5110`) **VÀ** tự động sinh bút toán giá vốn cho từng đơn bán (`Nợ 6320 / Có 1561, 1520`). |
+| **2. Hạch toán Định kỳ cuối tháng (`Periodic at closing`)** | - **Inventory Valuation:** Giữ **`Periodic (at closing)`**.<br>- **Expense Account:** Đổi thành **`1561` (hoặc `1520`)** nếu muốn khi lên Hóa đơn mua hàng (`BILL`) hạch toán vào kho trước; hoặc giữ `6320` nếu muốn kết chuyển tồn kho ngược lại vào cuối kỳ. | - **Khi Mua hàng (`BILL`):** Hạch toán thẳng vào `Expense Account` (`Nợ 1561 hoặc 6320 / Có 331`).<br>- **Khi Bán hàng (`INV`):** Chỉ hạch toán doanh thu (`Nợ 131 / Có 5110`), **không** tự sinh bút toán `6320` theo từng đơn. Cuối tháng kế toán xuất bảng kê phiếu giao hàng (`WH/OUT`) từ Kho để lập 1 bút toán kết chuyển giá vốn tổng hợp. |
 
 ##### **Các bước thực hiện**
-- **Bước 1:** Chọn phân hệ **"Mua hàng"** -> chọn **"Cấu hình"** -> click **"Product Categories"**.
-- **Bước 2:** Nhấn nút **"Mới"** để tạo nhóm sản phẩm mới:
+- **Bước 1:** Chọn phân hệ **"Mua hàng"** (hoặc **"Hóa đơn"** / **"Tồn kho"**) -> chọn **"Cấu hình"** -> click **"Danh mục sản phẩm" (Product Categories)**.
+- **Bước 2:** Nhấn nút **"Mới"** để tạo nhóm sản phẩm mới (hoặc bấm vào từng nhóm sản phẩm hiện có để chỉnh sửa):
    ![Nhóm sản phẩm](images/vi/product_categories.png)
-- **Bước 3:** Nhập **Category Name**, cấu hình phương pháp tính giá vốn **Phương pháp tính giá** và định giá kho tự động **Định giá tồn kho** tại tab **Định giá tồn kho** (Inventory Valuation):
+- **Bước 3:** Nhập **Tên danh mục (Category Name)**, thiết lập **Phương pháp tính chi phí (Costing Method)**, chế độ **Định giá tồn kho (Inventory Valuation)** và kiểm tra các tài khoản tại mục **Thuộc tính tài khoản (Account Properties)**:
    ![Chi tiết biểu mẫu Nhóm sản phẩm](images/vi/steps/product_category_form_filled.png)
-- **Bước 4:** Nhấn **Save** để hoàn tất.
+- **Bước 4:** Nhấn **Save** để hoàn tất. *(Lưu ý: Thay đổi chế độ Định giá tồn kho chỉ áp dụng cho các giao dịch phát sinh từ thời điểm lưu trở đi, không tự động sửa lại các chứng từ đã hoàn thành trong quá khứ).*
 
 ---
 
@@ -1069,8 +1076,11 @@ Khi kết xuất Sổ chi tiết tài khoản ra Excel, kế toán căn cứ và
 | **4. Nhóm Nợ phải trả & Nguồn vốn (Đầu 3, 4)**<br>*(VD: TK 331 - Phải trả NCC, 3331 - Thuế, 334)* | **Phát sinh GIẢM trong kỳ**<br>*(VD: Thanh toán tiền nợ cho nhà cung cấp, khấu trừ/nộp thuế).* | **Phát sinh TĂNG trong kỳ**<br>*(VD: Mua hàng ghi nhận nợ nhà cung cấp, thuế GTGT đầu ra phải nộp).* |
 
 > [!NOTE]
-> **Mẹo kết xuất Giá vốn hàng xuất bán từ phân hệ Kho (Khi tính giá tồn kho Thủ công):**
-> Trong trường hợp Nhóm sản phẩm đang thiết lập *Định giá tồn kho Thủ công (Manual)* (hệ thống chưa tự động sinh bút toán `Nợ 632 / Có 156` ngay lúc xuất kho) và kế toán cần đổ danh sách hàng đã xuất bán trong tháng để tính giá vốn: Hãy truy cập phân hệ **Tồn kho (Inventory)** -> **Báo cáo (Reporting)** -> **Lịch sử di chuyển (Moves History)** (hoặc **Hoạt động -> Giao hàng**), lọc trạng thái **Hoàn thành (Done)** theo tháng cần lấy -> chọn **Xuất (Export)** và lấy các cột: `Sản phẩm`, `Số lượng`, `Sản phẩm/Chi phí (Giá vốn)` để tính tổng giá vốn xuất kho trong kỳ.
+> **Mẹo kết xuất Giá vốn hàng xuất bán từ phân hệ Kho (Khi tính giá tồn kho Thủ công / Định kỳ `Periodic`):**
+> Trong trường hợp Nhóm sản phẩm đang thiết lập *Định giá tồn kho Thủ công / Định kỳ (`Periodic at closing`)* — tức là khi lọc `632` bên Kế toán chỉ thấy Hóa đơn mua hàng (`BILL`) mà chưa có bút toán xuất bán (`Nợ 632 / Có 156`) — để đổ danh sách giá vốn của những hàng đã xuất bán cho khách trong tháng:
+> 1. Truy cập phân hệ **Tồn kho (Inventory)** -> **Báo cáo (Reporting)** -> **Lịch sử di chuyển (Moves History)**.
+> 2. Trên thanh tìm kiếm: Lọc trạng thái **Hoàn thành (Done)** + lọc **Tháng/Kỳ cần lấy** + gõ **`WH/OUT`** vào ô tìm kiếm (chọn lọc theo *Tham chiếu / Reference* để chỉ lấy các Phiếu xuất kho giao hàng cho khách).
+> 3. Tích chọn tất cả -> bấm **Hành động (⚙️) -> Xuất (Export)** và chọn các cột: `Ngày (Date)`, `Tham chiếu (Reference)`, `Chứng từ gốc (Source Document - Số đơn SO)`, `Sản phẩm (Product)`, `Số lượng (Quantity)`, `Sản phẩm/Chi phí (Product/Cost)` để tính tổng giá vốn hàng xuất bán trong kỳ.
 
 ---
 
@@ -1400,6 +1410,20 @@ Hệ thống đã tự động hóa luồng Mua, Bán và Kho. Bạn chỉ phả
 - **Cách xử lý để lọc và kết xuất theo Tài khoản:**
   - **Cách 1:** Truy cập menu **Kế toán** -> chọn **Hạng mục bút toán (Chi tiết bút toán / Journal Items)**, sau đó gõ mã tài khoản (ví dụ: `632`) vào ô tìm kiếm và chọn **Tìm kiếm Tài khoản cho: 632**.
   - **Cách 2 (Ngay trên màn hình Bút toán):** Bấm vào thanh tìm kiếm -> chọn **"Bộ lọc tuỳ chỉnh..." (Custom Filter...)** ở dưới cùng -> chọn trường **`Hạng mục bút toán > Tài khoản`** -> điều kiện **`chứa`** -> gõ mã tài khoản cần tìm (ví dụ: `632`) -> nhấn **[Áp dụng]**. Sau đó tích chọn tất cả và bấm **Tác vụ ⚙️ -> Xuất (Export)** (Xem chi tiết quy tắc đọc cột Nợ/Có tại mục [4.3.4.3](#export-accounting-data)).
+
+##### **5. Tại sao khi lọc TK 632 (Giá vốn hàng bán) chỉ thấy Hóa đơn Mua hàng (`BILL`) mà không thấy giao dịch Bán hàng (`INV` / `WH/OUT`)? Làm sao để có cả Mua lẫn Bán?**
+- **Nguyên nhân:** Do trên màn hình **Nhóm sản phẩm (Product Categories)** (xem mục [4.2.1.3](#product-categories)), chế độ **Định giá tồn kho (Inventory Valuation)** đang để là **`Periodic (at closing)` (Thủ công / Định kỳ)** kết hợp với **Tài khoản chi phí (Expense Account)** gắn là **`6320`**. Khi đó:
+  - Lúc **Mua hàng (Xác nhận Hóa đơn mua `BILL`):** Hệ thống lấy trực tiếp *Tài khoản chi phí (`6320`)* để định khoản `Nợ 6320 / Có 331` (nên lọc `6320` chỉ thấy toàn hóa đơn mua hàng).
+  - Lúc **Bán hàng (Xác nhận Hóa đơn bán `INV` / Xuất kho `WH/OUT`):** Hệ thống chỉ ghi nhận doanh thu (`Nợ 131 / Có 5110`) và **không** tự sinh bút toán giá vốn `6320` cho từng đơn bán.
+- **Cách xử lý đối với dữ liệu đã phát sinh trong các kỳ trước (Khi hệ thống đang ở chế độ `Periodic`):**
+  1. **Lấy bảng kê Giá vốn hàng xuất bán thực tế trong tháng:** Vào phân hệ **Tồn kho (Inventory)** -> **Báo cáo (Reporting)** -> **Lịch sử di chuyển (Moves History)**, lọc **Trạng thái = Hoàn thành (Done)** + **Tháng cần lấy** + gõ **`WH/OUT`** (lọc theo *Tham chiếu* để lấy phiếu xuất giao khách) -> bấm **Hành động ⚙️ -> Xuất (Export)** ra Excel kèm cột `Sản phẩm/Chi phí (Cost)` để tính tổng giá vốn xuất bán.
+  2. **Điều chỉnh trên Sổ kế toán cuối tháng:** Lập 1 **Bút toán nhật ký (Manual Journal Entry)** kết chuyển giá trị hàng mua nhưng chưa bán hết (còn tồn kho) từ `6320` về lại tài khoản kho `1561/1520` (`Nợ 1561 / Có 6320`), hoặc nếu đã đổi *Expense Account* lúc mua hàng sang `1561` thì cuối tháng lập 1 bút toán tổng hợp `Nợ 6320 / Có 1561` theo tổng tiền trên file Excel vừa xuất.
+- **Cách cấu hình để hệ thống TỰ ĐỘNG ghi nhận cả chiều Mua lẫn chiều Bán (Từ thời điểm thiết lập trở đi):**
+  - *(Lưu ý nguyên tắc kế toán: Không thể để cả Hóa đơn Mua lẫn Đơn Bán đều ghi tăng `Nợ 6320` trực tiếp mà không qua tài khoản Kho, vì như vậy chi phí giá vốn sẽ bị tính trùng gấp đôi).*
+  - Để hệ thống tự động hạch toán đúng cả 2 chiều, vào **Cấu hình -> Nhóm sản phẩm (Product Categories)** của từng nhóm hàng và chỉnh:
+    1. **Định giá tồn kho (Inventory Valuation):** Đổi từ `Periodic (at closing)` sang **`Automated` (Tự động / `Perpetual`)**.
+    2. **Phương pháp tính chi phí (Costing Method):** Chọn **`Average Cost (AVCO)` (Giá bình quân)** hoặc **`FIFO`** *(nếu giữ `Standard Price` thì bắt buộc trong thẻ từng sản phẩm phải nhập tay ô `Chi phí / Cost > 0 đ`)*.
+    3. **Thuộc tính tài khoản (Account Properties):** Gắn **Stock Account = `1561` (hoặc `1520`)**, **Expense Account = `6320`**, **Income Account = `5110`**. Khi đó chiều Mua sẽ tự động đưa vào kho `1561/1520` (đối ứng trung gian qua `6320`/`151`), còn chiều Bán mỗi khi xuất kho/lên hóa đơn sẽ tự động sinh bút toán `Nợ 6320 / Có 1561, 1520`.
 
 ---
 
