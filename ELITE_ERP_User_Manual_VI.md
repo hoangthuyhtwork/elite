@@ -1465,8 +1465,8 @@ Bảng dưới đây tổng hợp các thuật ngữ thường xuyên xuất hi�
 <a id="changelog"></a>
 # **7. Lịch sử thay đổi (Changelog)**
 
-| Phiên bản | Ngày cập nhật | Nội dung thay đổi | Người cập nhật |
+| Phiên bản <div style="width: 75px;"></div> | Ngày cập nhật <div style="width: 125px;"></div> | Nội dung thay đổi | Người cập nhật <div style="width: 120px;"></div> |
 | :--- | :--- | :--- | :--- |
-| **v1.0** | 2026-06-01 | Khởi tạo tài liệu Hướng dẫn sử dụng gốc, bao gồm các phân hệ Bán hàng, Mua hàng, Hóa đơn cơ bản và Kho hàng. | HT |
-| **v2.0** | 2026-07-31 | - Bổ sung mục **4.3.4 Kế toán tổng hợp & Bút toán** (bao gồm Bút toán tự động, Bút toán tay).<br>- Bổ sung mục **4.3.5 Báo cáo & Phân tích** (Invoices Analysis & Cash/Bank Dashboard).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn ở mục **4.3**.<br>- Bổ sung mục **5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)**.<br>- Cập nhật thêm thuật ngữ (COA, Journal, Reverse Entry...) vào **6. Giải nghĩa thuật ngữ**.<br>- Bổ sung mục **7. Lịch sử thay đổi (Changelog)**. | Hoàng Thúy |
+| **v1.0** | <span style="white-space: nowrap;">2026-06-01</span> | Khởi tạo tài liệu Hướng dẫn sử dụng gốc, bao gồm các phân hệ Bán hàng, Mua hàng, Hóa đơn cơ bản và Kho hàng. | HT |
+| **v2.0** | <span style="white-space: nowrap;">2026-07-31</span> | - Bổ sung mục **4.3.4 Kế toán tổng hợp & Bút toán** (bao gồm Bút toán tự động, Bút toán tay).<br>- Bổ sung mục **4.3.5 Báo cáo & Phân tích** (Invoices Analysis & Cash/Bank Dashboard).<br>- Thêm Giới hạn hệ thống (Scope & Limitations) cho phân hệ Hóa đơn ở mục **4.3**.<br>- Bổ sung mục **5.3 Câu hỏi nghiệp vụ Kế toán (Accounting FAQ)**.<br>- Cập nhật thêm thuật ngữ (COA, Journal, Reverse Entry...) vào **6. Giải nghĩa thuật ngữ**.<br>- Bổ sung mục **7. Lịch sử thay đổi (Changelog)**. | Hoàng Thúy |
 
