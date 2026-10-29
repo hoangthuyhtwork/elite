@@ -617,14 +617,23 @@ table th:first-child, table td:first-child {
     <p><strong>Cách 2: Xuất tùy chỉnh các trường dữ liệu chi tiết (Custom Export)</strong></p>
     <ul>
       <li><strong>Bước 1:</strong> Tại màn hình <strong>Danh sách (List View)</strong> của phân hệ bất kỳ, tích chọn ô vuông (checkbox) ở đầu các dòng dữ liệu cần xuất. Để chọn toàn bộ danh sách, tích vào ô vuông ở tiêu đề bảng rồi nhấn <strong>Chọn tất cả (Select all)</strong>.</li>
-      <li><strong>Bước 2:</strong> Nhấn vào nút <strong>[Hành động] (Actions / Tác vụ)</strong> ⚙️ xuất hiện ở thanh công cụ phía trên -> chọn <strong>[Xuất] (Export)</strong>.</li>
-      <li><strong>Bước 3:</strong> Tại cửa sổ <strong>Xuất dữ liệu (Export Data)</strong>:
+      <li>
+        <strong>Bước 2:</strong> Nhấn vào nút <strong>[Hành động] (Actions / Tác vụ)</strong> ⚙️ xuất hiện ở thanh công cụ phía trên -> chọn <strong>[Xuất] (Export)</strong>.
+        
+        <img src="images/vi/steps/export_action_menu.png" alt="Chọn các dòng cần xuất và nhấn Tác vụ -> Xuất">
+      </li>
+      <li>
+        <strong>Bước 3:</strong> Tại cửa sổ <strong>Xuất dữ liệu (Export Data)</strong>:
         <ul>
           <li>Chọn định dạng <strong>XLSX</strong> (hoặc <strong>CSV</strong>).</li>
           <li>Từ cột <strong>Các trường hiện có (Available fields)</strong> bên trái, bấm dấu <strong><code>+</code></strong> tại các trường thông tin muốn lấy sang cột <strong>Các trường cần xuất (Fields to export)</strong> bên phải (hoặc chọn một <strong>Mẫu / Template</strong> đã lưu sẵn).</li>
         </ul>
       </li>
-      <li><strong>Bước 4:</strong> Nhấn nút <strong>[Xuất] (Export)</strong> ở góc dưới bên trái để tải file về máy tính.</li>
+      <li>
+        <strong>Bước 4:</strong> Nhấn nút <strong>[Xuất] (Export)</strong> ở góc dưới bên trái để tải file về máy tính.
+        
+        <img src="images/vi/steps/export_data_dialog.png" alt="Cửa sổ Xuất dữ liệu (Export Data)">
+      </li>
     </ul>
     <div class="markdown-alert markdown-alert-tip" dir="auto">
       <p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
@@ -1131,6 +1140,8 @@ graph TD
           <li>Các trường mặc định của đơn bán hàng (<code>Mã đơn hàng</code>, <code>Ngày đặt hàng</code>, <code>Khách hàng</code>, <code>Nhân viên kinh doanh</code>, <code>Tổng</code>, <code>Trạng thái</code>) đã được chọn sẵn ở cột bên phải.</li>
           <li>Nếu cần xuất chi tiết từng mặt hàng trong đơn, tại cột bên trái (<strong>Các trường hiện có</strong>), bấm mở rộng mục <strong>Chi tiết đơn hàng (Order Lines)</strong> và bấm dấu <strong><code>+</code></strong> chọn thêm: <code>Chi tiết đơn hàng/Sản phẩm</code>, <code>Chi tiết đơn hàng/Số lượng</code>, <code>Chi tiết đơn hàng/Đơn giá</code>, <code>Chi tiết đơn hàng/Thành tiền</code>.</li>
         </ul>
+        
+        <img src="images/vi/steps/export_sales_orders.png" alt="Xuất Đơn bán hàng kèm Chi tiết đơn hàng">
       </li>
       <li><strong>Bước 5:</strong> Nhấn nút <strong>[Xuất] (Export)</strong> để tải file Excel về máy tính.</li>
     </ul>
@@ -1439,7 +1450,11 @@ graph TD
       <li><strong>Bước 1:</strong> Tại phân hệ <strong>"Mua hàng"</strong>, truy cập menu <strong>"Đơn hàng"</strong> -> chọn <strong>"Đơn mua hàng"</strong> (hoặc <strong>"Yêu cầu báo giá"</strong> / <strong>"Nhà cung cấp"</strong>). Đảm bảo đang ở chế độ xem <strong>Danh sách (List View)</strong>.</li>
       <li><strong>Bước 2:</strong> Lọc dữ liệu theo kỳ hoặc theo Nhà cung cấp nếu cần, sau đó tích chọn ô vuông (checkbox) ở đầu các dòng đơn mua hàng muốn kết xuất.</li>
       <li><strong>Bước 3:</strong> Nhấn nút <strong>[Hành động] (Actions / Tác vụ)</strong> ⚙️ -> chọn <strong>[Xuất] (Export)</strong>.</li>
-      <li><strong>Bước 4:</strong> Trong cửa sổ <strong>Xuất dữ liệu (Export Data)</strong>, chọn định dạng <strong>XLSX</strong>, bổ sung thêm các trường từ cột <strong>Các trường hiện có</strong> (ví dụ: mở rộng <em>Chi tiết đơn mua hàng / Order Lines</em> để lấy chi tiết mặt hàng, số lượng nhận, đơn giá mua) sang cột <strong>Các trường cần xuất</strong>.</li>
+      <li>
+        <strong>Bước 4:</strong> Trong cửa sổ <strong>Xuất dữ liệu (Export Data)</strong>, chọn định dạng <strong>XLSX</strong>, bổ sung thêm các trường từ cột <strong>Các trường hiện có</strong> (ví dụ: mở rộng <em>Chi tiết đơn mua hàng / Order Lines</em> để lấy chi tiết mặt hàng, số lượng nhận, đơn giá mua) sang cột <strong>Các trường cần xuất</strong>.
+        
+        <img src="images/vi/steps/export_purchase_orders.png" alt="Xuất Đơn mua hàng kèm Chi tiết đơn hàng">
+      </li>
       <li><strong>Bước 5:</strong> Nhấn nút <strong>[Xuất] (Export)</strong> để tải file Excel về máy.</li>
     </ul>
     <hr>
@@ -1793,7 +1808,11 @@ Elite ERP cấu hình tiêu chuẩn hiện sử dụng phân hệ <strong>Hóa �
         </ul>
       </li>
       <li><strong>Bước 3:</strong> Tích chọn ô vuông ở góc trên bên trái bảng dữ liệu để chọn toàn bộ bản ghi trong trang (nếu có nhiều trang, nhấn thêm dòng chữ <strong>Chọn tất cả / Select all</strong>).</li>
-      <li><strong>Bước 4:</strong> Nhấn nút <strong>[Hành động] (Actions / Tác vụ)</strong> ⚙️ -> chọn <strong>[Xuất] (Export)</strong>.</li>
+      <li>
+        <strong>Bước 4:</strong> Nhấn nút <strong>[Hành động] (Actions / Tác vụ)</strong> ⚙️ -> chọn <strong>[Xuất] (Export)</strong>.
+        
+        <img src="images/vi/steps/export_journal_items_filter_632.png" alt="Lọc Hạng mục bút toán theo Tài khoản 632 và chọn Tác vụ -> Xuất">
+      </li>
       <li><strong>Bước 5:</strong> Tại cửa sổ <strong>Xuất dữ liệu (Export Data)</strong>:
         <ul>
           <li>Chọn định dạng <strong>XLSX</strong>.</li>
@@ -1840,9 +1859,10 @@ Elite ERP cấu hình tiêu chuẩn hiện sử dụng phân hệ <strong>Hóa �
       <p class="markdown-alert-title"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
       <p><strong>Mẹo kết xuất Giá vốn hàng xuất bán từ phân hệ Kho (Khi tính giá tồn kho Thủ công / Định kỳ <code>Periodic</code>):</strong><br />
       Trong trường hợp Nhóm sản phẩm đang thiết lập <em>Định giá tồn kho Thủ công / Định kỳ (<code>Periodic at closing</code>)</em> — tức là khi lọc <code>632</code> bên Kế toán chỉ thấy Hóa đơn mua hàng (<code>BILL</code>) mà chưa có bút toán xuất bán (<code>Nợ 632 / Có 156</code>) — để đổ danh sách giá vốn của những hàng đã xuất bán cho khách trong tháng:<br />
-      1. Truy cập phân hệ <strong>Tồn kho (Inventory)</strong> -> <strong>Báo cáo (Reporting)</strong> -> <strong>Lịch sử di chuyển (Moves History)</strong>.<br />
-      2. Trên thanh tìm kiếm: Lọc trạng thái <strong>Hoàn thành (Done)</strong> + lọc <strong>Tháng/Kỳ cần lấy</strong> + gõ <strong><code>WH/OUT</code></strong> vào ô tìm kiếm (chọn lọc theo <em>Tham chiếu / Reference</em> để chỉ lấy các Phiếu xuất kho giao hàng cho khách).<br />
+      1. Truy cập phân hệ <strong>Tồn kho (Inventory)</strong> -> <strong>Báo cáo (Reporting)</strong> -> <strong>Lịch sử điều chuyển (Moves History)</strong>.<br />
+      2. Trên thanh tìm kiếm: Lọc trạng thái <strong>Hoàn thành (Done)</strong> + lọc <strong>Tháng/Kỳ cần lấy</strong> + gõ <strong><code>WH/OUT</code></strong> (hoặc <strong><code>KH/OUT</code></strong>) vào ô tìm kiếm (chọn lọc theo <em>Tham chiếu / Reference</em> để chỉ lấy các Phiếu xuất kho giao hàng cho khách).<br />
       3. Tích chọn tất cả -> bấm <strong>Hành động (⚙️) -> Xuất (Export)</strong> và chọn các cột: <code>Ngày (Date)</code>, <code>Tham chiếu (Reference)</code>, <code>Chứng từ gốc (Source Document - Số đơn SO)</code>, <code>Sản phẩm (Product)</code>, <code>Số lượng (Quantity)</code>, <code>Sản phẩm/Chi phí (Product/Cost)</code> để tính tổng giá vốn hàng xuất bán trong kỳ.</p>
+      <img src="images/vi/steps/export_inventory_moves_wh_out.png" alt="Xuất danh sách Phiếu xuất kho (KH/OUT) tại Lịch sử điều chuyển">
     </div>
     <hr />
     <p><a id="invoicing-reporting"></a></p>

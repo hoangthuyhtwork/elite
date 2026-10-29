@@ -166,10 +166,12 @@ Hỗ trợ người dùng kết xuất danh sách bản ghi ở bất kỳ phân
 **Cách 2: Xuất tùy chỉnh các trường dữ liệu chi tiết (Custom Export)**
 - **Bước 1:** Tại màn hình **Danh sách (List View)** của phân hệ bất kỳ, tích chọn ô vuông (checkbox) ở đầu các dòng dữ liệu cần xuất. Để chọn toàn bộ danh sách, tích vào ô vuông ở tiêu đề bảng rồi nhấn **Chọn tất cả (Select all)**.
 - **Bước 2:** Nhấn vào nút **[Hành động] (Actions / Tác vụ)** ⚙️ xuất hiện ở thanh công cụ phía trên -> chọn **[Xuất] (Export)**.
+   ![Chọn Xuất dữ liệu từ menu Tác vụ](images/vi/steps/export_action_menu.png)
 - **Bước 3:** Tại cửa sổ **Xuất dữ liệu (Export Data)**:
   - Chọn định dạng **XLSX** (hoặc **CSV**).
   - Từ cột **Các trường hiện có (Available fields)** bên trái, bấm dấu **`+`** tại các trường thông tin muốn lấy sang cột **Các trường cần xuất (Fields to export)** bên phải (hoặc chọn một **Mẫu / Template** đã lưu sẵn).
 - **Bước 4:** Nhấn nút **[Xuất] (Export)** ở góc dưới bên trái để tải file về máy tính.
+   ![Cửa sổ cấu hình Xuất dữ liệu ra Excel](images/vi/steps/export_data_dialog.png)
 
 > [!TIP]
 > **Mẹo xuất chi tiết từng dòng sản phẩm trên Đơn hàng / Hóa đơn:**
@@ -502,6 +504,7 @@ Hỗ trợ bộ phận Kinh doanh và Quản lý kết xuất danh sách Báo gi
   - Chọn định dạng **XLSX**.
   - Các trường mặc định của đơn bán hàng (`Mã đơn hàng`, `Ngày đặt hàng`, `Khách hàng`, `Nhân viên kinh doanh`, `Tổng`, `Trạng thái`) đã được chọn sẵn ở cột bên phải.
   - Nếu cần xuất chi tiết từng mặt hàng trong đơn, tại cột bên trái (**Các trường hiện có**), bấm mở rộng mục **Chi tiết đơn hàng (Order Lines)** và bấm dấu **`+`** chọn thêm: `Chi tiết đơn hàng/Sản phẩm`, `Chi tiết đơn hàng/Số lượng`, `Chi tiết đơn hàng/Đơn giá`, `Chi tiết đơn hàng/Thành tiền`.
+   ![Mở rộng mục Chi tiết đơn hàng khi xuất Đơn bán hàng](images/vi/steps/export_sales_orders.png)
 - **Bước 5:** Nhấn nút **[Xuất] (Export)** để tải file Excel về máy tính.
 
 ---
@@ -703,6 +706,7 @@ Hỗ trợ nhân viên thu mua kết xuất danh sách Yêu cầu báo giá (RFQ
 - **Bước 2:** Lọc dữ liệu theo kỳ hoặc theo Nhà cung cấp nếu cần, sau đó tích chọn ô vuông (checkbox) ở đầu các dòng đơn mua hàng muốn kết xuất.
 - **Bước 3:** Nhấn nút **[Hành động] (Actions / Tác vụ)** ⚙️ -> chọn **[Xuất] (Export)**.
 - **Bước 4:** Trong cửa sổ **Xuất dữ liệu (Export Data)**, chọn định dạng **XLSX**, bổ sung thêm các trường từ cột **Các trường hiện có** (ví dụ: mở rộng *Chi tiết đơn mua hàng / Order Lines* để lấy chi tiết mặt hàng, số lượng nhận, đơn giá mua) sang cột **Các trường cần xuất**.
+   ![Cửa sổ Xuất dữ liệu Đơn mua hàng ra Excel](images/vi/steps/export_purchase_orders.png)
 - **Bước 5:** Nhấn nút **[Xuất] (Export)** để tải file Excel về máy.
 
 ---
@@ -1059,6 +1063,7 @@ Hỗ trợ kế toán viên kết xuất toàn bộ danh sách Hóa đơn bán r
     - *Tại màn hình **Bút toán (Journal Entries)**:* Do thanh tìm kiếm mặc định chỉ tìm theo thông tin bìa chứng từ (`Số`, `Tham chiếu`, `Đối tác`), bạn hãy bấm vào thanh tìm kiếm -> chọn **"Bộ lọc tuỳ chỉnh..." (Custom Filter...)** ở cuối danh sách -> chọn trường **`Hạng mục bút toán > Tài khoản`** (hoặc **`Tài khoản`**) -> điều kiện **`chứa`** -> nhập mã tài khoản cần lấy (ví dụ: `632`) -> nhấn **[Áp dụng]**.
 - **Bước 3:** Tích chọn ô vuông ở góc trên bên trái bảng dữ liệu để chọn toàn bộ bản ghi trong trang (nếu có nhiều trang, nhấn thêm dòng chữ **Chọn tất cả / Select all**).
 - **Bước 4:** Nhấn nút **[Hành động] (Actions / Tác vụ)** ⚙️ -> chọn **[Xuất] (Export)**.
+   ![Lọc Hạng mục bút toán theo Tài khoản 632 và chọn Tác vụ Xuất](images/vi/steps/export_journal_items_filter_632.png)
 - **Bước 5:** Tại cửa sổ **Xuất dữ liệu (Export Data)**:
   - Chọn định dạng **XLSX**.
   - Để xuất chi tiết định khoản Nợ/Có của từng dòng hạch toán: Mở rộng mục **Hạng mục bút toán / Chi tiết bút toán (Journal Items)** ở cột bên trái và bấm **`+`** chọn thêm các trường: `Chi tiết bút toán/Tài khoản`, `Chi tiết bút toán/Đối tác`, `Chi tiết bút toán/Nhãn`, `Chi tiết bút toán/Nợ`, `Chi tiết bút toán/Có`.
@@ -1078,9 +1083,11 @@ Khi kết xuất Sổ chi tiết tài khoản ra Excel, kế toán căn cứ và
 > [!NOTE]
 > **Mẹo kết xuất Giá vốn hàng xuất bán từ phân hệ Kho (Khi tính giá tồn kho Thủ công / Định kỳ `Periodic`):**
 > Trong trường hợp Nhóm sản phẩm đang thiết lập *Định giá tồn kho Thủ công / Định kỳ (`Periodic at closing`)* — tức là khi lọc `632` bên Kế toán chỉ thấy Hóa đơn mua hàng (`BILL`) mà chưa có bút toán xuất bán (`Nợ 632 / Có 156`) — để đổ danh sách giá vốn của những hàng đã xuất bán cho khách trong tháng:
-> 1. Truy cập phân hệ **Tồn kho (Inventory)** -> **Báo cáo (Reporting)** -> **Lịch sử di chuyển (Moves History)**.
-> 2. Trên thanh tìm kiếm: Lọc trạng thái **Hoàn thành (Done)** + lọc **Tháng/Kỳ cần lấy** + gõ **`WH/OUT`** vào ô tìm kiếm (chọn lọc theo *Tham chiếu / Reference* để chỉ lấy các Phiếu xuất kho giao hàng cho khách).
-> 3. Tích chọn tất cả -> bấm **Hành động (⚙️) -> Xuất (Export)** và chọn các cột: `Ngày (Date)`, `Tham chiếu (Reference)`, `Chứng từ gốc (Source Document - Số đơn SO)`, `Sản phẩm (Product)`, `Số lượng (Quantity)`, `Sản phẩm/Chi phí (Product/Cost)` để tính tổng giá vốn hàng xuất bán trong kỳ.
+> 1. Truy cập phân hệ **Tồn kho (Inventory)** -> **Báo cáo (Reporting)** -> **Lịch sử điều chuyển (Moves History)**.
+> 2. Trên thanh tìm kiếm: Lọc trạng thái **Hoàn tất (Done)** + lọc **Giao hàng (Outgoing)** (hoặc gõ **`KH/OUT`** / **`WH/OUT`** vào ô tìm kiếm theo *Tham chiếu / Reference* để chỉ lấy các Phiếu xuất kho giao hàng cho khách).
+> 3. Tích chọn tất cả -> bấm **Tác vụ (⚙️) -> Xuất (Export)** và chọn các cột: `Ngày (Date)`, `Tham chiếu (Reference)`, `Chứng từ gốc (Source Document - Số đơn SO)`, `Sản phẩm (Product)`, `Số lượng (Quantity)`, `Sản phẩm/Chi phí (Product/Cost)` để tính tổng giá vốn hàng xuất bán trong kỳ.
+
+![Kết xuất phiếu xuất kho bán hàng KH/OUT từ Lịch sử điều chuyển](images/vi/steps/export_inventory_moves_wh_out.png)
 
 ---
 
